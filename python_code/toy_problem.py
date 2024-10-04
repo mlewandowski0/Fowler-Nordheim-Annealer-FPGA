@@ -15,6 +15,9 @@ Q = np.array([[1,0,1,1,1,0,1,0,0,0],
               [0,1,0,1,0,1,1,0,1,1],
               [0,0,0,1,1,1,0,1,1,1]])
 
+
+Q = np.ones_like(Q) - Q
+
 plt.imshow(Q, cmap="gray")
 plt.savefig("toy.png")
 

@@ -277,8 +277,8 @@ if __name__ == "__main__":
                 ds_n[p] = s_p[p] > 0
 
                 # Update Neuron states
-                s_p[p] = np.logical_not(s_p[p])
-                s_n[p] = np.logical_not(s_n[p])
+                s_p[p] = 0 if s_p[p] == 1 else 1
+                s_n[p] = 0 if s_n[p] == 1 else 1
                 
                 vmem += 2*(ds_p[p]-ds_n[p])*Q[p,:]
                 d_cuts = (ds_p[p] - ds_n[p]) * vmem[p]
