@@ -1,16 +1,25 @@
-Vivado Simulator v2024.1
+Vivado Simulator v2024.1.2
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: E:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot LFSR_TB_behav xil_defaultlib.LFSR_TB xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
+Running: /home/mlewand/software/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot flipping_unit_tb_behav xil_defaultlib.flipping_unit_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 7 for port 'seed' [E:/PROJS/fwl/hw_impl/hw_impl.srcs/sim_1/new/LFSR_tb.v:31]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.LFSR(BITS=7)
-Compiling module xil_defaultlib.LFSR_TB
+Compiling module xil_defaultlib.LFSR
+Compiling module xil_defaultlib.log_LUT(NOISE_SOURCE_WIDTH=7)
+Compiling module xil_defaultlib.log_noise_generator(NOISE_SOURCE...
+Compiling module xil_defaultlib.temperature_mapping_default
+Compiling module xil_defaultlib.temperature_module
+Compiling module xil_defaultlib.mulBITSxBITS_default
+Compiling module xil_defaultlib.cla_nbit(n=5)
+Compiling module xil_defaultlib.float16_normalizer
+Compiling module xil_defaultlib.float16_mult
+Compiling module xil_defaultlib.float16_to_int
+Compiling module xil_defaultlib.flipping_unit(PIPELINED_ROMs=0)
+Compiling module xil_defaultlib.flipping_unit_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot LFSR_TB_behav
+Built simulation snapshot flipping_unit_tb_behav

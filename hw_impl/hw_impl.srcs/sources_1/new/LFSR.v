@@ -20,19 +20,40 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module LFSR #(parameter BITS=6) (
-        input wire clk,
-        input wire chip_enable,
-        
-        // seed 
-        input wire write_seed,
-        input wire [BITS:1] seed, 
-        output wire [BITS:1] out
- );
-   
-        reg [BITS:1] state;
-        reg XNORed;
+module LFSR #(parameter BITS=7)  
+(
+    input wire clk,
+    input wire chip_enable,
 
+    // seed
+    input wire write_seed,
+    input wire [BITS:1] seed,
+    output wire [BITS:1] out
+
+);
+
+reg [BITS:1] state;
+reg XNORed;
+
+
+assign out = state;
+
+always @(posedge clk) begin
+    if (chip_enable) 
+    begin
+        if (write_seed) 
+        begin
+            state <= seed;
+        end
+        else 
+        begin
+            state <= {state[BITS-1:1], XNORed};
+        end
+    end
+end
+
+  // Create Feedback Polynomials.  Based on Application Note:
+  // http://www.xilinx.com/support/documentation/application_notes/xapp052.pdf
   always @(*)
     begin
       case (BITS)
@@ -129,4 +150,5 @@ module LFSR #(parameter BITS=6) (
     endcase // case (NUM_BITS)
 end // always @ (*)
 
+    
 endmodule

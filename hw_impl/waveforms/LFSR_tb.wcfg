@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="LFSR_TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="LFSR_TB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="23,950.394 ns"></ZoomStartTime>
+      <ZoomEndTime time="25,953.922 ns"></ZoomEndTime>
+      <Cursor1Time time="25,620.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wvobject type="logic" fp_name="/LFSR_TB/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/LFSR_TB/chip_enable">
+      <obj_property name="ElementShortName">chip_enable</obj_property>
+      <obj_property name="ObjectShortName">chip_enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/LFSR_TB/write_seed">
+      <obj_property name="ElementShortName">write_seed</obj_property>
+      <obj_property name="ObjectShortName">write_seed</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/LFSR_TB/seed">
+      <obj_property name="ElementShortName">seed[7:1]</obj_property>
+      <obj_property name="ObjectShortName">seed[7:1]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/LFSR_TB/out">
+      <obj_property name="ElementShortName">out[7:1]</obj_property>
+      <obj_property name="ObjectShortName">out[7:1]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/LFSR_TB/file">
+      <obj_property name="ElementShortName">file[31:0]</obj_property>
+      <obj_property name="ObjectShortName">file[31:0]</obj_property>
+   </wvobject>
+</wave_config>
