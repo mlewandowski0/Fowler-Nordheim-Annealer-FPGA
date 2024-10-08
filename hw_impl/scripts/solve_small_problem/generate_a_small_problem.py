@@ -2,19 +2,22 @@ import numpy as np
 import itertools
 import networkx as nx
 import matplotlib.pyplot as plt
-from utils import *
+import os
+from generate_utils import *
 
 
 print(nx.__version__)
 
-# Create a random graph with 12 vertices (adjacency matrix)
-np.random.seed(42)  # For reproducibility
+np.random.seed(42)  
 n_vertices = 12
 adj_matrix = np.random.randint(0, 2, size=(n_vertices, n_vertices))
-np.fill_diagonal(adj_matrix, 0)  # No self-loops
-adj_matrix = np.triu(adj_matrix) + np.triu(adj_matrix, 1).T  # Make symmetric
 
-# Define MAX-CUT objective function for QUBO
+# No self-loops
+np.fill_diagonal(adj_matrix, 0) 
+
+ # Make symmetric
+adj_matrix = np.triu(adj_matrix) + np.triu(adj_matrix, 1).T  
+
 def max_cut_value(adj_matrix, cut):
     cut_value = 0
     for i in range(len(cut)):
@@ -35,10 +38,7 @@ for cut in all_possible_cuts:
         best_cut_value = cut_value
         best_cut = cut
 
-# Plotting the solution using networkx
 G = nx.from_numpy_array(adj_matrix)
-
-# Color nodes based on the cut solution
 color_map = ['red' if best_cut[i] == 0 else 'blue' for i in range(n_vertices)]
 
 plt.figure(figsize=(16, 8))
@@ -53,5 +53,8 @@ nx.draw(G, node_color=color_map, with_labels=True, node_size=500, font_color='wh
 plt.title(f"MAX-CUT Solution (Cut Value: {best_cut_value})")
 
 serialize_matrix(adj_matrix, "adj_matrix.mif")
+serialize_matrix_distributed(adj_matrix, "adj_matrix_distributed{}.mif", 4)
+
+np.save(os.path.join(".","toy_problem.npy"), adj_matrix)
 plt.savefig("problem.png")
 plt.show()

@@ -173,7 +173,6 @@ if __name__ == "__main__":
     s_n = np.zeros_like(ds_p, dtype=config.DTYPE)
     vmem = np.matmul(Q, (s_p-s_n))
 
-
     argmin_s_p = np.zeros_like(s_p)
     argmin_s_n = np.zeros_like(s_n)
 

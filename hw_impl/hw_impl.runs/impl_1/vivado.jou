@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1.2 (64-bit)
+# SW Build 5164865 on Thu Sep  5 14:36:28 MDT 2024
+# IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
+# SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
+# Start of session at: Tue Oct  8 11:29:24 2024
+# Process ID: 30255
+# Current directory: /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.runs/impl_1
+# Command line: vivado -log neuron_ensemble_with_memory.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source neuron_ensemble_with_memory.tcl -notrace
+# Log file: /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.runs/impl_1/neuron_ensemble_with_memory.vdi
+# Journal file: /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.runs/impl_1/vivado.jou
+# Running On        :mlewan
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04.1 LTS
+# Processor Detail  :12th Gen Intel(R) Core(TM) i7-12700H
+# CPU Frequency     :1371.681 MHz
+# CPU Physical cores:14
+# CPU Logical cores :20
+# Host memory       :33342 MB
+# Swap memory       :2147 MB
+# Total Virtual     :35489 MB
+# Available Virtual :26459 MB
+#-----------------------------------------------------------
+source neuron_ensemble_with_memory.tcl -notrace

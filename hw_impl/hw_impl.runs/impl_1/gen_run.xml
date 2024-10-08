@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1728383335">
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="neuron_ensemble_with_memory_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="neuron_ensemble_with_memory_routed.rqs"/>
+  <File Type="RBD_FILE" Name="neuron_ensemble_with_memory.rbd"/>
+  <File Type="NPI_FILE" Name="neuron_ensemble_with_memory.npi"/>
+  <File Type="RNPI_FILE" Name="neuron_ensemble_with_memory.rnpi"/>
+  <File Type="CFI_FILE" Name="neuron_ensemble_with_memory.cfi"/>
+  <File Type="RCFI_FILE" Name="neuron_ensemble_with_memory.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="neuron_ensemble_with_memory_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="neuron_ensemble_with_memory_boot.pdi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="neuron_ensemble_with_memory_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-RPX" Name="neuron_ensemble_with_memory_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="neuron_ensemble_with_memory_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="neuron_ensemble_with_memory_methodology_drc_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="neuron_ensemble_with_memory_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="neuron_ensemble_with_memory_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="neuron_ensemble_with_memory_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="neuron_ensemble_with_memory_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="neuron_ensemble_with_memory_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="neuron_ensemble_with_memory_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="neuron_ensemble_with_memory_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="neuron_ensemble_with_memory_postroute_physopt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="neuron_ensemble_with_memory_physopt.dcp"/>
+  <File Type="PLACE-IO" Name="neuron_ensemble_with_memory_io_placed.rpt"/>
+  <File Type="OPT-DRC" Name="neuron_ensemble_with_memory_drc_opted.rpt"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="neuron_ensemble_with_memory.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="neuron_ensemble_with_memory.sysdef"/>
+  <File Type="BITSTR-MMI" Name="neuron_ensemble_with_memory.mmi"/>
+  <File Type="BITSTR-BMM" Name="neuron_ensemble_with_memory_bd.bmm"/>
+  <File Type="PLACE-UTIL-PB" Name="neuron_ensemble_with_memory_utilization_placed.pb"/>
+  <File Type="BG-BGN" Name="neuron_ensemble_with_memory.bgn"/>
+  <File Type="OPT-DCP" Name="neuron_ensemble_with_memory_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="neuron_ensemble_with_memory.hwdef"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="BG-BIT" Name="neuron_ensemble_with_memory.bit"/>
+  <File Type="ROUTE-BUS-SKEW" Name="neuron_ensemble_with_memory_bus_skew_routed.rpt"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="PA-TCL" Name="neuron_ensemble_with_memory.tcl"/>
+  <File Type="REPORTS-TCL" Name="neuron_ensemble_with_memory_reports.tcl"/>
+  <File Type="PLACE-UTIL" Name="neuron_ensemble_with_memory_utilization_placed.rpt"/>
+  <File Type="BG-DRC" Name="neuron_ensemble_with_memory.drc"/>
+  <File Type="PLACE-CTRL" Name="neuron_ensemble_with_memory_control_sets_placed.rpt"/>
+  <File Type="PDI-FILE" Name="neuron_ensemble_with_memory.pdi"/>
+  <File Type="RDI-RDI" Name="neuron_ensemble_with_memory.vdi"/>
+  <File Type="BG-BIN" Name="neuron_ensemble_with_memory.bin"/>
+  <File Type="PLACE-DCP" Name="neuron_ensemble_with_memory_placed.dcp"/>
+  <File Type="BITSTR-MSK" Name="neuron_ensemble_with_memory.msk"/>
+  <File Type="PWROPT-DCP" Name="neuron_ensemble_with_memory_pwropt.dcp"/>
+  <File Type="BITSTR-RBT" Name="neuron_ensemble_with_memory.rbt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="neuron_ensemble_with_memory_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-NKY" Name="neuron_ensemble_with_memory.nky"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="neuron_ensemble_with_memory_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DRC" Name="neuron_ensemble_with_memory_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="neuron_ensemble_with_memory_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="neuron_ensemble_with_memory_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="neuron_ensemble_with_memory_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="neuron_ensemble_with_memory_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="neuron_ensemble_with_memory_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="neuron_ensemble_with_memory_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="neuron_ensemble_with_memory_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="neuron_ensemble_with_memory_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="neuron_ensemble_with_memory_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="neuron_ensemble_with_memory_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="neuron_ensemble_with_memory_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="neuron_ensemble_with_memory_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="neuron_ensemble_with_memory_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="neuron_ensemble_with_memory_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="neuron_ensemble_with_memory_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="neuron_ensemble_with_memory_bus_skew_routed.rpx"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/LFSR.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/LFSR_inout.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cla_nbit.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/distributed_graph_memory.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/flipping_unit.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/new/float16_mult.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/new/float16_normalizer.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/new/float16_to_int.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/new/log_LUT.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/log_noise_generator.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/new/mulBITSxBITS.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/neuron_ensemble.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/neuron_ensemble_storage.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/temperature_mapping.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/temperature_module.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/new/vedic_mul16x16.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/new/vedic_mul2x2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/new/vedic_mul4x4.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/new/vedic_mul8x8.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/neuron_ensemble_with_memory.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/adder.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/new/fixed_add.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/new/fixed_mult.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/new/float16_add_normalizer.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/new/float16_alignment.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/temp_module.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/scripts/temperature_LUT.mif">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/scripts/log_noise_LUT.mif">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/membrane_update.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/graph_processor_small.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/scripts/solve_small_problem/adj_matrix_distributed2.mif">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/scripts/solve_small_problem/adj_matrix_distributed1.mif">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/scripts/solve_small_problem/adj_matrix_distributed0.mif">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="neuron_ensemble_with_memory"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/adder.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
+  </Strategy>
+</GenRun>
