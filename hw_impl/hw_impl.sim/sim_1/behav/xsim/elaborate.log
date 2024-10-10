@@ -6,4 +6,26 @@ Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.distributed_graph_memory(MEM_FIL...
+Compiling module xil_defaultlib.LFSR(BITS=3)
+Compiling module xil_defaultlib.LFSR_inout(LFSR_BITS=3,OUT_BITS=...
+Compiling module xil_defaultlib.neuron_ensemble_storage
+Compiling module xil_defaultlib.LFSR(BITS=6)
+Compiling module xil_defaultlib.log_LUT(NOISE_SOURCE_WIDTH=6)
+Compiling module xil_defaultlib.log_noise_generator(NOISE_SOURCE...
+Compiling module xil_defaultlib.temperature_mapping_default
+Compiling module xil_defaultlib.temperature_module
+Compiling module xil_defaultlib.mulBITSxBITS_default
+Compiling module xil_defaultlib.cla_nbit(n=5)
+Compiling module xil_defaultlib.float16_normalizer
+Compiling module xil_defaultlib.float16_mult
+Compiling module xil_defaultlib.float16_to_int
+Compiling module xil_defaultlib.flipping_unit_default
+Compiling module xil_defaultlib.neuron_ensemble_default
+Compiling module xil_defaultlib.neuron_ensemble_with_memory_defa...
+Compiling module xil_defaultlib.neuron_ensemble_with_memory_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot neuron_ensemble_with_memory_tb_behav

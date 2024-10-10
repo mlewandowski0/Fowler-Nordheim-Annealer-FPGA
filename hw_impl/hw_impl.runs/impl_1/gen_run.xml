@@ -21,15 +21,15 @@
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="neuron_ensemble_with_memory_timing_summary_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="neuron_ensemble_with_memory_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="neuron_ensemble_with_memory_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="neuron_ensemble_with_memory_postroute_physopt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="neuron_ensemble_with_memory_physopt.dcp"/>
   <File Type="PLACE-IO" Name="neuron_ensemble_with_memory_io_placed.rpt"/>
   <File Type="OPT-DRC" Name="neuron_ensemble_with_memory_drc_opted.rpt"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="neuron_ensemble_with_memory.ltx"/>
   <File Type="BITSTR-SYSDEF" Name="neuron_ensemble_with_memory.sysdef"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="neuron_ensemble_with_memory_postroute_physopt.dcp"/>
   <File Type="BITSTR-MMI" Name="neuron_ensemble_with_memory.mmi"/>
   <File Type="BITSTR-BMM" Name="neuron_ensemble_with_memory_bd.bmm"/>
+  <File Type="PHYSOPT-DCP" Name="neuron_ensemble_with_memory_physopt.dcp"/>
   <File Type="PLACE-UTIL-PB" Name="neuron_ensemble_with_memory_utilization_placed.pb"/>
   <File Type="BG-BGN" Name="neuron_ensemble_with_memory.bgn"/>
   <File Type="OPT-DCP" Name="neuron_ensemble_with_memory_opt.dcp"/>
@@ -49,10 +49,10 @@
   <File Type="PLACE-DCP" Name="neuron_ensemble_with_memory_placed.dcp"/>
   <File Type="BITSTR-MSK" Name="neuron_ensemble_with_memory.msk"/>
   <File Type="PWROPT-DCP" Name="neuron_ensemble_with_memory_pwropt.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="neuron_ensemble_with_memory_incremental_reuse_pre_placed.rpt"/>
   <File Type="BITSTR-RBT" Name="neuron_ensemble_with_memory.rbt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="neuron_ensemble_with_memory_postplace_pwropt.dcp"/>
   <File Type="BITSTR-NKY" Name="neuron_ensemble_with_memory.nky"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="neuron_ensemble_with_memory_incremental_reuse_pre_placed.rpt"/>
   <File Type="ROUTE-DRC" Name="neuron_ensemble_with_memory_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="neuron_ensemble_with_memory_drc_routed.pb"/>
   <File Type="ROUTE-PWR" Name="neuron_ensemble_with_memory_power_routed.rpt"/>

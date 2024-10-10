@@ -29,6 +29,16 @@ module neuron_ensemble_storage_tb;
     localparam CLK_PERIOD = 2 * HALF_CLK_PERIOD;
     localparam CLK_PERIODS = 10 * (1<< NEURON_WIDTH);
 
+    localparam ENSEMBLE_GENERATE_STATE    =  2'b00;
+    localparam ENSEMBLE_RESET_STATE       =  2'b01;
+    localparam ENSEMBLE_INC_STATE         =  2'b10;
+    localparam ENSEMBLE_SUB_STATE         =  2'b11;
+    
+    localparam ENSEMBLE_WITH_MEM_GENERATE =  2'b00;
+    localparam ENSEMBLE_WITH_MEM_HALT     =  2'b01;
+    localparam ENSEMBLE_WITH_MEM_UPDATE   =  2'b10;
+    localparam ENSEMBLE_WITH_MEM_RESET    =  2'b11;
+
     reg clk, CE, write_seed, write;
     
     reg [LFSR_WIDTH-1:0] seed;
@@ -93,16 +103,18 @@ module neuron_ensemble_storage_tb;
         control = ENSEMBLE_GENERATE_STATE;
         write_seed = 0;
         write = 1;
-        membrane_data_in = 16'b0000_0000_0000_0000;
+        membrane_data_in = 16'd6;
         neuron_state_in = 4'b0010;
-        #(CLK_PERIOD);
-        membrane_data_in = 16'b0000_0000_0000_0001;
 
         #(CLK_PERIOD);
-        membrane_data_in = 16'b0000_0000_0000_0010;
+        membrane_data_in = 16'd7;
+
 
         #(CLK_PERIOD);
-        membrane_data_in = 16'b0000_0000_0000_0100;
+        membrane_data_in = 16'd8;
+
+        #(CLK_PERIOD);
+        membrane_data_in = 16'd3;
 
         #(CLK_PERIOD);
         write = 0;

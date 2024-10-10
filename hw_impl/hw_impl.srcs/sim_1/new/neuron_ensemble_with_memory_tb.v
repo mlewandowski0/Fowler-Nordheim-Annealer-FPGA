@@ -51,8 +51,7 @@ localparam CLK_PERIOD = 2 * HALF_CLK_PERIOD;
 
 
 reg [GRAPH_WIDTH_LINE-1:0] index_of_neuron_that_fired;
-reg [1:0] control;
-reg should_increment;
+reg should_increment, reset_module, halt, update_memory;
 reg clk;
 reg write_ensemble_seed;
 reg [NEURON_SEL_LFSR_WIDTH-1:0] ensemble_seed;
@@ -83,18 +82,27 @@ neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
                               .PIPELINED_ROMs(PIPELINED_ROMs),
                               .PIPELINED_ENSEMBLE_STORAGE(PIPELINED_ENSEMBLE_STORAGE))  
                               DUT(
-                                .index_of_neuron_that_fired(index_of_neuron_that_fired),
-                                .control(control),
+                                .reset_module(reset_module),
+                                .halt(halt),
+                                .update_memory(update_memory),
                                 .should_increment(should_increment),
+
+                                .index_of_neuron_that_fired(index_of_neuron_that_fired),
+
                                 .clk(clk),
+
                                 .write_ensemble_seed(write_ensemble_seed),
                                 .ensemble_seed(ensemble_seed),
+
                                 .write_flipping_seed(write_flipping_seed),
                                 .flipping_seed(flipping_seed),
+
                                 .decrease_temp(decrease_temp),
+                                
                                 .write_neuron_state(write_neuron_state),
                                 .membrane_data_in(membrane_data_in),
                                 .neuron_state_in(neuron_state_in),
+
                                 .spike(spike),
                                 .unit_number(unit_number),
                                 .offset(selected_idx_offset)
@@ -110,13 +118,16 @@ neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
     initial
     begin
             
+            reset_module = 0;
+            halt = 0;
+            update_memory = 0;
+
             wait (clk);
             #(2 * CLK_PERIOD); // wait for 2 clock cycles
             #(CLK_PERIOD - 1);
             
             // disable everything
             index_of_neuron_that_fired = {GRAPH_WIDTH_LINE{1'bX}};
-            control = ENSEMBLE_WITH_MEM_RESET;
             should_increment = 0;
             write_ensemble_seed = 1;
             ensemble_seed = 0;
@@ -126,21 +137,19 @@ neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
             write_neuron_state = 0;
             membrane_data_in = 0;
             neuron_state_in = 0;
-            
-            #(2*CLK_PERIOD);
+            reset_module = 1;
 
-            control = ENSEMBLE_WITH_MEM_HALT;
+            #(2*CLK_PERIOD);
+            reset_module = 0;
+            halt = 1;
+
             write_ensemble_seed = 0;
             write_flipping_seed = 0;
 
             # CLK_PERIOD;
             write_neuron_state = 1;
-            membrane_data_in = 16'd3;
+            membrane_data_in = 16'd6;
             neuron_state_in = 4'b0010;
-
-            #CLK_PERIOD;
-
-            membrane_data_in = 16'd8;
 
             #CLK_PERIOD;
 
@@ -148,67 +157,84 @@ neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
 
             #CLK_PERIOD;
 
-            membrane_data_in = 16'd6;
+            membrane_data_in = 16'd8;
+
+            #CLK_PERIOD;
+
+            membrane_data_in = 16'd3;
 
             #(CLK_PERIOD);
+            halt = 0;
             write_neuron_state = 0;
-            control = ENSEMBLE_WITH_MEM_GENERATE;
-
-            #(CLK_PERIOD);
             index_of_neuron_that_fired = 'd1;
-            control = ENSEMBLE_WITH_MEM_UPDATE;
-            should_increment = 0;
-
+            update_memory = 1;
             #(CLK_PERIOD);
+            update_memory = 0;
+ 
+            #(3 * CLK_PERIOD);
             index_of_neuron_that_fired = 'd3;
-            control = ENSEMBLE_WITH_MEM_UPDATE;
             should_increment = 0;
-
+            update_memory = 1;
             #(CLK_PERIOD);
+            update_memory = 0;
+
+            #(3 * CLK_PERIOD);
             index_of_neuron_that_fired = 'd3;
-            control = ENSEMBLE_WITH_MEM_UPDATE;
             should_increment = 1;
-
+            update_memory = 1;
             #(CLK_PERIOD);
+            update_memory = 0;            
+
+            #(3 * CLK_PERIOD);
             index_of_neuron_that_fired = 'd3;
-            control = ENSEMBLE_WITH_MEM_UPDATE;
             should_increment = 0;
-
+            update_memory = 1;
             #(CLK_PERIOD);
+            update_memory = 0;
+
+            #(3 * CLK_PERIOD);
             index_of_neuron_that_fired = 'd5;
-            control = ENSEMBLE_WITH_MEM_UPDATE;
             should_increment = 0;
-
+            update_memory = 1;
             #(CLK_PERIOD);
+            update_memory = 0;
+
+            #(3 * CLK_PERIOD);
             index_of_neuron_that_fired = 'd7;
-            control = ENSEMBLE_WITH_MEM_UPDATE;
             should_increment = 0;
-
+            update_memory = 1;
             #(CLK_PERIOD);
+            update_memory = 0;
+
+            #(3 * CLK_PERIOD);
             index_of_neuron_that_fired = 'd7;
-            control = ENSEMBLE_WITH_MEM_UPDATE;
             should_increment = 1;
-
+            update_memory = 1;
             #(CLK_PERIOD);
+            update_memory = 0;
+            
+            #(3 * CLK_PERIOD);
             index_of_neuron_that_fired = 'd7;
-            control = ENSEMBLE_WITH_MEM_UPDATE;
             should_increment = 0;
-
+            update_memory = 1;
             #(CLK_PERIOD);
+            update_memory = 0;
+
+            #(3 * CLK_PERIOD);
             index_of_neuron_that_fired = 'd9;
-            control = ENSEMBLE_WITH_MEM_UPDATE;
             should_increment = 0;
-
+            update_memory = 1;
             #(CLK_PERIOD);
+            update_memory = 0;
+
+            #(3 * CLK_PERIOD);
             index_of_neuron_that_fired = 'd11;
-            control = ENSEMBLE_WITH_MEM_UPDATE;
             should_increment = 0;
-
+            update_memory = 1;
             #(CLK_PERIOD);
-            index_of_neuron_that_fired = {GRAPH_WIDTH_LINE{1'bX}};
-            control = ENSEMBLE_WITH_MEM_GENERATE;
+            update_memory = 0;
 
-            #(5 * CLK_PERIOD);
+            #(40 * CLK_PERIOD);
 
             $finish;
     end

@@ -11,43 +11,81 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="44.437 ns"></ZoomEndTime>
-      <Cursor1Time time="18.017 ns"></Cursor1Time>
+      <ZoomStartTime time="14.121 ns"></ZoomStartTime>
+      <ZoomEndTime time="118.122 ns"></ZoomEndTime>
+      <Cursor1Time time="100.123 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="88"></ValueColumnWidth>
+      <NameColumnWidth column_width="247"></NameColumnWidth>
+      <ValueColumnWidth column_width="193"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="52" />
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/control">
-      <obj_property name="ElementShortName">control[1:0]</obj_property>
-      <obj_property name="ObjectShortName">control[1:0]</obj_property>
+   <WVObjectSize size="30" />
+   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/reset_module">
+      <obj_property name="ElementShortName">reset_module</obj_property>
+      <obj_property name="ObjectShortName">reset_module</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/update_memory">
+      <obj_property name="ElementShortName">update_memory</obj_property>
+      <obj_property name="ObjectShortName">update_memory</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/current_state">
+      <obj_property name="ElementShortName">current_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[2:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/halt">
+      <obj_property name="ElementShortName">halt</obj_property>
+      <obj_property name="ObjectShortName">halt</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/should_increment">
       <obj_property name="ElementShortName">should_increment</obj_property>
       <obj_property name="ObjectShortName">should_increment</obj_property>
    </wvobject>
+   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/decrease_temp">
+      <obj_property name="ElementShortName">decrease_temp</obj_property>
+      <obj_property name="ObjectShortName">decrease_temp</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage">
       <obj_property name="ElementShortName">membrane_storage[0:3][15:0]</obj_property>
       <obj_property name="ObjectShortName">membrane_storage[0:3][15:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage[0]">
+         <obj_property name="ElementShortName">[0][15:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage[1]">
+         <obj_property name="ElementShortName">[1][15:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage[2]">
+         <obj_property name="ElementShortName">[2][15:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage[3]">
+         <obj_property name="ElementShortName">[3][15:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/control">
-      <obj_property name="ElementShortName">control[1:0]</obj_property>
-      <obj_property name="ObjectShortName">control[1:0]</obj_property>
+   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage">
+      <obj_property name="ElementShortName">neuron_states_storage[0:3][3:0]</obj_property>
+      <obj_property name="ObjectShortName">neuron_states_storage[0:3][3:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/Q_inp">
-      <obj_property name="ElementShortName">Q_inp[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Q_inp[3:0]</obj_property>
+   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/write_neuron_state">
+      <obj_property name="ElementShortName">write_neuron_state</obj_property>
+      <obj_property name="ObjectShortName">write_neuron_state</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/index_of_neuron_that_fired">
       <obj_property name="ElementShortName">index_of_neuron_that_fired[3:0]</obj_property>
       <obj_property name="ObjectShortName">index_of_neuron_that_fired[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/clk">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/write_ensemble_seed">
       <obj_property name="ElementShortName">write_ensemble_seed</obj_property>
@@ -65,14 +103,6 @@
       <obj_property name="ElementShortName">flipping_seed[5:0]</obj_property>
       <obj_property name="ObjectShortName">flipping_seed[5:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/decrease_temp">
-      <obj_property name="ElementShortName">decrease_temp</obj_property>
-      <obj_property name="ObjectShortName">decrease_temp</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/write_neuron_state">
-      <obj_property name="ElementShortName">write_neuron_state</obj_property>
-      <obj_property name="ObjectShortName">write_neuron_state</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/membrane_data_in">
       <obj_property name="ElementShortName">membrane_data_in[15:0]</obj_property>
       <obj_property name="ObjectShortName">membrane_data_in[15:0]</obj_property>
@@ -81,152 +111,70 @@
       <obj_property name="ElementShortName">neuron_state_in[3:0]</obj_property>
       <obj_property name="ObjectShortName">neuron_state_in[3:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/spike">
-      <obj_property name="ElementShortName">spike</obj_property>
-      <obj_property name="ObjectShortName">spike</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/storage_CE">
-      <obj_property name="ElementShortName">storage_CE</obj_property>
-      <obj_property name="ObjectShortName">storage_CE</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/storage_CE_next">
-      <obj_property name="ElementShortName">storage_CE_next</obj_property>
-      <obj_property name="ObjectShortName">storage_CE_next</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/flipping_CE">
-      <obj_property name="ElementShortName">flipping_CE</obj_property>
-      <obj_property name="ObjectShortName">flipping_CE</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/flipping_CE_next">
-      <obj_property name="ElementShortName">flipping_CE_next</obj_property>
-      <obj_property name="ObjectShortName">flipping_CE_next</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/reset_flipping">
-      <obj_property name="ElementShortName">reset_flipping</obj_property>
-      <obj_property name="ObjectShortName">reset_flipping</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/reset_flipping_next">
-      <obj_property name="ElementShortName">reset_flipping_next</obj_property>
-      <obj_property name="ObjectShortName">reset_flipping_next</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_control">
-      <obj_property name="ElementShortName">neuron_ensemble_control[1:0]</obj_property>
-      <obj_property name="ObjectShortName">neuron_ensemble_control[1:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_control_next">
-      <obj_property name="ElementShortName">neuron_ensemble_control_next[1:0]</obj_property>
-      <obj_property name="ObjectShortName">neuron_ensemble_control_next[1:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/update_membranes">
-      <obj_property name="ElementShortName">update_membranes</obj_property>
-      <obj_property name="ObjectShortName">update_membranes</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/G_memory/index_of_neuron_that_fired">
-      <obj_property name="ElementShortName">index_of_neuron_that_fired[3:0]</obj_property>
-      <obj_property name="ObjectShortName">index_of_neuron_that_fired[3:0]</obj_property>
-   </wvobject>
    <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/G_memory/enable">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">enable</obj_property>
       <obj_property name="ObjectShortName">enable</obj_property>
+      <obj_property name="label">Graph_memory_enable</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/G_memory/Q_out">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">Q_out[3:0]</obj_property>
       <obj_property name="ObjectShortName">Q_out[3:0]</obj_property>
+      <obj_property name="label">Graph_memory_output[3:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/G_memory/memory">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">memory[0:11][3:0]</obj_property>
       <obj_property name="ObjectShortName">memory[0:11][3:0]</obj_property>
+      <obj_property name="label">graph_memory[0:11][3:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/selected_idx_offset">
-      <obj_property name="ElementShortName">selected_idx_offset[1:0]</obj_property>
-      <obj_property name="ObjectShortName">selected_idx_offset[1:0]</obj_property>
+   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/index_selection/lfsr/state">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">state[3:1]</obj_property>
+      <obj_property name="ObjectShortName">state[3:1]</obj_property>
+      <obj_property name="label">index_sel_state[3:1]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/selected_membrane">
-      <obj_property name="ElementShortName">selected_membrane[15:0]</obj_property>
-      <obj_property name="ObjectShortName">selected_membrane[15:0]</obj_property>
+   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/flipping_unit_tb/noise_generator/noise_source/state">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">state[6:1]</obj_property>
+      <obj_property name="ObjectShortName">state[6:1]</obj_property>
+      <obj_property name="label">noise_gen_state[6:1]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/flipping_output">
-      <obj_property name="ElementShortName">flipping_output[15:0]</obj_property>
-      <obj_property name="ObjectShortName">flipping_output[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_state">
+   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_state">
       <obj_property name="ElementShortName">neuron_state[3:0]</obj_property>
       <obj_property name="ObjectShortName">neuron_state[3:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/selected_idx_offset_reg">
-      <obj_property name="ElementShortName">selected_idx_offset_reg[1:0]</obj_property>
-      <obj_property name="ObjectShortName">selected_idx_offset_reg[1:0]</obj_property>
+   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/selected_membrane">
+      <obj_property name="ElementShortName">selected_membrane[15:0]</obj_property>
+      <obj_property name="ObjectShortName">selected_membrane[15:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/selected_membrane_reg">
-      <obj_property name="ElementShortName">selected_membrane_reg[15:0]</obj_property>
-      <obj_property name="ObjectShortName">selected_membrane_reg[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_state_reg">
-      <obj_property name="ElementShortName">neuron_state_reg[3:0]</obj_property>
-      <obj_property name="ObjectShortName">neuron_state_reg[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/ds_p">
-      <obj_property name="ElementShortName">ds_p</obj_property>
-      <obj_property name="ObjectShortName">ds_p</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/ds_n">
-      <obj_property name="ElementShortName">ds_n</obj_property>
-      <obj_property name="ObjectShortName">ds_n</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/s_p">
-      <obj_property name="ElementShortName">s_p</obj_property>
-      <obj_property name="ObjectShortName">s_p</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/s_n">
-      <obj_property name="ElementShortName">s_n</obj_property>
-      <obj_property name="ObjectShortName">s_n</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/membrane_compare">
-      <obj_property name="ElementShortName">membrane_compare[15:0]</obj_property>
-      <obj_property name="ObjectShortName">membrane_compare[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage">
-      <obj_property name="ElementShortName">neuron_states_storage[0:3][3:0]</obj_property>
-      <obj_property name="ObjectShortName">neuron_states_storage[0:3][3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/seed">
-      <obj_property name="ElementShortName">seed[2:0]</obj_property>
-      <obj_property name="ObjectShortName">seed[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/flipping_unit_tb/seed">
-      <obj_property name="ElementShortName">seed[5:0]</obj_property>
-      <obj_property name="ObjectShortName">seed[5:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/flipping_unit_tb/write_seed">
-      <obj_property name="ElementShortName">write_seed</obj_property>
-      <obj_property name="ObjectShortName">write_seed</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/write_seed">
-      <obj_property name="ElementShortName">write_seed</obj_property>
-      <obj_property name="ObjectShortName">write_seed</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_data_in">
-      <obj_property name="ElementShortName">membrane_data_in[15:0]</obj_property>
-      <obj_property name="ObjectShortName">membrane_data_in[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_state_in">
-      <obj_property name="ElementShortName">neuron_state_in[3:0]</obj_property>
-      <obj_property name="ObjectShortName">neuron_state_in[3:0]</obj_property>
+   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/idx">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">idx[1:0]</obj_property>
+      <obj_property name="ObjectShortName">idx[1:0]</obj_property>
+      <obj_property name="label">neuron_ensemble_idx[1:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/write">
       <obj_property name="ElementShortName">write</obj_property>
       <obj_property name="ObjectShortName">write</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/temp">
-      <obj_property name="ElementShortName">temp[15:0]</obj_property>
-      <obj_property name="ObjectShortName">temp[15:0]</obj_property>
+   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/CE">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">CE</obj_property>
+      <obj_property name="ObjectShortName">CE</obj_property>
+      <obj_property name="label">neuron_ensemble_Storage</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x">
-      <obj_property name="ElementShortName">x[6:0]</obj_property>
-      <obj_property name="ObjectShortName">x[6:0]</obj_property>
+   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/spike">
+      <obj_property name="ElementShortName">spike</obj_property>
+      <obj_property name="ObjectShortName">spike</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/idx">
-      <obj_property name="ElementShortName">idx[1:0]</obj_property>
-      <obj_property name="ObjectShortName">idx[1:0]</obj_property>
+   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/unit_number">
+      <obj_property name="ElementShortName">unit_number[1:0]</obj_property>
+      <obj_property name="ObjectShortName">unit_number[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/selected_idx_offset">
+      <obj_property name="ElementShortName">selected_idx_offset[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selected_idx_offset[1:0]</obj_property>
    </wvobject>
 </wave_config>

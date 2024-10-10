@@ -56,6 +56,7 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
         assign selected_membrane = CE ? membrane_storage[selected_idx_offset] : {NEURON_WIDTH{1'bX}};
         assign neuron_state = CE ? neuron_states_storage[selected_idx_offset] : 4'bXXXX; 
 
+
         always @(posedge clk)
         begin
             if (write)
@@ -65,7 +66,7 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
                 idx <= idx + 1;
             end
 
-            if (CE)
+            else if (CE)
             begin
                 case (control)
                     ENSEMBLE_RESET_STATE: 

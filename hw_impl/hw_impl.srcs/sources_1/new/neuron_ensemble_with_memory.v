@@ -19,6 +19,19 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+/*
+*       The following FSM is defined as below
+*    
+*       RESET 
+*       - should reset the  
+*      
+*       GENERATE 1 : 
+*       GENERATE 2 :
+*       HOLD :
+*       FETCH_Q : 
+*       UPDATE : 
+*/
+
 
 module neuron_ensemble_with_memory
 
@@ -38,9 +51,12 @@ parameter TEMPERATURE_LUT_WIDTH=7,
 parameter PIPELINED_ROMs=1,
 parameter PIPELINED_ENSEMBLE_STORAGE=1)
 (
+
     input wire [$clog2(GRAPH_WIDTH)-1:0] index_of_neuron_that_fired,
 
-    input wire [1:0] control,
+    input wire reset_module,
+    input wire halt,
+    input wire update_memory, 
     input wire should_increment,
 
     input wire clk, 
@@ -57,11 +73,20 @@ parameter PIPELINED_ENSEMBLE_STORAGE=1)
     input wire [MEMBRANE_WIDTH-1:0] membrane_data_in,
     input wire [3:0] neuron_state_in,
 
+    input  wire                                  update_ds,
     output wire                                  spike,
     output wire [UNIT_WIDTH-1:0]                 unit_number,
-    output wire [NEURON_WIDTH-1:0]               offset
+    output wire [NEURON_WIDTH-1:0]               offset, 
 
 );
+
+
+    reg  [2:0] current_state;
+    reg [2:0] next_state;
+    reg spike_reg;
+
+    wire spike_out;
+    assign spike = spike_reg;
 
     localparam NUMBER_OF_NEURONS = (1 << NEURON_WIDTH) - 1;
     
@@ -70,20 +95,24 @@ parameter PIPELINED_ENSEMBLE_STORAGE=1)
     localparam ENSEMBLE_INC_STATE         =  2'b10;
     localparam ENSEMBLE_SUB_STATE         =  2'b11;
     
-    localparam ENSEMBLE_WITH_MEM_GENERATE =  2'b00;
-    localparam ENSEMBLE_WITH_MEM_HALT     =  2'b01;
-    localparam ENSEMBLE_WITH_MEM_UPDATE   =  2'b10;
-    localparam ENSEMBLE_WITH_MEM_RESET    =  2'b11;
-    
-    // for the internal FSM
 
-    reg storage_CE, storage_CE_next, flipping_CE, flipping_CE_next, reset_flipping, reset_flipping_next;
-    reg [1:0] neuron_ensemble_control, neuron_ensemble_control_next;
-    wire update_membranes;
+    localparam ENSEMBLE_WITH_MEM_RESET          = 3'b000;
+    localparam ENSEMBLE_WITH_MEM_GENERATE_1     = 3'b001;
+    localparam ENSEMBLE_WITH_MEM_GENERATE_2     = 3'b010;
+    localparam ENSEMBLE_WITH_MEM_HOLD           = 3'b011;
+    localparam ENSEMBLE_WITH_MEM_FETCH_Q        = 3'b100;
+    localparam ENSEMBLE_WITH_MEM_UPDATE         = 3'b101;
+
+
+    // for the internal FSM
+    reg storage_CE, flipping_CE, reset_flipping;
+    reg [1:0] neuron_ensemble_control;
+    reg CE_output_from_distributed_graph, incrementing;
     
     assign update_membranes = neuron_ensemble_control[1];
 
 
+    reg  [NUMBER_OF_NEURONS:0] Q_out_reg;
     wire [NUMBER_OF_NEURONS:0] Q_out;
 
 
@@ -92,7 +121,7 @@ parameter PIPELINED_ENSEMBLE_STORAGE=1)
                                .MEM_FILE(GRAPH_DISTRIB_FILE)) 
                                
                                G_memory(.index_of_neuron_that_fired(index_of_neuron_that_fired),
-                                        .enable(update_membranes),
+                                        .enable(CE_output_from_distributed_graph),
                                         .Q_out(Q_out)
 );
 
@@ -130,9 +159,9 @@ parameter PIPELINED_ENSEMBLE_STORAGE=1)
         .neuron_state_in(neuron_state_in),
 
         .control(neuron_ensemble_control),
-        .Q_inp(Q_out),
+        .Q_inp(Q_out_reg),
 
-        .spike(spike),
+        .spike(spike_out),
         .unit_number(unit_number),
         .offset(offset)
 
@@ -141,61 +170,143 @@ parameter PIPELINED_ENSEMBLE_STORAGE=1)
 
     always @(*)
     begin
-        case (control)
-            ENSEMBLE_WITH_MEM_GENERATE:
-            begin
-                storage_CE_next = 1;
-                flipping_CE_next = 1;
-                reset_flipping_next = 0;
-                neuron_ensemble_control_next = ENSEMBLE_GENERATE_STATE;
-
-            end
-            ENSEMBLE_WITH_MEM_HALT:
-            begin
-                storage_CE_next = 0;
-                flipping_CE_next = 0;
-                reset_flipping_next = 0;
-                neuron_ensemble_control_next = ENSEMBLE_GENERATE_STATE;
-            end
-            ENSEMBLE_WITH_MEM_UPDATE:
-            begin
-                storage_CE_next = 1;
-                flipping_CE_next = 0;
-                reset_flipping_next = 0;
-
-                if (should_increment)
+        if (reset_module)
+        begin
+            next_state = ENSEMBLE_WITH_MEM_RESET;
+        end
+        else if (halt)
+        begin
+            next_state = ENSEMBLE_WITH_MEM_HOLD;
+        end
+        else if (update_memory)
+        begin
+            next_state = ENSEMBLE_WITH_MEM_FETCH_Q;
+        end
+        else 
+        begin
+            case (current_state)
+                ENSEMBLE_WITH_MEM_RESET:
                 begin
-                    neuron_ensemble_control_next = ENSEMBLE_INC_STATE;
+                    next_state = ENSEMBLE_WITH_MEM_GENERATE_1; 
                 end
-                else
+                ENSEMBLE_WITH_MEM_GENERATE_1:
                 begin
-                    neuron_ensemble_control_next = ENSEMBLE_SUB_STATE;
+                    next_state = ENSEMBLE_WITH_MEM_GENERATE_2;
                 end
-            end
-            ENSEMBLE_WITH_MEM_RESET:
-            begin
-                storage_CE_next = 1;
-                flipping_CE_next = 1;
-                reset_flipping_next = 1;
-                neuron_ensemble_control_next = ENSEMBLE_RESET_STATE;
-            end
-            default:
-            begin
-                neuron_ensemble_control_next = ENSEMBLE_GENERATE_STATE;
-                storage_CE_next = 0;
-                flipping_CE_next = 0;
-                reset_flipping_next = 0;
-            end
-        endcase
-
+                ENSEMBLE_WITH_MEM_GENERATE_2:
+                begin
+                    next_state = ENSEMBLE_WITH_MEM_GENERATE_2;
+                end
+                ENSEMBLE_WITH_MEM_HOLD:
+                begin
+                    next_state = ENSEMBLE_WITH_MEM_HOLD;
+                end
+                ENSEMBLE_WITH_MEM_FETCH_Q:
+                begin
+                    next_state = ENSEMBLE_WITH_MEM_UPDATE;
+                end
+                ENSEMBLE_WITH_MEM_UPDATE:
+                begin
+                    next_state = ENSEMBLE_WITH_MEM_GENERATE_1;
+                end
+                default:
+                begin
+                    next_state = ENSEMBLE_RESET_STATE;
+                end
+            endcase
+        end
     end    
 
     always @(posedge clk)
     begin
-        storage_CE <= storage_CE_next;
-        flipping_CE <= flipping_CE_next;
-        reset_flipping <= reset_flipping_next;
-        neuron_ensemble_control <= neuron_ensemble_control_next;
+        current_state <= next_state;
+
+        case(current_state)
+            ENSEMBLE_WITH_MEM_RESET:
+            begin
+                storage_CE <= 1;
+                flipping_CE <= 0;
+                reset_flipping <= 1;
+                CE_output_from_distributed_graph <= 0;
+                neuron_ensemble_control <= ENSEMBLE_RESET_STATE;
+                incrementing <= 1'bX;
+                Q_out_reg <= {NEURON_WIDTH{1'bX}};
+                spike_reg <= 0;
+            end
+            ENSEMBLE_WITH_MEM_GENERATE_1:
+            begin 
+                storage_CE <= 1;
+                flipping_CE <= 1;
+                reset_flipping <= 0;
+                CE_output_from_distributed_graph <= 0;
+                neuron_ensemble_control <= ENSEMBLE_GENERATE_STATE;
+                incrementing <= 1'bX;
+                Q_out_reg <= {NEURON_WIDTH{1'bX}};
+                spike_reg <= 0;
+            end
+            ENSEMBLE_WITH_MEM_GENERATE_2:
+            begin
+                storage_CE <= 1;
+                flipping_CE <= 1;
+                reset_flipping <= 0;
+                CE_output_from_distributed_graph <= 0;
+                neuron_ensemble_control <= ENSEMBLE_GENERATE_STATE;
+                incrementing <= 1'bX;
+                Q_out_reg <= {NEURON_WIDTH{1'bX}};
+                spike_reg <= spike_out;
+            end
+            ENSEMBLE_WITH_MEM_HOLD:
+            begin 
+                storage_CE <= 0;
+                flipping_CE <= 0;
+                reset_flipping <= 0;
+                CE_output_from_distributed_graph <= 0;
+                neuron_ensemble_control <= ENSEMBLE_GENERATE_STATE;
+                incrementing <= 1'bX;
+                Q_out_reg <= {NEURON_WIDTH{1'bX}};
+                spike_reg <= 0;
+            end
+            ENSEMBLE_WITH_MEM_FETCH_Q:
+            begin
+                storage_CE <= 0;
+                flipping_CE <= 0;
+                reset_flipping <= 0;
+                CE_output_from_distributed_graph <= 1;
+                neuron_ensemble_control <= ENSEMBLE_GENERATE_STATE;
+                incrementing <= should_increment;
+                Q_out_reg <= {NEURON_WIDTH{1'bX}};
+                spike_reg <= 0;
+            end
+            ENSEMBLE_WITH_MEM_UPDATE:
+            begin
+                Q_out_reg <= Q_out;
+                storage_CE <= 1;
+                flipping_CE <= 0;
+                reset_flipping <= 0;
+                CE_output_from_distributed_graph <= 1;
+                incrementing <= incrementing;
+                if (incrementing)
+                begin
+                    neuron_ensemble_control <= ENSEMBLE_INC_STATE;
+                end
+                else
+                begin
+                    neuron_ensemble_control <= ENSEMBLE_SUB_STATE;
+                end
+                spike_reg <= 0;
+            end
+            default:
+            begin
+                Q_out_reg <= {NEURON_WIDTH{1'bX}};
+                storage_CE <= 0;
+                flipping_CE <= 0;
+                reset_flipping <= 1;
+                CE_output_from_distributed_graph <= 0;
+                neuron_ensemble_control <= ENSEMBLE_RESET_STATE;
+                incrementing <= 1'bX;              
+                spike_reg <= 0;
+            end
+        endcase
     end
 
 
