@@ -26,7 +26,7 @@ module temperature_mapping #(parameter N=7, parameter OUT_WIDTH=16, parameter LU
     input wire [N-1: 0] x,
     output wire [OUT_WIDTH-1: 0] y
 );
-    parameter LUT_SIZE = 1 << N;
+    localparam LUT_SIZE = 1 << N;
     reg [OUT_WIDTH:1] distribution [0:LUT_SIZE-1];
     
     initial 

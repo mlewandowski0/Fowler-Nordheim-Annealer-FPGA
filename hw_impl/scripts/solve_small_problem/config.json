@@ -1,7 +1,7 @@
 {
     "DTYPE": "float32",
     "MAX_ITER": 10,
-    "PROBLEM_PATH": "./toy_problem.npy",
+    "PROBLEM_PATH": "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/scripts/solve_small_problem/toy_problem.npy",
     "THLD_MAX": 8e4,
     "THLD_DELTA": 2e-3,
     "LOG_FILE": "./logs/approximations",

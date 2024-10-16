@@ -3,178 +3,197 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="neuron_ensemble_with_memory_tb_behav.wdb" id="1">
+      <db_ref path="graph_n12_machine_tb_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
-            <top_module name="neuron_ensemble_with_memory_tb" />
+            <top_module name="graph_n12_machine_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="14.121 ns"></ZoomStartTime>
-      <ZoomEndTime time="118.122 ns"></ZoomEndTime>
-      <Cursor1Time time="100.123 ns"></Cursor1Time>
+      <ZoomStartTime time="208.546 ns"></ZoomStartTime>
+      <ZoomEndTime time="517.947 ns"></ZoomEndTime>
+      <Cursor1Time time="5,180.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="247"></NameColumnWidth>
-      <ValueColumnWidth column_width="193"></ValueColumnWidth>
+      <NameColumnWidth column_width="205"></NameColumnWidth>
+      <ValueColumnWidth column_width="124"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="30" />
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/clk">
+   <WVObjectSize size="39" />
+   <wvobject type="logic" fp_name="/graph_n12_machine_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/reset_module">
-      <obj_property name="ElementShortName">reset_module</obj_property>
-      <obj_property name="ObjectShortName">reset_module</obj_property>
+   <wvobject type="logic" fp_name="/graph_n12_machine_tb/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/update_memory">
-      <obj_property name="ElementShortName">update_memory</obj_property>
-      <obj_property name="ObjectShortName">update_memory</obj_property>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit0/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">neuron_states_storage[0:3][3:0]</obj_property>
+      <obj_property name="ObjectShortName">neuron_states_storage[0:3][3:0]</obj_property>
+      <obj_property name="label">UNIT0_neuron_states_storage[0:3][3:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/current_state">
-      <obj_property name="ElementShortName">current_state[2:0]</obj_property>
-      <obj_property name="ObjectShortName">current_state[2:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit0/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">membrane_storage[0:3][15:0]</obj_property>
+      <obj_property name="ObjectShortName">membrane_storage[0:3][15:0]</obj_property>
+      <obj_property name="label">UNIT0_membrane_storage[0:3][15:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/halt">
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit0/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">x[6:0]</obj_property>
+      <obj_property name="ObjectShortName">x[6:0]</obj_property>
+      <obj_property name="label">UNIT0_temperature</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit0/neuron_ensemble_inst/flipping_unit_tb/temperature_multiplier_out">
+      <obj_property name="ElementShortName">temperature_multiplier_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">temperature_multiplier_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit0/neuron_ensemble_inst/flipping_unit_tb/noise_times_temp">
+      <obj_property name="ElementShortName">noise_times_temp[15:0]</obj_property>
+      <obj_property name="ObjectShortName">noise_times_temp[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit0/neuron_ensemble_inst/flipping_unit_tb/noise_out">
+      <obj_property name="ElementShortName">noise_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">noise_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit0/neuron_ensemble_inst/flipping_unit_tb/flipping_output">
+      <obj_property name="ElementShortName">flipping_output[15:0]</obj_property>
+      <obj_property name="ObjectShortName">flipping_output[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit1/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">neuron_states_storage[0:3][3:0]</obj_property>
+      <obj_property name="ObjectShortName">neuron_states_storage[0:3][3:0]</obj_property>
+      <obj_property name="label">UNIT1_neuron_states_storage[0:3][3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit1/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">membrane_storage[0:3][15:0]</obj_property>
+      <obj_property name="ObjectShortName">membrane_storage[0:3][15:0]</obj_property>
+      <obj_property name="label">UNIT1_membrane_storage[0:3][15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit1/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">x[6:0]</obj_property>
+      <obj_property name="ObjectShortName">x[6:0]</obj_property>
+      <obj_property name="label">UNIT1_temperature</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit1/neuron_ensemble_inst/flipping_unit_tb/temperature_multiplier_out">
+      <obj_property name="ElementShortName">temperature_multiplier_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">temperature_multiplier_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit1/neuron_ensemble_inst/flipping_unit_tb/noise_times_temp">
+      <obj_property name="ElementShortName">noise_times_temp[15:0]</obj_property>
+      <obj_property name="ObjectShortName">noise_times_temp[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit1/neuron_ensemble_inst/flipping_unit_tb/noise_out">
+      <obj_property name="ElementShortName">noise_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">noise_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit1/neuron_ensemble_inst/flipping_unit_tb/flipping_output">
+      <obj_property name="ElementShortName">flipping_output[15:0]</obj_property>
+      <obj_property name="ObjectShortName">flipping_output[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit2/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">neuron_states_storage[0:3][3:0]</obj_property>
+      <obj_property name="ObjectShortName">neuron_states_storage[0:3][3:0]</obj_property>
+      <obj_property name="label">UNIT2_neuron_states_storage[0:3][3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit2/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">membrane_storage[0:3][15:0]</obj_property>
+      <obj_property name="ObjectShortName">membrane_storage[0:3][15:0]</obj_property>
+      <obj_property name="label">UNIT2_membrane_storage[0:3][15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit2/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">x[6:0]</obj_property>
+      <obj_property name="ObjectShortName">x[6:0]</obj_property>
+      <obj_property name="label">UNIT2_temperature</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit2/neuron_ensemble_inst/flipping_unit_tb/temperature_multiplier_out">
+      <obj_property name="ElementShortName">temperature_multiplier_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">temperature_multiplier_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit2/neuron_ensemble_inst/flipping_unit_tb/noise_times_temp">
+      <obj_property name="ElementShortName">noise_times_temp[15:0]</obj_property>
+      <obj_property name="ObjectShortName">noise_times_temp[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit2/neuron_ensemble_inst/flipping_unit_tb/noise_out">
+      <obj_property name="ElementShortName">noise_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">noise_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit2/neuron_ensemble_inst/flipping_unit_tb/flipping_output">
+      <obj_property name="ElementShortName">flipping_output[15:0]</obj_property>
+      <obj_property name="ObjectShortName">flipping_output[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/graph_n12_machine_tb/halt">
       <obj_property name="ElementShortName">halt</obj_property>
       <obj_property name="ObjectShortName">halt</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/should_increment">
+   <wvobject type="logic" fp_name="/graph_n12_machine_tb/DUT/selector/add_mem">
+      <obj_property name="ElementShortName">add_mem</obj_property>
+      <obj_property name="ObjectShortName">add_mem</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/graph_n12_machine_tb/DUT/scheduler_instance/should_increment">
       <obj_property name="ElementShortName">should_increment</obj_property>
       <obj_property name="ObjectShortName">should_increment</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/decrease_temp">
-      <obj_property name="ElementShortName">decrease_temp</obj_property>
-      <obj_property name="ObjectShortName">decrease_temp</obj_property>
+   <wvobject type="logic" fp_name="/graph_n12_machine_tb/DUT/scheduler_instance/update_memories">
+      <obj_property name="ElementShortName">update_memories</obj_property>
+      <obj_property name="ObjectShortName">update_memories</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage">
-      <obj_property name="ElementShortName">membrane_storage[0:3][15:0]</obj_property>
-      <obj_property name="ObjectShortName">membrane_storage[0:3][15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage[0]">
-         <obj_property name="ElementShortName">[0][15:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][15:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage[1]">
-         <obj_property name="ElementShortName">[1][15:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][15:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage[2]">
-         <obj_property name="ElementShortName">[2][15:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][15:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage[3]">
-         <obj_property name="ElementShortName">[3][15:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][15:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
+   <wvobject type="logic" fp_name="/graph_n12_machine_tb/DUT/unit0/should_increment">
+      <obj_property name="ElementShortName">should_increment</obj_property>
+      <obj_property name="ObjectShortName">should_increment</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage">
-      <obj_property name="ElementShortName">neuron_states_storage[0:3][3:0]</obj_property>
-      <obj_property name="ObjectShortName">neuron_states_storage[0:3][3:0]</obj_property>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/scheduler_instance/membrane_reg">
+      <obj_property name="ElementShortName">membrane_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">membrane_reg[15:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/write_neuron_state">
-      <obj_property name="ElementShortName">write_neuron_state</obj_property>
-      <obj_property name="ObjectShortName">write_neuron_state</obj_property>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/scheduler_instance/offset_reg">
+      <obj_property name="ElementShortName">offset_reg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">offset_reg[1:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/index_of_neuron_that_fired">
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/scheduler_instance/unit_number_reg">
+      <obj_property name="ElementShortName">unit_number_reg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">unit_number_reg[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/scheduler_instance/membrane_reg">
+      <obj_property name="ElementShortName">membrane_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">membrane_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/scheduler_instance/index_of_neuron_that_fired">
       <obj_property name="ElementShortName">index_of_neuron_that_fired[3:0]</obj_property>
       <obj_property name="ObjectShortName">index_of_neuron_that_fired[3:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/write_ensemble_seed">
-      <obj_property name="ElementShortName">write_ensemble_seed</obj_property>
-      <obj_property name="ObjectShortName">write_ensemble_seed</obj_property>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/scheduler_instance/current_state">
+      <obj_property name="ElementShortName">current_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/ensemble_seed">
-      <obj_property name="ElementShortName">ensemble_seed[2:0]</obj_property>
-      <obj_property name="ObjectShortName">ensemble_seed[2:0]</obj_property>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/scheduler_instance/curr_solution">
+      <obj_property name="ElementShortName">curr_solution[11:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_solution[11:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/write_flipping_seed">
-      <obj_property name="ElementShortName">write_flipping_seed</obj_property>
-      <obj_property name="ObjectShortName">write_flipping_seed</obj_property>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/scheduler_instance/cuts_best">
+      <obj_property name="ElementShortName">cuts_best[15:0]</obj_property>
+      <obj_property name="ObjectShortName">cuts_best[15:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/flipping_seed">
-      <obj_property name="ElementShortName">flipping_seed[5:0]</obj_property>
-      <obj_property name="ObjectShortName">flipping_seed[5:0]</obj_property>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit0/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage">
+      <obj_property name="ElementShortName">membrane_storage[0:3][15:0]</obj_property>
+      <obj_property name="ObjectShortName">membrane_storage[0:3][15:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/membrane_data_in">
-      <obj_property name="ElementShortName">membrane_data_in[15:0]</obj_property>
-      <obj_property name="ObjectShortName">membrane_data_in[15:0]</obj_property>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/unit0/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage">
+      <obj_property name="ElementShortName">neuron_states_storage[0:3][3:0]</obj_property>
+      <obj_property name="ObjectShortName">neuron_states_storage[0:3][3:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/neuron_state_in">
-      <obj_property name="ElementShortName">neuron_state_in[3:0]</obj_property>
-      <obj_property name="ObjectShortName">neuron_state_in[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/G_memory/enable">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">enable</obj_property>
-      <obj_property name="ObjectShortName">enable</obj_property>
-      <obj_property name="label">Graph_memory_enable</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/G_memory/Q_out">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">Q_out[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Q_out[3:0]</obj_property>
-      <obj_property name="label">Graph_memory_output[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/G_memory/memory">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">memory[0:11][3:0]</obj_property>
-      <obj_property name="ObjectShortName">memory[0:11][3:0]</obj_property>
-      <obj_property name="label">graph_memory[0:11][3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/index_selection/lfsr/state">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">state[3:1]</obj_property>
-      <obj_property name="ObjectShortName">state[3:1]</obj_property>
-      <obj_property name="label">index_sel_state[3:1]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/flipping_unit_tb/noise_generator/noise_source/state">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">state[6:1]</obj_property>
-      <obj_property name="ObjectShortName">state[6:1]</obj_property>
-      <obj_property name="label">noise_gen_state[6:1]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_state">
-      <obj_property name="ElementShortName">neuron_state[3:0]</obj_property>
-      <obj_property name="ObjectShortName">neuron_state[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/selected_membrane">
-      <obj_property name="ElementShortName">selected_membrane[15:0]</obj_property>
-      <obj_property name="ObjectShortName">selected_membrane[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/idx">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">idx[1:0]</obj_property>
-      <obj_property name="ObjectShortName">idx[1:0]</obj_property>
-      <obj_property name="label">neuron_ensemble_idx[1:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/write">
-      <obj_property name="ElementShortName">write</obj_property>
-      <obj_property name="ObjectShortName">write</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/DUT/neuron_ensemble_inst/neuron_ensemble_storage_inst/CE">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">CE</obj_property>
-      <obj_property name="ObjectShortName">CE</obj_property>
-      <obj_property name="label">neuron_ensemble_Storage</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/neuron_ensemble_with_memory_tb/spike">
-      <obj_property name="ElementShortName">spike</obj_property>
-      <obj_property name="ObjectShortName">spike</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/unit_number">
-      <obj_property name="ElementShortName">unit_number[1:0]</obj_property>
-      <obj_property name="ObjectShortName">unit_number[1:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuron_ensemble_with_memory_tb/selected_idx_offset">
-      <obj_property name="ElementShortName">selected_idx_offset[1:0]</obj_property>
-      <obj_property name="ObjectShortName">selected_idx_offset[1:0]</obj_property>
+   <wvobject type="array" fp_name="/graph_n12_machine_tb/DUT/scheduler_instance/curr_cuts">
+      <obj_property name="ElementShortName">curr_cuts[15:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_cuts[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
 </wave_config>

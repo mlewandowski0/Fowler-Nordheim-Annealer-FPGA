@@ -33,20 +33,28 @@ parameter PIPELINED_ENSEMBLE_STORAGE=1)
     input wire [1:0] control, // 0: GENERATE_STATE, 1: INC_STATE, 2: SUB_STATE, 3: RESET_STATE
     input wire [(1 << NEURON_WIDTH)-1:0] Q_inp,
 
+    input wire update_ds,
+    input wire [NEURON_WIDTH-1:0] idx_offset_to_update,
+
     output wire                                  spike,
     output wire [UNIT_WIDTH-1:0]                 unit_number,
-    output wire [NEURON_WIDTH-1:0]               offset
+    output wire [NEURON_WIDTH-1:0]               offset,
+    output wire [MEMBRANE_WIDTH-1:0]             membrane,
+    output wire                                  add_mem
 
 );
 
 wire [NEURON_WIDTH-1:0] selected_idx_offset;
-wire signed [MEMBRANE_WIDTH-1:0] selected_membrane;
 wire signed [LUT_FLIPPING_WIDTH-1:0] flipping_output;
+wire signed [MEMBRANE_WIDTH-1:0] selected_membrane;
 wire [3:0] neuron_state;
 
 reg [NEURON_WIDTH-1:0] selected_idx_offset_reg;
 reg signed [MEMBRANE_WIDTH-1:0] selected_membrane_reg;
+reg add_reg;
 reg [3:0] neuron_state_reg;
+
+
 
 neuron_ensemble_storage #(.LFSR_WIDTH(NEURON_SEL_LFSR_WIDTH),
                           .NEURON_WIDTH(NEURON_WIDTH),
@@ -64,6 +72,9 @@ neuron_ensemble_storage #(.LFSR_WIDTH(NEURON_SEL_LFSR_WIDTH),
                                   .control(control),                        // 0: GENERATE_STATE, 1: INC_STATE, 2: SUB_STATE, 3: RESET_STATE
                                   .Q_inp(Q_inp),
                                  
+                                  .update_ds(update_ds),
+                                  .idx_offset_to_update(idx_offset_to_update),
+
                                  .selected_idx_offset(selected_idx_offset),
                                  .selected_membrane(selected_membrane),
                                  .neuron_state(neuron_state));
@@ -127,11 +138,16 @@ flipping_unit #(.NOISE_SOURCE_WIDTH(NOISE_SOURCE_WIDTH),
 
     // 
     wire signed [MEMBRANE_WIDTH-1:0] membrane_compare; 
+    
+    
     assign membrane_compare = s_p == 1 ? selected_membrane_reg : -selected_membrane_reg;
 
 
     assign spike = (flipping_output < membrane_compare);
     assign unit_number = UNIT_NO;
     assign offset = selected_idx_offset_reg;
+    assign membrane = selected_membrane_reg;
+    assign add_mem = s_n;
+
 
 endmodule

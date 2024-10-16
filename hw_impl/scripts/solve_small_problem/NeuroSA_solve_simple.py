@@ -7,6 +7,7 @@ from tqdm import tqdm
 from utils import *
 import json
 import argparse
+from math import log2, ceil
 
 
 name_set_guard = set()
@@ -134,7 +135,7 @@ if __name__ == "__main__":
     global config
     
     parser = argparse.ArgumentParser(description='Run NeuroSA')
-    parser.add_argument('config', type=str, help='path to the config file')
+    parser.add_argument('-config', default="/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/scripts/solve_small_problem/config.json", type=str, help='path to the config file')
     args = parser.parse_args()
     
     config = CONFIG(args.config)
@@ -291,7 +292,7 @@ if __name__ == "__main__":
                 # s_spike = time.time_ns()
                 # ds_p[p] = s_n[p] > 0
                 # ds_n[p] = s_p[p] > 0
-                print(f"wchi selected : p = {p}")
+                print(f"which selected : p = {p}")
                 
                 print("before ds_p", ds_p)
                 print("before ds_n", ds_n)
@@ -317,10 +318,20 @@ if __name__ == "__main__":
                 vmem += delta
                 print("membranes : ", vmem)                
             
+                print("transmitted membrane value Vmem[p]=", vmem[p], ", add=", ds_p[p])
                 d_cuts = (ds_p[p] - ds_n[p]) * vmem[p]
                 print(f"d_cuts = {d_cuts}")
 
                 curr_cuts -= d_cuts
+                
+                width = ceil(log2(N // (N // config.UNITS)))
+                inp_unit_number = f"{width}'b" + format(p // (N // config.UNITS), f'0{width}b')
+
+                width = ceil(log2(config.UNITS))        
+                inp_offset = bin(p % config.UNITS)
+                inp_offset = f"{width}'b" + format(p % (N // config.UNITS), f'0{width}b')
+                
+                print(f"to put into simulator : {inp_unit_number},{inp_offset},{int(vmem[p])},{int(ds_p[p])}")
 
                 # e_update = time.time_ns()
                 if curr_cuts.item() > best_maxcuts:
@@ -363,3 +374,6 @@ if __name__ == "__main__":
                 thld += config.THLD_DELTA * config.COUNTER
 
         # print(f'#spikes:{num_spikes}, #maxcuts{maxcuts}, best{best_maxcuts}') 
+        
+    print("best solution : ", best_maxcuts)
+    print("argmax best solution : ", argmin_s_p[::-1])

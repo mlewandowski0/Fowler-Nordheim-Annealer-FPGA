@@ -65,7 +65,8 @@ reg [3:0] neuron_state_in;
 wire                            spike;
 wire [UNIT_WIDTH-1:0]           unit_number;
 wire [NEURON_WIDTH-1:0]         selected_idx_offset;
-
+wire [MEMBRANE_WIDTH-1:0]       membrane;
+wire                            add_mem;
 
 neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
                               .GRAPH_DISTRIB_FILE(GRAPH_DISTRIB_FILE),
@@ -105,7 +106,9 @@ neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
 
                                 .spike(spike),
                                 .unit_number(unit_number),
-                                .offset(selected_idx_offset)
+                                .offset(selected_idx_offset),
+                                .membrane(membrane),
+                                .add_mem(add_mem)
                              );
 
     initial
@@ -117,7 +120,6 @@ neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
 
     initial
     begin
-            
             reset_module = 0;
             halt = 0;
             update_memory = 0;
@@ -164,10 +166,12 @@ neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
             membrane_data_in = 16'd3;
 
             #(CLK_PERIOD);
+
             halt = 0;
             write_neuron_state = 0;
             index_of_neuron_that_fired = 'd1;
             update_memory = 1;
+            
             #(CLK_PERIOD);
             update_memory = 0;
  
@@ -175,6 +179,7 @@ neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
             index_of_neuron_that_fired = 'd3;
             should_increment = 0;
             update_memory = 1;
+
             #(CLK_PERIOD);
             update_memory = 0;
 
@@ -182,6 +187,7 @@ neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
             index_of_neuron_that_fired = 'd3;
             should_increment = 1;
             update_memory = 1;
+
             #(CLK_PERIOD);
             update_memory = 0;            
 
@@ -189,6 +195,7 @@ neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
             index_of_neuron_that_fired = 'd3;
             should_increment = 0;
             update_memory = 1;
+
             #(CLK_PERIOD);
             update_memory = 0;
 
@@ -196,6 +203,7 @@ neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
             index_of_neuron_that_fired = 'd5;
             should_increment = 0;
             update_memory = 1;
+
             #(CLK_PERIOD);
             update_memory = 0;
 
@@ -203,6 +211,7 @@ neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
             index_of_neuron_that_fired = 'd7;
             should_increment = 0;
             update_memory = 1;
+
             #(CLK_PERIOD);
             update_memory = 0;
 
@@ -210,6 +219,7 @@ neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
             index_of_neuron_that_fired = 'd7;
             should_increment = 1;
             update_memory = 1;
+
             #(CLK_PERIOD);
             update_memory = 0;
             
@@ -217,6 +227,7 @@ neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
             index_of_neuron_that_fired = 'd7;
             should_increment = 0;
             update_memory = 1;
+
             #(CLK_PERIOD);
             update_memory = 0;
 
@@ -224,6 +235,7 @@ neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
             index_of_neuron_that_fired = 'd9;
             should_increment = 0;
             update_memory = 1;
+
             #(CLK_PERIOD);
             update_memory = 0;
 
@@ -231,10 +243,11 @@ neuron_ensemble_with_memory #(.GRAPH_WIDTH(GRAPH_WIDTH),
             index_of_neuron_that_fired = 'd11;
             should_increment = 0;
             update_memory = 1;
+
             #(CLK_PERIOD);
             update_memory = 0;
 
-            #(40 * CLK_PERIOD);
+            #(100 * CLK_PERIOD);
 
             $finish;
     end

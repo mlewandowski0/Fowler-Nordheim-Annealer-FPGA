@@ -63,3 +63,10 @@ while (iter < MAX_ITER)
     thld = thld + delta_thld
     iter += 1;
 }
+
+
+
+U =   Q[0][0] + Q[0][1] + Q[0][2] ... + Q[0][N]
+U' = -Q[0][0] + Q[0][1] + Q[0][2] ... + Q[0][N]
+
+U' = U - 2 * Q[0][0]

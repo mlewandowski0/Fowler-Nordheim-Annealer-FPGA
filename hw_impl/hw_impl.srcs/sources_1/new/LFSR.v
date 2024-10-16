@@ -39,16 +39,13 @@ reg XNORed;
 assign out = state;
 
 always @(posedge clk) begin
-    if (chip_enable) 
+    if (write_seed)
     begin
-        if (write_seed) 
-        begin
-            state <= seed;
-        end
-        else 
-        begin
-            state <= {state[BITS-1:1], XNORed};
-        end
+       state <= seed;
+    end
+    else if (chip_enable) 
+    begin
+        state <= {state[BITS-1:1], XNORed};
     end
 end
 

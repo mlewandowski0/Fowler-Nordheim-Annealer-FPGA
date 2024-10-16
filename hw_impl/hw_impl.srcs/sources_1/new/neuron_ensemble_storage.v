@@ -15,10 +15,13 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
 
                                   input wire [1:0] control, // 0: GENERATE_STATE, 1: INC_STATE, 2: SUB_STATE, 3: RESET_STATE
                                   input wire [(1 << NEURON_WIDTH)-1:0] Q_inp,
+
+                                  input wire update_ds,
+                                  input wire [NEURON_WIDTH-1:0] idx_offset_to_update,
                                  
-                                 output wire [NEURON_WIDTH-1:0]      selected_idx_offset,
+                                 output wire [NEURON_WIDTH-1:0]             selected_idx_offset,
                                  output wire signed [MEMBRANE_WIDTH-1:0]    selected_membrane,
-                                 output wire [3:0]                   neuron_state
+                                 output wire [3:0]                          neuron_state                                 
                                  );
 
 
@@ -53,7 +56,7 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
         integer i;
 
 
-        assign selected_membrane = CE ? membrane_storage[selected_idx_offset] : {NEURON_WIDTH{1'bX}};
+        assign selected_membrane = CE ? membrane_storage[selected_idx_offset] : {MEMBRANE_WIDTH{1'bX}};
         assign neuron_state = CE ? neuron_states_storage[selected_idx_offset] : 4'bXXXX; 
 
 
@@ -65,8 +68,7 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
                 neuron_states_storage[idx] <= neuron_state_in;
                 idx <= idx + 1;
             end
-
-            else if (CE)
+            else
             begin
                 case (control)
                     ENSEMBLE_RESET_STATE: 
@@ -82,6 +84,32 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
                                 membrane_storage[i] <= membrane_storage[i] + 2;
                             end
                         end 
+
+
+                        /*
+                            neuron_state[3] = ds_p
+                            neuron_state[2] = ds_n
+                            neuron_state[1] = s_p
+                            neuron_state[0] = s_n
+                        
+                            the state is also asserted in the FETCH phase, 
+                        */
+                         if (update_ds)
+                         begin
+                            // ds_p[p] = s_n[p] > 0
+                            neuron_states_storage[idx_offset_to_update][3] <= neuron_states_storage[idx_offset_to_update][0];
+
+                            // ds_n[p] = s_p[p] > 0
+                            neuron_states_storage[idx_offset_to_update][2] <= neuron_states_storage[idx_offset_to_update][1];
+
+                            // s_p[p] = np.logical_not(s_p[p])
+                            neuron_states_storage[idx_offset_to_update][1] <= ~neuron_states_storage[idx_offset_to_update][1];
+
+                            // s_n[p] = np.logical_not(s_n[p])
+                            neuron_states_storage[idx_offset_to_update][0] <= ~neuron_states_storage[idx_offset_to_update][0];
+                         end
+
+
                     end
                     ENSEMBLE_SUB_STATE:
                     begin
@@ -93,10 +121,34 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
                             end
                         end
 
+                        /*
+                            neuron_state[3] = ds_p
+                            neuron_state[2] = ds_n
+                            neuron_state[1] = s_p
+                            neuron_state[0] = s_n
+                        
+                            
+                            the state is also asserted in the FETCH phase, 
+                        */
+                         if (update_ds)
+                         begin
+                            // ds_p[p] = s_n[p] > 0
+                            neuron_states_storage[idx_offset_to_update][3] <= neuron_states_storage[idx_offset_to_update][0];
+
+                            // ds_n[p] = s_p[p] > 0
+                            neuron_states_storage[idx_offset_to_update][2] <= neuron_states_storage[idx_offset_to_update][1];
+
+                            // s_p[p] = np.logical_not(s_p[p])
+                            neuron_states_storage[idx_offset_to_update][1] <= ~neuron_states_storage[idx_offset_to_update][1];
+
+                            // s_n[p] = np.logical_not(s_n[p])
+                            neuron_states_storage[idx_offset_to_update][0] <= ~neuron_states_storage[idx_offset_to_update][0];
+                         end
+
+
                     end
                     ENSEMBLE_GENERATE_STATE:
                     begin
-                         
                     end
                     default:
                     begin  

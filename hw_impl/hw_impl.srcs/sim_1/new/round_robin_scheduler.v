@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 10/10/2024 04:09:10 PM
+// Create Date: 10/11/2024 03:40:27 PM
 // Design Name: 
-// Module Name: scheduler
+// Module Name: round_robin_scheduler
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,14 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module selector_units_eq_3 
-#(parameter UNITS = 3,
-  parameter UNIT_WIDTH=2)
-(
-    input wire [UNITS-1:0] spikes,
-    output wire [UNIT_WIDTH-1:0] unit[:0],
-    output wire [UNITS-1:0] selected_unit  
-);
+module round_robin_scheduler(
 
-
+    );
 endmodule

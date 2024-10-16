@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1728383335" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/adder.dcp">
   <File Type="RDS-DCP" Name="neuron_ensemble_with_memory.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="neuron_ensemble_with_memory_utilization_synth.pb"/>
+  <File Type="RDS-UTIL-PB" Name="adder_utilization_synth.pb"/>
   <File Type="PA-TCL" Name="neuron_ensemble_with_memory.tcl"/>
-  <File Type="RDS-UTIL" Name="neuron_ensemble_with_memory_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="adder_utilization_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="neuron_ensemble_with_memory_reports.tcl"/>
   <File Type="RDS-RDS" Name="neuron_ensemble_with_memory.vds"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">

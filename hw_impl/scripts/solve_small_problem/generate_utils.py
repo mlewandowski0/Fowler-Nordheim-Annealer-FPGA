@@ -80,7 +80,7 @@ def int_to_signed_binary_string(value, width):
 def serialize_matrix(matrix, filename):
     with open(filename, "w") as f:
         for i,el in enumerate(matrix):
-            els = "".join([str(val) for val in el])
+            els = "".join([str(val) for val in el[::-1]])
             f.write(els)
             if i != len(matrix) -1 :
                 f.write("\n")
