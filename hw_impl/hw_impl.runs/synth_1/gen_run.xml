@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1728383335" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/adder.dcp">
-  <File Type="RDS-DCP" Name="neuron_ensemble_with_memory.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="adder_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="neuron_ensemble_with_memory.tcl"/>
-  <File Type="RDS-UTIL" Name="adder_utilization_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="neuron_ensemble_with_memory_reports.tcl"/>
-  <File Type="RDS-RDS" Name="neuron_ensemble_with_memory.vds"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1729174019" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/adder.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="graph_n12_machine_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="graph_n12_machine.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="graph_n12_machine_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="graph_n12_machine_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="graph_n12_machine_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="graph_n12_machine.vds"/>
+  <File Type="REPORTS-TCL" Name="graph_n12_machine_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="graph_n12_machine_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="graph_n12_machine.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/DEFINES.v">
+      <FileInfo>
+        <Attr Name="IsGlobalInclude" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/LFSR.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -99,6 +110,27 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/neuron_ensemble_with_memory.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/scheduler.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/simple_priority_selector.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/temperature_mapping.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -141,7 +173,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/neuron_ensemble_with_memory.v">
+    <File Path="$PSRCDIR/sources_1/new/graph_n12_machine.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -188,6 +220,30 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/graph_processor_small.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/membrane_update.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/round_robin_priority_selector.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/temp_module.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -205,22 +261,6 @@
     <File Path="$PPRDIR/scripts/log_noise_LUT.mif">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/membrane_update.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/graph_processor_small.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -244,12 +284,21 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="neuron_ensemble_with_memory"/>
+      <Option Name="TopModule" Val="graph_n12_machine"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/hw_impl/system.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/system.xdc"/>
+        <Attr Name="ImportTime" Val="1499334979"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/hw_impl/system.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

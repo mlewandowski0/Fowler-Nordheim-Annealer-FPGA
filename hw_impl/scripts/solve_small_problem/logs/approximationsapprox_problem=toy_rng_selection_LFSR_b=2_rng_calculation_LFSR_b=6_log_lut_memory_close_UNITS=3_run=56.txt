@@ -1,2 +1,0 @@
-spikes,best_maxcuts,iter,thld,curr_cuts
-1,8.0,<built-in function iter>,1,8.0

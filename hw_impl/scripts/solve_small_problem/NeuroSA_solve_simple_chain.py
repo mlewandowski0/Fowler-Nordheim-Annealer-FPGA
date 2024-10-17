@@ -59,6 +59,8 @@ class CONFIG:
         self.LUT_THLD_MAX_MULTIPLES = get_with_default(config, "LUT_THLD_MAX_MULTIPLES", 3)
         
         self.LUT_APPROX_FILENAME = get_with_default(config, "LUT_APPROX_FILENAME", os.path.join("hardware","log_approximation_LUT.mem")) 
+        
+        self.SERIES_OF_FLIPS = get_with_default(config, "SERIES_OF_FLIPS", None)
 
 # create the approximations for the hardware-tricky parts (random number generation and 1/log(1 + thld/thld_max))
 
@@ -246,19 +248,15 @@ if __name__ == "__main__":
     log_file_name = "livetowin"
     while os.path.exists(log_file_name):
         i += 1
-        log_file_name = config.LOG_FILE + f"_UNITS={config.UNITS}" + f"_run={i}" + config.EXTENSION
-
+        log_file_name = f"livetowin_{i}"
         
-    if config.DEBUG:
-        log_file_name = "debug" + config.EXTENSION
-        config.MAX_ITER = 1000       
-
     print(f"saving to {log_file_name}")
 
     
     pb = tqdm(range(int(config.MAX_ITER)))
-    ps = [1, 3, 1, 0, 0, 3, 1, 2, 1, 0]
+    ps = config.SERIES_OF_FLIPS
     iter = 0
+    print(f"saving to {log_file_name}")
     with open(log_file_name, 'w') as f:
         for p in ps:
             print("\n\n")
@@ -312,7 +310,7 @@ if __name__ == "__main__":
                 print("transmitted membrane value Vmem[p]=", vmem[p], ", add=", ds_p[p])
                 d_cuts = (ds_p[p] - ds_n[p]) * vmem[p]
                 print(f"d_cuts = {d_cuts}, curr_cuts = {curr_cuts}, curr_cuts_after_update = {hex(int(curr_cuts - d_cuts))}")
-                f.write(f"d_cuts = {d_cuts}, curr_cuts = {curr_cuts}, curr_cuts_after_update = {hex(int(curr_cuts - d_cuts))}\n")
+                f.write(f"d_cuts = {d_cuts}, curr_cuts = {curr_cuts}, curr_cuts_after_update = {int(curr_cuts - d_cuts)}\n")
 
                 curr_cuts -= d_cuts
                 

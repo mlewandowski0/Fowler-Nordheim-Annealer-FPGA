@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/constrs_1/imports/hw_impl/system.xdc rfile:../../../hw_impl.srcs/constrs_1/imports/hw_impl/system.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:42 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN A20 [get_ports halt]
+set_property src_info {type:XDC file:1 line:43 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN B19 [get_ports reset]
+set_property src_info {type:XDC file:1 line:44 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN C20 [get_ports clk]

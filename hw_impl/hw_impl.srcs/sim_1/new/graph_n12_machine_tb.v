@@ -22,7 +22,7 @@
 
 module graph_n12_machine_tb();
 
-
+    localparam FILE_TO_SAVE     =   "graph_n12_machine_tb.txt";
     localparam NEURON_SEL_LFSR_WIDTH=3;
     localparam MEMBRANE_WIDTH=16;
     localparam NOISE_SOURCE_WIDTH=6;
@@ -41,6 +41,8 @@ module graph_n12_machine_tb();
     reg [2:0]                       write_ensemble_seed, write_flipping_seed;
     reg [MEMBRANE_WIDTH-1:0]        membrane_data_in;
     reg [3:0]                       neuron_state_in;
+
+    integer                         fd;
 
 
     graph_n12_machine 
@@ -76,7 +78,7 @@ module graph_n12_machine_tb();
 
     initial 
     begin
-        
+        fd = $fopen(FILE_TO_SAVE, "w");
         reset = 0;
         halt = 0;
         write_ensemble_seed = 0;
@@ -151,7 +153,16 @@ module graph_n12_machine_tb();
         halt = 0;
 
         #(500 * CLK_PERIOD);
+        $fclose(fd);
         $finish;
+    end
+
+    always @(posedge DUT.update_memory)
+    begin
+        if (DUT.scheduler_instance.should_increment)
+            $fdisplay(fd,"%d, %d, %d", DUT.idx_that_fired, -$signed(DUT.scheduler_instance.membrane_reg), DUT.scheduler_instance.curr_cuts);
+        else 
+            $fdisplay(fd,"%d, %d, %d", DUT.idx_that_fired, $signed(DUT.scheduler_instance.membrane_reg), DUT.scheduler_instance.curr_cuts);
     end
 
     

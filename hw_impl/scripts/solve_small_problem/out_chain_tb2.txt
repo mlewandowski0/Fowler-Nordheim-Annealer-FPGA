@@ -1,0 +1,1523 @@
+setting DTYPE to float32
+setting MAX_ITER to 10
+setting PROBLEM_PATH to /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/scripts/solve_small_problem/toy_problem.npy
+setting THLD_MAX to 80000.0
+setting THLD_DELTA to 0.002
+setting LOG_FILE to ./logs/approximations
+setting EXTENSION to .txt
+setting RNG_APPROX_SELECTION to LFSR
+setting RNG_APPROX_CALC to LFSR
+setting LOG_APPROX to lut
+setting RNG_APPROX_SELECTION_BITS to 2
+setting RNG_APPROX_SELECTION_SEED to 0
+setting RNG_APPROX_CALC_BITS to 6
+setting RNG_APPROX_CALC_SEED to 0
+setting UNITS to 3
+setting TAYLOR_ORDER to 1
+setting PADE_ORDER to 1
+setting DEBUG to 0
+setting MEMORY_CLOSE to 1
+setting COUNTER to 128
+setting LUT_NBITS to 7
+setting LUT_THLD_MAX_MULTIPLES to 2.5
+key not found, setting LUT_APPROX_FILENAME to hardware/log_approximation_LUT.mem
+setting SERIES_OF_FLIPS to [1, 3, 1, 0, 0, 3, 1, 3, 1, 0, 2, 2, 4, 2, 1, 2, 7, 0, 0, 2, 2, 5, 0, 9, 3, 2, 11, 4, 8, 2, 3, 0, 0, 3, 8, 8, 8, 8, 2, 5, 3, 9, 0, 2, 2, 0, 0, 1, 10, 3, 6, 11, 0, 1, 7, 1, 0, 7, 1, 1, 5, 7, 7]
+to save : ./logs/approximations
+rng for selection set to LFSR approximation, bits=2, seed=0b0
+rng for selection set to LFSR approximation, bits=2, seed=0b0
+rng for selection set to LFSR approximation, bits=2, seed=0b0
+rng for calculation set to LFSR approximation, bits=6, seed=0b0
+rng for calculation set to LFSR approximation, bits=6, seed=0b0
+rng for calculation set to LFSR approximation, bits=6, seed=0b0
+log approximation set to LUT
+size of ROM = 2048 bits [128 elements]
+
+
+
+
+Starting simulation
+
+
+
+
+Q : 
+[[0 1 0 0 0 1 0 0 0 1 0 0]
+ [1 0 1 0 1 1 1 0 1 0 1 1]
+ [0 1 0 1 1 1 0 0 1 1 1 0]
+ [0 0 1 0 0 0 1 1 1 1 1 0]
+ [0 1 1 0 0 1 0 1 1 0 0 0]
+ [1 1 1 0 1 0 1 0 1 1 1 1]
+ [0 1 0 1 0 1 0 1 0 1 0 1]
+ [0 0 0 1 1 0 1 0 1 1 1 1]
+ [0 1 1 1 1 1 0 1 0 1 1 1]
+ [1 0 1 1 0 1 1 1 1 0 1 0]
+ [0 1 1 1 0 1 0 1 1 1 0 0]
+ [0 1 0 0 0 1 1 1 1 0 0 0]]
+
+ ds_p :  [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+
+ ds_n :  [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+
+ s_p :  [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+
+ s_n :  [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+
+ Vmem :  [3. 8. 7. 6. 5. 9. 6. 7. 9. 8. 7. 5.]
+Curr cuts :  0.0
+
+
+
+Starting computing
+saving to livetowin_3
+saving to livetowin_3
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 1
+spiked
+which selected : p = 1
+before ds_p [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before s_p [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+after s_n [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+delta :  [-2. -0. -2. -0. -2. -2. -2. -0. -2. -0. -2. -2.]
+membranes :  [1. 8. 5. 6. 3. 7. 4. 7. 7. 8. 5. 3.]
+transmitted membrane value Vmem[p]= 8.0 , add= 0.0
+d_cuts = -8.0, curr_cuts = 0.0, curr_cuts_after_update = 0x8
+to put into simulator : 2'b00,2'b01,8,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 3
+spiked
+which selected : p = 3
+before ds_p [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+before s_p [1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [1. 0. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+after s_n [0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+delta :  [-0. -0. -2. -0. -0. -0. -2. -2. -2. -2. -2. -0.]
+membranes :  [1. 8. 3. 6. 3. 7. 2. 5. 5. 6. 3. 3.]
+transmitted membrane value Vmem[p]= 6.0 , add= 0.0
+d_cuts = -6.0, curr_cuts = 8.0, curr_cuts_after_update = 0xe
+to put into simulator : 2'b00,2'b11,6,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 1
+spiked
+which selected : p = 1
+before ds_p [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+before s_p [1. 0. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [1. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+after s_n [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+delta :  [2. 0. 2. 0. 2. 2. 2. 0. 2. 0. 2. 2.]
+membranes :  [3. 8. 5. 6. 5. 9. 4. 5. 7. 6. 5. 5.]
+transmitted membrane value Vmem[p]= 8.0 , add= 1.0
+d_cuts = 8.0, curr_cuts = 14.0, curr_cuts_after_update = 0x6
+to put into simulator : 2'b00,2'b01,8,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 0
+spiked
+which selected : p = 0
+before ds_p [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+before s_p [1. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [0. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+after s_n [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+delta :  [-0. -2. -0. -0. -0. -2. -0. -0. -0. -2. -0. -0.]
+membranes :  [3. 6. 5. 6. 5. 7. 4. 5. 7. 4. 5. 5.]
+transmitted membrane value Vmem[p]= 3.0 , add= 0.0
+d_cuts = -3.0, curr_cuts = 6.0, curr_cuts_after_update = 0x9
+to put into simulator : 2'b00,2'b00,3,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 0
+spiked
+which selected : p = 0
+before ds_p [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+before s_p [0. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [1. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+after s_n [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+delta :  [0. 2. 0. 0. 0. 2. 0. 0. 0. 2. 0. 0.]
+membranes :  [3. 8. 5. 6. 5. 9. 4. 5. 7. 6. 5. 5.]
+transmitted membrane value Vmem[p]= 3.0 , add= 1.0
+d_cuts = 3.0, curr_cuts = 9.0, curr_cuts_after_update = 0x6
+to put into simulator : 2'b00,2'b00,3,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 3
+spiked
+which selected : p = 3
+before ds_p [1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [1. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before s_p [1. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+after s_n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+delta :  [0. 0. 2. 0. 0. 0. 2. 2. 2. 2. 2. 0.]
+membranes :  [3. 8. 7. 6. 5. 9. 6. 7. 9. 8. 7. 5.]
+transmitted membrane value Vmem[p]= 6.0 , add= 1.0
+d_cuts = 6.0, curr_cuts = 6.0, curr_cuts_after_update = 0x0
+to put into simulator : 2'b00,2'b11,6,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 1
+spiked
+which selected : p = 1
+before ds_p [1. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before s_p [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+after s_n [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+delta :  [-2. -0. -2. -0. -2. -2. -2. -0. -2. -0. -2. -2.]
+membranes :  [1. 8. 5. 6. 3. 7. 4. 7. 7. 8. 5. 3.]
+transmitted membrane value Vmem[p]= 8.0 , add= 0.0
+d_cuts = -8.0, curr_cuts = 0.0, curr_cuts_after_update = 0x8
+to put into simulator : 2'b00,2'b01,8,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 3
+spiked
+which selected : p = 3
+before ds_p [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+before s_p [1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [1. 0. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+after s_n [0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+delta :  [-0. -0. -2. -0. -0. -0. -2. -2. -2. -2. -2. -0.]
+membranes :  [1. 8. 3. 6. 3. 7. 2. 5. 5. 6. 3. 3.]
+transmitted membrane value Vmem[p]= 6.0 , add= 0.0
+d_cuts = -6.0, curr_cuts = 8.0, curr_cuts_after_update = 0xe
+to put into simulator : 2'b00,2'b11,6,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 1
+spiked
+which selected : p = 1
+before ds_p [1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+before s_p [1. 0. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [1. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+after s_n [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+delta :  [2. 0. 2. 0. 2. 2. 2. 0. 2. 0. 2. 2.]
+membranes :  [3. 8. 5. 6. 5. 9. 4. 5. 7. 6. 5. 5.]
+transmitted membrane value Vmem[p]= 8.0 , add= 1.0
+d_cuts = 8.0, curr_cuts = 14.0, curr_cuts_after_update = 0x6
+to put into simulator : 2'b00,2'b01,8,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 0
+spiked
+which selected : p = 0
+before ds_p [1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+before s_p [1. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [0. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+after s_n [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+delta :  [-0. -2. -0. -0. -0. -2. -0. -0. -0. -2. -0. -0.]
+membranes :  [3. 6. 5. 6. 5. 7. 4. 5. 7. 4. 5. 5.]
+transmitted membrane value Vmem[p]= 3.0 , add= 0.0
+d_cuts = -3.0, curr_cuts = 6.0, curr_cuts_after_update = 0x9
+to put into simulator : 2'b00,2'b00,3,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 2
+spiked
+which selected : p = 2
+before ds_p [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+before s_p [0. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [0. 1. 0. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+after s_n [1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+delta :  [-0. -2. -0. -2. -2. -2. -0. -0. -2. -2. -2. -0.]
+membranes :  [3. 4. 5. 4. 3. 5. 4. 5. 5. 2. 3. 5.]
+transmitted membrane value Vmem[p]= 5.0 , add= 0.0
+d_cuts = -5.0, curr_cuts = 9.0, curr_cuts_after_update = 0xe
+to put into simulator : 2'b00,2'b10,5,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 2
+spiked
+which selected : p = 2
+before ds_p [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+before s_p [0. 1. 0. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [0. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+after s_n [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+delta :  [0. 2. 0. 2. 2. 2. 0. 0. 2. 2. 2. 0.]
+membranes :  [3. 6. 5. 6. 5. 7. 4. 5. 7. 4. 5. 5.]
+transmitted membrane value Vmem[p]= 5.0 , add= 1.0
+d_cuts = 5.0, curr_cuts = 14.0, curr_cuts_after_update = 0x9
+to put into simulator : 2'b00,2'b10,5,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 4
+spiked
+which selected : p = 4
+before ds_p [0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [1. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+before s_p [0. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [0. 1. 1. 0. 0. 1. 1. 1. 1. 1. 1. 1.]
+after s_n [1. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+delta :  [-0. -2. -2. -0. -0. -2. -0. -2. -2. -0. -0. -0.]
+membranes :  [3. 4. 3. 6. 5. 5. 4. 3. 5. 4. 5. 5.]
+transmitted membrane value Vmem[p]= 5.0 , add= 0.0
+d_cuts = -5.0, curr_cuts = 9.0, curr_cuts_after_update = 0xe
+to put into simulator : 2'b01,2'b00,5,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 2
+spiked
+which selected : p = 2
+before ds_p [0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [1. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [1. 0. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+before s_p [0. 1. 1. 0. 0. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [1. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [0. 1. 0. 0. 0. 1. 1. 1. 1. 1. 1. 1.]
+after s_n [1. 0. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+delta :  [-0. -2. -0. -2. -2. -2. -0. -0. -2. -2. -2. -0.]
+membranes :  [3. 2. 3. 4. 3. 3. 4. 3. 3. 2. 3. 5.]
+transmitted membrane value Vmem[p]= 3.0 , add= 0.0
+d_cuts = -3.0, curr_cuts = 14.0, curr_cuts_after_update = 0x11
+to put into simulator : 2'b00,2'b10,3,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 1
+spiked
+which selected : p = 1
+before ds_p [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [1. 0. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [1. 1. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+before s_p [0. 1. 0. 0. 0. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [1. 0. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [0. 0. 0. 0. 0. 1. 1. 1. 1. 1. 1. 1.]
+after s_n [1. 1. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+delta :  [-2. -0. -2. -0. -2. -2. -2. -0. -2. -0. -2. -2.]
+membranes :  [1. 2. 1. 4. 1. 1. 2. 3. 1. 2. 1. 3.]
+transmitted membrane value Vmem[p]= 2.0 , add= 0.0
+d_cuts = -2.0, curr_cuts = 17.0, curr_cuts_after_update = 0x13
+to put into simulator : 2'b00,2'b01,2,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 2
+spiked
+which selected : p = 2
+before ds_p [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [1. 1. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [1. 1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+before s_p [0. 0. 0. 0. 0. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [1. 1. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [0. 0. 1. 0. 0. 1. 1. 1. 1. 1. 1. 1.]
+after s_n [1. 1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+delta :  [0. 2. 0. 2. 2. 2. 0. 0. 2. 2. 2. 0.]
+membranes :  [1. 4. 1. 6. 3. 3. 2. 3. 3. 4. 3. 3.]
+transmitted membrane value Vmem[p]= 1.0 , add= 1.0
+d_cuts = 1.0, curr_cuts = 19.0, curr_cuts_after_update = 0x12
+to put into simulator : 2'b00,2'b10,1,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 7
+spiked
+which selected : p = 7
+before ds_p [0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [1. 1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+after ds_p [0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+before s_p [0. 0. 1. 0. 0. 1. 1. 1. 1. 1. 1. 1.]
+before s_n [1. 1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+after s_p [0. 0. 1. 0. 0. 1. 1. 0. 1. 1. 1. 1.]
+after s_n [1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+delta :  [-0. -0. -0. -2. -2. -0. -2. -0. -2. -2. -2. -2.]
+membranes :  [1. 4. 1. 4. 1. 3. 0. 3. 1. 2. 1. 1.]
+transmitted membrane value Vmem[p]= 3.0 , add= 0.0
+d_cuts = -3.0, curr_cuts = 18.0, curr_cuts_after_update = 0x15
+to put into simulator : 2'b01,2'b11,3,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 0
+spiked
+which selected : p = 0
+before ds_p [0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+after ds_p [1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+before s_p [0. 0. 1. 0. 0. 1. 1. 0. 1. 1. 1. 1.]
+before s_n [1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+after s_p [1. 0. 1. 0. 0. 1. 1. 0. 1. 1. 1. 1.]
+after s_n [0. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+delta :  [0. 2. 0. 0. 0. 2. 0. 0. 0. 2. 0. 0.]
+membranes :  [1. 6. 1. 4. 1. 5. 0. 3. 1. 4. 1. 1.]
+transmitted membrane value Vmem[p]= 1.0 , add= 1.0
+d_cuts = 1.0, curr_cuts = 21.0, curr_cuts_after_update = 0x14
+to put into simulator : 2'b00,2'b00,1,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 0
+spiked
+which selected : p = 0
+before ds_p [1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+after ds_p [0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+before s_p [1. 0. 1. 0. 0. 1. 1. 0. 1. 1. 1. 1.]
+before s_n [0. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+after s_p [0. 0. 1. 0. 0. 1. 1. 0. 1. 1. 1. 1.]
+after s_n [1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+delta :  [-0. -2. -0. -0. -0. -2. -0. -0. -0. -2. -0. -0.]
+membranes :  [1. 4. 1. 4. 1. 3. 0. 3. 1. 2. 1. 1.]
+transmitted membrane value Vmem[p]= 1.0 , add= 0.0
+d_cuts = -1.0, curr_cuts = 20.0, curr_cuts_after_update = 0x15
+to put into simulator : 2'b00,2'b00,1,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 2
+spiked
+which selected : p = 2
+before ds_p [0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+after ds_p [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [1. 1. 1. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+before s_p [0. 0. 1. 0. 0. 1. 1. 0. 1. 1. 1. 1.]
+before s_n [1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+after s_p [0. 0. 0. 0. 0. 1. 1. 0. 1. 1. 1. 1.]
+after s_n [1. 1. 1. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+delta :  [-0. -2. -0. -2. -2. -2. -0. -0. -2. -2. -2. -0.]
+membranes :  [ 1.  2.  1.  2. -1.  1.  0.  3. -1.  0. -1.  1.]
+transmitted membrane value Vmem[p]= 1.0 , add= 0.0
+d_cuts = -1.0, curr_cuts = 21.0, curr_cuts_after_update = 0x16
+to put into simulator : 2'b00,2'b10,1,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 2
+spiked
+which selected : p = 2
+before ds_p [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [1. 1. 1. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+after ds_p [0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+before s_p [0. 0. 0. 0. 0. 1. 1. 0. 1. 1. 1. 1.]
+before s_n [1. 1. 1. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+after s_p [0. 0. 1. 0. 0. 1. 1. 0. 1. 1. 1. 1.]
+after s_n [1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+delta :  [0. 2. 0. 2. 2. 2. 0. 0. 2. 2. 2. 0.]
+membranes :  [1. 4. 1. 4. 1. 3. 0. 3. 1. 2. 1. 1.]
+transmitted membrane value Vmem[p]= 1.0 , add= 1.0
+d_cuts = 1.0, curr_cuts = 22.0, curr_cuts_after_update = 0x15
+to put into simulator : 2'b00,2'b10,1,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 5
+spiked
+which selected : p = 5
+before ds_p [0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+after ds_p [0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [1. 1. 0. 1. 1. 1. 0. 1. 0. 0. 0. 0.]
+before s_p [0. 0. 1. 0. 0. 1. 1. 0. 1. 1. 1. 1.]
+before s_n [1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0.]
+after s_p [0. 0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 1.]
+after s_n [1. 1. 0. 1. 1. 1. 0. 1. 0. 0. 0. 0.]
+delta :  [-2. -2. -2. -0. -2. -0. -2. -0. -2. -2. -2. -2.]
+membranes :  [-1.  2. -1.  4. -1.  3. -2.  3. -1.  0. -1. -1.]
+transmitted membrane value Vmem[p]= 3.0 , add= 0.0
+d_cuts = -3.0, curr_cuts = 21.0, curr_cuts_after_update = 0x18
+to put into simulator : 2'b01,2'b01,3,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 0
+spiked
+which selected : p = 0
+before ds_p [0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [1. 1. 0. 1. 1. 1. 0. 1. 0. 0. 0. 0.]
+after ds_p [1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 0. 1. 1. 1. 0. 1. 0. 0. 0. 0.]
+before s_p [0. 0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 1.]
+before s_n [1. 1. 0. 1. 1. 1. 0. 1. 0. 0. 0. 0.]
+after s_p [1. 0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 1.]
+after s_n [0. 1. 0. 1. 1. 1. 0. 1. 0. 0. 0. 0.]
+delta :  [0. 2. 0. 0. 0. 2. 0. 0. 0. 2. 0. 0.]
+membranes :  [-1.  4. -1.  4. -1.  5. -2.  3. -1.  2. -1. -1.]
+transmitted membrane value Vmem[p]= -1.0 , add= 1.0
+d_cuts = -1.0, curr_cuts = 24.0, curr_cuts_after_update = 0x19
+to put into simulator : 2'b00,2'b00,-1,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 9
+spiked
+which selected : p = 9
+before ds_p [1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 0. 1. 1. 1. 0. 1. 0. 0. 0. 0.]
+after ds_p [1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 0. 1. 1. 1. 0. 1. 0. 1. 0. 0.]
+before s_p [1. 0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 1.]
+before s_n [0. 1. 0. 1. 1. 1. 0. 1. 0. 0. 0. 0.]
+after s_p [1. 0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 1.]
+after s_n [0. 1. 0. 1. 1. 1. 0. 1. 0. 1. 0. 0.]
+delta :  [-2. -0. -2. -2. -0. -2. -2. -2. -2. -0. -2. -0.]
+membranes :  [-3.  4. -3.  2. -1.  3. -4.  1. -3.  2. -3. -1.]
+transmitted membrane value Vmem[p]= 2.0 , add= 0.0
+d_cuts = -2.0, curr_cuts = 25.0, curr_cuts_after_update = 0x1b
+to put into simulator : 2'b10,2'b01,2,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 3
+spiked
+which selected : p = 3
+before ds_p [1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 0. 1. 1. 1. 0. 1. 0. 1. 0. 0.]
+after ds_p [1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 0. 0. 1. 1. 0. 1. 0. 1. 0. 0.]
+before s_p [1. 0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 1.]
+before s_n [0. 1. 0. 1. 1. 1. 0. 1. 0. 1. 0. 0.]
+after s_p [1. 0. 1. 1. 0. 0. 1. 0. 1. 0. 1. 1.]
+after s_n [0. 1. 0. 0. 1. 1. 0. 1. 0. 1. 0. 0.]
+delta :  [0. 0. 2. 0. 0. 0. 2. 2. 2. 2. 2. 0.]
+membranes :  [-3.  4. -1.  2. -1.  3. -2.  3. -1.  4. -1. -1.]
+transmitted membrane value Vmem[p]= 2.0 , add= 1.0
+d_cuts = 2.0, curr_cuts = 27.0, curr_cuts_after_update = 0x19
+to put into simulator : 2'b00,2'b11,2,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 2
+spiked
+which selected : p = 2
+before ds_p [1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 0. 0. 1. 1. 0. 1. 0. 1. 0. 0.]
+after ds_p [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 1. 0. 1. 1. 0. 1. 0. 1. 0. 0.]
+before s_p [1. 0. 1. 1. 0. 0. 1. 0. 1. 0. 1. 1.]
+before s_n [0. 1. 0. 0. 1. 1. 0. 1. 0. 1. 0. 0.]
+after s_p [1. 0. 0. 1. 0. 0. 1. 0. 1. 0. 1. 1.]
+after s_n [0. 1. 1. 0. 1. 1. 0. 1. 0. 1. 0. 0.]
+delta :  [-0. -2. -0. -2. -2. -2. -0. -0. -2. -2. -2. -0.]
+membranes :  [-3.  2. -1.  0. -3.  1. -2.  3. -3.  2. -3. -1.]
+transmitted membrane value Vmem[p]= -1.0 , add= 0.0
+d_cuts = 1.0, curr_cuts = 25.0, curr_cuts_after_update = 0x18
+to put into simulator : 2'b00,2'b10,-1,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 11
+spiked
+which selected : p = 11
+before ds_p [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 1. 0. 1. 1. 0. 1. 0. 1. 0. 0.]
+after ds_p [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 1. 0. 1. 1. 0. 1. 0. 1. 0. 1.]
+before s_p [1. 0. 0. 1. 0. 0. 1. 0. 1. 0. 1. 1.]
+before s_n [0. 1. 1. 0. 1. 1. 0. 1. 0. 1. 0. 0.]
+after s_p [1. 0. 0. 1. 0. 0. 1. 0. 1. 0. 1. 0.]
+after s_n [0. 1. 1. 0. 1. 1. 0. 1. 0. 1. 0. 1.]
+delta :  [-0. -2. -0. -0. -0. -2. -2. -2. -2. -0. -0. -0.]
+membranes :  [-3.  0. -1.  0. -3. -1. -4.  1. -5.  2. -3. -1.]
+transmitted membrane value Vmem[p]= -1.0 , add= 0.0
+d_cuts = 1.0, curr_cuts = 24.0, curr_cuts_after_update = 0x17
+to put into simulator : 2'b10,2'b11,-1,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 4
+spiked
+which selected : p = 4
+before ds_p [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 1. 0. 1. 1. 0. 1. 0. 1. 0. 1.]
+after ds_p [1. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 1. 0. 0. 1. 0. 1. 0. 1. 0. 1.]
+before s_p [1. 0. 0. 1. 0. 0. 1. 0. 1. 0. 1. 0.]
+before s_n [0. 1. 1. 0. 1. 1. 0. 1. 0. 1. 0. 1.]
+after s_p [1. 0. 0. 1. 1. 0. 1. 0. 1. 0. 1. 0.]
+after s_n [0. 1. 1. 0. 0. 1. 0. 1. 0. 1. 0. 1.]
+delta :  [0. 2. 2. 0. 0. 2. 0. 2. 2. 0. 0. 0.]
+membranes :  [-3.  2.  1.  0. -3.  1. -4.  3. -3.  2. -3. -1.]
+transmitted membrane value Vmem[p]= -3.0 , add= 1.0
+d_cuts = -3.0, curr_cuts = 23.0, curr_cuts_after_update = 0x1a
+to put into simulator : 2'b01,2'b00,-3,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 8
+spiked
+which selected : p = 8
+before ds_p [1. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 1. 0. 0. 1. 0. 1. 0. 1. 0. 1.]
+after ds_p [1. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 1. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+before s_p [1. 0. 0. 1. 1. 0. 1. 0. 1. 0. 1. 0.]
+before s_n [0. 1. 1. 0. 0. 1. 0. 1. 0. 1. 0. 1.]
+after s_p [1. 0. 0. 1. 1. 0. 1. 0. 0. 0. 1. 0.]
+after s_n [0. 1. 1. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+delta :  [-0. -2. -2. -2. -2. -2. -0. -2. -0. -2. -2. -2.]
+membranes :  [-3.  0. -1. -2. -5. -1. -4.  1. -3.  0. -5. -3.]
+transmitted membrane value Vmem[p]= -3.0 , add= 0.0
+d_cuts = 3.0, curr_cuts = 26.0, curr_cuts_after_update = 0x17
+to put into simulator : 2'b10,2'b00,-3,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 2
+spiked
+which selected : p = 2
+before ds_p [1. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 1. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+after ds_p [1. 0. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+before s_p [1. 0. 0. 1. 1. 0. 1. 0. 0. 0. 1. 0.]
+before s_n [0. 1. 1. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+after s_p [1. 0. 1. 1. 1. 0. 1. 0. 0. 0. 1. 0.]
+after s_n [0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+delta :  [0. 2. 0. 2. 2. 2. 0. 0. 2. 2. 2. 0.]
+membranes :  [-3.  2. -1.  0. -3.  1. -4.  1. -1.  2. -3. -3.]
+transmitted membrane value Vmem[p]= -1.0 , add= 1.0
+d_cuts = -1.0, curr_cuts = 23.0, curr_cuts_after_update = 0x18
+to put into simulator : 2'b00,2'b10,-1,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 3
+spiked
+which selected : p = 3
+before ds_p [1. 0. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+after ds_p [1. 0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 0. 1. 0. 1. 0. 1. 1. 1. 0. 1.]
+before s_p [1. 0. 1. 1. 1. 0. 1. 0. 0. 0. 1. 0.]
+before s_n [0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+after s_p [1. 0. 1. 0. 1. 0. 1. 0. 0. 0. 1. 0.]
+after s_n [0. 1. 0. 1. 0. 1. 0. 1. 1. 1. 0. 1.]
+delta :  [-0. -0. -2. -0. -0. -0. -2. -2. -2. -2. -2. -0.]
+membranes :  [-3.  2. -3.  0. -3.  1. -6. -1. -3.  0. -5. -3.]
+transmitted membrane value Vmem[p]= 0.0 , add= 0.0
+d_cuts = -0.0, curr_cuts = 24.0, curr_cuts_after_update = 0x18
+to put into simulator : 2'b00,2'b11,0,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 0
+spiked
+which selected : p = 0
+before ds_p [1. 0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 0. 1. 0. 1. 0. 1. 1. 1. 0. 1.]
+after ds_p [0. 0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [1. 1. 0. 1. 0. 1. 0. 1. 1. 1. 0. 1.]
+before s_p [1. 0. 1. 0. 1. 0. 1. 0. 0. 0. 1. 0.]
+before s_n [0. 1. 0. 1. 0. 1. 0. 1. 1. 1. 0. 1.]
+after s_p [0. 0. 1. 0. 1. 0. 1. 0. 0. 0. 1. 0.]
+after s_n [1. 1. 0. 1. 0. 1. 0. 1. 1. 1. 0. 1.]
+delta :  [-0. -2. -0. -0. -0. -2. -0. -0. -0. -2. -0. -0.]
+membranes :  [-3.  0. -3.  0. -3. -1. -6. -1. -3. -2. -5. -3.]
+transmitted membrane value Vmem[p]= -3.0 , add= 0.0
+d_cuts = 3.0, curr_cuts = 24.0, curr_cuts_after_update = 0x15
+to put into simulator : 2'b00,2'b00,-3,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 0
+spiked
+which selected : p = 0
+before ds_p [0. 0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [1. 1. 0. 1. 0. 1. 0. 1. 1. 1. 0. 1.]
+after ds_p [1. 0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 0. 1. 0. 1. 0. 1. 1. 1. 0. 1.]
+before s_p [0. 0. 1. 0. 1. 0. 1. 0. 0. 0. 1. 0.]
+before s_n [1. 1. 0. 1. 0. 1. 0. 1. 1. 1. 0. 1.]
+after s_p [1. 0. 1. 0. 1. 0. 1. 0. 0. 0. 1. 0.]
+after s_n [0. 1. 0. 1. 0. 1. 0. 1. 1. 1. 0. 1.]
+delta :  [0. 2. 0. 0. 0. 2. 0. 0. 0. 2. 0. 0.]
+membranes :  [-3.  2. -3.  0. -3.  1. -6. -1. -3.  0. -5. -3.]
+transmitted membrane value Vmem[p]= -3.0 , add= 1.0
+d_cuts = -3.0, curr_cuts = 21.0, curr_cuts_after_update = 0x18
+to put into simulator : 2'b00,2'b00,-3,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 3
+spiked
+which selected : p = 3
+before ds_p [1. 0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 0. 1. 0. 1. 0. 1. 1. 1. 0. 1.]
+after ds_p [1. 0. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+before s_p [1. 0. 1. 0. 1. 0. 1. 0. 0. 0. 1. 0.]
+before s_n [0. 1. 0. 1. 0. 1. 0. 1. 1. 1. 0. 1.]
+after s_p [1. 0. 1. 1. 1. 0. 1. 0. 0. 0. 1. 0.]
+after s_n [0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+delta :  [0. 0. 2. 0. 0. 0. 2. 2. 2. 2. 2. 0.]
+membranes :  [-3.  2. -1.  0. -3.  1. -4.  1. -1.  2. -3. -3.]
+transmitted membrane value Vmem[p]= 0.0 , add= 1.0
+d_cuts = 0.0, curr_cuts = 24.0, curr_cuts_after_update = 0x18
+to put into simulator : 2'b00,2'b11,0,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 8
+spiked
+which selected : p = 8
+before ds_p [1. 0. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+after ds_p [1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 0. 0.]
+after ds_n [0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0. 1.]
+before s_p [1. 0. 1. 1. 1. 0. 1. 0. 0. 0. 1. 0.]
+before s_n [0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+after s_p [1. 0. 1. 1. 1. 0. 1. 0. 1. 0. 1. 0.]
+after s_n [0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0. 1.]
+delta :  [0. 2. 2. 2. 2. 2. 0. 2. 0. 2. 2. 2.]
+membranes :  [-3.  4.  1.  2. -1.  3. -4.  3. -1.  4. -1. -1.]
+transmitted membrane value Vmem[p]= -1.0 , add= 1.0
+d_cuts = -1.0, curr_cuts = 24.0, curr_cuts_after_update = 0x19
+to put into simulator : 2'b10,2'b00,-1,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 8
+spiked
+which selected : p = 8
+before ds_p [1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 0. 0.]
+before ds_n [0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0. 1.]
+after ds_p [1. 0. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+before s_p [1. 0. 1. 1. 1. 0. 1. 0. 1. 0. 1. 0.]
+before s_n [0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0. 1.]
+after s_p [1. 0. 1. 1. 1. 0. 1. 0. 0. 0. 1. 0.]
+after s_n [0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+delta :  [-0. -2. -2. -2. -2. -2. -0. -2. -0. -2. -2. -2.]
+membranes :  [-3.  2. -1.  0. -3.  1. -4.  1. -1.  2. -3. -3.]
+transmitted membrane value Vmem[p]= -1.0 , add= 0.0
+d_cuts = 1.0, curr_cuts = 25.0, curr_cuts_after_update = 0x18
+to put into simulator : 2'b10,2'b00,-1,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 8
+spiked
+which selected : p = 8
+before ds_p [1. 0. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+after ds_p [1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 0. 0.]
+after ds_n [0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0. 1.]
+before s_p [1. 0. 1. 1. 1. 0. 1. 0. 0. 0. 1. 0.]
+before s_n [0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+after s_p [1. 0. 1. 1. 1. 0. 1. 0. 1. 0. 1. 0.]
+after s_n [0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0. 1.]
+delta :  [0. 2. 2. 2. 2. 2. 0. 2. 0. 2. 2. 2.]
+membranes :  [-3.  4.  1.  2. -1.  3. -4.  3. -1.  4. -1. -1.]
+transmitted membrane value Vmem[p]= -1.0 , add= 1.0
+d_cuts = -1.0, curr_cuts = 24.0, curr_cuts_after_update = 0x19
+to put into simulator : 2'b10,2'b00,-1,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 8
+spiked
+which selected : p = 8
+before ds_p [1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 0. 0.]
+before ds_n [0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0. 1.]
+after ds_p [1. 0. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+before s_p [1. 0. 1. 1. 1. 0. 1. 0. 1. 0. 1. 0.]
+before s_n [0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0. 1.]
+after s_p [1. 0. 1. 1. 1. 0. 1. 0. 0. 0. 1. 0.]
+after s_n [0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+delta :  [-0. -2. -2. -2. -2. -2. -0. -2. -0. -2. -2. -2.]
+membranes :  [-3.  2. -1.  0. -3.  1. -4.  1. -1.  2. -3. -3.]
+transmitted membrane value Vmem[p]= -1.0 , add= 0.0
+d_cuts = 1.0, curr_cuts = 25.0, curr_cuts_after_update = 0x18
+to put into simulator : 2'b10,2'b00,-1,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 2
+spiked
+which selected : p = 2
+before ds_p [1. 0. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+after ds_p [1. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 1. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+before s_p [1. 0. 1. 1. 1. 0. 1. 0. 0. 0. 1. 0.]
+before s_n [0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+after s_p [1. 0. 0. 1. 1. 0. 1. 0. 0. 0. 1. 0.]
+after s_n [0. 1. 1. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+delta :  [-0. -2. -0. -2. -2. -2. -0. -0. -2. -2. -2. -0.]
+membranes :  [-3.  0. -1. -2. -5. -1. -4.  1. -3.  0. -5. -3.]
+transmitted membrane value Vmem[p]= -1.0 , add= 0.0
+d_cuts = 1.0, curr_cuts = 24.0, curr_cuts_after_update = 0x17
+to put into simulator : 2'b00,2'b10,-1,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 5
+spiked
+which selected : p = 5
+before ds_p [1. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 1. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+after ds_p [1. 0. 0. 1. 1. 1. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 1. 0. 0. 0. 0. 1. 1. 1. 0. 1.]
+before s_p [1. 0. 0. 1. 1. 0. 1. 0. 0. 0. 1. 0.]
+before s_n [0. 1. 1. 0. 0. 1. 0. 1. 1. 1. 0. 1.]
+after s_p [1. 0. 0. 1. 1. 1. 1. 0. 0. 0. 1. 0.]
+after s_n [0. 1. 1. 0. 0. 0. 0. 1. 1. 1. 0. 1.]
+delta :  [2. 2. 2. 0. 2. 0. 2. 0. 2. 2. 2. 2.]
+membranes :  [-1.  2.  1. -2. -3. -1. -2.  1. -1.  2. -3. -1.]
+transmitted membrane value Vmem[p]= -1.0 , add= 1.0
+d_cuts = -1.0, curr_cuts = 23.0, curr_cuts_after_update = 0x18
+to put into simulator : 2'b01,2'b01,-1,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 3
+spiked
+which selected : p = 3
+before ds_p [1. 0. 0. 1. 1. 1. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 1. 0. 0. 0. 0. 1. 1. 1. 0. 1.]
+after ds_p [1. 0. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0.]
+after ds_n [0. 1. 1. 1. 0. 0. 0. 1. 1. 1. 0. 1.]
+before s_p [1. 0. 0. 1. 1. 1. 1. 0. 0. 0. 1. 0.]
+before s_n [0. 1. 1. 0. 0. 0. 0. 1. 1. 1. 0. 1.]
+after s_p [1. 0. 0. 0. 1. 1. 1. 0. 0. 0. 1. 0.]
+after s_n [0. 1. 1. 1. 0. 0. 0. 1. 1. 1. 0. 1.]
+delta :  [-0. -0. -2. -0. -0. -0. -2. -2. -2. -2. -2. -0.]
+membranes :  [-1.  2. -1. -2. -3. -1. -4. -1. -3.  0. -5. -1.]
+transmitted membrane value Vmem[p]= -2.0 , add= 0.0
+d_cuts = 2.0, curr_cuts = 24.0, curr_cuts_after_update = 0x16
+to put into simulator : 2'b00,2'b11,-2,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 9
+spiked
+which selected : p = 9
+before ds_p [1. 0. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0.]
+before ds_n [0. 1. 1. 1. 0. 0. 0. 1. 1. 1. 0. 1.]
+after ds_p [1. 0. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0.]
+after ds_n [0. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+before s_p [1. 0. 0. 0. 1. 1. 1. 0. 0. 0. 1. 0.]
+before s_n [0. 1. 1. 1. 0. 0. 0. 1. 1. 1. 0. 1.]
+after s_p [1. 0. 0. 0. 1. 1. 1. 0. 0. 1. 1. 0.]
+after s_n [0. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+delta :  [2. 0. 2. 2. 0. 2. 2. 2. 2. 0. 2. 0.]
+membranes :  [ 1.  2.  1.  0. -3.  1. -2.  1. -1.  0. -3. -1.]
+transmitted membrane value Vmem[p]= 0.0 , add= 1.0
+d_cuts = 0.0, curr_cuts = 22.0, curr_cuts_after_update = 0x16
+to put into simulator : 2'b10,2'b01,0,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 0
+spiked
+which selected : p = 0
+before ds_p [1. 0. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0.]
+before ds_n [0. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+after ds_p [0. 0. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0.]
+after ds_n [1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+before s_p [1. 0. 0. 0. 1. 1. 1. 0. 0. 1. 1. 0.]
+before s_n [0. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+after s_p [0. 0. 0. 0. 1. 1. 1. 0. 0. 1. 1. 0.]
+after s_n [1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+delta :  [-0. -2. -0. -0. -0. -2. -0. -0. -0. -2. -0. -0.]
+membranes :  [ 1.  0.  1.  0. -3. -1. -2.  1. -1. -2. -3. -1.]
+transmitted membrane value Vmem[p]= 1.0 , add= 0.0
+d_cuts = -1.0, curr_cuts = 22.0, curr_cuts_after_update = 0x17
+to put into simulator : 2'b00,2'b00,1,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 2
+spiked
+which selected : p = 2
+before ds_p [0. 0. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0.]
+before ds_n [1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+after ds_p [0. 0. 1. 0. 1. 1. 0. 0. 0. 1. 0. 0.]
+after ds_n [1. 1. 0. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+before s_p [0. 0. 0. 0. 1. 1. 1. 0. 0. 1. 1. 0.]
+before s_n [1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+after s_p [0. 0. 1. 0. 1. 1. 1. 0. 0. 1. 1. 0.]
+after s_n [1. 1. 0. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+delta :  [0. 2. 0. 2. 2. 2. 0. 0. 2. 2. 2. 0.]
+membranes :  [ 1.  2.  1.  2. -1.  1. -2.  1.  1.  0. -1. -1.]
+transmitted membrane value Vmem[p]= 1.0 , add= 1.0
+d_cuts = 1.0, curr_cuts = 23.0, curr_cuts_after_update = 0x16
+to put into simulator : 2'b00,2'b10,1,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 2
+spiked
+which selected : p = 2
+before ds_p [0. 0. 1. 0. 1. 1. 0. 0. 0. 1. 0. 0.]
+before ds_n [1. 1. 0. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+after ds_p [0. 0. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0.]
+after ds_n [1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+before s_p [0. 0. 1. 0. 1. 1. 1. 0. 0. 1. 1. 0.]
+before s_n [1. 1. 0. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+after s_p [0. 0. 0. 0. 1. 1. 1. 0. 0. 1. 1. 0.]
+after s_n [1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+delta :  [-0. -2. -0. -2. -2. -2. -0. -0. -2. -2. -2. -0.]
+membranes :  [ 1.  0.  1.  0. -3. -1. -2.  1. -1. -2. -3. -1.]
+transmitted membrane value Vmem[p]= 1.0 , add= 0.0
+d_cuts = -1.0, curr_cuts = 22.0, curr_cuts_after_update = 0x17
+to put into simulator : 2'b00,2'b10,1,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 0
+spiked
+which selected : p = 0
+before ds_p [0. 0. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0.]
+before ds_n [1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+after ds_p [1. 0. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0.]
+after ds_n [0. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+before s_p [0. 0. 0. 0. 1. 1. 1. 0. 0. 1. 1. 0.]
+before s_n [1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+after s_p [1. 0. 0. 0. 1. 1. 1. 0. 0. 1. 1. 0.]
+after s_n [0. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+delta :  [0. 2. 0. 0. 0. 2. 0. 0. 0. 2. 0. 0.]
+membranes :  [ 1.  2.  1.  0. -3.  1. -2.  1. -1.  0. -3. -1.]
+transmitted membrane value Vmem[p]= 1.0 , add= 1.0
+d_cuts = 1.0, curr_cuts = 23.0, curr_cuts_after_update = 0x16
+to put into simulator : 2'b00,2'b00,1,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 0
+spiked
+which selected : p = 0
+before ds_p [1. 0. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0.]
+before ds_n [0. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+after ds_p [0. 0. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0.]
+after ds_n [1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+before s_p [1. 0. 0. 0. 1. 1. 1. 0. 0. 1. 1. 0.]
+before s_n [0. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+after s_p [0. 0. 0. 0. 1. 1. 1. 0. 0. 1. 1. 0.]
+after s_n [1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+delta :  [-0. -2. -0. -0. -0. -2. -0. -0. -0. -2. -0. -0.]
+membranes :  [ 1.  0.  1.  0. -3. -1. -2.  1. -1. -2. -3. -1.]
+transmitted membrane value Vmem[p]= 1.0 , add= 0.0
+d_cuts = -1.0, curr_cuts = 22.0, curr_cuts_after_update = 0x17
+to put into simulator : 2'b00,2'b00,1,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 1
+spiked
+which selected : p = 1
+before ds_p [0. 0. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0.]
+before ds_n [1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+after ds_p [0. 1. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0.]
+after ds_n [1. 0. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+before s_p [0. 0. 0. 0. 1. 1. 1. 0. 0. 1. 1. 0.]
+before s_n [1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+after s_p [0. 1. 0. 0. 1. 1. 1. 0. 0. 1. 1. 0.]
+after s_n [1. 0. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+delta :  [2. 0. 2. 0. 2. 2. 2. 0. 2. 0. 2. 2.]
+membranes :  [ 3.  0.  3.  0. -1.  1.  0.  1.  1. -2. -1.  1.]
+transmitted membrane value Vmem[p]= 0.0 , add= 1.0
+d_cuts = 0.0, curr_cuts = 23.0, curr_cuts_after_update = 0x17
+to put into simulator : 2'b00,2'b01,0,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 10
+spiked
+which selected : p = 10
+before ds_p [0. 1. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0.]
+before ds_n [1. 0. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+after ds_p [0. 1. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0.]
+after ds_n [1. 0. 1. 1. 0. 0. 0. 1. 1. 0. 1. 1.]
+before s_p [0. 1. 0. 0. 1. 1. 1. 0. 0. 1. 1. 0.]
+before s_n [1. 0. 1. 1. 0. 0. 0. 1. 1. 0. 0. 1.]
+after s_p [0. 1. 0. 0. 1. 1. 1. 0. 0. 1. 0. 0.]
+after s_n [1. 0. 1. 1. 0. 0. 0. 1. 1. 0. 1. 1.]
+delta :  [-0. -2. -2. -2. -0. -2. -0. -2. -2. -2. -0. -0.]
+membranes :  [ 3. -2.  1. -2. -1. -1.  0. -1. -1. -4. -1.  1.]
+transmitted membrane value Vmem[p]= -1.0 , add= 0.0
+d_cuts = 1.0, curr_cuts = 23.0, curr_cuts_after_update = 0x16
+to put into simulator : 2'b10,2'b10,-1,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 3
+spiked
+which selected : p = 3
+before ds_p [0. 1. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0.]
+before ds_n [1. 0. 1. 1. 0. 0. 0. 1. 1. 0. 1. 1.]
+after ds_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 0.]
+after ds_n [1. 0. 1. 0. 0. 0. 0. 1. 1. 0. 1. 1.]
+before s_p [0. 1. 0. 0. 1. 1. 1. 0. 0. 1. 0. 0.]
+before s_n [1. 0. 1. 1. 0. 0. 0. 1. 1. 0. 1. 1.]
+after s_p [0. 1. 0. 1. 1. 1. 1. 0. 0. 1. 0. 0.]
+after s_n [1. 0. 1. 0. 0. 0. 0. 1. 1. 0. 1. 1.]
+delta :  [0. 0. 2. 0. 0. 0. 2. 2. 2. 2. 2. 0.]
+membranes :  [ 3. -2.  3. -2. -1. -1.  2.  1.  1. -2.  1.  1.]
+transmitted membrane value Vmem[p]= -2.0 , add= 1.0
+d_cuts = -2.0, curr_cuts = 22.0, curr_cuts_after_update = 0x18
+to put into simulator : 2'b00,2'b11,-2,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 6
+spiked
+which selected : p = 6
+before ds_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 0.]
+before ds_n [1. 0. 1. 0. 0. 0. 0. 1. 1. 0. 1. 1.]
+after ds_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 0.]
+after ds_n [1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 1.]
+before s_p [0. 1. 0. 1. 1. 1. 1. 0. 0. 1. 0. 0.]
+before s_n [1. 0. 1. 0. 0. 0. 0. 1. 1. 0. 1. 1.]
+after s_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 0.]
+after s_n [1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 1.]
+delta :  [-0. -2. -0. -2. -0. -2. -0. -2. -0. -2. -0. -2.]
+membranes :  [ 3. -4.  3. -4. -1. -3.  2. -1.  1. -4.  1. -1.]
+transmitted membrane value Vmem[p]= 2.0 , add= 0.0
+d_cuts = -2.0, curr_cuts = 24.0, curr_cuts_after_update = 0x1a
+to put into simulator : 2'b01,2'b10,2,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 11
+spiked
+which selected : p = 11
+before ds_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 0.]
+before ds_n [1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 1.]
+after ds_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+after ds_n [1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+before s_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 0.]
+before s_n [1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 1.]
+after s_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+after s_n [1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+delta :  [0. 2. 0. 0. 0. 2. 2. 2. 2. 0. 0. 0.]
+membranes :  [ 3. -2.  3. -4. -1. -1.  4.  1.  3. -4.  1. -1.]
+transmitted membrane value Vmem[p]= -1.0 , add= 1.0
+d_cuts = -1.0, curr_cuts = 26.0, curr_cuts_after_update = 0x1b
+to put into simulator : 2'b10,2'b11,-1,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 0
+spiked
+which selected : p = 0
+before ds_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+before ds_n [1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+after ds_p [1. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+after ds_n [0. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+before s_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+before s_n [1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+after s_p [1. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+after s_n [0. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+delta :  [0. 2. 0. 0. 0. 2. 0. 0. 0. 2. 0. 0.]
+membranes :  [ 3.  0.  3. -4. -1.  1.  4.  1.  3. -2.  1. -1.]
+transmitted membrane value Vmem[p]= 3.0 , add= 1.0
+d_cuts = 3.0, curr_cuts = 27.0, curr_cuts_after_update = 0x18
+to put into simulator : 2'b00,2'b00,3,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 1
+spiked
+which selected : p = 1
+before ds_p [1. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+before ds_n [0. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+after ds_p [1. 0. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+after ds_n [0. 1. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+before s_p [1. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+before s_n [0. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+after s_p [1. 0. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+after s_n [0. 1. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+delta :  [-2. -0. -2. -0. -2. -2. -2. -0. -2. -0. -2. -2.]
+membranes :  [ 1.  0.  1. -4. -3. -1.  2.  1.  1. -2. -1. -3.]
+transmitted membrane value Vmem[p]= 0.0 , add= 0.0
+d_cuts = -0.0, curr_cuts = 24.0, curr_cuts_after_update = 0x18
+to put into simulator : 2'b00,2'b01,0,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 7
+spiked
+which selected : p = 7
+before ds_p [1. 0. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+before ds_n [0. 1. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+after ds_p [1. 0. 0. 1. 1. 1. 0. 1. 0. 1. 0. 1.]
+after ds_n [0. 1. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0.]
+before s_p [1. 0. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+before s_n [0. 1. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+after s_p [1. 0. 0. 1. 1. 1. 0. 1. 0. 1. 0. 1.]
+after s_n [0. 1. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0.]
+delta :  [0. 0. 0. 2. 2. 0. 2. 0. 2. 2. 2. 2.]
+membranes :  [ 1.  0.  1. -2. -1. -1.  4.  1.  3.  0.  1. -1.]
+transmitted membrane value Vmem[p]= 1.0 , add= 1.0
+d_cuts = 1.0, curr_cuts = 24.0, curr_cuts_after_update = 0x17
+to put into simulator : 2'b01,2'b11,1,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 1
+spiked
+which selected : p = 1
+before ds_p [1. 0. 0. 1. 1. 1. 0. 1. 0. 1. 0. 1.]
+before ds_n [0. 1. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0.]
+after ds_p [1. 1. 0. 1. 1. 1. 0. 1. 0. 1. 0. 1.]
+after ds_n [0. 0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0.]
+before s_p [1. 0. 0. 1. 1. 1. 0. 1. 0. 1. 0. 1.]
+before s_n [0. 1. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0.]
+after s_p [1. 1. 0. 1. 1. 1. 0. 1. 0. 1. 0. 1.]
+after s_n [0. 0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0.]
+delta :  [2. 0. 2. 0. 2. 2. 2. 0. 2. 0. 2. 2.]
+membranes :  [ 3.  0.  3. -2.  1.  1.  6.  1.  5.  0.  3.  1.]
+transmitted membrane value Vmem[p]= 0.0 , add= 1.0
+d_cuts = 0.0, curr_cuts = 23.0, curr_cuts_after_update = 0x17
+to put into simulator : 2'b00,2'b01,0,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 0
+spiked
+which selected : p = 0
+before ds_p [1. 1. 0. 1. 1. 1. 0. 1. 0. 1. 0. 1.]
+before ds_n [0. 0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0.]
+after ds_p [0. 1. 0. 1. 1. 1. 0. 1. 0. 1. 0. 1.]
+after ds_n [1. 0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0.]
+before s_p [1. 1. 0. 1. 1. 1. 0. 1. 0. 1. 0. 1.]
+before s_n [0. 0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0.]
+after s_p [0. 1. 0. 1. 1. 1. 0. 1. 0. 1. 0. 1.]
+after s_n [1. 0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0.]
+delta :  [-0. -2. -0. -0. -0. -2. -0. -0. -0. -2. -0. -0.]
+membranes :  [ 3. -2.  3. -2.  1. -1.  6.  1.  5. -2.  3.  1.]
+transmitted membrane value Vmem[p]= 3.0 , add= 0.0
+d_cuts = -3.0, curr_cuts = 23.0, curr_cuts_after_update = 0x1a
+to put into simulator : 2'b00,2'b00,3,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 7
+spiked
+which selected : p = 7
+before ds_p [0. 1. 0. 1. 1. 1. 0. 1. 0. 1. 0. 1.]
+before ds_n [1. 0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0.]
+after ds_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+after ds_n [1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+before s_p [0. 1. 0. 1. 1. 1. 0. 1. 0. 1. 0. 1.]
+before s_n [1. 0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0.]
+after s_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+after s_n [1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+delta :  [-0. -0. -0. -2. -2. -0. -2. -0. -2. -2. -2. -2.]
+membranes :  [ 3. -2.  3. -4. -1. -1.  4.  1.  3. -4.  1. -1.]
+transmitted membrane value Vmem[p]= 1.0 , add= 0.0
+d_cuts = -1.0, curr_cuts = 26.0, curr_cuts_after_update = 0x1b
+to put into simulator : 2'b01,2'b11,1,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 1
+spiked
+which selected : p = 1
+before ds_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+before ds_n [1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+after ds_p [0. 0. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+after ds_n [1. 1. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+before s_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+before s_n [1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+after s_p [0. 0. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+after s_n [1. 1. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+delta :  [-2. -0. -2. -0. -2. -2. -2. -0. -2. -0. -2. -2.]
+membranes :  [ 1. -2.  1. -4. -3. -3.  2.  1.  1. -4. -1. -3.]
+transmitted membrane value Vmem[p]= -2.0 , add= 0.0
+d_cuts = 2.0, curr_cuts = 27.0, curr_cuts_after_update = 0x19
+to put into simulator : 2'b00,2'b01,-2,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 1
+spiked
+which selected : p = 1
+before ds_p [0. 0. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+before ds_n [1. 1. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+after ds_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+after ds_n [1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+before s_p [0. 0. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+before s_n [1. 1. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+after s_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+after s_n [1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+delta :  [2. 0. 2. 0. 2. 2. 2. 0. 2. 0. 2. 2.]
+membranes :  [ 3. -2.  3. -4. -1. -1.  4.  1.  3. -4.  1. -1.]
+transmitted membrane value Vmem[p]= -2.0 , add= 1.0
+d_cuts = -2.0, curr_cuts = 25.0, curr_cuts_after_update = 0x1b
+to put into simulator : 2'b00,2'b01,-2,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 5
+spiked
+which selected : p = 5
+before ds_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+before ds_n [1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+after ds_p [0. 1. 0. 1. 1. 0. 0. 0. 0. 1. 0. 1.]
+after ds_n [1. 0. 1. 0. 0. 1. 1. 1. 1. 0. 1. 0.]
+before s_p [0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 0. 1.]
+before s_n [1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0.]
+after s_p [0. 1. 0. 1. 1. 0. 0. 0. 0. 1. 0. 1.]
+after s_n [1. 0. 1. 0. 0. 1. 1. 1. 1. 0. 1. 0.]
+delta :  [-2. -2. -2. -0. -2. -0. -2. -0. -2. -2. -2. -2.]
+membranes :  [ 1. -4.  1. -4. -3. -1.  2.  1.  1. -6. -1. -3.]
+transmitted membrane value Vmem[p]= -1.0 , add= 0.0
+d_cuts = 1.0, curr_cuts = 27.0, curr_cuts_after_update = 0x1a
+to put into simulator : 2'b01,2'b01,-1,0
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 7
+spiked
+which selected : p = 7
+before ds_p [0. 1. 0. 1. 1. 0. 0. 0. 0. 1. 0. 1.]
+before ds_n [1. 0. 1. 0. 0. 1. 1. 1. 1. 0. 1. 0.]
+after ds_p [0. 1. 0. 1. 1. 0. 0. 1. 0. 1. 0. 1.]
+after ds_n [1. 0. 1. 0. 0. 1. 1. 0. 1. 0. 1. 0.]
+before s_p [0. 1. 0. 1. 1. 0. 0. 0. 0. 1. 0. 1.]
+before s_n [1. 0. 1. 0. 0. 1. 1. 1. 1. 0. 1. 0.]
+after s_p [0. 1. 0. 1. 1. 0. 0. 1. 0. 1. 0. 1.]
+after s_n [1. 0. 1. 0. 0. 1. 1. 0. 1. 0. 1. 0.]
+delta :  [0. 0. 0. 2. 2. 0. 2. 0. 2. 2. 2. 2.]
+membranes :  [ 1. -4.  1. -2. -1. -1.  4.  1.  3. -4.  1. -1.]
+transmitted membrane value Vmem[p]= 1.0 , add= 1.0
+d_cuts = 1.0, curr_cuts = 26.0, curr_cuts_after_update = 0x19
+to put into simulator : 2'b01,2'b11,1,1
+
+
+
+----------------------------------------------------------------
+
+
+
+getting p = 7
+spiked
+which selected : p = 7
+before ds_p [0. 1. 0. 1. 1. 0. 0. 1. 0. 1. 0. 1.]
+before ds_n [1. 0. 1. 0. 0. 1. 1. 0. 1. 0. 1. 0.]
+after ds_p [0. 1. 0. 1. 1. 0. 0. 0. 0. 1. 0. 1.]
+after ds_n [1. 0. 1. 0. 0. 1. 1. 1. 1. 0. 1. 0.]
+before s_p [0. 1. 0. 1. 1. 0. 0. 1. 0. 1. 0. 1.]
+before s_n [1. 0. 1. 0. 0. 1. 1. 0. 1. 0. 1. 0.]
+after s_p [0. 1. 0. 1. 1. 0. 0. 0. 0. 1. 0. 1.]
+after s_n [1. 0. 1. 0. 0. 1. 1. 1. 1. 0. 1. 0.]
+delta :  [-0. -0. -0. -2. -2. -0. -2. -0. -2. -2. -2. -2.]
+membranes :  [ 1. -4.  1. -4. -3. -1.  2.  1.  1. -6. -1. -3.]
+transmitted membrane value Vmem[p]= 1.0 , add= 0.0
+d_cuts = -1.0, curr_cuts = 25.0, curr_cuts_after_update = 0x1a
+to put into simulator : 2'b01,2'b11,1,0
+best solution :  27.0
+argmax best solution :  [1. 1. 0. 1. 0. 1. 0. 0. 0. 1. 0. 1.]

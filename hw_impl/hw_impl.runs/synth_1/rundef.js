@@ -28,7 +28,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log neuron_ensemble_with_memory.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuron_ensemble_with_memory.tcl" );
+         "-log graph_n12_machine.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source graph_n12_machine.tcl" );
 
 
 
