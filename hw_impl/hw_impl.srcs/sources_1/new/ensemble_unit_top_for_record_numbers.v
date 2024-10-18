@@ -52,8 +52,8 @@ module ensemble_unit_top_for_record_numbers(
 
 
     localparam GRAPH_WIDTH = 800;
-    localparam NEURON_SEL_LFSR_WIDTH=4;
-    localparam NEURON_WIDTH=2;           // 4 units
+    localparam NEURON_SEL_LFSR_WIDTH=5;
+    localparam NEURON_WIDTH=5;           // 4 units
 
 
     localparam GRAPH_DISTRIB_FILE = "G15distr_N=800_A=16_0.mif";

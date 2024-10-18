@@ -3,8 +3,8 @@
 # SW Build 5164865 on Thu Sep  5 14:36:28 MDT 2024
 # IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
 # SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
-# Start of session at: Fri Oct 18 16:15:47 2024
-# Process ID: 13111
+# Start of session at: Fri Oct 18 16:53:25 2024
+# Process ID: 20474
 # Current directory: /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.runs/synth_1
 # Command line: vivado -log ensemble_unit_top_for_record_numbers.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ensemble_unit_top_for_record_numbers.tcl
 # Log file: /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.runs/synth_1/ensemble_unit_top_for_record_numbers.vds
@@ -13,12 +13,12 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04.1 LTS
 # Processor Detail  :12th Gen Intel(R) Core(TM) i7-12700H
-# CPU Frequency     :400.139 MHz
+# CPU Frequency     :2954.506 MHz
 # CPU Physical cores:14
 # CPU Logical cores :20
 # Host memory       :33342 MB
 # Swap memory       :2147 MB
 # Total Virtual     :35489 MB
-# Available Virtual :26995 MB
+# Available Virtual :26541 MB
 #-----------------------------------------------------------
 source ensemble_unit_top_for_record_numbers.tcl -notrace
