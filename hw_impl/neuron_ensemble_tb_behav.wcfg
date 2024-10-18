@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="210.359 ns"></ZoomStartTime>
-      <ZoomEndTime time="487.760 ns"></ZoomEndTime>
-      <Cursor1Time time="257.115 ns"></Cursor1Time>
+      <ZoomStartTime time="4,839.587 ns"></ZoomStartTime>
+      <ZoomEndTime time="5,230.083 ns"></ZoomEndTime>
+      <Cursor1Time time="5,165.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="269"></NameColumnWidth>
-      <ValueColumnWidth column_width="154"></ValueColumnWidth>
+      <ValueColumnWidth column_width="150"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="18" />
    <wvobject type="logic" fp_name="/graph_n12_machine_tb2/DUT/clk">

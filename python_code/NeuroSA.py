@@ -142,9 +142,12 @@ with open(log_file_name, 'w') as f:
             # e_spike = time.time_ns()
             # Update Neuron Membrane Potential
             # curr_cuts -= 1*(ds_p[p]-ds_n[p])*vmem[p]
+            
+            # (s_p > 0 - s_n > 0) 
             curr_cuts -= 1*(new_ds_p_p-new_ds_n_p)*vmem_p
             # s_update = time.time_ns()
             # vmem += 2*(ds_p[p]-ds_n[p])*Q[p,:]
+            # 1, 0 | 0, 1
             vmem += 2*(new_ds_p_p-new_ds_n_p)*Q[p,:]
             # e_update = time.time_ns()
             if curr_cuts.item() > best_maxcuts:

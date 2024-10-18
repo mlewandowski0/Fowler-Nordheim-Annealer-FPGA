@@ -43,7 +43,7 @@
     <Option Name="SimulatorGccVersionVCS" Val="9.2.0"/>
     <Option Name="SimulatorGccVersionRiviera" Val="9.3.0"/>
     <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
-    <Option Name="BoardPart" Val=""/>
+    <Option Name="BoardPart" Val="myir.com:mys-7z020:part0:2.1"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
@@ -59,7 +59,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="mys-7z020"/>
-    <Option Name="WTXSimLaunchSim" Val="303"/>
+    <Option Name="WTXSimLaunchSim" Val="305"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -133,29 +133,37 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/float16_mult.v">
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/float16_mult.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/float16_mult.v"/>
+          <Attr Name="ImportTime" Val="1728210111"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/float16_normalizer.v">
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/float16_normalizer.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/float16_normalizer.v"/>
+          <Attr Name="ImportTime" Val="1728123248"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/float16_to_int.v">
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/float16_to_int.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/float16_to_int.v"/>
+          <Attr Name="ImportTime" Val="1728213459"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/log_LUT.v">
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/log_LUT.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/log_LUT.v"/>
+          <Attr Name="ImportTime" Val="1728246536"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -168,8 +176,10 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/mulBITSxBITS.v">
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/mulBITSxBITS.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/mulBITSxBITS.v"/>
+          <Attr Name="ImportTime" Val="1728146288"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -196,20 +206,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/scheduler.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/simple_priority_selector.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/new/temperature_mapping.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -224,29 +220,60 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/vedic_mul16x16.v">
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/vedic_mul16x16.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/vedic_mul16x16.v"/>
+          <Attr Name="ImportTime" Val="1728125293"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/vedic_mul2x2.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/vedic_mul2x2.v"/>
+          <Attr Name="ImportTime" Val="1728123668"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/vedic_mul4x4.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/vedic_mul4x4.v"/>
+          <Attr Name="ImportTime" Val="1728125271"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/vedic_mul8x8.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/vedic_mul8x8.v"/>
+          <Attr Name="ImportTime" Val="1728125281"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/ensemble_unit_top_for_record_numbers.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/vedic_mul2x2.v">
+      <File Path="$PSRCDIR/sources_1/new/scheduler.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/vedic_mul4x4.v">
+      <File Path="$PSRCDIR/sources_1/new/simple_priority_selector.v">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/new/vedic_mul8x8.v">
-        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -254,6 +281,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/graph_n12_machine.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -267,33 +295,41 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/fixed_add.v">
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/fixed_add.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/fixed_add.v"/>
+          <Attr Name="ImportTime" Val="1728151349"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/fixed_mult.v">
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/fixed_mult.v"/>
+          <Attr Name="ImportTime" Val="1728150997"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/float16_add_normalizer.v">
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/float16_add_normalizer.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/float16_add_normalizer.v"/>
+          <Attr Name="ImportTime" Val="1728123587"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/float16_alignment.v">
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/float16_alignment.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/float16_alignment.v"/>
+          <Attr Name="ImportTime" Val="1728123509"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -331,39 +367,73 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/scripts/temperature_LUT.mif">
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/scripts/temperature_LUT.mif">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/scripts/temperature_LUT.mif"/>
+          <Attr Name="ImportTime" Val="1728231848"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/scripts/log_noise_LUT.mif">
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/scripts/log_noise_LUT.mif">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/scripts/log_noise_LUT.mif"/>
+          <Attr Name="ImportTime" Val="1728249609"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/scripts/solve_small_problem/adj_matrix_distributed2.mif">
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/scripts/solve_small_problem/adj_matrix_distributed2.mif">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/scripts/solve_small_problem/adj_matrix_distributed2.mif"/>
+          <Attr Name="ImportTime" Val="1729171918"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/scripts/solve_small_problem/adj_matrix_distributed1.mif">
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/scripts/solve_small_problem/adj_matrix_distributed1.mif">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/scripts/solve_small_problem/adj_matrix_distributed1.mif"/>
+          <Attr Name="ImportTime" Val="1729171918"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/scripts/solve_small_problem/adj_matrix_distributed0.mif">
+      <File Path="$PSRCDIR/sources_1/imports/hw_impl/scripts/solve_small_problem/adj_matrix_distributed0.mif">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/scripts/solve_small_problem/adj_matrix_distributed0.mif"/>
+          <Attr Name="ImportTime" Val="1729171918"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/solve_small_problem/G15distr_N=800_A=16_0.mif">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/scripts/solve_small_problem/G15distr_N=800_A=16_0.mif"/>
+          <Attr Name="ImportTime" Val="1729260551"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/solve_small_problem/G15distr_N=800_A=32_0.mif">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/scripts/solve_small_problem/G15distr_N=800_A=32_0.mif"/>
+          <Attr Name="ImportTime" Val="1729260533"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/solve_small_problem/G15distr_N=800_A=4_0.mif">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/scripts/solve_small_problem/G15distr_N=800_A=4_0.mif"/>
+          <Attr Name="ImportTime" Val="1729260555"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="graph_n12_machine"/>
+        <Option Name="TopModule" Val="ensemble_unit_top_for_record_numbers"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -383,6 +453,13 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sim_1/new/float16_to_int_tb.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sim_1/new/graph_n12_machine_tb2.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -407,14 +484,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sim_1/new/scheduler2_tb.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/new/float16_to_int_tb.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -566,8 +635,10 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/neuron_ensemble_tb_behav.wcfg">
+      <File Path="$PSRCDIR/sim_1/imports/hw_impl/neuron_ensemble_tb_behav.wcfg">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/neuron_ensemble_tb_behav.wcfg"/>
+          <Attr Name="ImportTime" Val="1729176234"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -593,7 +664,7 @@
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedInSteps" Val="synth_1"/>
+          <Attr Name="UsedInSteps" Val="synth_1_copy_1"/>
           <Attr Name="AutoDcp" Val="1"/>
         </FileInfo>
       </File>
@@ -624,13 +695,30 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="22">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/adder.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1" ParallelReportGen="true">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2024"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="synth_1_copy_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/adder.dcp" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1/synth_1_copy_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1_copy_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2024" CtrlBit="true">
+        <ReportConfig DisplayName="synthesis_report" Name="synth_1_copy_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="ensemble_unit_top_for_record_numbers.vds">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig DisplayName="Utilization - Synth Design" Name="synth_1_copy_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="ensemble_unit_top_for_record_numbers_utilization_synth.rpt" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+        </ReportConfig>
+      </ReportStrategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
@@ -652,7 +740,9 @@
       <RQSFiles/>
     </Run>
   </Runs>
-  <Board/>
+  <Board>
+    <Jumpers/>
+  </Board>
   <DashboardSummary Version="1" Minor="0">
     <Dashboards>
       <Dashboard Name="default_dashboard">

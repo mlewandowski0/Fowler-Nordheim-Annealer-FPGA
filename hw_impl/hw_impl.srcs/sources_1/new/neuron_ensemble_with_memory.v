@@ -131,7 +131,7 @@ parameter PIPELINED_ENSEMBLE_STORAGE=1)
     assign update_ds                = UNIT_NO == which_unit_fired;
     
 
-    distributed_graph_memory #(.NEURON_WIDTH(UNIT_WIDTH),
+    distributed_graph_memory #(.NEURON_WIDTH(NEURON_WIDTH),
                                .GRAPH_WIDTH(GRAPH_WIDTH),
                                .MEM_FILE(GRAPH_DISTRIB_FILE)) 
                                

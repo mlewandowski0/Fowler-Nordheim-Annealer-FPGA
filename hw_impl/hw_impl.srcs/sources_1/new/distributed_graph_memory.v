@@ -10,7 +10,7 @@ module distributed_graph_memory #(parameter NEURON_WIDTH = 2,
 
     localparam MEM_WIDTH = (1 << NEURON_WIDTH) - 1;
 
-    reg [MEM_WIDTH:0] memory[0: GRAPH_WIDTH-1];
+    (* ram_style = "block" *) reg [MEM_WIDTH:0] memory[0: GRAPH_WIDTH-1];
 
     initial 
     begin

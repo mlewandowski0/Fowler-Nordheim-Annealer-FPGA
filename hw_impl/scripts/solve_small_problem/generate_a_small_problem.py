@@ -51,7 +51,6 @@ plt.yticks(np.arange(n_vertices), np.arange(n_vertices) )
 plt.subplot(1, 2, 2)
 nx.draw(G, node_color=color_map, with_labels=True, node_size=500, font_color='white')
 plt.title(f"MAX-CUT Solution (Cut Value: {best_cut_value})")
-
 serialize_matrix(adj_matrix, "adj_matrix.mif")
 serialize_matrix_distributed(adj_matrix, "adj_matrix_distributed{}.mif", 4)
 
