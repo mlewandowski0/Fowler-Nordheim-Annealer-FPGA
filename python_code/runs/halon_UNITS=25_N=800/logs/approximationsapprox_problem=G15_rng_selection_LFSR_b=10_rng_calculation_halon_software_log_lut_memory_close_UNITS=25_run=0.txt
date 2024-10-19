@@ -1,0 +1,2 @@
+spikes,best_maxcuts,iter,thld,curr_cuts
+100001,2536.0,100000,200.93600000000015,2460.0
