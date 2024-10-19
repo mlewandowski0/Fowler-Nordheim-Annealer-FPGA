@@ -45,7 +45,7 @@ module simple_priority_selector
     output reg                                 add_mem
 );
 
-    integer i, selected;
+    integer i;
 
     always @(*) 
     begin
@@ -59,10 +59,8 @@ module simple_priority_selector
                 offset        = offsets[(i+1)*NEURON_NUM_WIDTH-1 -: NEURON_NUM_WIDTH];
                 membrane      = all_membranes[(i+1)*MEMBRANE_WIDTH-1 -: MEMBRANE_WIDTH];
                 add_mem       = add_mems[i];
-                selected      = i;
             end
         end
-        selected = {32{1'bX}};
     end
 
 endmodule

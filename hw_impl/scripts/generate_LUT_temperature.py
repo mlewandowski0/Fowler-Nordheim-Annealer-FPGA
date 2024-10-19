@@ -7,7 +7,10 @@ N_BITS = 7
 MAX = 1000.
 CONT_VALUES = 1000
 
+
 filepath = "temperature_LUT.mif"
+filepath_fixed = "temperature_LUT_fixed.mif"
+
 THLD_MAX = 8e4
 MAX_ITER = 1e8
 THLD_DELTA = 2e-3

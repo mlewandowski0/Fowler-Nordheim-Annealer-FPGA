@@ -3,111 +3,37 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="graph_n12_machine_tb2_behav.wdb" id="1">
+      <db_ref path="graph_n12_machine_postsynth_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
-            <top_module name="graph_n12_machine_tb2" />
+            <top_module name="graph_n12_machine_postsynth" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="4,839.587 ns"></ZoomStartTime>
-      <ZoomEndTime time="5,230.083 ns"></ZoomEndTime>
-      <Cursor1Time time="5,165.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="5.180001 us"></ZoomEndTime>
+      <Cursor1Time time="3.361133 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="269"></NameColumnWidth>
-      <ValueColumnWidth column_width="150"></ValueColumnWidth>
+      <ValueColumnWidth column_width="138"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="18" />
-   <wvobject type="logic" fp_name="/graph_n12_machine_tb2/DUT/clk">
+   <WVObjectSize size="4" />
+   <wvobject type="logic" fp_name="/graph_n12_machine_postsynth/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/graph_n12_machine_tb2/DUT/update_memory">
-      <obj_property name="ElementShortName">update_memory</obj_property>
-      <obj_property name="ObjectShortName">update_memory</obj_property>
+   <wvobject type="logic" fp_name="/graph_n12_machine_postsynth/halt">
+      <obj_property name="ElementShortName">halt</obj_property>
+      <obj_property name="ObjectShortName">halt</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2/DUT/scheduler_instance/membrane_reg">
-      <obj_property name="ElementShortName">membrane_reg[15:0]</obj_property>
-      <obj_property name="ObjectShortName">membrane_reg[15:0]</obj_property>
+   <wvobject type="logic" fp_name="/graph_n12_machine_postsynth/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2/DUT/idx_that_fired">
-      <obj_property name="ElementShortName">idx_that_fired[3:0]</obj_property>
-      <obj_property name="ObjectShortName">idx_that_fired[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2/DUT/scheduler_instance/cuts_best">
-      <obj_property name="ElementShortName">cuts_best[15:0]</obj_property>
-      <obj_property name="ObjectShortName">cuts_best[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2/DUT/scheduler_instance/curr_cuts">
-      <obj_property name="ElementShortName">curr_cuts[15:0]</obj_property>
-      <obj_property name="ObjectShortName">curr_cuts[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2/DUT/scheduler_instance/curr_solution">
-      <obj_property name="ElementShortName">curr_solution[11:0]</obj_property>
-      <obj_property name="ObjectShortName">curr_solution[11:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2/DUT/scheduler_instance/best_solution">
-      <obj_property name="ElementShortName">best_solution[11:0]</obj_property>
-      <obj_property name="ObjectShortName">best_solution[11:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/graph_n12_machine_tb2/DUT/clk">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2/DUT/unit0/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">membrane_storage[0:3][15:0]</obj_property>
-      <obj_property name="ObjectShortName">membrane_storage[0:3][15:0]</obj_property>
-      <obj_property name="label">UNIT0_membrane_storage[0:3][15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2/DUT/unit1/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">membrane_storage[0:3][15:0]</obj_property>
-      <obj_property name="ObjectShortName">membrane_storage[0:3][15:0]</obj_property>
-      <obj_property name="label">UNIT1_membrane_storage[0:3][15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2/DUT/unit2/neuron_ensemble_inst/neuron_ensemble_storage_inst/membrane_storage">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">membrane_storage[0:3][15:0]</obj_property>
-      <obj_property name="ObjectShortName">membrane_storage[0:3][15:0]</obj_property>
-      <obj_property name="label">UNIT2_membrane_storage[0:3][15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2/DUT/unit0/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">neuron_states_storage[0:3][3:0]</obj_property>
-      <obj_property name="ObjectShortName">neuron_states_storage[0:3][3:0]</obj_property>
-      <obj_property name="label">UNIT0_neuron_states_storage[0:3][3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2/DUT/unit1/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">neuron_states_storage[0:3][3:0]</obj_property>
-      <obj_property name="ObjectShortName">neuron_states_storage[0:3][3:0]</obj_property>
-      <obj_property name="label">UNIT1_neuron_states_storage[0:3][3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2/DUT/unit2/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">neuron_states_storage[0:3][3:0]</obj_property>
-      <obj_property name="ObjectShortName">neuron_states_storage[0:3][3:0]</obj_property>
-      <obj_property name="label">UNIT2_neuron_states_storage[0:3][3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2/DUT/unit0/neuron_ensemble_inst/neuron_ensemble_storage_inst/Q_inp">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">Q_inp[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Q_inp[3:0]</obj_property>
-      <obj_property name="label">UNIT0_Q_inp[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2/DUT/unit1/neuron_ensemble_inst/neuron_ensemble_storage_inst/Q_inp">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">Q_inp[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Q_inp[3:0]</obj_property>
-      <obj_property name="label">UNIT1_Q_inp[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2/DUT/unit2/neuron_ensemble_inst/neuron_ensemble_storage_inst/Q_inp">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">Q_inp[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Q_inp[3:0]</obj_property>
-      <obj_property name="label">UNIT2_Q_inp[3:0]</obj_property>
+   <wvobject type="array" fp_name="/graph_n12_machine_postsynth/best_cuts_found">
+      <obj_property name="ElementShortName">best_cuts_found[15:0]</obj_property>
+      <obj_property name="ObjectShortName">best_cuts_found[15:0]</obj_property>
    </wvobject>
 </wave_config>

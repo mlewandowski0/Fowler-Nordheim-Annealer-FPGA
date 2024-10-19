@@ -30,6 +30,7 @@ module scheduler2_tb();
     localparam COUNTER_WIDTH=40;
     localparam TEMP_INC_WIDTH=2;
     localparam NO_CLK_CYCLES_AFTER_UPDATE=0;
+    localparam SOLUTION_WIDTH=16;
 
     localparam HALF_CLK_PERIOD = 5;
     localparam CLK_PERIOD = 2 * HALF_CLK_PERIOD;
@@ -44,6 +45,7 @@ module scheduler2_tb();
     wire [$clog2(GRAPH_WIDTH)-1:0] index_of_neuron_that_fired;
     wire reset_modules, halt_modules, update_memories, should_increment;
     wire decrease_temp; 
+    wire [SOLUTION_WIDTH-1:0]       cuts_best_transmit;
 
     scheduler
     #(.UNIT_WIDTH(UNIT_WIDTH),
@@ -68,7 +70,8 @@ module scheduler2_tb();
             .halt_modules(halt_modules),
             .update_memories(update_memories),
             .should_increment(should_increment),
-            .decrease_temp(decrease_temp)
+            .decrease_temp(decrease_temp),
+            .cuts_best_transmit(cuts_best_transmit)
       );
 
     always

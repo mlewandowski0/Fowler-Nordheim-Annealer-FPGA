@@ -1,0 +1,77 @@
+setting DTYPE to float32
+setting MAX_ITER to 10000000.0
+setting PROBLEM_PATH to ./G15.npy
+setting THLD_MAX to 80000.0
+setting THLD_DELTA to 0.002
+setting LOG_FILE to ./logs/approximations
+setting EXTENSION to .txt
+setting RNG_APPROX_SELECTION to LFSR
+setting RNG_APPROX_CALC to LFSR
+setting LOG_APPROX to lut
+setting RNG_APPROX_SELECTION_BITS to 10
+setting RNG_APPROX_SELECTION_SEED to -1
+setting RNG_APPROX_CALC_BITS to 6
+setting RNG_APPROX_CALC_SEED to -1
+setting UNITS to 25
+setting TAYLOR_ORDER to 1
+setting PADE_ORDER to 1
+setting DEBUG to 0
+setting MEMORY_CLOSE to 1
+setting COUNTER to 128
+setting LUT_NBITS to 7
+setting LUT_THLD_MAX_MULTIPLES to 2.5
+key not found, setting LUT_APPROX_FILENAME to hardware/log_approximation_LUT.mem
+to save : ./logs/approximations
+rng for selection set to LFSR approximation, bits=10, seed=0b11000011
+rng for selection set to LFSR approximation, bits=10, seed=0b1100101100
+rng for selection set to LFSR approximation, bits=10, seed=0b100001111
+rng for selection set to LFSR approximation, bits=10, seed=0b1010000001
+rng for selection set to LFSR approximation, bits=10, seed=0b1001100111
+rng for selection set to LFSR approximation, bits=10, seed=0b111111100
+rng for selection set to LFSR approximation, bits=10, seed=0b1111000010
+rng for selection set to LFSR approximation, bits=10, seed=0b1100001011
+rng for selection set to LFSR approximation, bits=10, seed=0b1101000110
+rng for selection set to LFSR approximation, bits=10, seed=0b1110111101
+rng for selection set to LFSR approximation, bits=10, seed=0b110101001
+rng for selection set to LFSR approximation, bits=10, seed=0b1101011
+rng for selection set to LFSR approximation, bits=10, seed=0b101100010
+rng for selection set to LFSR approximation, bits=10, seed=0b1010011101
+rng for selection set to LFSR approximation, bits=10, seed=0b1110010001
+rng for selection set to LFSR approximation, bits=10, seed=0b110001111
+rng for selection set to LFSR approximation, bits=10, seed=0b1011100000
+rng for selection set to LFSR approximation, bits=10, seed=0b1011100000
+rng for selection set to LFSR approximation, bits=10, seed=0b1010011100
+rng for selection set to LFSR approximation, bits=10, seed=0b101111100
+rng for selection set to LFSR approximation, bits=10, seed=0b11011111
+rng for selection set to LFSR approximation, bits=10, seed=0b101110001
+rng for selection set to LFSR approximation, bits=10, seed=0b1011111010
+rng for selection set to LFSR approximation, bits=10, seed=0b11001101
+rng for selection set to LFSR approximation, bits=10, seed=0b1101110000
+rng for calculation set to LFSR approximation, bits=6, seed=0b10001
+rng for calculation set to LFSR approximation, bits=6, seed=0b11011
+rng for calculation set to LFSR approximation, bits=6, seed=0b100
+rng for calculation set to LFSR approximation, bits=6, seed=0b10010
+rng for calculation set to LFSR approximation, bits=6, seed=0b1101
+rng for calculation set to LFSR approximation, bits=6, seed=0b101
+rng for calculation set to LFSR approximation, bits=6, seed=0b10101
+rng for calculation set to LFSR approximation, bits=6, seed=0b111000
+rng for calculation set to LFSR approximation, bits=6, seed=0b100000
+rng for calculation set to LFSR approximation, bits=6, seed=0b11110
+rng for calculation set to LFSR approximation, bits=6, seed=0b11
+rng for calculation set to LFSR approximation, bits=6, seed=0b101000
+rng for calculation set to LFSR approximation, bits=6, seed=0b1110
+rng for calculation set to LFSR approximation, bits=6, seed=0b10111
+rng for calculation set to LFSR approximation, bits=6, seed=0b11010
+rng for calculation set to LFSR approximation, bits=6, seed=0b100001
+rng for calculation set to LFSR approximation, bits=6, seed=0b101000
+rng for calculation set to LFSR approximation, bits=6, seed=0b10110
+rng for calculation set to LFSR approximation, bits=6, seed=0b111110
+rng for calculation set to LFSR approximation, bits=6, seed=0b111100
+rng for calculation set to LFSR approximation, bits=6, seed=0b11010
+rng for calculation set to LFSR approximation, bits=6, seed=0b1010
+rng for calculation set to LFSR approximation, bits=6, seed=0b11010
+rng for calculation set to LFSR approximation, bits=6, seed=0b101110
+rng for calculation set to LFSR approximation, bits=6, seed=0b101001
+log approximation set to LUT
+size of ROM = 2048 bits [128 elements]
+saving to ./logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=29.txt

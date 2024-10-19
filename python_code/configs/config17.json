@@ -1,6 +1,6 @@
 {
     "DTYPE": "float32",
-    "MAX_ITER": 1e7,
+    "MAX_ITER": 1e8,
     "PROBLEM_PATH": "./G15.npy",
     "THLD_MAX": 8e4,
     "THLD_DELTA": 2e-3,

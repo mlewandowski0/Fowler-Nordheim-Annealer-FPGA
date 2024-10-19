@@ -1,6 +1,6 @@
 #!/bin/bash --login
 #$ -cwd
-#$ -t 1-32            # A job-array with 1000 "tasks", numbered 1...1000
+#$ -t 1-20            # A job-array with 1000 "tasks", numbered 1...1000
                       # NOTE: No #$ -pe line so each task will use 1-core by default.
 
 module load apps/binapps/anaconda3/2023.09

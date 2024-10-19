@@ -37,6 +37,13 @@ module neuron_ensemble_tb();
 
     localparam HALF_CLK_PERIOD = 1;
     localparam CLK_PERIOD = 2 * HALF_CLK_PERIOD;
+    
+    // 0: GENERATE_STATE, 1: INC_STATE, 2: SUB_STATE, 3: RESET_STATE
+    localparam ENSEMBLE_GENERATE_STATE  = 2'b00;
+    localparam ENSEMBLE_INC_STATE       = 2'b01;
+    localparam ENSEMBLE_SUB_STATE       = 2'b10;
+    localparam ENSEMBLE_RESET_STATE     = 2'b11;
+    
 
 
     reg clk, storage_CE, flipping_CE, write_ensemble_seed, write_flipping_seed, decrease_temp, reset_flipping, write_mem_state_data;

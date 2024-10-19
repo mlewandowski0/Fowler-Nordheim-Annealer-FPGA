@@ -1,0 +1,192 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/DEFINES.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/DEFINES.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/LFSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LFSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/LFSR_inout.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LFSR_inout
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/cla_nbit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cla_nbit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module distributed_graph_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/ensemble_unit_top_for_record_numbers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ensemble_unit_top_for_record_numbers
+WARNING: [VRFC 10-3380] identifier 'GRAPH_WIDTH' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/ensemble_unit_top_for_record_numbers.v:25]
+WARNING: [VRFC 10-3380] identifier 'NEURON_SEL_LFSR_WIDTH' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/ensemble_unit_top_for_record_numbers.v:35]
+WARNING: [VRFC 10-3380] identifier 'NOISE_SOURCE_WIDTH' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/ensemble_unit_top_for_record_numbers.v:38]
+WARNING: [VRFC 10-3380] identifier 'MEMBRANE_WIDTH' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/ensemble_unit_top_for_record_numbers.v:43]
+WARNING: [VRFC 10-3380] identifier 'UNIT_WIDTH' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/ensemble_unit_top_for_record_numbers.v:47]
+WARNING: [VRFC 10-3380] identifier 'NEURON_WIDTH' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/ensemble_unit_top_for_record_numbers.v:48]
+WARNING: [VRFC 10-3380] identifier 'MEMBRANE_WIDTH' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/ensemble_unit_top_for_record_numbers.v:49]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/fixed_add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fixed_add
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fixed_mult
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/flipping_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flipping_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/float16_add_normalizer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module float16_add_normalizer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/float16_alignment.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module float16_alignment
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/float16_mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module float16_mult
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/float16_normalizer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module float16_normalizer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/float16_to_int.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module float16_to_int
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/graph_processor_small.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module graph_processor_small
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/log_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module log_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/log_noise_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module log_noise_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/membrane_update.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module membrane_update
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/mulBITSxBITS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mulBITSxBITS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neuron_ensemble
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_storage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neuron_ensemble_storage
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neuron_ensemble_with_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/round_robin_priority_selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module round_robin_priority_selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/scheduler.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scheduler
+WARNING: [VRFC 10-3380] identifier 'unit_number_reg' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/scheduler.v:79]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/simple_priority_selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_priority_selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/temp_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module temp_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/temperature_mapping.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module temperature_mapping
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/temperature_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module temperature_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/vedic_mul16x16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vedic_mul16x16
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/vedic_mul2x2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vedic_mul2x2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/vedic_mul4x4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vedic_mul4x4
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/vedic_mul8x8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vedic_mul8x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/graph_n12_machine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module graph_n12_machine
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/graph_n12_machine_tb2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module graph_n12_machine_tb2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/float16_to_int_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module float16_to_int
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'float16_to_int' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/float16_to_int.v:1]
+INFO: [VRFC 10-311] analyzing module float16_to_int_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/graph_n12_machine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module graph_n12_machine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/scheduler_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scheduler_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/scheduler2_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scheduler2_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/UTIL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UTIL
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/float16_mult_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UTIL
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'UTIL' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/UTIL.v:23]
+INFO: [VRFC 10-311] analyzing module float16_mult_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/float16_add_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UTIL
+INFO: [VRFC 10-311] analyzing module float16_add_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UTIL
+INFO: [VRFC 10-311] analyzing module fixed_mult_tb
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:56]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:57]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:64]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:65]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:71]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:72]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:78]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:79]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:85]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:86]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:93]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:94]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:100]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:101]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:107]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:108]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:114]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:115]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:135]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:136]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:142]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:143]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:149]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:150]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:156]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:157]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:163]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:164]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:175]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult_tb.v:176]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UTIL
+INFO: [VRFC 10-311] analyzing module fixed_add_tb
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:37]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:38]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:45]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:46]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:52]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:53]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:59]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:60]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:66]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:67]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:74]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:75]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:81]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:82]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:88]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:89]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:95]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:96]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:116]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:117]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:123]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:124]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:130]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:131]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:137]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:138]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:144]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:145]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:156]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_add_tb.v:157]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/LFSR_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LFSR_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/adder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/flipping_unit_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flipping_unit_tb
+WARNING: [VRFC 10-3380] identifier 'i' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/flipping_unit_tb.v:67]
+WARNING: [VRFC 10-3380] identifier 'i' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/flipping_unit_tb.v:75]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/float16_add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module float16_add
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/log_noise_generator_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module log_noise_generator_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/neuron_ensemble_storage_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neuron_ensemble_storage_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/neuron_ensemble_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neuron_ensemble_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/neuron_ensemble_with_memory_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neuron_ensemble_with_memory_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/round_robin_priority_selector_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module round_robin_priority_selector_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/simple_priority_selector_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_priority_selector_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/temperature_mapping_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module temperature_mapping_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/temperature_module_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module temperature_module_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/noise_source_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/graph_n12_machine_postsynth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module graph_n12_machine_postsynth

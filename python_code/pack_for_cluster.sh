@@ -20,5 +20,7 @@ cp -r configs/* run_on_cluster/configs/
 # move the running script (TODO: automate the process of submission)
 cp submit_jobs.job  run_on_cluster/submit_jobs.job
 
+cp install_deps_runpod.sh run_on_cluster/install_deps_runpod.sh
+
 # zip the package for sending to cluster
 zip -r cluster.zip run_on_cluster/*

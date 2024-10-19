@@ -45,6 +45,9 @@ module graph_n12_machine_tb2();
     reg [3:0]                       neuron_state_in;
     
     reg                             SIMULATION_RUNNING;   
+    
+    
+    wire [SOLUTION_WIDTH-1:0]       best_cuts_found;
 
     integer                         decrease_temeperature_no;
     integer                         fd;
@@ -67,7 +70,8 @@ module graph_n12_machine_tb2();
         .flipping_seed(flipping_seed),
         .membrane_data_in(membrane_data_in),
         .neuron_state_in(neuron_state_in),
-        .write_neuron_states(write_neuron_states)
+        .write_neuron_states(write_neuron_states),
+        .found_solution_value(best_cuts_found)
     );
 
     initial

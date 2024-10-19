@@ -1,0 +1,74 @@
+Vivado Simulator v2024.1.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/mlewand/software/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot graph_n12_machine_postsynth_func_synth xil_defaultlib.graph_n12_machine_postsynth xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.FDPE_default
+Compiling module unisims_ver.FDCE_default
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.scheduler
+Compiling module unisims_ver.latchsre_ldce
+Compiling module unisims_ver.LDCE
+Compiling module xil_defaultlib.simple_priority_selector
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mulBITSxBITS_17
+Compiling module xil_defaultlib.float16_mult_13
+Compiling module xil_defaultlib.LFSR__parameterized0_16
+Compiling module xil_defaultlib.log_noise_generator_14
+Compiling module unisims_ver.RB18_INTERNAL_VLOG(DOA_REG=1,DOB...
+Compiling module unisims_ver.RAMB18E1(DOA_REG=1,DOB_REG=1,INI...
+Compiling module xil_defaultlib.temperature_module_15
+Compiling module xil_defaultlib.flipping_unit_9
+Compiling module xil_defaultlib.LFSR_12
+Compiling module xil_defaultlib.LFSR_inout_11
+Compiling module unisims_ver.RAM32M
+Compiling module xil_defaultlib.neuron_ensemble_storage_10
+Compiling module xil_defaultlib.neuron_ensemble
+Compiling module xil_defaultlib.neuron_ensemble_with_memory
+Compiling module xil_defaultlib.mulBITSxBITS_8
+Compiling module xil_defaultlib.float16_mult_4
+Compiling module xil_defaultlib.LFSR__parameterized0_7
+Compiling module xil_defaultlib.log_noise_generator_5
+Compiling module xil_defaultlib.temperature_module_6
+Compiling module xil_defaultlib.flipping_unit_0
+Compiling module xil_defaultlib.LFSR_3
+Compiling module xil_defaultlib.LFSR_inout_2
+Compiling module xil_defaultlib.neuron_ensemble_storage_1
+Compiling module xil_defaultlib.neuron_ensemble__parameterized0
+Compiling module xil_defaultlib.neuron_ensemble_with_memory__par...
+Compiling module xil_defaultlib.mulBITSxBITS
+Compiling module xil_defaultlib.float16_mult
+Compiling module xil_defaultlib.LFSR__parameterized0
+Compiling module xil_defaultlib.log_noise_generator
+Compiling module unisims_ver.RB18_INTERNAL_VLOG(DOA_REG=1,RDA...
+Compiling module unisims_ver.RAMB18E1(DOA_REG=1,INIT_00=256'b...
+Compiling module xil_defaultlib.temperature_module
+Compiling module xil_defaultlib.flipping_unit
+Compiling module xil_defaultlib.LFSR
+Compiling module xil_defaultlib.LFSR_inout
+Compiling module xil_defaultlib.neuron_ensemble_storage
+Compiling module xil_defaultlib.neuron_ensemble__parameterized1
+Compiling module xil_defaultlib.neuron_ensemble_with_memory__par...
+Compiling module xil_defaultlib.graph_n12_machine
+Compiling module xil_defaultlib.graph_n12_machine_postsynth
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot graph_n12_machine_postsynth_func_synth

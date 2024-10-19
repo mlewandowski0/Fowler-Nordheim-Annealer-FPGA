@@ -39,8 +39,9 @@ module graph_n12_machine
                          input [NOISE_SOURCE_WIDTH-1:0]     flipping_seed,
                          input [MEMBRANE_WIDTH-1:0]         membrane_data_in,
                          input [3:0]                        neuron_state_in,
-                         input [2:0]                        write_neuron_states
-
+                         input [2:0]                        write_neuron_states,
+                         
+                         output [SOLUTION_WIDTH-1:0]        found_solution_value
                          );
 
     
@@ -80,6 +81,9 @@ module graph_n12_machine
     wire [NEURON_NUM_WIDTH-1:0]             offset;
     wire [MEMBRANE_WIDTH-1:0]               membrane;
     wire                                    add_mem;
+    
+    
+    assign cos = spiked;
 
     neuron_ensemble_with_memory 
     #(.UNIT_NO(0),
@@ -256,7 +260,8 @@ module graph_n12_machine
       .halt_modules(halt),
       .update_memories(update_memory),
       .should_increment(should_increment),
-      .decrease_temp(decrease_temp)
+      .decrease_temp(decrease_temp),
+      .cuts_best_transmit(found_solution_value)
     );
 
 

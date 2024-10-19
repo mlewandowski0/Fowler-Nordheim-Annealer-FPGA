@@ -53,7 +53,8 @@ module scheduler
     output wire                                halt_modules,
     output reg                                 update_memories,
     output reg                                 should_increment,
-    output wire                                decrease_temp
+    output wire                                decrease_temp, 
+    output wire [SOLUTION_WIDTH-1:0]           cuts_best_transmit
 );
 
     // State Definitions
@@ -85,7 +86,13 @@ module scheduler
 
     assign halt_modules = halt_scheduler;
     assign decrease_temp = &counter[TEMP_INC_WIDTH-1:0];
+    
+    
+    // transmit the value of the best solution found
+    assign cuts_best_transmit = cuts_best;
 
+
+    // TODO : transmit the best solution found
 
     // Sequential Logic for State Transitions and Outputs
     always @(posedge clk or posedge reset) begin
