@@ -1,187 +1,384 @@
-			fd = $fopen("float16_to_int_tb.txt", "w");
+val = 18'b0001101111_00110000; // after conversion should be 111.1875
+#CLK;
 
+val = 18'b0000111001_10011000; // after conversion should be 57.59375
+#CLK;
 
-			// TC 1 :
-			inp = 16'b0011111000000000; // 1.5 
-			expected = 16'b0000000000000001; // 1 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be 1, as binary = 0000000000000001 
-			#1;
-			// TC 2 :
-			inp = 16'b0100000010000000; // 2.25 
-			expected = 16'b0000000000000010; // 2 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be 2, as binary = 0000000000000010 
-			#1;
-			// TC 3 :
-			inp = 16'b1011111000000000; // -1.5 
-			expected = 16'b1111111111111111; // -1 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be -1, as binary = 1111111111111111 
-			#1;
-			// TC 4 :
-			inp = 16'b1100000010000000; // -2.25 
-			expected = 16'b1111111111111110; // -2 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be -2, as binary = 1111111111111110 
-			#1;
-			// TC 5 :
-			inp = 16'b0100000000000000; // 2.0 
-			expected = 16'b0000000000000010; // 2 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be 2, as binary = 0000000000000010 
-			#1;
-			// TC 6 :
-			inp = 16'b0101011001000000; // 100.0 
-			expected = 16'b0000000001100100; // 100 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be 100, as binary = 0000000001100100 
-			#1;
-			// TC 7 :
-			inp = 16'b0100111011000000; // 27.0 
-			expected = 16'b0000000000011011; // 27 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be 27, as binary = 0000000000011011 
-			#1;
-			// TC 8 :
-			inp = 16'b0101000101010010; // 42.5625 
-			expected = 16'b0000000000101010; // 42 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be 42, as binary = 0000000000101010 
-			#1;
-			// TC 9 :
-			inp = 16'b0011100101001110; // 0.6630859375 
-			expected = 16'b0000000000000000; // 0 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be 0, as binary = 0000000000000000 
-			#1;
-			// TC 10 :
-			inp = 16'b0110001010011000; // 844.0 
-			expected = 16'b0000001101001100; // 844 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be 844, as binary = 0000001101001100 
-			#1;
-			// TC 11 :
-			inp = 16'b0110111101101011; // 7596.0 
-			expected = 16'b0001110110101100; // 7596 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be 7596, as binary = 0001110110101100 
-			#1;
-			// TC 12 :
-			inp = 16'b1110010001001000; // -1096.0 
-			expected = 16'b1111101110111000; // -1096 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be -1096, as binary = 1111101110111000 
-			#1;
-			// TC 13 :
-			inp = 16'b1110110000001101; // -4148.0 
-			expected = 16'b1110111111001100; // -4148 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be -4148, as binary = 1110111111001100 
-			#1;
-			// TC 14 :
-			inp = 16'b1110111010001101; // -6708.0 
-			expected = 16'b1110010111001100; // -6708 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be -6708, as binary = 1110010111001100 
-			#1;
-			// TC 15 :
-			inp = 16'b1110001001010111; // -811.5 
-			expected = 16'b1111110011010101; // -811 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be -811, as binary = 1111110011010101 
-			#1;
-			// TC 16 :
-			inp = 16'b0111000000010011; // 8344.0 
-			expected = 16'b0010000010011000; // 8344 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be 8344, as binary = 0010000010011000 
-			#1;
-			// TC 17 :
-			inp = 16'b0110101111010001; // 4002.0 
-			expected = 16'b0000111110100010; // 4002 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be 4002, as binary = 0000111110100010 
-			#1;
-			// TC 18 :
-			inp = 16'b1110100011110101; // -2538.0 
-			expected = 16'b1111011000010110; // -2538 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be -2538, as binary = 1111011000010110 
-			#1;
-			// TC 19 :
-			inp = 16'b0110100111011110; // 3004.0 
-			expected = 16'b0000101110111100; // 3004 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be 3004, as binary = 0000101110111100 
-			#1;
-			// TC 20 :
-			inp = 16'b1110111100011010; // -7272.0 
-			expected = 16'b1110001110011000; // -7272 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be -7272, as binary = 1110001110011000 
-			#1;
-			// TC 21 :
-			inp = 16'b1111000011010001; // -9864.0 
-			expected = 16'b1101100101111000; // -9864 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be -9864, as binary = 1101100101111000 
-			#1;
-			// TC 22 :
-			inp = 16'b0110100110011100; // 2872.0 
-			expected = 16'b0000101100111000; // 2872 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be 2872, as binary = 0000101100111000 
-			#1;
-			// TC 23 :
-			inp = 16'b1110100001000000; // -2176.0 
-			expected = 16'b1111011110000000; // -2176 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be -2176, as binary = 1111011110000000 
-			#1;
-			// TC 24 :
-			inp = 16'b1110110001100000; // -4480.0 
-			expected = 16'b1110111010000000; // -4480 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be -4480, as binary = 1110111010000000 
-			#1;
-			// TC 25 :
-			inp = 16'b1110111111100011; // -8076.0 
-			expected = 16'b1110000001110100; // -8076 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be -8076, as binary = 1110000001110100 
-			#1;
-			// TC 26 :
-			inp = 16'b0110111000001110; // 6200.0 
-			expected = 16'b0001100000111000; // 6200 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be 6200, as binary = 0001100000111000 
-			#1;
-			// TC 27 :
-			inp = 16'b1110010010001111; // -1167.0 
-			expected = 16'b1111101101110001; // -1167 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be -1167, as binary = 1111101101110001 
-			#1;
-			// TC 28 :
-			inp = 16'b1110110110011001; // -5732.0 
-			expected = 16'b1110100110011100; // -5732 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be -5732, as binary = 1110100110011100 
-			#1;
-			// TC 29 :
-			inp = 16'b1110111110101101; // -7860.0 
-			expected = 16'b1110000101001100; // -7860 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be -7860, as binary = 1110000101001100 
-			#1;
-			// TC 30 :
-			inp = 16'b0110101010010101; // 3370.0 
-			expected = 16'b0000110100101010; // 3370 
-			#1;
-			utils.display_float16_to_int(inp, out, fd); // should be 3370, as binary = 0000110100101010 
-			#1;
+val = 18'b0000011011_00100100; // after conversion should be 27.140625
+#CLK;
 
+val = 18'b0000010001_11100000; // after conversion should be 17.875
+#CLK;
 
-			$fclose(fd);
-			$finish;
+val = 18'b0000001101_01100010; // after conversion should be 13.3828125
+#CLK;
+
+val = 18'b0000001010_10111110; // after conversion should be 10.7421875
+#CLK;
+
+val = 18'b0000001000_11111110; // after conversion should be 8.9921875
+#CLK;
+
+val = 18'b0000000111_11000001; // after conversion should be 7.75390625
+#CLK;
+
+val = 18'b0000000110_11101111; // after conversion should be 6.93359375
+#CLK;
+
+val = 18'b0000000110_00110010; // after conversion should be 6.1953125
+#CLK;
+
+val = 18'b0000000101_10011100; // after conversion should be 5.609375
+#CLK;
+
+val = 18'b0000000101_00100001; // after conversion should be 5.12890625
+#CLK;
+
+val = 18'b0000000100_10111100; // after conversion should be 4.734375
+#CLK;
+
+val = 18'b0000000100_01100110; // after conversion should be 4.3984375
+#CLK;
+
+val = 18'b0000000100_00011101; // after conversion should be 4.11328125
+#CLK;
+
+val = 18'b0000000011_11100101; // after conversion should be 3.89453125
+#CLK;
+
+val = 18'b0000000011_10101100; // after conversion should be 3.671875
+#CLK;
+
+val = 18'b0000000011_01111011; // after conversion should be 3.48046875
+#CLK;
+
+val = 18'b0000000011_01001111; // after conversion should be 3.30859375
+#CLK;
+
+val = 18'b0000000011_00101000; // after conversion should be 3.15625
+#CLK;
+
+val = 18'b0000000011_00000100; // after conversion should be 3.015625
+#CLK;
+
+val = 18'b0000000010_11100100; // after conversion should be 2.890625
+#CLK;
+
+val = 18'b0000000010_11000111; // after conversion should be 2.77734375
+#CLK;
+
+val = 18'b0000000010_10110000; // after conversion should be 2.6875
+#CLK;
+
+val = 18'b0000000010_10011000; // after conversion should be 2.59375
+#CLK;
+
+val = 18'b0000000010_10000001; // after conversion should be 2.50390625
+#CLK;
+
+val = 18'b0000000010_01101100; // after conversion should be 2.421875
+#CLK;
+
+val = 18'b0000000010_01011001; // after conversion should be 2.34765625
+#CLK;
+
+val = 18'b0000000010_01000111; // after conversion should be 2.27734375
+#CLK;
+
+val = 18'b0000000010_00110111; // after conversion should be 2.21484375
+#CLK;
+
+val = 18'b0000000010_00101001; // after conversion should be 2.16015625
+#CLK;
+
+val = 18'b0000000010_00011011; // after conversion should be 2.10546875
+#CLK;
+
+val = 18'b0000000010_00001101; // after conversion should be 2.05078125
+#CLK;
+
+val = 18'b0000000010_00000000; // after conversion should be 2.0
+#CLK;
+
+val = 18'b0000000001_11110100; // after conversion should be 1.953125
+#CLK;
+
+val = 18'b0000000001_11101000; // after conversion should be 1.90625
+#CLK;
+
+val = 18'b0000000001_11011110; // after conversion should be 1.8671875
+#CLK;
+
+val = 18'b0000000001_11010100; // after conversion should be 1.828125
+#CLK;
+
+val = 18'b0000000001_11001011; // after conversion should be 1.79296875
+#CLK;
+
+val = 18'b0000000001_11000010; // after conversion should be 1.7578125
+#CLK;
+
+val = 18'b0000000001_10111001; // after conversion should be 1.72265625
+#CLK;
+
+val = 18'b0000000001_10110001; // after conversion should be 1.69140625
+#CLK;
+
+val = 18'b0000000001_10101001; // after conversion should be 1.66015625
+#CLK;
+
+val = 18'b0000000001_10100001; // after conversion should be 1.62890625
+#CLK;
+
+val = 18'b0000000001_10011010; // after conversion should be 1.6015625
+#CLK;
+
+val = 18'b0000000001_10010100; // after conversion should be 1.578125
+#CLK;
+
+val = 18'b0000000001_10001101; // after conversion should be 1.55078125
+#CLK;
+
+val = 18'b0000000001_10000111; // after conversion should be 1.52734375
+#CLK;
+
+val = 18'b0000000001_10000001; // after conversion should be 1.50390625
+#CLK;
+
+val = 18'b0000000001_01111011; // after conversion should be 1.48046875
+#CLK;
+
+val = 18'b0000000001_01110101; // after conversion should be 1.45703125
+#CLK;
+
+val = 18'b0000000001_01110000; // after conversion should be 1.4375
+#CLK;
+
+val = 18'b0000000001_01101011; // after conversion should be 1.41796875
+#CLK;
+
+val = 18'b0000000001_01100110; // after conversion should be 1.3984375
+#CLK;
+
+val = 18'b0000000001_01100010; // after conversion should be 1.3828125
+#CLK;
+
+val = 18'b0000000001_01011101; // after conversion should be 1.36328125
+#CLK;
+
+val = 18'b0000000001_01011000; // after conversion should be 1.34375
+#CLK;
+
+val = 18'b0000000001_01010100; // after conversion should be 1.328125
+#CLK;
+
+val = 18'b0000000001_01010000; // after conversion should be 1.3125
+#CLK;
+
+val = 18'b0000000001_01001100; // after conversion should be 1.296875
+#CLK;
+
+val = 18'b0000000001_01001000; // after conversion should be 1.28125
+#CLK;
+
+val = 18'b0000000001_01000101; // after conversion should be 1.26953125
+#CLK;
+
+val = 18'b0000000001_01000001; // after conversion should be 1.25390625
+#CLK;
+
+val = 18'b0000000001_00111101; // after conversion should be 1.23828125
+#CLK;
+
+val = 18'b0000000001_00111010; // after conversion should be 1.2265625
+#CLK;
+
+val = 18'b0000000001_00110110; // after conversion should be 1.2109375
+#CLK;
+
+val = 18'b0000000001_00110011; // after conversion should be 1.19921875
+#CLK;
+
+val = 18'b0000000001_00110000; // after conversion should be 1.1875
+#CLK;
+
+val = 18'b0000000001_00101101; // after conversion should be 1.17578125
+#CLK;
+
+val = 18'b0000000001_00101010; // after conversion should be 1.1640625
+#CLK;
+
+val = 18'b0000000001_00100111; // after conversion should be 1.15234375
+#CLK;
+
+val = 18'b0000000001_00100101; // after conversion should be 1.14453125
+#CLK;
+
+val = 18'b0000000001_00100010; // after conversion should be 1.1328125
+#CLK;
+
+val = 18'b0000000001_00011111; // after conversion should be 1.12109375
+#CLK;
+
+val = 18'b0000000001_00011100; // after conversion should be 1.109375
+#CLK;
+
+val = 18'b0000000001_00011010; // after conversion should be 1.1015625
+#CLK;
+
+val = 18'b0000000001_00011000; // after conversion should be 1.09375
+#CLK;
+
+val = 18'b0000000001_00010101; // after conversion should be 1.08203125
+#CLK;
+
+val = 18'b0000000001_00010011; // after conversion should be 1.07421875
+#CLK;
+
+val = 18'b0000000001_00010001; // after conversion should be 1.06640625
+#CLK;
+
+val = 18'b0000000001_00001110; // after conversion should be 1.0546875
+#CLK;
+
+val = 18'b0000000001_00001100; // after conversion should be 1.046875
+#CLK;
+
+val = 18'b0000000001_00001010; // after conversion should be 1.0390625
+#CLK;
+
+val = 18'b0000000001_00001000; // after conversion should be 1.03125
+#CLK;
+
+val = 18'b0000000001_00000110; // after conversion should be 1.0234375
+#CLK;
+
+val = 18'b0000000001_00000100; // after conversion should be 1.015625
+#CLK;
+
+val = 18'b0000000001_00000010; // after conversion should be 1.0078125
+#CLK;
+
+val = 18'b0000000001_00000000; // after conversion should be 1.0
+#CLK;
+
+val = 18'b0000000000_11111110; // after conversion should be 0.9921875
+#CLK;
+
+val = 18'b0000000000_11111100; // after conversion should be 0.984375
+#CLK;
+
+val = 18'b0000000000_11111011; // after conversion should be 0.98046875
+#CLK;
+
+val = 18'b0000000000_11111001; // after conversion should be 0.97265625
+#CLK;
+
+val = 18'b0000000000_11110111; // after conversion should be 0.96484375
+#CLK;
+
+val = 18'b0000000000_11110110; // after conversion should be 0.9609375
+#CLK;
+
+val = 18'b0000000000_11110100; // after conversion should be 0.953125
+#CLK;
+
+val = 18'b0000000000_11110010; // after conversion should be 0.9453125
+#CLK;
+
+val = 18'b0000000000_11110001; // after conversion should be 0.94140625
+#CLK;
+
+val = 18'b0000000000_11101111; // after conversion should be 0.93359375
+#CLK;
+
+val = 18'b0000000000_11101110; // after conversion should be 0.9296875
+#CLK;
+
+val = 18'b0000000000_11101100; // after conversion should be 0.921875
+#CLK;
+
+val = 18'b0000000000_11101011; // after conversion should be 0.91796875
+#CLK;
+
+val = 18'b0000000000_11101010; // after conversion should be 0.9140625
+#CLK;
+
+val = 18'b0000000000_11101000; // after conversion should be 0.90625
+#CLK;
+
+val = 18'b0000000000_11100111; // after conversion should be 0.90234375
+#CLK;
+
+val = 18'b0000000000_11100101; // after conversion should be 0.89453125
+#CLK;
+
+val = 18'b0000000000_11100100; // after conversion should be 0.890625
+#CLK;
+
+val = 18'b0000000000_11100011; // after conversion should be 0.88671875
+#CLK;
+
+val = 18'b0000000000_11100010; // after conversion should be 0.8828125
+#CLK;
+
+val = 18'b0000000000_11100000; // after conversion should be 0.875
+#CLK;
+
+val = 18'b0000000000_11011111; // after conversion should be 0.87109375
+#CLK;
+
+val = 18'b0000000000_11011110; // after conversion should be 0.8671875
+#CLK;
+
+val = 18'b0000000000_11011101; // after conversion should be 0.86328125
+#CLK;
+
+val = 18'b0000000000_11011011; // after conversion should be 0.85546875
+#CLK;
+
+val = 18'b0000000000_11011010; // after conversion should be 0.8515625
+#CLK;
+
+val = 18'b0000000000_11011001; // after conversion should be 0.84765625
+#CLK;
+
+val = 18'b0000000000_11011000; // after conversion should be 0.84375
+#CLK;
+
+val = 18'b0000000000_11010111; // after conversion should be 0.83984375
+#CLK;
+
+val = 18'b0000000000_11010110; // after conversion should be 0.8359375
+#CLK;
+
+val = 18'b0000000000_11010101; // after conversion should be 0.83203125
+#CLK;
+
+val = 18'b0000000000_11010100; // after conversion should be 0.828125
+#CLK;
+
+val = 18'b0000000000_11010011; // after conversion should be 0.82421875
+#CLK;
+
+val = 18'b0000000000_11010010; // after conversion should be 0.8203125
+#CLK;
+
+val = 18'b0000000000_11010001; // after conversion should be 0.81640625
+#CLK;
+
+val = 18'b0000000000_11010000; // after conversion should be 0.8125
+#CLK;
+
+val = 18'b0000000000_11001111; // after conversion should be 0.80859375
+#CLK;
+
+val = 18'b0000000000_11001110; // after conversion should be 0.8046875
+#CLK;
+
+val = 18'b0000000000_11001101; // after conversion should be 0.80078125
+#CLK;
+
+val = 18'b0000000000_11001100; // after conversion should be 0.796875
+#CLK;
+

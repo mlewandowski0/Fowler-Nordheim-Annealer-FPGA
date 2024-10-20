@@ -6,12 +6,17 @@ parameter NEURON_SEL_LFSR_WIDTH=3,
 parameter NEURON_WIDTH=2,
 parameter MEMBRANE_WIDTH=16,
 parameter NOISE_SOURCE_WIDTH=6,
-parameter LUT_FLIPPING_WIDTH=16,
+parameter FLIPPING_OUTPUT_WIDTH=16,
+parameter REAL_WIDTH=16,
 parameter LOG_NOISE_LUT_FILENAME="log_noise_LUT.mif",
 parameter TEMPERATURE_LUT_FILENAME="temperature_LUT.mif",
 parameter TEMPERATURE_LUT_WIDTH=7,
 parameter PIPELINED_ROMs=1,
-parameter PIPELINED_ENSEMBLE_STORAGE=1)
+parameter PIPELINED_ENSEMBLE_STORAGE=1,
+parameter USE_FLOAT_POINT=0,
+parameter FIXED_TOTAL_WIDTH=18,
+parameter FRACTIONAL_PART=8
+)
 (
     input wire clk, 
     input wire storage_CE,
@@ -45,7 +50,7 @@ parameter PIPELINED_ENSEMBLE_STORAGE=1)
 );
 
 wire [NEURON_WIDTH-1:0] selected_idx_offset;
-wire signed [LUT_FLIPPING_WIDTH-1:0] flipping_output;
+wire signed [FLIPPING_OUTPUT_WIDTH-1:0] flipping_output;
 wire signed [MEMBRANE_WIDTH-1:0] selected_membrane;
 wire [3:0] neuron_state;
 
@@ -80,11 +85,14 @@ neuron_ensemble_storage #(.LFSR_WIDTH(NEURON_SEL_LFSR_WIDTH),
                                  .neuron_state(neuron_state));
 
 flipping_unit #(.NOISE_SOURCE_WIDTH(NOISE_SOURCE_WIDTH), 
-                .LUT_WIDTH(LUT_FLIPPING_WIDTH),
+                .REAL_WIDTH(REAL_WIDTH),
+                .FLIPPING_OUTPUT_WIDTH(FLIPPING_OUTPUT_WIDTH),
                 .LOG_NOISE_LUT_FILENAME(LOG_NOISE_LUT_FILENAME),
                 .TEMPERATURE_LUT_FILENAME(TEMPERATURE_LUT_FILENAME),
                 .TEMPERATURE_LUT_WIDTH(TEMPERATURE_LUT_WIDTH),
-                .PIPELINED_ROMs(PIPELINED_ROMs))
+                .PIPELINED_ROMs(PIPELINED_ROMs),
+                .USE_FLOAT_POINT(USE_FLOAT_POINT),
+                .FRACTIONAL_PART(FRACTIONAL_PART))
 
                     flipping_unit_tb
                     (.clk(clk), 

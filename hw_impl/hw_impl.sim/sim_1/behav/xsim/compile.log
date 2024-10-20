@@ -74,6 +74,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-
 INFO: [VRFC 10-311] analyzing module vedic_mul8x8
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/graph_n12_machine.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module graph_n12_machine
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/fixed_to_int.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fixed_to_int
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/graph_n12_machine_tb2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module graph_n12_machine_tb2
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/float16_to_int_tb.v" into library xil_defaultlib
@@ -190,3 +192,7 @@ INFO: [VRFC 10-311] analyzing module temperature_module_tb
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/noise_source_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/graph_n12_machine_postsynth.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module graph_n12_machine_postsynth
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/fixed_to_int_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fixed_to_int_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/graph_n12_machine_tb2_fixed.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module graph_n12_machine_tb2_fixed

@@ -1,8 +1,8 @@
 import math
 import numpy as np
 
-FRAC_BITS = 8
-TOTAL_BITS = 16
+#FRAC_BITS = 8
+#TOTAL_BITS = 16
 
 def real_to_fixed(real, total_bits, fractional_bits):
     f = 1 << fractional_bits
@@ -19,6 +19,11 @@ def to_signed_bit_string(number, bit_width):
     else:
         return format((1 << bit_width) + number, f'0{bit_width}b')
 
+def real_to_fixed_str(number, total_bits, frac_bits):
+   ff = real_to_fixed(number, total_bits, frac_bits)
+   formatted_number = to_signed_bit_string(ff, total_bits)
+   return formatted_number 
+ 
 def real_to_fixed_repr(number, total_bits, frac_bits):
     ff = real_to_fixed(number, total_bits, frac_bits)
     formatted_number = to_signed_bit_string(ff, total_bits)

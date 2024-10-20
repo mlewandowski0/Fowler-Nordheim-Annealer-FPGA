@@ -2,3 +2,6 @@ Running: xsim.dir/graph_n12_machine_postsynth_behav/xsimk -simmode gui -wdb grap
 Design successfully loaded
 Design Loading Memory Usage: 20480 KB (Peak: 20792 KB)
 Design Loading CPU Usage: 20 ms
+Simulation completed
+Simulation Memory Usage: 104064 KB (Peak: 159748 KB)
+Simulation CPU Usage: 50 ms

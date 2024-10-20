@@ -28,7 +28,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log graph_n12_machine.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source graph_n12_machine.tcl" );
+         "-log ensemble_unit_top_for_record_numbers.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ensemble_unit_top_for_record_numbers.tcl" );
 
 
 

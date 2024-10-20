@@ -32,7 +32,12 @@ module graph_n12_machine_tb();
     localparam SOLUTION_WIDTH=16;
     localparam HALF_CLK_PERIOD  = 5;
     localparam CLK_PERIOD       = 2 * HALF_CLK_PERIOD;
-
+    localparam USE_FLOAT_POINT              = 0;
+    localparam FIXED_TOTAL_WIDTH            = 18;
+    localparam FRACTIONAL_PART              = 8;
+    localparam LOG_NOISE_LUT_FILENAME       = "log_noise_LUT.mif";
+    localparam TEMPERATURE_LUT_FILENAME     = "temperature_LUT.mif";
+    
     reg                             clk, reset, halt;
     reg [NEURON_SEL_LFSR_WIDTH-1:0] ensemble_seed;
     reg [NOISE_SOURCE_WIDTH-1:0]    flipping_seed;
@@ -52,7 +57,12 @@ module graph_n12_machine_tb();
       .COUNTER_WIDTH(COUNTER_WIDTH),
       .TEMP_INC_WIDTH(TEMP_INC_WIDTH),
       .NO_CLK_CYCLES_AFTER_UPDATE(NO_CLK_CYCLES_AFTER_UPDATE),
-      .SOLUTION_WIDTH(SOLUTION_WIDTH))
+      .SOLUTION_WIDTH(SOLUTION_WIDTH),
+      .USE_FLOAT_POINT(USE_FLOAT_POINT),
+      .FIXED_TOTAL_WIDTH(FIXED_TOTAL_WIDTH),
+      .FRACTIONAL_PART(FRACTIONAL_PART),
+      .LOG_NOISE_LUT_FILENAME(LOG_NOISE_LUT_FILENAME),
+      .TEMPERATURE_LUT_FILENAME(TEMPERATURE_LUT_FILENAME))
 
     DUT(.clk(clk),
         .reset(reset),

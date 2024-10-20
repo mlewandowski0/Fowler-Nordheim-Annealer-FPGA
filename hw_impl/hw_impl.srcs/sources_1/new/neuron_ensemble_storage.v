@@ -25,7 +25,7 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
                                  );
 
 
-        reg signed [MEMBRANE_WIDTH-1:0] membrane_storage [0:(1 << NEURON_WIDTH)-1];
+        (* ram_style = "block" *) reg signed [MEMBRANE_WIDTH-1:0] membrane_storage [0:(1 << NEURON_WIDTH)-1];
         
         
         localparam ENSEMBLE_GENERATE_STATE  =  2'b00;
@@ -42,7 +42,7 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
             neuron_state[0] = s_n
  
         */
-        reg [3:0] neuron_states_storage [0:(1 << NEURON_WIDTH)-1];
+        (* ram_style = "block" *) reg [3:0] neuron_states_storage [0:(1 << NEURON_WIDTH)-1];
 
 
         LFSR_inout #(.LFSR_BITS(LFSR_WIDTH), .OUT_BITS(NEURON_WIDTH)) index_selection(.clk(clk), 

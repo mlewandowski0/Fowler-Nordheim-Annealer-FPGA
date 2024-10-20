@@ -3,12 +3,21 @@ from math import *
 import numpy as np
 import matplotlib.pyplot as plt 
 
+# minima=-4.3173470493638355, maxima=0.28634097871064845
+
+random_gen_val = max(abs(-4.3173470493638355), abs(0.28634097871064845))
+
+offset = 32
+FRAC_TOTAL_BITS = 18
+FRAC_WIDTH      = 8
+MAX = (2**(FRAC_TOTAL_BITS - FRAC_WIDTH - 1)  - offset)/ random_gen_val
+
+frac_eps = 1 / (1 << FRAC_WIDTH)
+
 N_BITS = 7
-MAX = 1000.
 CONT_VALUES = 1000
 
-
-filepath = "temperature_LUT.mif"
+filepath_float = "temperature_LUT_float.mif"
 filepath_fixed = "temperature_LUT_fixed.mif"
 
 THLD_MAX = 8e4
@@ -16,7 +25,7 @@ MAX_ITER = 1e8
 THLD_DELTA = 2e-3
 
 
-SHOW_PLOT = True
+SHOW_PLOT = False
 
 total_values = 2**N_BITS
 
@@ -26,7 +35,8 @@ values_quant = []
 x_continuous = []
 values_continuous = []
 
-f = open(filepath, "w")
+f = open(filepath_float, "w")
+f_fixed = open(filepath_fixed, "w")
 
 for i in range(CONT_VALUES):
     
@@ -58,13 +68,24 @@ for i in range(total_values):
     
     x_quant.append(el)
     values_quant.append(val)    
+    
+    if abs(val) <= frac_eps:
+        val = val / abs(val) * frac_eps
+    val_as_fixed_str = real_to_fixed_str(val, FRAC_TOTAL_BITS, FRAC_WIDTH)
+    val_as_int = binary_to_unsigned_int(val_as_fixed_str)
+    print(f"fixed conversion of {val_as_fixed_str} : {val} -> {val_as_int} -> {fixed_to_real(val_as_int, TOTAL_BITS, FRAC_BITS)}")
+
     f.write(f"{fp16_view(val)}")
+    f_fixed.write(f"{val_as_fixed_str}")
+    
     if i != total_values -1:
         f.write("\n")
+        f_fixed.write("\n")
     
 
 
 f.close()
+f_fixed.close()
 
 if SHOW_PLOT:
     plt.stairs(values_quant[:-1], x_quant, color="blue", label="Quantized version")

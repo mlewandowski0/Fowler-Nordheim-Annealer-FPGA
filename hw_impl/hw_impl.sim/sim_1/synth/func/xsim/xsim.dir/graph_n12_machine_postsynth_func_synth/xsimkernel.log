@@ -2,3 +2,6 @@ Running: xsim.dir/graph_n12_machine_postsynth_func_synth/xsimk -simmode gui -wdb
 Design successfully loaded
 Design Loading Memory Usage: 29364 KB (Peak: 29364 KB)
 Design Loading CPU Usage: 30 ms
+Simulation completed
+Simulation Memory Usage: 115964 KB (Peak: 168632 KB)
+Simulation CPU Usage: 170 ms

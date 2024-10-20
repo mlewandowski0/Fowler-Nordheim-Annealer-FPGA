@@ -50,40 +50,52 @@ module ensemble_unit_top_for_record_numbers(
     output wire                                  add_mem
 );
 
+// modifying these parameters should reproduce the numbers from figure 2 from publication
+localparam GRAPH_WIDTH = 800;
+localparam NEURON_SEL_LFSR_WIDTH=5;
+localparam NEURON_WIDTH=5;
 
-    localparam GRAPH_WIDTH = 800;
-    localparam NEURON_SEL_LFSR_WIDTH=5;
-    localparam NEURON_WIDTH=5;           // 4 units
+// Change REAL_WIDTH=16 when using USE_FLOAT_POINT=1, 
+// or REAL_WIDTH=18 when USE_FLOAT_POINT=0
+localparam USE_FLOAT_POINT=0;
+localparam REAL_WIDTH=18;
 
 
-    localparam GRAPH_DISTRIB_FILE = "G15distr_N=800_A=16_0.mif";
-    localparam UNIT_WIDTH=2;
-    localparam UNIT_NO=0;
-    localparam MEMBRANE_WIDTH=16;
-    localparam NOISE_SOURCE_WIDTH=6;
-    localparam LUT_FLIPPING_WIDTH=16;
-    localparam LOG_NOISE_LUT_FILENAME="log_noise_LUT.mif";
-    localparam TEMPERATURE_LUT_FILENAME="temperature_LUT.mif";
-    localparam TEMPERATURE_LUT_WIDTH=7;
-    localparam PIPELINED_ROMs=1;
-    localparam PIPELINED_ENSEMBLE_STORAGE=1;
+localparam GRAPH_DISTRIB_FILE = "adj_matrix_distributed0.mif";
+localparam UNIT_WIDTH=2;
+localparam UNIT_NO=0;
+localparam MEMBRANE_WIDTH=16;
+localparam NOISE_SOURCE_WIDTH=7;
+localparam FLIPPING_OUTPUT_WIDTH=16;
+localparam LOG_NOISE_LUT_FILENAME="log_noise_LUT_fixed.mif";
+localparam TEMPERATURE_LUT_FILENAME="temperature_LUT_fixed.mif";
+localparam TEMPERATURE_LUT_WIDTH=7;
+localparam PIPELINED_ROMs=1;
+localparam PIPELINED_ENSEMBLE_STORAGE=1;
+localparam FIXED_TOTAL_WIDTH=18;
+localparam FRACTIONAL_PART=8;
+
 
 neuron_ensemble_with_memory
 #(.GRAPH_WIDTH(GRAPH_WIDTH),
-  .GRAPH_DISTRIB_FILE(GRAPH_DISTRIB_FILE),
-  .UNIT_WIDTH(UNIT_WIDTH),
-  .UNIT_NO(UNIT_NO),
-  .NEURON_SEL_LFSR_WIDTH(NEURON_SEL_LFSR_WIDTH),
-  .NEURON_WIDTH(NEURON_WIDTH),
-  .MEMBRANE_WIDTH(MEMBRANE_WIDTH),
-  .NOISE_SOURCE_WIDTH(NOISE_SOURCE_WIDTH),
-  .LUT_FLIPPING_WIDTH(LUT_FLIPPING_WIDTH),
-  .LOG_NOISE_LUT_FILENAME(LOG_NOISE_LUT_FILENAME),
-  .TEMPERATURE_LUT_FILENAME(TEMPERATURE_LUT_FILENAME),
-  .TEMPERATURE_LUT_WIDTH(TEMPERATURE_LUT_WIDTH),
-  .PIPELINED_ROMs(PIPELINED_ROMs),
-  .PIPELINED_ENSEMBLE_STORAGE(PIPELINED_ENSEMBLE_STORAGE))
-
+    .GRAPH_DISTRIB_FILE(GRAPH_DISTRIB_FILE),
+    .UNIT_WIDTH(UNIT_WIDTH),
+    .UNIT_NO(UNIT_NO),
+    .NEURON_SEL_LFSR_WIDTH(NEURON_SEL_LFSR_WIDTH),
+    .NEURON_WIDTH(NEURON_WIDTH),
+    .MEMBRANE_WIDTH(MEMBRANE_WIDTH),
+    .NOISE_SOURCE_WIDTH(NOISE_SOURCE_WIDTH),
+    .REAL_WIDTH(REAL_WIDTH),
+    .FLIPPING_OUTPUT_WIDTH(FLIPPING_OUTPUT_WIDTH),
+    .LOG_NOISE_LUT_FILENAME(LOG_NOISE_LUT_FILENAME),
+    .TEMPERATURE_LUT_FILENAME(TEMPERATURE_LUT_FILENAME),
+    .TEMPERATURE_LUT_WIDTH(TEMPERATURE_LUT_WIDTH),
+    .PIPELINED_ROMs(PIPELINED_ROMs),
+    .PIPELINED_ENSEMBLE_STORAGE(PIPELINED_ENSEMBLE_STORAGE),
+    .USE_FLOAT_POINT(USE_FLOAT_POINT),
+    .FIXED_TOTAL_WIDTH(FIXED_TOTAL_WIDTH),
+    .FRACTIONAL_PART(FRACTIONAL_PART)
+    )
     dut
     (.index_of_neuron_that_fired(index_of_neuron_that_fired),
         .reset_module(reset_module),

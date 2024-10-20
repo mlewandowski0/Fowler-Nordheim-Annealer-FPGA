@@ -31,7 +31,28 @@ def fixed_to_real(ival, total_bits, frac_bits):
         return ival / (1 << frac_bits) 
     else:
         return (ival / (1 << frac_bits))- (1 << (total_bits-frac_bits))
-            
+ 
+ 
+def binary_to_signed_int(bin_str):
+    # Convert the binary string to an integer
+    int_value = int(bin_str, 2)
+    
+    # Check if the MSB (most significant bit) is 1 (which indicates a negative number)
+    if bin_str[0] == '1':
+        # Calculate the two's complement (negative representation)
+        int_value -= (1 << len(bin_str))  # Subtract 2^len(bin_str)
+    
+    return int_value
+
+
+def binary_to_unsigned_int(bin_str):
+    # Convert the binary string to an integer
+    return int(bin_str, 2)
+ 
+def real_to_fixed_str(number, total_bits, frac_bits):
+   ff = real_to_fixed(number, total_bits, frac_bits)
+   formatted_number = to_signed_bit_string(ff, total_bits)
+   return formatted_number            
 
 # function to convert float to fp16 binary representation
 def fp16_view(value):

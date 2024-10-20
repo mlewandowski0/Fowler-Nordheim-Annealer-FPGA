@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1729359560">
-  <File Type="VDS-TIMINGSUMMARY" Name="graph_n12_machine_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="graph_n12_machine.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="graph_n12_machine_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="graph_n12_machine_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="graph_n12_machine_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="graph_n12_machine.vds"/>
-  <File Type="REPORTS-TCL" Name="graph_n12_machine_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="graph_n12_machine_timing_summary_synth.pb"/>
-  <File Type="PA-TCL" Name="graph_n12_machine.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1729434205">
+  <File Type="VDS-TIMINGSUMMARY" Name="ensemble_unit_top_for_record_numbers_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="ensemble_unit_top_for_record_numbers.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="ensemble_unit_top_for_record_numbers_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="ensemble_unit_top_for_record_numbers_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="ensemble_unit_top_for_record_numbers_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="ensemble_unit_top_for_record_numbers.vds"/>
+  <File Type="REPORTS-TCL" Name="ensemble_unit_top_for_record_numbers_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="ensemble_unit_top_for_record_numbers_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="ensemble_unit_top_for_record_numbers.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/DEFINES.v">
@@ -340,9 +340,32 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/fixed_to_int.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/scripts/log_noise_LUT_fixed.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/scripts/log_noise_LUT_fixed.mif"/>
+        <Attr Name="ImportTime" Val="1729384971"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/scripts/temperature_LUT_fixed.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/scripts/temperature_LUT_fixed.mif"/>
+        <Attr Name="ImportTime" Val="1729421360"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="graph_n12_machine"/>
+      <Option Name="TopModule" Val="ensemble_unit_top_for_record_numbers"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
