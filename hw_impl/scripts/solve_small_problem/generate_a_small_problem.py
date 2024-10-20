@@ -52,7 +52,7 @@ plt.subplot(1, 2, 2)
 nx.draw(G, node_color=color_map, with_labels=True, node_size=500, font_color='white')
 plt.title(f"MAX-CUT Solution (Cut Value: {best_cut_value})")
 serialize_matrix(adj_matrix, "adj_matrix.mif")
-serialize_matrix_distributed(adj_matrix, "adj_matrix_distributed{}.mif", 4)
+serialize_matrix_distributed(adj_matrix, f"adj_matrix_N12_A3_distributed" + "{}.mif", 4)
 
 np.save(os.path.join(".","toy_problem.npy"), adj_matrix)
 plt.savefig("problem.png")

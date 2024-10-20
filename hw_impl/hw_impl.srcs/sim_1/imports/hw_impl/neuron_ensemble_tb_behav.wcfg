@@ -3,69 +3,46 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="graph_n12_machine_tb2_fixed_behav.wdb" id="1">
+      <db_ref path="neuroSA_machine_N12_U3_tb_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
-            <top_module name="graph_n12_machine_tb2_fixed" />
+            <top_module name="neuroSA_machine_N12_U3_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="4,462.779 ns"></ZoomStartTime>
-      <ZoomEndTime time="5,261.969 ns"></ZoomEndTime>
-      <Cursor1Time time="5,180.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="747.001 ns"></ZoomEndTime>
+      <Cursor1Time time="349.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="269"></NameColumnWidth>
+      <NameColumnWidth column_width="216"></NameColumnWidth>
       <ValueColumnWidth column_width="98"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="12" />
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2_fixed/USE_FLOAT_POINT">
-      <obj_property name="ElementShortName">USE_FLOAT_POINT[31:0]</obj_property>
-      <obj_property name="ObjectShortName">USE_FLOAT_POINT[31:0]</obj_property>
+   <WVObjectSize size="6" />
+   <wvobject type="array" fp_name="/neuroSA_machine_N12_U3_tb/decrease_temperature_no">
+      <obj_property name="ElementShortName">decrease_temperature_no[31:0]</obj_property>
+      <obj_property name="ObjectShortName">decrease_temperature_no[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2_fixed/DUT/found_solution_value">
+   <wvobject type="array" fp_name="/neuroSA_machine_N12_U3_tb/found_solution_value">
       <obj_property name="ElementShortName">found_solution_value[15:0]</obj_property>
       <obj_property name="ObjectShortName">found_solution_value[15:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2_fixed/DUT/unit0/neuron_ensemble_inst/flipping_unit_tb/temperature_multiplier_out">
-      <obj_property name="ElementShortName">temperature_multiplier_out[17:0]</obj_property>
-      <obj_property name="ObjectShortName">temperature_multiplier_out[17:0]</obj_property>
+   <wvobject type="array" fp_name="/neuroSA_machine_N12_U3_tb/DUT/\unit_gen[0].unit_inst /G_memory/memory">
+      <obj_property name="ElementShortName">memory[0:11][3:0]</obj_property>
+      <obj_property name="ObjectShortName">memory[0:11][3:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2_fixed/DUT/unit0/neuron_ensemble_inst/flipping_unit_tb/noise_times_temp">
-      <obj_property name="ElementShortName">noise_times_temp[17:0]</obj_property>
-      <obj_property name="ObjectShortName">noise_times_temp[17:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2_fixed/DUT/unit0/neuron_ensemble_inst/flipping_unit_tb/\genblk1.noise_out_reg ">
-      <obj_property name="ElementShortName">\genblk1.noise_out_reg [17:0]</obj_property>
-      <obj_property name="ObjectShortName">\genblk1.noise_out_reg [17:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2_fixed/DUT/unit0/neuron_ensemble_inst/flipping_unit_tb/\genblk1.temperature_multiplier_out_reg ">
-      <obj_property name="ElementShortName">\genblk1.temperature_multiplier_out_reg [17:0]</obj_property>
-      <obj_property name="ObjectShortName">\genblk1.temperature_multiplier_out_reg [17:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2_fixed/DUT/unit0/neuron_ensemble_inst/flipping_unit_tb/flipping_output">
-      <obj_property name="ElementShortName">flipping_output[15:0]</obj_property>
-      <obj_property name="ObjectShortName">flipping_output[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2_fixed/DUT/selector/spikes">
+   <wvobject type="array" fp_name="/neuroSA_machine_N12_U3_tb/DUT/selector/spikes">
       <obj_property name="ElementShortName">spikes[2:0]</obj_property>
       <obj_property name="ObjectShortName">spikes[2:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/graph_n12_machine_tb2_fixed/DUT/unit0/neuron_ensemble_inst/spike">
-      <obj_property name="ElementShortName">spike</obj_property>
-      <obj_property name="ObjectShortName">spike</obj_property>
+   <wvobject type="array" fp_name="/neuroSA_machine_N12_U3_tb/DUT/\unit_gen[0].unit_inst /neuron_ensemble_inst/membrane">
+      <obj_property name="ElementShortName">membrane[15:0]</obj_property>
+      <obj_property name="ObjectShortName">membrane[15:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2_fixed/DUT/unit0/neuron_ensemble_inst/membrane_compare">
-      <obj_property name="ElementShortName">membrane_compare[15:0]</obj_property>
-      <obj_property name="ObjectShortName">membrane_compare[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2_fixed/DUT/unit0/neuron_ensemble_inst/flipping_output">
-      <obj_property name="ElementShortName">flipping_output[15:0]</obj_property>
-      <obj_property name="ObjectShortName">flipping_output[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/graph_n12_machine_tb2_fixed/DUT/selector/spikes">
-      <obj_property name="ElementShortName">spikes[2:0]</obj_property>
-      <obj_property name="ObjectShortName">spikes[2:0]</obj_property>
+   <wvobject type="array" fp_name="/neuroSA_machine_N12_U3_tb/DUT/\unit_gen[0].unit_inst /GRAPH_DISTRIB_FILE">
+      <obj_property name="ElementShortName">GRAPH_DISTRIB_FILE[271:0]</obj_property>
+      <obj_property name="ObjectShortName">GRAPH_DISTRIB_FILE[271:0]</obj_property>
+      <obj_property name="Radix">ASCIIRADIX</obj_property>
    </wvobject>
 </wave_config>

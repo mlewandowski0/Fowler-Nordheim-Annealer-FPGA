@@ -1,0 +1,5 @@
+Time resolution is 1 ps
+WARNING: Too many words specified in data file log_noise_LUT_fixed.mif
+WARNING: Too many words specified in data file log_noise_LUT_fixed.mif
+WARNING: Too many words specified in data file log_noise_LUT_fixed.mif
+$finish called at time : 10360 ns : File "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sim_1/new/neuroSA_machine_N12_U3_tb.sv" Line 220

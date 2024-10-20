@@ -29,7 +29,7 @@ module graph_n12_machine
           parameter TEMP_INC_WIDTH=16,
           parameter NO_CLK_CYCLES_AFTER_UPDATE=3,
           parameter SOLUTION_WIDTH=16,
-          parameter USE_FLOAT_POINT=0,
+          parameter USE_FLOAT_POINT=1,
           parameter REAL_WIDTH=16,
           parameter FLIPPING_OUTPUT_WIDTH=16,
           parameter FRACTIONAL_PART=8,
@@ -86,8 +86,6 @@ module graph_n12_machine
     wire                                    add_mem;
     
     
-    assign cos = spiked;
-
     neuron_ensemble_with_memory 
     #(.UNIT_NO(0),
       .GRAPH_WIDTH(GRAPH_WIDTH),

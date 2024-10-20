@@ -1,0 +1,78 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/DEFINES.v" --include "../../../../hw_impl.srcs/sources_1/new" \
+"../../../../hw_impl.srcs/sources_1/new/DEFINES.v" \
+"../../../../hw_impl.srcs/sources_1/new/LFSR.v" \
+"../../../../hw_impl.srcs/sources_1/new/LFSR_inout.v" \
+"../../../../hw_impl.srcs/sources_1/new/adder.v" \
+"../../../../hw_impl.srcs/sources_1/new/cla_nbit.v" \
+"../../../../hw_impl.srcs/sources_1/new/distributed_graph_memory.v" \
+"../../../../hw_impl.srcs/sources_1/new/ensemble_unit_top_for_record_numbers.v" \
+"../../../../hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/fixed_add.v" \
+"../../../../hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/fixed_mult.v" \
+"../../../../hw_impl.srcs/sources_1/new/flipping_unit.v" \
+"../../../../hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/float16_add_normalizer.v" \
+"../../../../hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/float16_alignment.v" \
+"../../../../hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/float16_mult.v" \
+"../../../../hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/float16_normalizer.v" \
+"../../../../hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/float16_to_int.v" \
+"../../../../hw_impl.srcs/sources_1/new/graph_processor_small.v" \
+"../../../../hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/log_LUT.v" \
+"../../../../hw_impl.srcs/sources_1/new/log_noise_generator.v" \
+"../../../../hw_impl.srcs/sources_1/new/membrane_update.v" \
+"../../../../hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/mulBITSxBITS.v" \
+"../../../../hw_impl.srcs/sources_1/new/neuron_ensemble.v" \
+"../../../../hw_impl.srcs/sources_1/new/neuron_ensemble_storage.v" \
+"../../../../hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v" \
+"../../../../hw_impl.srcs/sources_1/new/round_robin_priority_selector.v" \
+"../../../../hw_impl.srcs/sources_1/new/scheduler.v" \
+"../../../../hw_impl.srcs/sources_1/new/simple_priority_selector.v" \
+"../../../../hw_impl.srcs/sources_1/new/temp_module.v" \
+"../../../../hw_impl.srcs/sources_1/new/temperature_mapping.v" \
+"../../../../hw_impl.srcs/sources_1/new/temperature_module.v" \
+"../../../../hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/vedic_mul16x16.v" \
+"../../../../hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/vedic_mul2x2.v" \
+"../../../../hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/vedic_mul4x4.v" \
+"../../../../hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/vedic_mul8x8.v" \
+"../../../../hw_impl.srcs/sources_1/new/graph_n12_machine.v" \
+"../../../../hw_impl.srcs/sources_1/new/fixed_to_int.v" \
+"../../../../hw_impl.srcs/sources_1/new/graph_n12_machine_fixed.v" \
+
+sv xil_defaultlib "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/DEFINES.v" --include "../../../../hw_impl.srcs/sources_1/new" \
+"../../../../hw_impl.srcs/sources_1/new/neuroSA_machine.sv" \
+
+verilog xil_defaultlib "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/DEFINES.v" --include "../../../../hw_impl.srcs/sources_1/new" \
+"../../../../hw_impl.srcs/sim_1/new/graph_n12_machine_tb2.v" \
+"../../../../hw_impl.srcs/sim_1/new/float16_to_int_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/graph_n12_machine_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/scheduler_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/scheduler2_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/UTIL.v" \
+"../../../../hw_impl.srcs/sim_1/new/float16_mult_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/float16_add_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/fixed_mult_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/fixed_add_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/LFSR_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/adder_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/flipping_unit_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/float16_add.v" \
+"../../../../hw_impl.srcs/sim_1/new/log_noise_generator_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/neuron_ensemble_storage_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/neuron_ensemble_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/neuron_ensemble_with_memory_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/round_robin_priority_selector_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/simple_priority_selector_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/temperature_mapping_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/temperature_module_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/noise_source_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/graph_n12_machine_postsynth.v" \
+"../../../../hw_impl.srcs/sim_1/new/fixed_to_int_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/graph_n12_machine_tb2_fixed.v" \
+
+sv xil_defaultlib "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/DEFINES.v" --include "../../../../hw_impl.srcs/sources_1/new" \
+"../../../../hw_impl.srcs/sim_1/new/neuroSA_machine_N12_U3_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

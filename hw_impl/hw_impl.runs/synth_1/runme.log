@@ -1,18 +1,18 @@
 
 *** Running vivado
-    with args -log ensemble_unit_top_for_record_numbers.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ensemble_unit_top_for_record_numbers.tcl
+    with args -log neuroSA_top_record_numbers.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuroSA_top_record_numbers.tcl
 
 
 ****** Vivado v2024.1.2 (64-bit)
   **** SW Build 5164865 on Thu Sep  5 14:36:28 MDT 2024
   **** IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
   **** SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
-  **** Start of session at: Sun Oct 20 15:23:26 2024
+  **** Start of session at: Sun Oct 20 19:31:36 2024
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
-source ensemble_unit_top_for_record_numbers.tcl -notrace
-Command: synth_design -top ensemble_unit_top_for_record_numbers -part xc7z020clg400-1
+source neuroSA_top_record_numbers.tcl -notrace
+Command: synth_design -top neuroSA_top_record_numbers -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
@@ -20,10 +20,18 @@ INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 48693
+INFO: [Synth 8-7075] Helper process launched with PID 114396
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2161.926 ; gain = 414.715 ; free physical = 12444 ; free virtual = 22570
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2161.891 ; gain = 411.715 ; free physical = 3545 ; free virtual = 16311
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-6901] identifier 'UNIT_WIDTH' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuroSA_machine.sv:40]
+WARNING: [Synth 8-6901] identifier 'UNITS' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuroSA_top_record_numbers.sv:26]
+WARNING: [Synth 8-6901] identifier 'UNITS' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuroSA_top_record_numbers.sv:27]
+WARNING: [Synth 8-6901] identifier 'NEURON_SEL_LFSR_WIDTH' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuroSA_top_record_numbers.sv:28]
+WARNING: [Synth 8-6901] identifier 'NOISE_SOURCE_WIDTH' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuroSA_top_record_numbers.sv:29]
+WARNING: [Synth 8-6901] identifier 'MEMBRANE_WIDTH' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuroSA_top_record_numbers.sv:30]
+WARNING: [Synth 8-6901] identifier 'UNITS' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuroSA_top_record_numbers.sv:32]
+WARNING: [Synth 8-6901] identifier 'SOLUTION_WIDTH' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuroSA_top_record_numbers.sv:33]
 WARNING: [Synth 8-6901] identifier 'GRAPH_WIDTH' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/ensemble_unit_top_for_record_numbers.v:25]
 WARNING: [Synth 8-6901] identifier 'NEURON_SEL_LFSR_WIDTH' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/ensemble_unit_top_for_record_numbers.v:35]
 WARNING: [Synth 8-6901] identifier 'NOISE_SOURCE_WIDTH' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/ensemble_unit_top_for_record_numbers.v:38]
@@ -37,17 +45,39 @@ INFO: [Synth 8-11241] undeclared symbol 'error', assumed default net type 'wire'
 INFO: [Synth 8-11241] undeclared symbol 'update_membranes', assumed default net type 'wire' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
 WARNING: [Synth 8-6901] identifier 'unit_number_reg' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/scheduler.v:79]
 WARNING: [Synth 8-6901] identifier 'offset_reg' is used before its declaration [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/scheduler.v:79]
-INFO: [Synth 8-11241] undeclared symbol 'cos', assumed default net type 'wire' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/graph_n12_machine.v:89]
-INFO: [Synth 8-6157] synthesizing module 'ensemble_unit_top_for_record_numbers' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/ensemble_unit_top_for_record_numbers.v:23]
+INFO: [Synth 8-6157] synthesizing module 'neuroSA_top_record_numbers' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuroSA_top_record_numbers.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'neuroSA_machine' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuroSA_machine.sv:23]
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 32'sb00000000000000000000000000000101 
+	Parameter MEMBRANE_WIDTH bound to: 32'sb00000000000000000000000000010000 
+	Parameter NOISE_SOURCE_WIDTH bound to: 32'sb00000000000000000000000000000110 
+	Parameter COUNTER_WIDTH bound to: 32'sb00000000000000000000000000101000 
+	Parameter TEMP_INC_WIDTH bound to: 32'sb00000000000000000000000000000110 
+	Parameter NO_CLK_CYCLES_AFTER_UPDATE bound to: 32'sb00000000000000000000000000000011 
+	Parameter SOLUTION_WIDTH bound to: 32'sb00000000000000000000000000010000 
+	Parameter USE_FLOAT_POINT bound to: 32'sb00000000000000000000000000000000 
+	Parameter REAL_WIDTH bound to: 32'sb00000000000000000000000000010010 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 32'sb00000000000000000000000000010000 
+	Parameter FRACTIONAL_PART bound to: 32'sb00000000000000000000000000001000 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter GRAPH_WIDTH bound to: 32'sb00000000000000000000001100100000 
+	Parameter UNITS bound to: 32'sb00000000000000000000000000011001 
+	Parameter NEURONS_PER_UNIT bound to: 32'sb00000000000000000000000000100000 
+	Parameter UNIT_WIDTH bound to: 32'sb00000000000000000000000000000101 
+	Parameter NEURON_NUM_WIDTH bound to: 32'sb00000000000000000000000000000101 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 32'sb00000000000000000000000000000111 
+	Parameter PIPELINED_ROMs bound to: 32'sb00000000000000000000000000000001 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 32'sb00000000000000000000000000000001 
+	Parameter IDX_THAT_FIRED_WIDTH bound to: 32'sb00000000000000000000000000001010 
 INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
 	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
-	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_distributed0.mif - type: string 
-	Parameter UNIT_WIDTH bound to: 2 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed0.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
 	Parameter UNIT_NO bound to: 0 - type: integer 
 	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
 	Parameter NEURON_WIDTH bound to: 5 - type: integer 
 	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
-	Parameter NOISE_SOURCE_WIDTH bound to: 7 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
 	Parameter REAL_WIDTH bound to: 18 - type: integer 
 	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
 	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
@@ -56,21 +86,20 @@ INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory' [/home/ml
 	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
 	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
 	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
-	Parameter FIXED_TOTAL_WIDTH bound to: 18 - type: integer 
 	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
 	Parameter NEURON_WIDTH bound to: 5 - type: integer 
 	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
-	Parameter MEM_FILE bound to: adj_matrix_distributed0.mif - type: string 
-INFO: [Synth 8-3876] $readmem data file 'adj_matrix_distributed0.mif' is read successfully [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed0.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed0.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
 INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
 INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
-	Parameter UNIT_WIDTH bound to: 2 - type: integer 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
 	Parameter UNIT_NO bound to: 0 - type: integer 
 	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
 	Parameter NEURON_WIDTH bound to: 5 - type: integer 
 	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
-	Parameter NOISE_SOURCE_WIDTH bound to: 7 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
 	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
 	Parameter REAL_WIDTH bound to: 18 - type: integer 
 	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
@@ -126,7 +155,7 @@ INFO: [Synth 8-6155] done synthesizing module 'LFSR_inout' (0#1) [/home/mlewand/
 INFO: [Synth 8-226] default block is never used [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_storage.v:73]
 INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_storage' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_storage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'flipping_unit' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/flipping_unit.v:23]
-	Parameter NOISE_SOURCE_WIDTH bound to: 7 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
 	Parameter REAL_WIDTH bound to: 18 - type: integer 
 	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
 	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
@@ -148,14 +177,14 @@ INFO: [Synth 8-6157] synthesizing module 'fixed_to_int' [/home/mlewand/Desktop/P
 	Parameter FRAC_BITS bound to: 8 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'fixed_to_int' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/fixed_to_int.v:23]
 INFO: [Synth 8-6157] synthesizing module 'log_noise_generator' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/log_noise_generator.v:23]
-	Parameter NOISE_SOURCE_WIDTH bound to: 7 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
 	Parameter LUT_WIDTH bound to: 18 - type: integer 
 	Parameter filename bound to: log_noise_LUT_fixed.mif - type: string 
 INFO: [Synth 8-6157] synthesizing module 'LFSR__parameterized0' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/LFSR.v:23]
-	Parameter BITS bound to: 7 - type: integer 
+	Parameter BITS bound to: 6 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'LFSR__parameterized0' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/LFSR.v:23]
 INFO: [Synth 8-6157] synthesizing module 'log_LUT' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/log_LUT.v:1]
-	Parameter NOISE_SOURCE_WIDTH bound to: 7 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
 	Parameter LUT_WIDTH bound to: 18 - type: integer 
 	Parameter filename bound to: log_noise_LUT_fixed.mif - type: string 
 INFO: [Synth 8-3876] $readmem data file 'log_noise_LUT_fixed.mif' is read successfully [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/hw_impl/hw_impl.srcs/sim_1/new/log_LUT.v:13]
@@ -175,7 +204,1040 @@ INFO: [Synth 8-6155] done synthesizing module 'temperature_module' (0#1) [/home/
 INFO: [Synth 8-6155] done synthesizing module 'flipping_unit' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/flipping_unit.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
-INFO: [Synth 8-6155] done synthesizing module 'ensemble_unit_top_for_record_numbers' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/ensemble_unit_top_for_record_numbers.v:23]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized0' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed1.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 1 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized0' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed1.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed1.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized0' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized0' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 1 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized0' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized0' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized1' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed2.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 2 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized1' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed2.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed2.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized1' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized1' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 2 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized1' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized1' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized2' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed3.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 3 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized2' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed3.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed3.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized2' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized2' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 3 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized2' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized2' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized3' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed4.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 4 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized3' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed4.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed4.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized3' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized3' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 4 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized3' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized3' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized4' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed5.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 5 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized4' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed5.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed5.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized4' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized4' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 5 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized4' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized4' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized5' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed6.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 6 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized5' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed6.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed6.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized5' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized5' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 6 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized5' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized5' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized6' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed7.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 7 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized6' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed7.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed7.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized6' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized6' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 7 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized6' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized6' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized7' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed8.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 8 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized7' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed8.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed8.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized7' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized7' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 8 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized7' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized7' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized8' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed9.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 9 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized8' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed9.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed9.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized8' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized8' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 9 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized8' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized8' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized9' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed10.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 10 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized9' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed10.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed10.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized9' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized9' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 10 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized9' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized9' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized10' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed11.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 11 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized10' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed11.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed11.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized10' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized10' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 11 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized10' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized10' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized11' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed12.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 12 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized11' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed12.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed12.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized11' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized11' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 12 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized11' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized11' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized12' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed13.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 13 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized12' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed13.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed13.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized12' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized12' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 13 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized12' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized12' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized13' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed14.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 14 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized13' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed14.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed14.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized13' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized13' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 14 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized13' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized13' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized14' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed15.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 15 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized14' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed15.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed15.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized14' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized14' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 15 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized14' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized14' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized15' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed16.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 16 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized15' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed16.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed16.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized15' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized15' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 16 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized15' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized15' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized16' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed17.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 17 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized16' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed17.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed17.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized16' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized16' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 17 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized16' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized16' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized17' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed18.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 18 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized17' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed18.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed18.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized17' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized17' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 18 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized17' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized17' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized18' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed19.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 19 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized18' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed19.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed19.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized18' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized18' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 19 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized18' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized18' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized19' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed20.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 20 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized19' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed20.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed20.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized19' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized19' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 20 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized19' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized19' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized20' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed21.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 21 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized20' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed21.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed21.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized20' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized20' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 21 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized20' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized20' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized21' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed22.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 22 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized21' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed22.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed22.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized21' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized21' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 22 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized21' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized21' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized22' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed23.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 23 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized22' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed23.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed23.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized22' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized22' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 23 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized22' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized22' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble_with_memory__parameterized23' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter GRAPH_DISTRIB_FILE bound to: adj_matrix_N800_A25_distributed24.mif - type: string 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 24 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'distributed_graph_memory__parameterized23' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter MEM_FILE bound to: adj_matrix_N800_A25_distributed24.mif - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'adj_matrix_N800_A25_distributed24.mif'; please make sure the file is added to project and has read permission, ignoring [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'distributed_graph_memory__parameterized23' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/distributed_graph_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'neuron_ensemble__parameterized23' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter UNIT_NO bound to: 24 - type: integer 
+	Parameter NEURON_SEL_LFSR_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter NOISE_SOURCE_WIDTH bound to: 6 - type: integer 
+	Parameter FLIPPING_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter REAL_WIDTH bound to: 18 - type: integer 
+	Parameter LOG_NOISE_LUT_FILENAME bound to: log_noise_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_FILENAME bound to: temperature_LUT_fixed.mif - type: string 
+	Parameter TEMPERATURE_LUT_WIDTH bound to: 7 - type: integer 
+	Parameter PIPELINED_ROMs bound to: 1 - type: integer 
+	Parameter PIPELINED_ENSEMBLE_STORAGE bound to: 1 - type: integer 
+	Parameter USE_FLOAT_POINT bound to: 0 - type: integer 
+	Parameter FRACTIONAL_PART bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble__parameterized23' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_ensemble_with_memory__parameterized23' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:36]
+INFO: [Synth 8-6157] synthesizing module 'simple_priority_selector' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/simple_priority_selector.v:25]
+	Parameter UNITS bound to: 25 - type: integer 
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter NEURON_NUM_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'simple_priority_selector' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/simple_priority_selector.v:25]
+INFO: [Synth 8-6157] synthesizing module 'scheduler' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/scheduler.v:29]
+	Parameter UNIT_WIDTH bound to: 5 - type: integer 
+	Parameter GRAPH_WIDTH bound to: 800 - type: integer 
+	Parameter NEURON_NUM_WIDTH bound to: 5 - type: integer 
+	Parameter MEMBRANE_WIDTH bound to: 16 - type: integer 
+	Parameter COUNTER_WIDTH bound to: 40 - type: integer 
+	Parameter TEMP_INC_WIDTH bound to: 6 - type: integer 
+	Parameter NO_CLK_CYCLES_AFTER_UPDATE bound to: 3 - type: integer 
+	Parameter SOLUTION_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/scheduler.v:122]
+INFO: [Synth 8-226] default block is never used [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/scheduler.v:199]
+INFO: [Synth 8-6155] done synthesizing module 'scheduler' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/scheduler.v:29]
+WARNING: [Synth 8-6104] Input port 'halt' has an internal driver [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuroSA_machine.sv:181]
+WARNING: [Synth 8-7071] port 'halt_scheduler' of module 'scheduler' is unconnected for instance 'scheduler_instance' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuroSA_machine.sv:170]
+WARNING: [Synth 8-7023] instance 'scheduler_instance' of module 'scheduler' has 15 connections declared, but only 14 given [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuroSA_machine.sv:170]
+INFO: [Synth 8-6155] done synthesizing module 'neuroSA_machine' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuroSA_machine.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'neuroSA_top_record_numbers' (0#1) [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuroSA_top_record_numbers.sv:23]
+WARNING: [Synth 8-6014] Unused sequential element curr_solution_reg was removed.  [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/scheduler.v:112]
+WARNING: [Synth 8-6014] Unused sequential element best_solution_reg was removed.  [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/scheduler.v:113]
+WARNING: [Synth 8-7137] Register should_increment_reg in module scheduler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/scheduler.v:140]
 WARNING: [Synth 8-7129] Port clk in module temperature_mapping is either unconnected or has no load
 WARNING: [Synth 8-7129] Port fixed_val[7] in module fixed_to_int is either unconnected or has no load
 WARNING: [Synth 8-7129] Port fixed_val[6] in module fixed_to_int is either unconnected or has no load
@@ -185,19 +1247,30 @@ WARNING: [Synth 8-7129] Port fixed_val[3] in module fixed_to_int is either uncon
 WARNING: [Synth 8-7129] Port fixed_val[2] in module fixed_to_int is either unconnected or has no load
 WARNING: [Synth 8-7129] Port fixed_val[1] in module fixed_to_int is either unconnected or has no load
 WARNING: [Synth 8-7129] Port fixed_val[0] in module fixed_to_int is either unconnected or has no load
+WARNING: [Synth 8-7129] Port index_of_neuron_that_fired[9] in module distributed_graph_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port index_of_neuron_that_fired[8] in module distributed_graph_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port index_of_neuron_that_fired[7] in module distributed_graph_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port index_of_neuron_that_fired[6] in module distributed_graph_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port index_of_neuron_that_fired[5] in module distributed_graph_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port index_of_neuron_that_fired[4] in module distributed_graph_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port index_of_neuron_that_fired[3] in module distributed_graph_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port index_of_neuron_that_fired[2] in module distributed_graph_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port index_of_neuron_that_fired[1] in module distributed_graph_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port index_of_neuron_that_fired[0] in module distributed_graph_memory is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2250.895 ; gain = 503.684 ; free physical = 12329 ; free virtual = 22455
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2274.859 ; gain = 524.684 ; free physical = 3395 ; free virtual = 16155
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2265.738 ; gain = 518.527 ; free physical = 12339 ; free virtual = 22438
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2292.672 ; gain = 542.496 ; free physical = 3397 ; free virtual = 16156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2265.738 ; gain = 518.527 ; free physical = 12339 ; free virtual = 22438
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2292.672 ; gain = 542.496 ; free physical = 3397 ; free virtual = 16156
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2265.738 ; gain = 0.000 ; free physical = 12339 ; free virtual = 22438
+Netlist sorting complete. Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2292.672 ; gain = 0.000 ; free physical = 3391 ; free virtual = 16142
+WARNING: [Netlist 29-1115] Found multi-term driver net: halt.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -206,67 +1279,131 @@ Parsing XDC File [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_i
 Finished Parsing XDC File [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/constrs_1/imports/hw_impl/system.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2413.488 ; gain = 0.000 ; free physical = 12358 ; free virtual = 22432
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2438.422 ; gain = 0.000 ; free physical = 3336 ; free virtual = 16086
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00 . Memory (MB): peak = 2413.488 ; gain = 0.000 ; free physical = 12358 ; free virtual = 22432
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.1 . Memory (MB): peak = 2438.422 ; gain = 0.000 ; free physical = 3346 ; free virtual = 16097
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2413.488 ; gain = 666.277 ; free physical = 12411 ; free virtual = 22453
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2438.422 ; gain = 688.246 ; free physical = 3122 ; free virtual = 15870
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2421.492 ; gain = 674.281 ; free physical = 12411 ; free virtual = 22453
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2446.426 ; gain = 696.250 ; free physical = 3121 ; free virtual = 15869
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2421.492 ; gain = 674.281 ; free physical = 12411 ; free virtual = 22453
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2446.426 ; gain = 696.250 ; free physical = 3123 ; free virtual = 15871
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+WARNING: [Synth 8-3936] Found unconnected internal register 'neuron_state_reg_reg' and it is trimmed from '4' to '2' bits. [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble.v:114]
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'scheduler'
 WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_ensemble_control_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'offset_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/simple_priority_selector.v:59]
+WARNING: [Synth 8-327] inferring latch for variable 'membrane_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/simple_priority_selector.v:60]
+WARNING: [Synth 8-327] inferring latch for variable 'add_mem_reg' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/simple_priority_selector.v:61]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+           STATE_RESETED |                             0001 |                               00
+         STATE_ACCEPTING |                             0010 |                               01
+     STATE_DATA_CAPTURED |                             0100 |                               11
+            STATE_HALTED |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'scheduler'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2421.492 ; gain = 674.281 ; free physical = 12410 ; free virtual = 22441
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2446.426 ; gain = 696.250 ; free physical = 3243 ; free virtual = 15993
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   16 Bit       Adders := 1     
-	   2 Input   10 Bit       Adders := 1     
-	   2 Input    7 Bit       Adders := 1     
-	   2 Input    5 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 25    
+	   2 Input   10 Bit       Adders := 25    
+	   2 Input    7 Bit       Adders := 25    
+	   2 Input    5 Bit       Adders := 25    
+	   2 Input    2 Bit       Adders := 1     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 3     
+	   2 Input      1 Bit         XORs := 75    
 +---Registers : 
-	               18 Bit    Registers := 2     
-	               16 Bit    Registers := 1     
-	               10 Bit    Registers := 1     
-	                7 Bit    Registers := 2     
-	                5 Bit    Registers := 3     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
+	               18 Bit    Registers := 50    
+	               16 Bit    Registers := 27    
+	               10 Bit    Registers := 26    
+	                7 Bit    Registers := 25    
+	                6 Bit    Registers := 25    
+	                5 Bit    Registers := 77    
+	                3 Bit    Registers := 25    
+	                2 Bit    Registers := 26    
+	                1 Bit    Registers := 28    
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 1     
-	   7 Input   32 Bit        Muxes := 1     
-	   2 Input   18 Bit        Muxes := 1     
-	   2 Input   16 Bit        Muxes := 1     
-	   2 Input    7 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 3     
-	   2 Input    4 Bit        Muxes := 2     
-	  10 Input    3 Bit        Muxes := 1     
-	   7 Input    2 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 3     
-	   4 Input    1 Bit        Muxes := 32    
-	   5 Input    1 Bit        Muxes := 2     
-	   7 Input    1 Bit        Muxes := 4     
+	   2 Input   32 Bit        Muxes := 25    
+	   7 Input   32 Bit        Muxes := 25    
+	   2 Input   18 Bit        Muxes := 25    
+	   2 Input   16 Bit        Muxes := 25    
+	   2 Input    6 Bit        Muxes := 25    
+	   2 Input    5 Bit        Muxes := 75    
+	   2 Input    4 Bit        Muxes := 51    
+	   4 Input    4 Bit        Muxes := 1     
+	  10 Input    3 Bit        Muxes := 25    
+	   7 Input    2 Bit        Muxes := 25    
+	   2 Input    2 Bit        Muxes := 26    
+	   2 Input    1 Bit        Muxes := 99    
+	   4 Input    1 Bit        Muxes := 804   
+	   5 Input    1 Bit        Muxes := 50    
+	   7 Input    1 Bit        Muxes := 100   
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -283,56 +1420,242 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP dut/neuron_ensemble_inst/flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
-DSP Report: register dut/neuron_ensemble_inst/flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP dut/neuron_ensemble_inst/flipping_unit_tb/mult/mult/tmp.
-DSP Report: register dut/neuron_ensemble_inst/flipping_unit_tb/noise_out_reg_reg is absorbed into DSP dut/neuron_ensemble_inst/flipping_unit_tb/mult/mult/tmp.
-DSP Report: operator dut/neuron_ensemble_inst/flipping_unit_tb/mult/mult/tmp is absorbed into DSP dut/neuron_ensemble_inst/flipping_unit_tb/mult/mult/tmp.
-WARNING: [Synth 8-3917] design ensemble_unit_top_for_record_numbers has port unit_number[1] driven by constant 0
-WARNING: [Synth 8-3917] design ensemble_unit_top_for_record_numbers has port unit_number[0] driven by constant 0
-WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "ensemble_unit_top_for_record_numbers/dut/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage_reg",trying to implement using LUTRAM
-WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "ensemble_unit_top_for_record_numbers/dut/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage_reg",trying to implement using LUTRAM
-WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "ensemble_unit_top_for_record_numbers/dut/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage_reg",trying to implement using LUTRAM
-WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "ensemble_unit_top_for_record_numbers/dut/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage_reg",trying to implement using LUTRAM
-WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "ensemble_unit_top_for_record_numbers/dut/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage_reg",trying to implement using LUTRAM
-WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "ensemble_unit_top_for_record_numbers/dut/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage_reg",trying to implement using LUTRAM
-WARNING: [Synth 8-3332] Sequential element (dut/neuron_ensemble_control_reg[1]) is unused and will be removed from module ensemble_unit_top_for_record_numbers.
-WARNING: [Synth 8-3332] Sequential element (dut/neuron_ensemble_control_reg[0]) is unused and will be removed from module ensemble_unit_top_for_record_numbers.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: Generating DSP flipping_unit_tb/mult/mult/tmp, operation Mode is: A2*B2.
+DSP Report: register flipping_unit_tb/temperature_multiplier_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: register flipping_unit_tb/noise_out_reg_reg is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+DSP Report: operator flipping_unit_tb/mult/mult/tmp is absorbed into DSP flipping_unit_tb/mult/mult/tmp.
+WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "neuron_ensemble_storage:/neuron_states_storage_reg",trying to implement using LUTRAM
+WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "neuron_ensemble_storage:/neuron_states_storage_reg",trying to implement using LUTRAM
+WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "neuron_ensemble_storage:/neuron_states_storage_reg",trying to implement using LUTRAM
+WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "neuron_ensemble_storage:/neuron_states_storage_reg",trying to implement using LUTRAM
+WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "neuron_ensemble_storage:/neuron_states_storage_reg",trying to implement using LUTRAM
+WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "neuron_ensemble_storage:/neuron_states_storage_reg",trying to implement using LUTRAM
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2421.492 ; gain = 674.281 ; free physical = 12409 ; free virtual = 22434
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2446.426 ; gain = 696.250 ; free physical = 3138 ; free virtual = 15896
 ---------------------------------------------------------------------------------
- Sort Area is  dut/neuron_ensemble_inst/flipping_unit_tb/mult/mult/tmp_0 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__GC0 flipping_unit_tb/mult/mult/tmp_0 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized14__GC0 flipping_unit_tb/mult/mult/tmp_10 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized15__GC0 flipping_unit_tb/mult/mult/tmp_11 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized16__GC0 flipping_unit_tb/mult/mult/tmp_12 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized17__GC0 flipping_unit_tb/mult/mult/tmp_13 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized18__GC0 flipping_unit_tb/mult/mult/tmp_14 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized19__GC0 flipping_unit_tb/mult/mult/tmp_15 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized20__GC0 flipping_unit_tb/mult/mult/tmp_16 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized21__GC0 flipping_unit_tb/mult/mult/tmp_17 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized22__GC0 flipping_unit_tb/mult/mult/tmp_18 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized23__GC0 flipping_unit_tb/mult/mult/tmp_19 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized0__GC0 flipping_unit_tb/mult/mult/tmp_2 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized1__GC0 flipping_unit_tb/mult/mult/tmp_3 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized2__GC0 flipping_unit_tb/mult/mult/tmp_4 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized3__GC0 flipping_unit_tb/mult/mult/tmp_5 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized4__GC0 flipping_unit_tb/mult/mult/tmp_6 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized5__GC0 flipping_unit_tb/mult/mult/tmp_7 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized6__GC0 flipping_unit_tb/mult/mult/tmp_8 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized7__GC0 flipping_unit_tb/mult/mult/tmp_9 : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized8__GC0 flipping_unit_tb/mult/mult/tmp_a : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized9__GC0 flipping_unit_tb/mult/mult/tmp_b : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized10__GC0 flipping_unit_tb/mult/mult/tmp_c : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized11__GC0 flipping_unit_tb/mult/mult/tmp_d : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized12__GC0 flipping_unit_tb/mult/mult/tmp_e : 0 0 : 2230 2230 : Used 1 time 0
+ Sort Area is neuron_ensemble__parameterized13__GC0 flipping_unit_tb/mult/mult/tmp_f : 0 0 : 2230 2230 : Used 1 time 0
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 ROM: Preliminary Mapping Report
-+-------------------------------------+--------------------------------------------------------------------------------------+---------------+----------------+
-|Module Name                          | RTL Object                                                                           | Depth x Width | Implemented As | 
-+-------------------------------------+--------------------------------------------------------------------------------------+---------------+----------------+
-|distributed_graph_memory             | memory                                                                               | 16x32         | LUT            | 
-|log_LUT                              | distribution                                                                         | 128x11        | LUT            | 
-|temperature_mapping                  | distribution                                                                         | 128x16        | LUT            | 
-|ensemble_unit_top_for_record_numbers | dut/neuron_ensemble_inst/flipping_unit_tb/noise_generator/noise_source/state_reg_rep | 128x11        | Block RAM      | 
-|ensemble_unit_top_for_record_numbers | dut/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep          | 128x16        | Block RAM      | 
-|ensemble_unit_top_for_record_numbers | p_0_out                                                                              | 16x32         | LUT            | 
-+-------------------------------------+--------------------------------------------------------------------------------------+---------------+----------------+
++---------------------------+----------------------------------------------------+---------------+----------------+
+|Module Name                | RTL Object                                         | Depth x Width | Implemented As | 
++---------------------------+----------------------------------------------------+---------------+----------------+
+|log_LUT                    | distribution                                       | 64x11         | LUT            | 
+|temperature_mapping        | distribution                                       | 128x16        | LUT            | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
+|neuroSA_top_record_numbers | p_0_out                                            | 64x11         | LUT            | 
+|neuroSA_top_record_numbers | flipping_unit_tb/temperature_module_inst/x_reg_rep | 128x16        | Block RAM      | 
++---------------------------+----------------------------------------------------+---------------+----------------+
 
 
 Distributed RAM: Preliminary Mapping Report (see note below)
-+-------------------------------------+---------------------------------------------------------------------------------+-----------+----------------------+-------------+
-|Module Name                          | RTL Object                                                                      | Inference | Size (Depth x Width) | Primitives  | 
-+-------------------------------------+---------------------------------------------------------------------------------+-----------+----------------------+-------------+
-|ensemble_unit_top_for_record_numbers | dut/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage_reg | Implied   | 32 x 4               | RAM32M x 2  | 
-+-------------------------------------+---------------------------------------------------------------------------------+-----------+----------------------+-------------+
++-------------------------+---------------------------+-----------+----------------------+-------------+
+|Module Name              | RTL Object                | Inference | Size (Depth x Width) | Primitives  | 
++-------------------------+---------------------------+-----------+----------------------+-------------+
+|neuron_ensemble_storage: | neuron_states_storage_reg | Implied   | 32 x 4               | RAM32M x 2  | 
++-------------------------+---------------------------+-----------+----------------------+-------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+-------------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name                          | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+-------------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|ensemble_unit_top_for_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-+-------------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A2*B2       | 18     | 16     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -342,24 +1665,24 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2421.492 ; gain = 674.281 ; free physical = 12431 ; free virtual = 22458
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2446.426 ; gain = 696.250 ; free physical = 2973 ; free virtual = 15787
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2421.492 ; gain = 674.281 ; free physical = 12412 ; free virtual = 22437
+Finished Timing Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:09 . Memory (MB): peak = 2462.434 ; gain = 712.258 ; free physical = 2684 ; free virtual = 15436
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Final Mapping Report
-+-------------------------------------+---------------------------------------------------------------------------------+-----------+----------------------+-------------+
-|Module Name                          | RTL Object                                                                      | Inference | Size (Depth x Width) | Primitives  | 
-+-------------------------------------+---------------------------------------------------------------------------------+-----------+----------------------+-------------+
-|ensemble_unit_top_for_record_numbers | dut/neuron_ensemble_inst/neuron_ensemble_storage_inst/neuron_states_storage_reg | Implied   | 32 x 4               | RAM32M x 2  | 
-+-------------------------------------+---------------------------------------------------------------------------------+-----------+----------------------+-------------+
++-------------------------+---------------------------+-----------+----------------------+-------------+
+|Module Name              | RTL Object                | Inference | Size (Depth x Width) | Primitives  | 
++-------------------------+---------------------------+-----------+----------------------+-------------+
+|neuron_ensemble_storage: | neuron_states_storage_reg | Implied   | 32 x 4               | RAM32M x 2  | 
++-------------------------+---------------------------+-----------+----------------------+-------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -367,10 +1690,33 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-7052] The timing for the instance dut/neuron_ensemble_inst/flipping_unit_tb/noise_generator/noise_source/state_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance dut/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[0].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[1].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[2].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[3].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[4].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[6].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[7].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[8].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[9].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[10].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[11].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[12].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[13].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[16].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[17].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[18].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[19].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[20].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[21].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[22].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[23].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DUT/unit_gen[24].unit_inst/neuron_ensemble_inst/flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance flipping_unit_tb/temperature_module_inst/x_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance flipping_unit_tb/temperature_module_inst/x_reg_rep__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2421.492 ; gain = 674.281 ; free physical = 12425 ; free virtual = 22449
+Finished Technology Mapping : Time (s): cpu = 00:01:13 ; elapsed = 00:01:13 . Memory (MB): peak = 2462.434 ; gain = 712.258 ; free physical = 2371 ; free virtual = 15102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -388,48 +1734,72 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2421.492 ; gain = 674.281 ; free physical = 12424 ; free virtual = 22449
+Finished IO Insertion : Time (s): cpu = 00:01:16 ; elapsed = 00:01:16 . Memory (MB): peak = 2462.434 ; gain = 712.258 ; free physical = 2465 ; free virtual = 15179
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2421.492 ; gain = 674.281 ; free physical = 12424 ; free virtual = 22449
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:16 ; elapsed = 00:01:16 . Memory (MB): peak = 2462.434 ; gain = 712.258 ; free physical = 2463 ; free virtual = 15177
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2421.492 ; gain = 674.281 ; free physical = 12424 ; free virtual = 22449
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:19 ; elapsed = 00:01:19 . Memory (MB): peak = 2462.434 ; gain = 712.258 ; free physical = 2420 ; free virtual = 15135
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2421.492 ; gain = 674.281 ; free physical = 12424 ; free virtual = 22449
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:19 ; elapsed = 00:01:19 . Memory (MB): peak = 2462.434 ; gain = 712.258 ; free physical = 2418 ; free virtual = 15133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2421.492 ; gain = 674.281 ; free physical = 12424 ; free virtual = 22449
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:20 ; elapsed = 00:01:19 . Memory (MB): peak = 2468.371 ; gain = 718.195 ; free physical = 2445 ; free virtual = 15159
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2421.492 ; gain = 674.281 ; free physical = 12424 ; free virtual = 22449
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:20 ; elapsed = 00:01:19 . Memory (MB): peak = 2468.371 ; gain = 718.195 ; free physical = 2441 ; free virtual = 15155
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 DSP Final Report (the ' indicates corresponding REG is set)
-+-------------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name                          | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+-------------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|ensemble_unit_top_for_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-+-------------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|neuroSA_top_record_numbers | A'*B'       | 30     | 18     | -      | -      | 36     | 1    | 1    | -    | -    | -     | 0    | 0    | 
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
 Report BlackBoxes: 
@@ -443,46 +1813,51 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |BUFG     |     1|
-|2     |CARRY4   |   134|
-|3     |DSP48E1  |     1|
-|4     |LUT1     |    18|
-|5     |LUT2     |     3|
-|6     |LUT3     |   127|
-|7     |LUT4     |   475|
-|8     |LUT5     |    36|
-|9     |LUT6     |   192|
-|10    |MUXF7    |    68|
-|11    |RAM32M   |     2|
-|12    |RAMB18E1 |     2|
-|14    |FDRE     |   577|
-|15    |IBUF     |    48|
-|16    |OBUF     |    25|
+|2     |CARRY4   |  3358|
+|3     |DSP48E1  |    25|
+|4     |LUT1     |   453|
+|5     |LUT2     | 10563|
+|6     |LUT3     |  3190|
+|7     |LUT4     | 11939|
+|8     |LUT5     |   628|
+|9     |LUT6     |  5239|
+|10    |MUXF7    |  1600|
+|11    |RAM32M   |    50|
+|12    |RAMB18E1 |    24|
+|13    |FDCE     |    70|
+|14    |FDPE     |     2|
+|15    |FDRE     | 14222|
+|16    |LD       |    22|
+|17    |IBUF     |   109|
+|18    |OBUF     |    16|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2421.492 ; gain = 674.281 ; free physical = 12424 ; free virtual = 22449
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:20 ; elapsed = 00:01:19 . Memory (MB): peak = 2468.371 ; gain = 718.195 ; free physical = 2437 ; free virtual = 15151
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2421.492 ; gain = 526.531 ; free physical = 12424 ; free virtual = 22449
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2421.500 ; gain = 674.281 ; free physical = 12424 ; free virtual = 22449
+Synthesis finished with 0 errors, 0 critical warnings and 60 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 2468.371 ; gain = 572.445 ; free physical = 2433 ; free virtual = 15148
+Synthesis Optimization Complete : Time (s): cpu = 00:01:20 ; elapsed = 00:01:20 . Memory (MB): peak = 2468.379 ; gain = 718.195 ; free physical = 2433 ; free virtual = 15148
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2421.500 ; gain = 0.000 ; free physical = 12679 ; free virtual = 22704
-INFO: [Netlist 29-17] Analyzing 207 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.27 . Memory (MB): peak = 2468.379 ; gain = 0.000 ; free physical = 2698 ; free virtual = 15412
+INFO: [Netlist 29-17] Analyzing 5079 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2477.520 ; gain = 0.000 ; free physical = 12682 ; free virtual = 22707
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 22 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2524.398 ; gain = 0.000 ; free physical = 2661 ; free virtual = 15376
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  A total of 72 instances were transformed.
+  LD => LDCE (inverted pins: G): 22 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 50 instances
 
-Synth Design complete | Checksum: db12b26c
+Synth Design complete | Checksum: 86e2446b
 INFO: [Common 17-83] Releasing license: Synthesis
-57 Infos, 64 Warnings, 0 Critical Warnings and 0 Errors encountered.
+232 Infos, 136 Warnings, 25 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 2477.520 ; gain = 1057.809 ; free physical = 12681 ; free virtual = 22706
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1946.972; main = 1626.155; forked = 393.405
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3456.352; main = 2477.523; forked = 1034.855
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2501.531 ; gain = 0.000 ; free physical = 12681 ; free virtual = 22707
-INFO: [Common 17-1381] The checkpoint '/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.runs/synth_1/ensemble_unit_top_for_record_numbers.dcp' has been generated.
-INFO: [Vivado 12-24828] Executing command : report_utilization -file ensemble_unit_top_for_record_numbers_utilization_synth.rpt -pb ensemble_unit_top_for_record_numbers_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Oct 20 15:23:51 2024...
+synth_design: Time (s): cpu = 00:01:30 ; elapsed = 00:01:28 . Memory (MB): peak = 2524.398 ; gain = 1103.691 ; free physical = 2657 ; free virtual = 15369
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2043.061; main = 1704.054; forked = 394.145
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3502.262; main = 2524.402; forked = 1039.824
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.3 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2548.410 ; gain = 0.000 ; free physical = 2630 ; free virtual = 15357
+INFO: [Common 17-1381] The checkpoint '/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.runs/synth_1/neuroSA_top_record_numbers.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file neuroSA_top_record_numbers_utilization_synth.rpt -pb neuroSA_top_record_numbers_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 20 19:33:12 2024...
