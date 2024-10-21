@@ -59,6 +59,7 @@ module neuroSA_machine
 
 
 // Signals for interaction with units
+wire                                      halt_modules;
 wire [IDX_THAT_FIRED_WIDTH-1:0]           idx_that_fired;
 wire                                      reset_module, update_memory, should_increment;
 wire                                      decrease_temp;
@@ -112,7 +113,7 @@ generate
             unit_inst(
                 .clk(clk),
                 .reset_module(reset_module),
-                .halt(halt),
+                .halt(halt_modules),
                 .update_memory(update_memory),
                 .should_increment(should_increment),
                 .index_of_neuron_that_fired(idx_that_fired),
@@ -170,6 +171,8 @@ scheduler
 scheduler_instance(
     .clk(clk),
     .reset(reset),
+    .halt_scheduler(halt),
+
     .flip(spiked),
     .unit_number(unit_numb),
     .offset(offset),
@@ -178,7 +181,7 @@ scheduler_instance(
 
     .index_of_neuron_that_fired(idx_that_fired),
     .reset_modules(reset_module),
-    .halt_modules(halt),
+    .halt_modules(halt_modules),
     .update_memories(update_memory),
     .should_increment(should_increment),
     .decrease_temp(decrease_temp),

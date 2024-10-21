@@ -25,18 +25,22 @@ module neuroSA_top_record_numbers(  input                                  clk,
                                     input                                  halt,
                                     input [UNITS-1:0]                      write_ensemble_seed, 
                                     input [UNITS-1:0]                      write_flipping_seed,
-                                    input [NEURON_SEL_LFSR_WIDTH-1:0]      ensemble_seed,
-                                    input [NOISE_SOURCE_WIDTH-1:0]         flipping_seed,
                                     input [MEMBRANE_WIDTH-1:0]             membrane_data_in,
                                     input [3:0]                            neuron_state_in,
                                     input [UNITS-1:0]                      write_neuron_states,         
                                     output [SOLUTION_WIDTH-1:0]            found_solution_value);
 
 
-
+    wire [NEURON_SEL_LFSR_WIDTH-1:0]      ensemble_seed;
+    wire [NOISE_SOURCE_WIDTH-1:0]         flipping_seed;
+    
+    
+    assign ensemble_seed = {NEURON_SEL_LFSR_WIDTH{1'b0}};
+    assign flipping_seed = {(NOISE_SOURCE_WIDTH-1){1'b0}};
+    
     // Parameters for the problem
     parameter int GRAPH_WIDTH                       = 800;
-    parameter int UNITS                             = 25;
+    parameter int UNITS                             = 100;
     parameter int NEURON_SEL_LFSR_WIDTH             = 5;
     
     parameter int NEURONS_PER_UNIT                  = GRAPH_WIDTH / UNITS;
@@ -49,7 +53,7 @@ module neuroSA_top_record_numbers(  input                                  clk,
 
     // Parameters (adjust these as needed for your tests)
     parameter int TEMP_INC_WIDTH                    = 6;
-    parameter int MEMBRANE_WIDTH                    = 16;
+    parameter int MEMBRANE_WIDTH                    = 10;
     parameter int NOISE_SOURCE_WIDTH                = 6;
     parameter int COUNTER_WIDTH                     = 40;
     parameter int NO_CLK_CYCLES_AFTER_UPDATE        = 3;
@@ -61,7 +65,7 @@ module neuroSA_top_record_numbers(  input                                  clk,
     parameter string LOG_NOISE_LUT_FILENAME         = "log_noise_LUT_fixed.mif";
     parameter string TEMPERATURE_LUT_FILENAME       = "temperature_LUT_fixed.mif";
 
-    parameter int FLIPPING_OUTPUT_WIDTH             = 16;
+    parameter int FLIPPING_OUTPUT_WIDTH             = 10;
  
 
     // Instantiate the module under test (MUT)

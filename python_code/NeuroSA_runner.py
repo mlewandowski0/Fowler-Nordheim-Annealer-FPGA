@@ -231,9 +231,13 @@ if __name__ == "__main__":
         log_file_name = "debug" + config.EXTENSION
         config.MAX_ITER = 1000       
 
-    print(f"saving to {log_file_name}")
+    it = N / config.UNITS
 
-    
+    with open("vmems.txt", "w") as vmem_f:
+        print("cfg = ", config.UNITS)
+        for i in range(config.UNITS):
+            vmem_f.write(str(vmem[int(it*i):int(it*(i+1))]) + "\n")
+ 
     pb = tqdm(range(int(config.MAX_ITER)))
     with open(log_file_name, 'w') as f:
         f.write("spikes,best_maxcuts,iter,thld,curr_cuts\n")
