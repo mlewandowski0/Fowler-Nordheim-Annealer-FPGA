@@ -14,11 +14,11 @@ MAX = (2**(FRAC_TOTAL_BITS - FRAC_WIDTH - 1)  - offset)/ random_gen_val
 
 frac_eps = 1 / (1 << FRAC_WIDTH)
 
-N_BITS = 7
+N_BITS = 10
 CONT_VALUES = 1000
 
-filepath_float = "temperature_LUT_float.mif"
-filepath_fixed = "temperature_LUT_fixed.mif"
+filepath_float = f"temperature_LUT_float_N{N_BITS}.mif" 
+filepath_fixed = f"temperature_LUT_fixed_N{N_BITS}.mif"
 
 THLD_MAX = 8e4
 MAX_ITER = 1e8
@@ -71,6 +71,7 @@ for i in range(total_values):
     
     if abs(val) <= frac_eps:
         val = val / abs(val) * frac_eps
+    print(val)
     val_as_fixed_str = real_to_fixed_str(val, FRAC_TOTAL_BITS, FRAC_WIDTH)
     val_as_int = binary_to_unsigned_int(val_as_fixed_str)
     print(f"fixed conversion of {val_as_fixed_str} : {val} -> {val_as_int} -> {fixed_to_real(val_as_int, TOTAL_BITS, FRAC_BITS)}")

@@ -8,10 +8,10 @@ FRAC_BITS = 8
 
 frac_eps = 1 / (1 << FRAC_BITS)
 
-NOISE_SRC_BITS = 7
+NOISE_SRC_BITS = 9
 TOTAL_VALS = 1 << NOISE_SRC_BITS
-towrite_float = "log_noise_LUT_float.mif"
-towrite_fixed = "log_noise_LUT_fixed.mif"
+towrite_float = f"log_noise_LUT_fixed_{NOISE_SRC_BITS}bit.mif"
+towrite_fixed = f"log_noise_LUT_fixed_{NOISE_SRC_BITS}bit.mif"
 
 THLD_MAX = 8e4
 MULT = 2.5e4
@@ -30,8 +30,8 @@ with open(towrite_float, "w") as f_float:
             rand = i / (TOTAL_VALS -1 )
             x_val = alpha * np.log(log_mult * rand + 1e-6)
 
-            if abs(x_val) <= frac_eps:
-                x_val = x_val / abs(x_val) * frac_eps
+            #if abs(x_val) <= frac_eps:
+            #    x_val = x_val / abs(x_val) * frac_eps
             x_val_as_fixed_str = real_to_fixed_str(x_val, FIXED_SIZE, FRAC_BITS)
             x_val_as_int = binary_to_unsigned_int(x_val_as_fixed_str)
             print(f"fixed conversion of {x_val_as_fixed_str} : {x_val} -> {x_val_as_int} -> {fixed_to_real(x_val_as_int, TOTAL_BITS, FRAC_BITS)}")

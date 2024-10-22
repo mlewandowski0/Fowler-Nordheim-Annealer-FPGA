@@ -1,5 +1,5 @@
 
-module mulBITSxBITS#(parameter BITS = 16, parameter USE_VEDIC=0) (input wire signed [BITS-1:0] a, input wire signed [BITS-1:0] b, output wire [2*BITS-1:0] c);
+module mulBITSxBITS#(parameter BITS = 16, parameter USE_VEDIC=0) (input wire signed [BITS-1:0] a, input wire signed [BITS-1:0] b, output wire signed [2*BITS-1:0] c);
 
 generate
     if (USE_VEDIC == 1)
@@ -24,7 +24,7 @@ generate
     else 
     begin
         wire [2*BITS-1:0] tmp;
-        assign tmp = a * b;
+        assign tmp = $signed(a) * $signed(b);
         assign c = tmp;
     end
 

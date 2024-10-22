@@ -56,8 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 5
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -256,6 +254,12 @@ read_mem {
   /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/G_partition/adj_matrix_N800_A100_distributed43.mif
   /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/G_partition/adj_matrix_N800_A100_distributed92.mif
   /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/G_partition/adj_matrix_N800_A100_distributed62.mif
+  /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/scripts/log_noise_LUT_fixed_7bit.mif
+  /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/scripts/temperature_LUT_fixed_N9.mif
+  /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/scripts/temperature_LUT_fixed_N7.mif
+  /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/scripts/temperature_LUT_fixed_N8.mif
+  /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/scripts/log_noise_LUT_fixed_8bit.mif
+  /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/imports/scripts/log_noise_LUT_fixed_9bit.mif
 }
 read_verilog -library xil_defaultlib -sv {
   /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/neuroSA_machine.sv

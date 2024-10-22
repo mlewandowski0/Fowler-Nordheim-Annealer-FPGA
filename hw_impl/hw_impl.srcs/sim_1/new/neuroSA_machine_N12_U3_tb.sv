@@ -215,7 +215,7 @@ module neuroSA_machine_N12_U3_tb();
         halt = 0;
         SIMULATION_RUNNING = 1;
 
-        #(500 * CLK_PERIOD);
+        #(50000 * CLK_PERIOD);
         $fclose(fd);
         $finish;
     end

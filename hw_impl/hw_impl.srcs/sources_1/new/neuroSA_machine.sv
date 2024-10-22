@@ -22,6 +22,7 @@
 
 module neuroSA_machine
 #(
+    parameter int USE_ROUND_ROBIN=1,
     parameter int NEURON_SEL_LFSR_WIDTH=3,
     parameter int MEMBRANE_WIDTH=10,
     parameter int NOISE_SOURCE_WIDTH=6,
@@ -138,24 +139,48 @@ generate
     end
 endgenerate
 
-simple_priority_selector
-    #(.UNITS(UNITS),
-      .UNIT_WIDTH(UNIT_WIDTH),
-      .NEURON_NUM_WIDTH(NEURON_NUM_WIDTH),
-      .MEMBRANE_WIDTH(MEMBRANE_WIDTH))
-      selector(
-            .spikes(spikes),
-            .all_unit_numbers(all_unit_numbers),
-            .offsets(offsets),
-            .all_membranes(all_membranes),
-            .add_mems(add_mems),
-            .spiked(spiked),
-            .unit_numb(unit_numb),
-            .offset(offset),
-            .membrane(membrane),
-            .add_mem(add_mem)
-            );
 
+if (USE_ROUND_ROBIN == 1)
+begin
+    round_robin_priority_selector #(.UNITS(UNITS),
+        .UNIT_WIDTH(UNIT_WIDTH),
+        .NEURON_NUM_WIDTH(NEURON_NUM_WIDTH),
+        .MEMBRANE_WIDTH(MEMBRANE_WIDTH))
+        selector(
+                .reset(reset),
+                .clk(clk),
+                .spikes(spikes),
+                .all_unit_numbers(all_unit_numbers),
+                .offsets(offsets),
+                .all_membranes(all_membranes),
+                .add_mems(add_mems),
+                .spiked(spiked),
+                .unit_numb(unit_numb),
+                .offset(offset),
+                .membrane(membrane),
+                .add_mem(add_mem)
+                );
+end
+else 
+begin
+    simple_priority_selector
+        #(.UNITS(UNITS),
+        .UNIT_WIDTH(UNIT_WIDTH),
+        .NEURON_NUM_WIDTH(NEURON_NUM_WIDTH),
+        .MEMBRANE_WIDTH(MEMBRANE_WIDTH))
+        selector(
+                .spikes(spikes),
+                .all_unit_numbers(all_unit_numbers),
+                .offsets(offsets),
+                .all_membranes(all_membranes),
+                .add_mems(add_mems),
+                .spiked(spiked),
+                .unit_numb(unit_numb),
+                .offset(offset),
+                .membrane(membrane),
+                .add_mem(add_mem)
+                );
+end
 
 scheduler 
 #(

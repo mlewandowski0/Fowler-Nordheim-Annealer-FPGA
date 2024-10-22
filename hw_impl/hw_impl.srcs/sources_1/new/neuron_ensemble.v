@@ -151,7 +151,7 @@ flipping_unit #(.NOISE_SOURCE_WIDTH(NOISE_SOURCE_WIDTH),
     assign membrane_compare = s_p == 1 ? selected_membrane_reg : -selected_membrane_reg;
 
 
-    assign spike = (flipping_output < membrane_compare);
+    assign spike = (flipping_output <= membrane_compare);
     assign unit_number = UNIT_NO;
     assign offset = selected_idx_offset_reg;
     assign membrane = selected_membrane_reg;

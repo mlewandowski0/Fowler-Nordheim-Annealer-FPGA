@@ -236,7 +236,15 @@ if __name__ == "__main__":
     with open("vmems.txt", "w") as vmem_f:
         print("cfg = ", config.UNITS)
         for i in range(config.UNITS):
-            vmem_f.write(str(vmem[int(it*i):int(it*(i+1))]) + "\n")
+            sub = vmem[int(it*i):int(it*(i+1))]
+
+            vmem_f.write("data_arrays[" + str(i) + "] = {")
+            for i,el in enumerate(sub):
+                vmem_f.write(f"{int(el)}")
+                if i != len(sub)-1:
+                    vmem_f.write(",")
+            vmem_f.write("};\n")
+
  
     pb = tqdm(range(int(config.MAX_ITER)))
     with open(log_file_name, 'w') as f:

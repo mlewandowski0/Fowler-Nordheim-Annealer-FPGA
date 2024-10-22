@@ -118,7 +118,6 @@ parameter FRACTIONAL_PART=8
     assign update_membranes = neuron_ensemble_control[1];
 
 
-    reg  [NUMBER_OF_NEURONS:0] Q_out_reg;
     wire [NUMBER_OF_NEURONS:0] Q_out;
 
 
@@ -183,7 +182,7 @@ parameter FRACTIONAL_PART=8
         .neuron_state_in(neuron_state_in),
 
         .control(neuron_ensemble_control),
-        .Q_inp(Q_out_reg),
+        .Q_inp(Q_out),
 
         .update_ds(update_ds),
         .idx_offset_to_update(offset_of_spike),
@@ -266,7 +265,6 @@ parameter FRACTIONAL_PART=8
                 reset_flipping = 1;
                 CE_output_from_distributed_graph = 0;
                 neuron_ensemble_control = ENSEMBLE_RESET_STATE;
-                Q_out_reg = {NEURON_WIDTH{1'bX}};
             end
             ENSEMBLE_WITH_MEM_GENERATE_1:
             begin 
@@ -275,7 +273,6 @@ parameter FRACTIONAL_PART=8
                 reset_flipping = 0;
                 CE_output_from_distributed_graph = 0;
                 neuron_ensemble_control <= ENSEMBLE_GENERATE_STATE;
-                Q_out_reg = {NEURON_WIDTH{1'bX}};
             end
             ENSEMBLE_WITH_MEM_GENERATE_2:
             begin
@@ -284,7 +281,6 @@ parameter FRACTIONAL_PART=8
                 reset_flipping = 0;
                 CE_output_from_distributed_graph = 0;
                 neuron_ensemble_control = ENSEMBLE_GENERATE_STATE;
-                Q_out_reg = {NEURON_WIDTH{1'bX}};
 
             end
             ENSEMBLE_WITH_MEM_HOLD:
@@ -294,21 +290,10 @@ parameter FRACTIONAL_PART=8
                 reset_flipping = 0;
                 CE_output_from_distributed_graph = 0;
                 neuron_ensemble_control = ENSEMBLE_GENERATE_STATE;
-                Q_out_reg = {NEURON_WIDTH{1'bX}};
             end
             ENSEMBLE_WITH_MEM_FETCH_Q:
             begin
                 storage_CE = 0;
-                flipping_CE = 0;
-                reset_flipping = 0;
-                CE_output_from_distributed_graph = 1;
-                neuron_ensemble_control = ENSEMBLE_GENERATE_STATE;
-                Q_out_reg = {NEURON_WIDTH{1'bX}};
-            end
-            ENSEMBLE_WITH_MEM_UPDATE:
-            begin
-                Q_out_reg = Q_out;
-                storage_CE = 1;
                 flipping_CE = 0;
                 reset_flipping = 0;
                 CE_output_from_distributed_graph = 1;
@@ -321,9 +306,16 @@ parameter FRACTIONAL_PART=8
                     neuron_ensemble_control = ENSEMBLE_SUB_STATE;
                 end
             end
+            ENSEMBLE_WITH_MEM_UPDATE:
+            begin
+                storage_CE = 1;
+                flipping_CE = 0;
+                reset_flipping = 0;
+                CE_output_from_distributed_graph = 1;
+                neuron_ensemble_control = ENSEMBLE_GENERATE_STATE;
+            end
             default:
             begin
-                Q_out_reg = {NEURON_WIDTH{1'bX}};
                 storage_CE = 0;
                 flipping_CE = 0;
                 reset_flipping = 1;

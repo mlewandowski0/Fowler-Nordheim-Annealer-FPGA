@@ -39,6 +39,7 @@ verilog xil_defaultlib "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPG
 
 sv xil_defaultlib "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/DEFINES.v" --include "../../../../hw_impl.srcs/sources_1/new" \
 "../../../../hw_impl.srcs/sources_1/new/neuroSA_machine.sv" \
+"../../../../hw_impl.srcs/sources_1/new/neuroSA_top_record_numbers.sv" \
 
 verilog xil_defaultlib "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/DEFINES.v" --include "../../../../hw_impl.srcs/sources_1/new" \
 "../../../../hw_impl.srcs/sim_1/new/graph_n12_machine_tb2.v" \
@@ -70,6 +71,7 @@ verilog xil_defaultlib "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPG
 
 sv xil_defaultlib "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/DEFINES.v" --include "../../../../hw_impl.srcs/sources_1/new" \
 "../../../../hw_impl.srcs/sim_1/new/neuroSA_machine_N12_U3_tb.sv" \
+"../../../../hw_impl.srcs/sim_1/new/neuroSA_machine_N800_U25_tb.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

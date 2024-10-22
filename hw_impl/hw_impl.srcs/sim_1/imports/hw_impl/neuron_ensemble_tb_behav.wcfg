@@ -3,46 +3,44 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="neuroSA_machine_N12_U3_tb_behav.wdb" id="1">
+      <db_ref path="neuroSA_machine_N800_U25_tb_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
-            <top_module name="neuroSA_machine_N12_U3_tb" />
+            <top_module name="neuroSA_machine_N800_U25_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="747.001 ns"></ZoomEndTime>
-      <Cursor1Time time="349.000 ns"></Cursor1Time>
+      <ZoomStartTime time="70.734768307 ms"></ZoomStartTime>
+      <ZoomEndTime time="101.838472012 ms"></ZoomEndTime>
+      <Cursor1Time time="100.016640000 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="216"></NameColumnWidth>
-      <ValueColumnWidth column_width="98"></ValueColumnWidth>
+      <NameColumnWidth column_width="281"></NameColumnWidth>
+      <ValueColumnWidth column_width="60"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
-   <wvobject type="array" fp_name="/neuroSA_machine_N12_U3_tb/decrease_temperature_no">
+   <WVObjectSize size="5" />
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/DUT/scheduler_instance/cuts_best_transmit">
+      <obj_property name="ElementShortName">cuts_best_transmit[15:0]</obj_property>
+      <obj_property name="ObjectShortName">cuts_best_transmit[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/decrease_temperature_no">
       <obj_property name="ElementShortName">decrease_temperature_no[31:0]</obj_property>
       <obj_property name="ObjectShortName">decrease_temperature_no[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuroSA_machine_N12_U3_tb/found_solution_value">
-      <obj_property name="ElementShortName">found_solution_value[15:0]</obj_property>
-      <obj_property name="ObjectShortName">found_solution_value[15:0]</obj_property>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/SPIKES_CNT">
+      <obj_property name="ElementShortName">SPIKES_CNT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SPIKES_CNT[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuroSA_machine_N12_U3_tb/DUT/\unit_gen[0].unit_inst /G_memory/memory">
-      <obj_property name="ElementShortName">memory[0:11][3:0]</obj_property>
-      <obj_property name="ObjectShortName">memory[0:11][3:0]</obj_property>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/ensemble_seed">
+      <obj_property name="ElementShortName">ensemble_seed[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ensemble_seed[4:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/neuroSA_machine_N12_U3_tb/DUT/selector/spikes">
-      <obj_property name="ElementShortName">spikes[2:0]</obj_property>
-      <obj_property name="ObjectShortName">spikes[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuroSA_machine_N12_U3_tb/DUT/\unit_gen[0].unit_inst /neuron_ensemble_inst/membrane">
-      <obj_property name="ElementShortName">membrane[15:0]</obj_property>
-      <obj_property name="ObjectShortName">membrane[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/neuroSA_machine_N12_U3_tb/DUT/\unit_gen[0].unit_inst /GRAPH_DISTRIB_FILE">
-      <obj_property name="ElementShortName">GRAPH_DISTRIB_FILE[271:0]</obj_property>
-      <obj_property name="ObjectShortName">GRAPH_DISTRIB_FILE[271:0]</obj_property>
-      <obj_property name="Radix">ASCIIRADIX</obj_property>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/flipping_seed">
+      <obj_property name="ElementShortName">flipping_seed[6:0]</obj_property>
+      <obj_property name="ObjectShortName">flipping_seed[6:0]</obj_property>
    </wvobject>
 </wave_config>

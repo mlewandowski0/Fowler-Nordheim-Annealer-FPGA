@@ -1,0 +1,8 @@
+d_cuts = -57.0, curr_cuts = 0.0, curr_cuts_after_update = 57
+d_cuts = -35.0, curr_cuts = 57.0, curr_cuts_after_update = 92
+d_cuts = -19.0, curr_cuts = 92.0, curr_cuts_after_update = 111
+d_cuts = -60.0, curr_cuts = 111.0, curr_cuts_after_update = 171
+d_cuts = -51.0, curr_cuts = 171.0, curr_cuts_after_update = 222
+d_cuts = -6.0, curr_cuts = 222.0, curr_cuts_after_update = 228
+d_cuts = -25.0, curr_cuts = 228.0, curr_cuts_after_update = 253
+d_cuts = -42.0, curr_cuts = 253.0, curr_cuts_after_update = 295

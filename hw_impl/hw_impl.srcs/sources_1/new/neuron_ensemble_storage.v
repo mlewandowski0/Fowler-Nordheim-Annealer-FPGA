@@ -25,6 +25,11 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
                                  );
 
 
+        reg [(1 << NEURON_WIDTH)-1:0] Q_inp_reg;
+        reg [1:0]                     Q_control_reg;
+        reg                           update_ds_reg;
+
+
         (* ram_style = "block" *) reg signed [MEMBRANE_WIDTH-1:0] membrane_storage [0:(1 << NEURON_WIDTH)-1];
         
         
@@ -59,6 +64,87 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
         assign selected_membrane = CE ? membrane_storage[selected_idx_offset] : {MEMBRANE_WIDTH{1'bX}};
         assign neuron_state = CE ? neuron_states_storage[selected_idx_offset] : 4'bXXXX; 
 
+        always @(Q_control_reg)
+        begin
+            case (Q_control_reg)
+                ENSEMBLE_RESET_STATE: 
+                begin  
+                    idx = 0;
+                end
+                ENSEMBLE_INC_STATE:
+                begin
+                    for (i = 0; i < (1 << NEURON_WIDTH); i = i + 1)
+                     begin
+                        if (Q_inp_reg[i])  // If corresponding bit in Q_inp is 1
+                        begin
+                            membrane_storage[i] = membrane_storage[i] + 2;
+                        end
+                    end 
+
+                    /*
+                        neuron_state[3] = ds_p
+                        neuron_state[2] = ds_n
+                        neuron_state[1] = s_p
+                        neuron_state[0] = s_n
+                        
+                        the state is also asserted in the FETCH phase, 
+                    */
+                    if (update_ds)
+                    begin
+                        // ds_p[p] = s_n[p] > 0
+                        neuron_states_storage[idx_offset_to_update][3] = neuron_states_storage[idx_offset_to_update][0];
+
+                        // ds_n[p] = s_p[p] > 0
+                        neuron_states_storage[idx_offset_to_update][2] = neuron_states_storage[idx_offset_to_update][1];
+
+                        // s_p[p] = np.logical_not(s_p[p])
+                        neuron_states_storage[idx_offset_to_update][1] = ~neuron_states_storage[idx_offset_to_update][1];
+
+                        // s_n[p] = np.logical_not(s_n[p])
+                        neuron_states_storage[idx_offset_to_update][0] = ~neuron_states_storage[idx_offset_to_update][0];
+                    end
+
+                end
+                ENSEMBLE_SUB_STATE:
+                begin
+                    for (i = 0; i < (1 << NEURON_WIDTH); i = i + 1)
+                    begin
+                        if (Q_inp[i])  // If corresponding bit in Q_inp is 1
+                        begin
+                            membrane_storage[i] = membrane_storage[i] - 2;
+                        end
+                    end
+                 /*
+                        neuron_state[3] = ds_p
+                        neuron_state[2] = ds_n
+                        neuron_state[1] = s_p
+                        neuron_state[0] = s_n
+                    
+                        
+                        the state is also asserted in the FETCH phase, 
+                    */
+                     if (update_ds)
+                     begin
+                        // ds_p[p] = s_n[p] > 0
+                        neuron_states_storage[idx_offset_to_update][3] = neuron_states_storage[idx_offset_to_update][0];
+                     // ds_n[p] = s_p[p] > 0
+                        neuron_states_storage[idx_offset_to_update][2] = neuron_states_storage[idx_offset_to_update][1];
+                     // s_p[p] = np.logical_not(s_p[p])
+                        neuron_states_storage[idx_offset_to_update][1] = ~neuron_states_storage[idx_offset_to_update][1];
+                     // s_n[p] = np.logical_not(s_n[p])
+                        neuron_states_storage[idx_offset_to_update][0] = ~neuron_states_storage[idx_offset_to_update][0];
+                     end
+                end
+                ENSEMBLE_GENERATE_STATE:
+                begin
+                end
+                default:
+                begin  
+                    
+                end 
+            endcase
+        end
+
 
         always @(posedge clk)
         begin
@@ -70,91 +156,9 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
             end
             else
             begin
-                case (control)
-                    ENSEMBLE_RESET_STATE: 
-                    begin
-                        idx <= 0;
-                    end
-                    ENSEMBLE_INC_STATE:
-                    begin
-                        for (i = 0; i < (1 << NEURON_WIDTH); i = i + 1)
-                        begin
-                            if (Q_inp[i])  // If corresponding bit in Q_inp is 1
-                            begin
-                                membrane_storage[i] <= membrane_storage[i] + 2;
-                            end
-                        end 
-
-
-                        /*
-                            neuron_state[3] = ds_p
-                            neuron_state[2] = ds_n
-                            neuron_state[1] = s_p
-                            neuron_state[0] = s_n
-                        
-                            the state is also asserted in the FETCH phase, 
-                        */
-                         if (update_ds)
-                         begin
-                            // ds_p[p] = s_n[p] > 0
-                            neuron_states_storage[idx_offset_to_update][3] <= neuron_states_storage[idx_offset_to_update][0];
-
-                            // ds_n[p] = s_p[p] > 0
-                            neuron_states_storage[idx_offset_to_update][2] <= neuron_states_storage[idx_offset_to_update][1];
-
-                            // s_p[p] = np.logical_not(s_p[p])
-                            neuron_states_storage[idx_offset_to_update][1] <= ~neuron_states_storage[idx_offset_to_update][1];
-
-                            // s_n[p] = np.logical_not(s_n[p])
-                            neuron_states_storage[idx_offset_to_update][0] <= ~neuron_states_storage[idx_offset_to_update][0];
-                         end
-
-
-                    end
-                    ENSEMBLE_SUB_STATE:
-                    begin
-                        for (i = 0; i < (1 << NEURON_WIDTH); i = i + 1)
-                        begin
-                            if (Q_inp[i])  // If corresponding bit in Q_inp is 1
-                            begin
-                                membrane_storage[i] <= membrane_storage[i] - 2;
-                            end
-                        end
-
-                        /*
-                            neuron_state[3] = ds_p
-                            neuron_state[2] = ds_n
-                            neuron_state[1] = s_p
-                            neuron_state[0] = s_n
-                        
-                            
-                            the state is also asserted in the FETCH phase, 
-                        */
-                         if (update_ds)
-                         begin
-                            // ds_p[p] = s_n[p] > 0
-                            neuron_states_storage[idx_offset_to_update][3] <= neuron_states_storage[idx_offset_to_update][0];
-
-                            // ds_n[p] = s_p[p] > 0
-                            neuron_states_storage[idx_offset_to_update][2] <= neuron_states_storage[idx_offset_to_update][1];
-
-                            // s_p[p] = np.logical_not(s_p[p])
-                            neuron_states_storage[idx_offset_to_update][1] <= ~neuron_states_storage[idx_offset_to_update][1];
-
-                            // s_n[p] = np.logical_not(s_n[p])
-                            neuron_states_storage[idx_offset_to_update][0] <= ~neuron_states_storage[idx_offset_to_update][0];
-                         end
-
-
-                    end
-                    ENSEMBLE_GENERATE_STATE:
-                    begin
-                    end
-                    default:
-                    begin  
-                        
-                    end 
-                endcase
+                Q_inp_reg       <= Q_inp;
+                Q_control_reg   <= control;
+                update_ds_reg   <= update_ds;
             end
         end
 

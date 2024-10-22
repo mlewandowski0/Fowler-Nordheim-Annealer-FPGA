@@ -40,7 +40,7 @@ module neuroSA_top_record_numbers(  input                                  clk,
     
     // Parameters for the problem
     parameter int GRAPH_WIDTH                       = 800;
-    parameter int UNITS                             = 100;
+    parameter int UNITS                             = 25;
     parameter int NEURON_SEL_LFSR_WIDTH             = 5;
     
     parameter int NEURONS_PER_UNIT                  = GRAPH_WIDTH / UNITS;
