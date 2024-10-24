@@ -2560,3 +2560,5 @@
 [$monitor] time=25595000,LFSR_out=79
 [$monitor] time=25605000,LFSR_out=30
 [$monitor] time=25615000,LFSR_out=61
+[$monitor] time=25625000,LFSR_out=0
+[$monitor] time=25635000,LFSR_out=1

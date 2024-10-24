@@ -25,7 +25,8 @@ module neuroSA_machine
     parameter int USE_ROUND_ROBIN=1,
     parameter int NEURON_SEL_LFSR_WIDTH=3,
     parameter int MEMBRANE_WIDTH=10,
-    parameter int NOISE_SOURCE_WIDTH=6,
+    parameter int LOG_NOISE_SOURCE_WIDTH = 16,
+    parameter int LOG_LUT_BIT_SIZE = 7, 
     parameter int COUNTER_WIDTH=40,
     parameter int TEMP_INC_WIDTH=16,
     parameter int NO_CLK_CYCLES_AFTER_UPDATE=3,
@@ -52,7 +53,7 @@ module neuroSA_machine
  input [UNITS-1:0]                      write_ensemble_seed, 
  input [UNITS-1:0]                      write_flipping_seed,
  input [NEURON_SEL_LFSR_WIDTH-1:0]      ensemble_seed,
- input [NOISE_SOURCE_WIDTH-1:0]         flipping_seed,
+ input [LOG_NOISE_SOURCE_WIDTH-1:0]     flipping_seed,
  input [MEMBRANE_WIDTH-1:0]             membrane_data_in,
  input [3:0]                            neuron_state_in,
  input [UNITS-1:0]                      write_neuron_states,         
@@ -95,11 +96,12 @@ generate
             .UNIT_NO(UNIT_NO),
             .GRAPH_WIDTH(GRAPH_WIDTH),
             .GRAPH_DISTRIB_FILE(GRAPH_DISTRIB_FILE),
+            .LOG_NOISE_SOURCE_WIDTH(LOG_NOISE_SOURCE_WIDTH),
+            .LOG_LUT_BIT_SIZE(LOG_LUT_BIT_SIZE), 
             .UNIT_WIDTH(UNIT_WIDTH),
             .NEURON_SEL_LFSR_WIDTH(NEURON_SEL_LFSR_WIDTH),
             .NEURON_WIDTH(NEURON_NUM_WIDTH),
             .MEMBRANE_WIDTH(MEMBRANE_WIDTH),
-            .NOISE_SOURCE_WIDTH(NOISE_SOURCE_WIDTH),
             .REAL_WIDTH(REAL_WIDTH),
             .FLIPPING_OUTPUT_WIDTH(FLIPPING_OUTPUT_WIDTH),
             .LOG_NOISE_LUT_FILENAME(LOG_NOISE_LUT_FILENAME),
@@ -130,11 +132,11 @@ generate
                 .membrane_data_in(membrane_data_in),
                 .neuron_state_in(neuron_state_in),
 
-                .spike(spikes[i]),
+                .spike_reg(spikes[i]),
                 .unit_number(all_unit_numbers[((i+1)*UNIT_WIDTH)-1 -: UNIT_WIDTH]),
-                .offset(offsets[((i+1)*NEURON_NUM_WIDTH)-1 -: NEURON_NUM_WIDTH]),
-                .membrane(all_membranes[((i+1)*MEMBRANE_WIDTH)-1 -: MEMBRANE_WIDTH]),
-                .add_mem(add_mems[i])
+                .offset_reg(offsets[((i+1)*NEURON_NUM_WIDTH)-1 -: NEURON_NUM_WIDTH]),
+                .membrane_reg(all_membranes[((i+1)*MEMBRANE_WIDTH)-1 -: MEMBRANE_WIDTH]),
+                .add_mem_reg(add_mems[i])
             );
     end
 endgenerate

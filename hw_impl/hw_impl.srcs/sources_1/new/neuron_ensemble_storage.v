@@ -19,148 +19,114 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
                                   input wire update_ds,
                                   input wire [NEURON_WIDTH-1:0] idx_offset_to_update,
                                  
-                                 output wire [NEURON_WIDTH-1:0]             selected_idx_offset,
-                                 output wire signed [MEMBRANE_WIDTH-1:0]    selected_membrane,
-                                 output wire [3:0]                          neuron_state                                 
+                                 output reg [NEURON_WIDTH-1:0]              selected_idx_offset,
+                                 output reg signed [MEMBRANE_WIDTH-1:0]     selected_membrane,
+                                 output reg [3:0]                           neuron_state                                 
                                  );
 
 
-        reg [(1 << NEURON_WIDTH)-1:0] Q_inp_reg;
-        reg [1:0]                     Q_control_reg;
-        reg                           update_ds_reg;
+    localparam ENSEMBLE_GENERATE_STATE  =  2'b00;
+    localparam ENSEMBLE_RESET_STATE     =  2'b01;
+    localparam ENSEMBLE_INC_STATE       =  2'b10;
+    localparam ENSEMBLE_SUB_STATE       =  2'b11;
 
 
-        (* ram_style = "block" *) reg signed [MEMBRANE_WIDTH-1:0] membrane_storage [0:(1 << NEURON_WIDTH)-1];
-        
-        
-        localparam ENSEMBLE_GENERATE_STATE  =  2'b00;
-        localparam ENSEMBLE_RESET_STATE     =  2'b01;
-        localparam ENSEMBLE_INC_STATE       =  2'b10;
-        localparam ENSEMBLE_SUB_STATE       =  2'b11;
+    reg [1:0]                       Q_control_reg;
+    reg                             update_ds_reg;   
 
+    (* ram_style = "block" *) reg signed [MEMBRANE_WIDTH-1:0] membrane_storage [0:(1 << NEURON_WIDTH)-1];
+    (* ram_style = "block" *) reg [3:0] neuron_states_storage [0:(1 << NEURON_WIDTH)-1];
 
+    wire [NEURON_WIDTH-1:0] idx_offset;
 
-        /* storing the following neuron data
-            neuron_state[3] = ds_p
-            neuron_state[2] = ds_n
-            neuron_state[1] = s_p
-            neuron_state[0] = s_n
- 
-        */
-        (* ram_style = "block" *) reg [3:0] neuron_states_storage [0:(1 << NEURON_WIDTH)-1];
+    LFSR_inout #(
+        .LFSR_BITS(LFSR_WIDTH),
+        .OUT_BITS(NEURON_WIDTH)
+    ) index_selection (
+        .clk(clk), 
+        .chip_enable(CE), 
+        .write_seed(write_seed), 
+        .seed(seed), 
+        .out_trunc(idx_offset)
+    );
 
+    reg [NEURON_WIDTH-1:0] idx;
+    integer i;
 
-        LFSR_inout #(.LFSR_BITS(LFSR_WIDTH), .OUT_BITS(NEURON_WIDTH)) index_selection(.clk(clk), 
-                                                                                      .chip_enable(CE), 
-                                                                                      .write_seed(write_seed), 
-                                                                                      .seed(seed), 
-                                                                                      .out_trunc(selected_idx_offset));
-        
+    // Sequential logic for state updates
+    always @(posedge clk)
+    begin
+        // Register control signals
+        Q_control_reg   <= control;
+        update_ds_reg   <= update_ds;
 
-        reg [NEURON_WIDTH-1:0] idx;
-        integer i;
-
-
-        assign selected_membrane = CE ? membrane_storage[selected_idx_offset] : {MEMBRANE_WIDTH{1'bX}};
-        assign neuron_state = CE ? neuron_states_storage[selected_idx_offset] : 4'bXXXX; 
-
-        always @(Q_control_reg)
+        if (write)
+        begin
+            membrane_storage[idx] <= membrane_data_in;
+            neuron_states_storage[idx] <= neuron_state_in;
+            idx <= idx + 1;
+        end
+        else
         begin
             case (Q_control_reg)
                 ENSEMBLE_RESET_STATE: 
                 begin  
-                    idx = 0;
+                    idx <= 0;
                 end
                 ENSEMBLE_INC_STATE:
                 begin
                     for (i = 0; i < (1 << NEURON_WIDTH); i = i + 1)
-                     begin
-                        if (Q_inp_reg[i])  // If corresponding bit in Q_inp is 1
+                    begin
+                        if (Q_inp[i])  // If corresponding bit in Q_inp_reg is 1
                         begin
-                            membrane_storage[i] = membrane_storage[i] + 2;
+                            membrane_storage[i] <= membrane_storage[i] + 2;
                         end
                     end 
 
-                    /*
-                        neuron_state[3] = ds_p
-                        neuron_state[2] = ds_n
-                        neuron_state[1] = s_p
-                        neuron_state[0] = s_n
-                        
-                        the state is also asserted in the FETCH phase, 
-                    */
-                    if (update_ds)
+                    if (update_ds_reg)
                     begin
-                        // ds_p[p] = s_n[p] > 0
-                        neuron_states_storage[idx_offset_to_update][3] = neuron_states_storage[idx_offset_to_update][0];
-
-                        // ds_n[p] = s_p[p] > 0
-                        neuron_states_storage[idx_offset_to_update][2] = neuron_states_storage[idx_offset_to_update][1];
-
-                        // s_p[p] = np.logical_not(s_p[p])
-                        neuron_states_storage[idx_offset_to_update][1] = ~neuron_states_storage[idx_offset_to_update][1];
-
-                        // s_n[p] = np.logical_not(s_n[p])
-                        neuron_states_storage[idx_offset_to_update][0] = ~neuron_states_storage[idx_offset_to_update][0];
+                        neuron_states_storage[idx_offset_to_update][3] <= neuron_states_storage[idx_offset_to_update][0];
+                        neuron_states_storage[idx_offset_to_update][2] <= neuron_states_storage[idx_offset_to_update][1];
+                        neuron_states_storage[idx_offset_to_update][1] <= ~neuron_states_storage[idx_offset_to_update][1];
+                        neuron_states_storage[idx_offset_to_update][0] <= ~neuron_states_storage[idx_offset_to_update][0];
                     end
-
                 end
                 ENSEMBLE_SUB_STATE:
                 begin
                     for (i = 0; i < (1 << NEURON_WIDTH); i = i + 1)
                     begin
-                        if (Q_inp[i])  // If corresponding bit in Q_inp is 1
+                        if (Q_inp[i])  // If corresponding bit in Q_inp_reg is 1
                         begin
-                            membrane_storage[i] = membrane_storage[i] - 2;
+                            membrane_storage[i] <= membrane_storage[i] - 2;
                         end
                     end
-                 /*
-                        neuron_state[3] = ds_p
-                        neuron_state[2] = ds_n
-                        neuron_state[1] = s_p
-                        neuron_state[0] = s_n
-                    
-                        
-                        the state is also asserted in the FETCH phase, 
-                    */
-                     if (update_ds)
-                     begin
-                        // ds_p[p] = s_n[p] > 0
-                        neuron_states_storage[idx_offset_to_update][3] = neuron_states_storage[idx_offset_to_update][0];
-                     // ds_n[p] = s_p[p] > 0
-                        neuron_states_storage[idx_offset_to_update][2] = neuron_states_storage[idx_offset_to_update][1];
-                     // s_p[p] = np.logical_not(s_p[p])
-                        neuron_states_storage[idx_offset_to_update][1] = ~neuron_states_storage[idx_offset_to_update][1];
-                     // s_n[p] = np.logical_not(s_n[p])
-                        neuron_states_storage[idx_offset_to_update][0] = ~neuron_states_storage[idx_offset_to_update][0];
-                     end
-                end
-                ENSEMBLE_GENERATE_STATE:
-                begin
+
+                    if (update_ds_reg)
+                    begin
+                        neuron_states_storage[idx_offset_to_update][3] <= neuron_states_storage[idx_offset_to_update][0];
+                        neuron_states_storage[idx_offset_to_update][2] <= neuron_states_storage[idx_offset_to_update][1];
+                        neuron_states_storage[idx_offset_to_update][1] <= ~neuron_states_storage[idx_offset_to_update][1];
+                        neuron_states_storage[idx_offset_to_update][0] <= ~neuron_states_storage[idx_offset_to_update][0];
+                    end
                 end
                 default:
-                begin  
-                    
+                begin
+                    // No action needed
                 end 
             endcase
-        end
 
-
-        always @(posedge clk)
-        begin
-            if (write)
+            if (CE)
             begin
-                membrane_storage[idx] <= membrane_data_in;
-                neuron_states_storage[idx] <= neuron_state_in;
-                idx <= idx + 1;
+                selected_idx_offset <= idx_offset;
+                selected_membrane   <= membrane_storage[idx_offset];
+                neuron_state        <= neuron_states_storage[idx_offset];
             end
-            else
+            else 
             begin
-                Q_inp_reg       <= Q_inp;
-                Q_control_reg   <= control;
-                update_ds_reg   <= update_ds;
+                selected_membrane   <= {MEMBRANE_WIDTH{1'bX}};
+                neuron_state        <= 4'bXXXX;
             end
         end
+    end
 
-
-    endmodule
+endmodule

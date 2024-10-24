@@ -78,7 +78,18 @@ module LFSR_TB;
 
 
         #(`LFSR_CYCLES * `ELEMENTS * `CLOCK_CYCLE)
-
+        
+        seed = 0;
+        chip_enable = 1;
+        write_seed = 1;
+        #(`CLOCK_CYCLE);
+        write_seed = 0;
+        #(`CLOCK_CYCLE);
+        chip_enable = 0;
+        #(`CLOCK_CYCLE);
+        #(`CLOCK_CYCLE);
+        #(`CLOCK_CYCLE);
+                
         $fclose(file);
         $stop;
     end

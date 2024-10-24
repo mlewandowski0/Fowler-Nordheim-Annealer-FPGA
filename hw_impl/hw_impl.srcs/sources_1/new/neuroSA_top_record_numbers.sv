@@ -32,47 +32,53 @@ module neuroSA_top_record_numbers(  input                                  clk,
 
 
     wire [NEURON_SEL_LFSR_WIDTH-1:0]      ensemble_seed;
-    wire [NOISE_SOURCE_WIDTH-1:0]         flipping_seed;
+    wire [LOG_NOISE_SOURCE_WIDTH-1:0]         flipping_seed;
     
     
     assign ensemble_seed = {NEURON_SEL_LFSR_WIDTH{1'b0}};
-    assign flipping_seed = {(NOISE_SOURCE_WIDTH-1){1'b0}};
+    assign flipping_seed = {(LOG_NOISE_SOURCE_WIDTH-1){1'b0}};
     
     // Parameters for the problem
     parameter int GRAPH_WIDTH                       = 800;
     parameter int UNITS                             = 25;
-    parameter int NEURON_SEL_LFSR_WIDTH             = 5;
-    
     parameter int NEURONS_PER_UNIT                  = GRAPH_WIDTH / UNITS;
     parameter int UNIT_WIDTH                        = $clog2(UNITS);
     parameter int NEURON_NUM_WIDTH                  = $clog2(NEURONS_PER_UNIT);
-    parameter int TEMPERATURE_LUT_WIDTH             = 7;
     parameter int PIPELINED_ROMs                    = 1;
     parameter int PIPELINED_ENSEMBLE_STORAGE        = 1;
     parameter int IDX_THAT_FIRED_WIDTH              = $clog2(GRAPH_WIDTH);
+    parameter int USE_ROUND_ROBIN                   = 0;
 
     // Parameters (adjust these as needed for your tests)
-    parameter int TEMP_INC_WIDTH                    = 6;
-    parameter int MEMBRANE_WIDTH                    = 10;
-    parameter int NOISE_SOURCE_WIDTH                = 6;
+    parameter int TEMP_INC_WIDTH                    = 16;
+    parameter int MEMBRANE_WIDTH                    = 16;
     parameter int COUNTER_WIDTH                     = 40;
-    parameter int NO_CLK_CYCLES_AFTER_UPDATE        = 3;
+    parameter int NO_CLK_CYCLES_AFTER_UPDATE        = 4;
     parameter int SOLUTION_WIDTH                    = 16;
 
     parameter int USE_FLOAT_POINT                   = 0;
     parameter int REAL_WIDTH                        = 18;
     parameter int FRACTIONAL_PART                   = 8;
-    parameter string LOG_NOISE_LUT_FILENAME         = "log_noise_LUT_fixed.mif";
-    parameter string TEMPERATURE_LUT_FILENAME       = "temperature_LUT_fixed.mif";
 
-    parameter int FLIPPING_OUTPUT_WIDTH             = 10;
+    parameter int NEURON_SEL_LFSR_WIDTH             = 5;
+    parameter int LOG_NOISE_SOURCE_WIDTH            = 16;
+    parameter int LOG_LUT_BIT_SIZE                  = 7; 
+
+    
+    parameter string LOG_NOISE_LUT_FILENAME         = "log_noise_LUT_fixed_7bit.mif";
+    parameter int TEMPERATURE_LUT_WIDTH             = 9;
+    parameter string TEMPERATURE_LUT_FILENAME       = "temperature_LUT_fixed_N9.mif";
+
+    parameter int FLIPPING_OUTPUT_WIDTH             = 16;
  
 
     // Instantiate the module under test (MUT)
     neuroSA_machine #(
+        .USE_ROUND_ROBIN(USE_ROUND_ROBIN),
         .NEURON_SEL_LFSR_WIDTH(NEURON_SEL_LFSR_WIDTH),
         .MEMBRANE_WIDTH(MEMBRANE_WIDTH),
-        .NOISE_SOURCE_WIDTH(NOISE_SOURCE_WIDTH),
+        .LOG_NOISE_SOURCE_WIDTH(LOG_NOISE_SOURCE_WIDTH),
+        .LOG_LUT_BIT_SIZE(LOG_LUT_BIT_SIZE),
         .COUNTER_WIDTH(COUNTER_WIDTH),
         .TEMP_INC_WIDTH(TEMP_INC_WIDTH),
         .NO_CLK_CYCLES_AFTER_UPDATE(NO_CLK_CYCLES_AFTER_UPDATE),

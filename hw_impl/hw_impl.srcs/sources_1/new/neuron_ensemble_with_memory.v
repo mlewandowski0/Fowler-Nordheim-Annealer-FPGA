@@ -43,7 +43,8 @@ parameter UNIT_NO=0,
 parameter NEURON_SEL_LFSR_WIDTH=3,
 parameter NEURON_WIDTH=2,
 parameter MEMBRANE_WIDTH=16,
-parameter NOISE_SOURCE_WIDTH=6,
+parameter LOG_NOISE_SOURCE_WIDTH = 16,
+parameter LOG_LUT_BIT_SIZE = 7, 
 parameter REAL_WIDTH=16,
 parameter FLIPPING_OUTPUT_WIDTH=16,
 parameter LOG_NOISE_LUT_FILENAME="log_noise_LUT.mif",
@@ -56,33 +57,30 @@ parameter FIXED_TOTAL_WIDTH=18,
 parameter FRACTIONAL_PART=8
 )
 (
-
-    input wire [$clog2(GRAPH_WIDTH)-1:0] index_of_neuron_that_fired,
-
-    input wire reset_module,
-    input wire halt,
-    input wire update_memory, 
-    input wire should_increment,
-
-    input wire clk, 
+    input wire [$clog2(GRAPH_WIDTH)-1:0]        index_of_neuron_that_fired,
+    input wire                                  reset_module,
+    input wire                                  halt,
+    input wire                                  update_memory, 
+    input wire                                  should_increment,
+    input wire                                  clk, 
     
-    input wire write_ensemble_seed,
-    input wire [NEURON_SEL_LFSR_WIDTH-1:0] ensemble_seed,
+    input wire                                  write_ensemble_seed,
+    input wire [NEURON_SEL_LFSR_WIDTH-1:0]      ensemble_seed,
 
-    input wire write_flipping_seed,
-    input wire [NOISE_SOURCE_WIDTH-1:0] flipping_seed,
+    input wire                                  write_flipping_seed,
+    input wire [LOG_NOISE_SOURCE_WIDTH-1:0]     flipping_seed,
 
-    input wire decrease_temp,
+    input wire                                  decrease_temp,
 
-    input wire write_neuron_state,
-    input wire [MEMBRANE_WIDTH-1:0] membrane_data_in,
-    input wire [3:0] neuron_state_in,
+    input wire                                  write_neuron_state,
+    input wire [MEMBRANE_WIDTH-1:0]             membrane_data_in,
+    input wire [3:0]                            neuron_state_in,
 
-    output wire                                  spike,
-    output wire [UNIT_WIDTH-1:0]                 unit_number,
-    output wire [NEURON_WIDTH-1:0]               offset,
-    output wire [MEMBRANE_WIDTH-1:0]             membrane,
-    output wire                                  add_mem
+    output reg                                  spike_reg,
+    output reg [NEURON_WIDTH-1:0]               offset_reg,
+    output reg [MEMBRANE_WIDTH-1:0]             membrane_reg,
+    output reg                                  add_mem_reg,
+    output wire [UNIT_WIDTH-1:0]                unit_number
 );
 
 
@@ -91,8 +89,6 @@ parameter FRACTIONAL_PART=8
     reg  [2:0] next_state;
 
     wire spike_out;
-
-
 
     localparam NUMBER_OF_NEURONS = (1 << NEURON_WIDTH) - 1;
     
@@ -125,6 +121,11 @@ parameter FRACTIONAL_PART=8
     // belongs to the membrane is quite easy. The index that fired is of size ceil[GRAPH_WIDTH]
     // so assuming that the graph size is 12, and it is separated into three units, each containing 4 neurons
     // index_that_fired =  {which_unit_fired}{offset_ofspike}
+
+    wire [NEURON_WIDTH-1:0]             offset;
+    wire [MEMBRANE_WIDTH-1:0]           membrane;
+    wire                                add_mem;
+
     wire [NEURON_WIDTH-1:0]             offset_of_spike;
     wire [UNIT_WIDTH-1:0]               which_unit_fired;
     wire                                update_ds;
@@ -139,7 +140,8 @@ parameter FRACTIONAL_PART=8
                                .GRAPH_WIDTH(GRAPH_WIDTH),
                                .MEM_FILE(GRAPH_DISTRIB_FILE)) 
                                
-                               G_memory(.index_of_neuron_that_fired(index_of_neuron_that_fired_reg),
+                               G_memory(.clk(clk),
+                                        .index_of_neuron_that_fired(index_of_neuron_that_fired_reg),
                                         .enable(CE_output_from_distributed_graph),
                                         .Q_out(Q_out));
 
@@ -151,7 +153,8 @@ parameter FRACTIONAL_PART=8
                           .NEURON_SEL_LFSR_WIDTH(NEURON_SEL_LFSR_WIDTH),
                           .NEURON_WIDTH(NEURON_WIDTH),
                           .MEMBRANE_WIDTH(MEMBRANE_WIDTH),
-                          .NOISE_SOURCE_WIDTH(NOISE_SOURCE_WIDTH),
+                          .LOG_NOISE_SOURCE_WIDTH(LOG_NOISE_SOURCE_WIDTH),
+                          .LOG_LUT_BIT_SIZE(LOG_LUT_BIT_SIZE), 
                           .FLIPPING_OUTPUT_WIDTH(FLIPPING_OUTPUT_WIDTH),
                           .REAL_WIDTH(REAL_WIDTH),
                           .LOG_NOISE_LUT_FILENAME(LOG_NOISE_LUT_FILENAME),
@@ -247,12 +250,43 @@ parameter FRACTIONAL_PART=8
 
     always @(posedge clk)
     begin
-        current_state <= next_state;
+        if (reset_module)
+        begin
+            index_of_neuron_that_fired_reg      <= 0;
+            current_state                       <= ENSEMBLE_WITH_MEM_RESET;
+            incrementing_reg                    <= 0;
 
-        if (update_memory)
-            index_of_neuron_that_fired_reg <= index_of_neuron_that_fired;
+            spike_reg                           <= 0;
+            offset_reg                          <= {NEURON_WIDTH{1'bX}};
+            membrane_reg                        <= {MEMBRANE_WIDTH{1'bX}};
+            add_mem_reg                         <= 1'bX;
+        end
+        else
+        begin
+            current_state                       <= next_state;
+            incrementing_reg                    <= should_increment;
 
-        incrementing_reg <= should_increment;
+            if (update_memory)
+            begin
+                index_of_neuron_that_fired_reg  <= index_of_neuron_that_fired;
+            end
+
+            if (current_state == ENSEMBLE_WITH_MEM_GENERATE_2 && spike_reg == 0)
+            begin
+                spike_reg                       <= spike_out;
+                offset_reg                      <= offset;
+                membrane_reg                    <= membrane;
+                add_mem_reg                     <= add_mem;
+            end
+            else if (current_state == ENSEMBLE_WITH_MEM_FETCH_Q)
+            begin
+                spike_reg                       <= 0;
+                offset_reg                      <= {NEURON_WIDTH{1'bX}};
+                membrane_reg                    <= {MEMBRANE_WIDTH{1'bX}};
+                add_mem_reg                     <= 1'bX;
+            end
+
+        end
     end
 
     always @(*)
@@ -324,9 +358,6 @@ parameter FRACTIONAL_PART=8
             end
         endcase
     end
-
-
-    assign  spike = current_state == ENSEMBLE_WITH_MEM_GENERATE_2 ? spike_out : 1'b0;
 
 
 endmodule

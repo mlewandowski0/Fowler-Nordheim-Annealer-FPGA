@@ -26,6 +26,7 @@ module neuroSA_machine_N800_U25_tb();
     //    
     parameter string FILE_TO_SAVE                   = "neuroSA_machine_N=800_A25_tb.txt";
     parameter string PLOT_FIG_SAVE                  = "neuroSA_machine_N=800_A25_tb_sol_vs_clk.txt";
+    parameter string SPIKE_DEBUGGING                = "neuroSA_machine_N=800_A25_tb_spikes.txt";
 
     // Parameters for the problem
     parameter int GRAPH_WIDTH                       = 800;
@@ -39,8 +40,7 @@ module neuroSA_machine_N800_U25_tb();
     parameter int USE_ROUND_ROBIN                   = 0;
 
     // Parameters (adjust these as needed for your tests)
-    parameter int TEMP_INC_WIDTH                    = 18;
-    parameter int NEURON_SEL_LFSR_WIDTH             = 5;
+    parameter int TEMP_INC_WIDTH                    = 16;
     parameter int MEMBRANE_WIDTH                    = 16;
     parameter int COUNTER_WIDTH                     = 40;
     parameter int NO_CLK_CYCLES_AFTER_UPDATE        = 4;
@@ -50,11 +50,14 @@ module neuroSA_machine_N800_U25_tb();
     parameter int REAL_WIDTH                        = 18;
     parameter int FRACTIONAL_PART                   = 8;
 
-    parameter int NOISE_SOURCE_WIDTH                = 7;
-    parameter string LOG_NOISE_LUT_FILENAME         = "log_noise_LUT_fixed_7bit.mif";
+    parameter int NEURON_SEL_LFSR_WIDTH             = 5;
+    parameter int LOG_NOISE_SOURCE_WIDTH            = 16;
+    parameter int LOG_LUT_BIT_SIZE                  = 7; 
 
-    parameter int TEMPERATURE_LUT_WIDTH             = 7;
-    parameter string TEMPERATURE_LUT_FILENAME       = "temperature_LUT_fixed_N7.mif";
+    
+    parameter string LOG_NOISE_LUT_FILENAME         = "log_noise_LUT_fixed_7bit.mif";
+    parameter int TEMPERATURE_LUT_WIDTH             = 9;
+    parameter string TEMPERATURE_LUT_FILENAME       = "temperature_LUT_fixed_N9.mif";
 
     parameter int FLIPPING_OUTPUT_WIDTH             = 16;
     
@@ -67,7 +70,7 @@ module neuroSA_machine_N800_U25_tb();
     // values helpful for simulation
     logic                             SIMULATION_RUNNING;   
     integer                           decrease_temperature_no;
-    integer                           fd, fd2;  
+    integer                           fd, fd2, fd3;  
     integer                           SPIKES_CNT = 0;
  
 
@@ -80,7 +83,7 @@ module neuroSA_machine_N800_U25_tb();
     logic [UNITS-1:0] write_ensemble_seed;
     logic [UNITS-1:0] write_flipping_seed;
     logic [NEURON_SEL_LFSR_WIDTH-1:0] ensemble_seed;
-    logic [NOISE_SOURCE_WIDTH-1:0] flipping_seed;
+    logic [LOG_NOISE_SOURCE_WIDTH-1:0] flipping_seed;
     logic [MEMBRANE_WIDTH-1:0] membrane_data_in;
     logic [3:0] neuron_state_in;
     logic [UNITS-1:0] write_neuron_states;
@@ -93,7 +96,8 @@ module neuroSA_machine_N800_U25_tb();
         .USE_ROUND_ROBIN(USE_ROUND_ROBIN),
         .NEURON_SEL_LFSR_WIDTH(NEURON_SEL_LFSR_WIDTH),
         .MEMBRANE_WIDTH(MEMBRANE_WIDTH),
-        .NOISE_SOURCE_WIDTH(NOISE_SOURCE_WIDTH),
+        .LOG_NOISE_SOURCE_WIDTH(LOG_NOISE_SOURCE_WIDTH),
+        .LOG_LUT_BIT_SIZE(LOG_LUT_BIT_SIZE),
         .COUNTER_WIDTH(COUNTER_WIDTH),
         .TEMP_INC_WIDTH(TEMP_INC_WIDTH),
         .NO_CLK_CYCLES_AFTER_UPDATE(NO_CLK_CYCLES_AFTER_UPDATE),
@@ -191,6 +195,7 @@ module neuroSA_machine_N800_U25_tb();
 
         fd  = $fopen(FILE_TO_SAVE, "w");
         fd2 = $fopen(PLOT_FIG_SAVE, "w");
+        fd3 = $fopen(SPIKE_DEBUGGING,"w");
 
         decrease_temperature_no = 0;
         reset = 0;
@@ -219,10 +224,14 @@ module neuroSA_machine_N800_U25_tb();
             write_flipping_seed = '0;
             write_flipping_seed[unit] = 1;
             
+            ensemble_seed = 1 + unit;
+            flipping_seed = 1 + unit;
+                
             for (int i = 0; i < 2; i++)
             begin
-                ensemble_seed = $urandom_range((1 << NEURON_SEL_LFSR_WIDTH) - 1, 0);
-                flipping_seed = $urandom_range((1 << NOISE_SOURCE_WIDTH) - 1, 0);
+                //ensemble_seed = $urandom_range((1 << NEURON_SEL_LFSR_WIDTH) - 1, 0);
+                //flipping_seed = $urandom_range((1 << NOISE_SOURCE_WIDTH) - 1, 0);
+
             end
             #CLK_PERIOD;
             
@@ -231,7 +240,7 @@ module neuroSA_machine_N800_U25_tb();
         neuron_state_in         = 4'b0010;   
 
         ensemble_seed           = {NEURON_SEL_LFSR_WIDTH{1'b0}};
-        flipping_seed           = {NOISE_SOURCE_WIDTH{1'b0}};
+        flipping_seed           = {LOG_NOISE_SOURCE_WIDTH{1'b0}};
 
         // program the membranes
         #CLK_PERIOD;
@@ -258,7 +267,8 @@ module neuroSA_machine_N800_U25_tb();
         SIMULATION_RUNNING = 1;
 
         // #(10_000_000 * CLK_PERIOD);
-        #(100_000 * CLK_PERIOD);
+        //#(100_000 * CLK_PERIOD);
+        #(1000 * CLK_PERIOD);
         $fclose(fd);
         $fclose(fd2);
         $finish;
@@ -281,6 +291,12 @@ module neuroSA_machine_N800_U25_tb();
     /*
 
     */
+
+
+    always @(DUT.spikes)
+    begin
+        $fdisplay(fd3, "%d : %b", $time, DUT.spikes );
+    end
 
     always @(posedge DUT.spiked)
     begin

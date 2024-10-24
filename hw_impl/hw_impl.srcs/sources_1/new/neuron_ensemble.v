@@ -5,7 +5,8 @@ parameter UNIT_NO=0,
 parameter NEURON_SEL_LFSR_WIDTH=3,
 parameter NEURON_WIDTH=2,
 parameter MEMBRANE_WIDTH=16,
-parameter NOISE_SOURCE_WIDTH=6,
+parameter LOG_NOISE_SOURCE_WIDTH = 16,
+parameter LOG_LUT_BIT_SIZE = 8, 
 parameter FLIPPING_OUTPUT_WIDTH=16,
 parameter REAL_WIDTH=16,
 parameter LOG_NOISE_LUT_FILENAME="log_noise_LUT.mif",
@@ -26,7 +27,7 @@ parameter FRACTIONAL_PART=8
     input wire [NEURON_SEL_LFSR_WIDTH-1:0] ensemble_seed,
 
     input wire write_flipping_seed,
-    input wire [NOISE_SOURCE_WIDTH-1:0] flipping_seed,
+    input wire [LOG_NOISE_SOURCE_WIDTH-1:0] flipping_seed,
 
     input wire decrease_temp,
     input wire reset_flipping,
@@ -46,7 +47,6 @@ parameter FRACTIONAL_PART=8
     output wire [NEURON_WIDTH-1:0]               offset,
     output wire [MEMBRANE_WIDTH-1:0]             membrane,
     output wire                                  add_mem
-
 );
 
 wire [NEURON_WIDTH-1:0] selected_idx_offset;
@@ -59,6 +59,11 @@ reg signed [MEMBRANE_WIDTH-1:0] selected_membrane_reg;
 reg add_reg;
 reg [3:0] neuron_state_reg;
 
+
+localparam GENERATE_STATE = 2'b00;
+localparam INC_STATE      = 2'b01;
+localparam SUB_STATE      = 2'b10; 
+localparam RESET_STATE    = 2'b11;
 
 
 neuron_ensemble_storage #(.LFSR_WIDTH(NEURON_SEL_LFSR_WIDTH),
@@ -84,7 +89,8 @@ neuron_ensemble_storage #(.LFSR_WIDTH(NEURON_SEL_LFSR_WIDTH),
                                  .selected_membrane(selected_membrane),
                                  .neuron_state(neuron_state));
 
-flipping_unit #(.NOISE_SOURCE_WIDTH(NOISE_SOURCE_WIDTH), 
+flipping_unit #(.LOG_NOISE_SOURCE_WIDTH(LOG_NOISE_SOURCE_WIDTH),
+                .LOG_LUT_BIT_SIZE(LOG_LUT_BIT_SIZE), 
                 .REAL_WIDTH(REAL_WIDTH),
                 .FLIPPING_OUTPUT_WIDTH(FLIPPING_OUTPUT_WIDTH),
                 .LOG_NOISE_LUT_FILENAME(LOG_NOISE_LUT_FILENAME),
@@ -107,17 +113,17 @@ flipping_unit #(.NOISE_SOURCE_WIDTH(NOISE_SOURCE_WIDTH),
     begin
         always @(posedge clk)
         begin
-            if (storage_CE)
+            if (control == RESET_STATE)
+            begin
+                selected_idx_offset_reg <= 0;
+                selected_membrane_reg <= 0;
+                neuron_state_reg <= 0;
+            end
+            else if (storage_CE)
             begin
                 selected_idx_offset_reg <= selected_idx_offset;
                 selected_membrane_reg <= selected_membrane;
                 neuron_state_reg <= neuron_state;
-            end
-            else 
-            begin
-                selected_idx_offset_reg <= selected_idx_offset_reg;
-                selected_membrane_reg <= selected_membrane_reg;
-                neuron_state_reg <= neuron_state_reg;
             end
         end
     end
@@ -151,7 +157,7 @@ flipping_unit #(.NOISE_SOURCE_WIDTH(NOISE_SOURCE_WIDTH),
     assign membrane_compare = s_p == 1 ? selected_membrane_reg : -selected_membrane_reg;
 
 
-    assign spike = (flipping_output <= membrane_compare);
+    assign spike = (flipping_output < membrane_compare);
     assign unit_number = UNIT_NO;
     assign offset = selected_idx_offset_reg;
     assign membrane = selected_membrane_reg;

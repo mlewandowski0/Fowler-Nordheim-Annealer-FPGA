@@ -302,6 +302,8 @@ read_verilog -library xil_defaultlib {
   /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/graph_n12_machine.v
   /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/fixed_to_int.v
   /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/graph_n12_machine_fixed.v
+  /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/transmit_buffer.v
+  /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/LFSR_with_adv.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
