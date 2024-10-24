@@ -34,8 +34,11 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
     reg [1:0]                       Q_control_reg;
     reg                             update_ds_reg;   
 
-    (* ram_style = "block" *) reg signed [MEMBRANE_WIDTH-1:0] membrane_storage [0:(1 << NEURON_WIDTH)-1];
-    (* ram_style = "block" *) reg [3:0] neuron_states_storage [0:(1 << NEURON_WIDTH)-1];
+    //(* ram_style = "block" *) 
+    reg signed [MEMBRANE_WIDTH-1:0] membrane_storage [0:(1 << NEURON_WIDTH)-1];
+    
+    //(* ram_style = "block" *) 
+    reg [3:0] neuron_states_storage [0:(1 << NEURON_WIDTH)-1];
 
     wire [NEURON_WIDTH-1:0] idx_offset;
 

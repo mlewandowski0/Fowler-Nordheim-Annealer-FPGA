@@ -77,6 +77,7 @@ sv xil_defaultlib "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_
 
 verilog xil_defaultlib "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/DEFINES.v" --include "../../../../hw_impl.srcs/sources_1/new" \
 "../../../../hw_impl.srcs/sim_1/new/transmit_buffer_tb.v" \
+"../../../../hw_impl.srcs/sim_1/new/integration_transmit_buffer_selection_tb.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

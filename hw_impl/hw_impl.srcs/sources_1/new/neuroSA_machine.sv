@@ -39,8 +39,8 @@ module neuroSA_machine
     parameter string TEMPERATURE_LUT_FILENAME="temperature_LUT_fixed.mif",
     parameter int GRAPH_WIDTH = 800,
     parameter int UNITS = 25,
-    parameter int NEURONS_PER_UNIT = GRAPH_WIDTH / UNIT_WIDTH, // Example value
     parameter int UNIT_WIDTH = $clog2(UNITS),
+    parameter int NEURONS_PER_UNIT = GRAPH_WIDTH / UNIT_WIDTH, // Example value
     parameter int NEURON_NUM_WIDTH = $clog2(NEURONS_PER_UNIT),
     parameter int TEMPERATURE_LUT_WIDTH=7,
     parameter int PIPELINED_ROMs=1,

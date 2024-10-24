@@ -306,7 +306,7 @@ parameter FRACTIONAL_PART=8
                 flipping_CE = 1;
                 reset_flipping = 0;
                 CE_output_from_distributed_graph = 0;
-                neuron_ensemble_control <= ENSEMBLE_GENERATE_STATE;
+                neuron_ensemble_control = ENSEMBLE_GENERATE_STATE;
             end
             ENSEMBLE_WITH_MEM_GENERATE_2:
             begin

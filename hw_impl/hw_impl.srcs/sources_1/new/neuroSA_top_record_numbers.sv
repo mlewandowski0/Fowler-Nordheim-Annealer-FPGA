@@ -40,7 +40,7 @@ module neuroSA_top_record_numbers(  input                                  clk,
     
     // Parameters for the problem
     parameter int GRAPH_WIDTH                       = 800;
-    parameter int UNITS                             = 25;
+    parameter int UNITS                             = 100;
     parameter int NEURONS_PER_UNIT                  = GRAPH_WIDTH / UNITS;
     parameter int UNIT_WIDTH                        = $clog2(UNITS);
     parameter int NEURON_NUM_WIDTH                  = $clog2(NEURONS_PER_UNIT);
@@ -51,7 +51,7 @@ module neuroSA_top_record_numbers(  input                                  clk,
 
     // Parameters (adjust these as needed for your tests)
     parameter int TEMP_INC_WIDTH                    = 16;
-    parameter int MEMBRANE_WIDTH                    = 16;
+    parameter int MEMBRANE_WIDTH                    = 10;
     parameter int COUNTER_WIDTH                     = 40;
     parameter int NO_CLK_CYCLES_AFTER_UPDATE        = 4;
     parameter int SOLUTION_WIDTH                    = 16;

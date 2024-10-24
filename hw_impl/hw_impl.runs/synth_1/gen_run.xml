@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1729782734">
-  <File Type="VDS-TIMINGSUMMARY" Name="neuroSA_top_record_numbers_timing_summary_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1729787228">
   <File Type="RDS-DCP" Name="neuroSA_top_record_numbers.dcp"/>
   <File Type="RDS-UTIL-PB" Name="neuroSA_top_record_numbers_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="neuroSA_top_record_numbers_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="neuroSA_top_record_numbers_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="neuroSA_top_record_numbers.vds"/>
-  <File Type="REPORTS-TCL" Name="neuroSA_top_record_numbers_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="neuroSA_top_record_numbers_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="neuroSA_top_record_numbers.tcl"/>
+  <File Type="RDS-UTIL" Name="neuroSA_top_record_numbers_utilization_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="neuroSA_top_record_numbers_reports.tcl"/>
+  <File Type="RDS-RDS" Name="neuroSA_top_record_numbers.vds"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/DEFINES.v">

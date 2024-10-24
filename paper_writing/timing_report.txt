@@ -1,0 +1,1 @@
+Units = 25, clk = 10ns, slack 

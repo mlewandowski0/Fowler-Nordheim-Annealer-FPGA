@@ -32,6 +32,7 @@ module transmit_buffer
   parameter NO_OF_CLK_CYCLES_TO_PROPAGATE=2)
 (input wire clk,
  input wire reset,
+ input wire updating_membranes,
  input wire spike,
  input wire [NEURON_WIDTH-1:0] idx_offset,
  input wire [MEMBRANE_WIDTH-1:0] membrane,
@@ -47,6 +48,7 @@ module transmit_buffer
 localparam WAIT_FOR_PROPAGATION     = 2'b00;
 localparam ACCEPTING                = 2'b01;
 localparam GOOD_SAMPLE              = 2'b10;
+localparam MEMBRANE_UPDATING        = 2'b11;
 
 localparam CNT_SIZE = $clog2(NO_OF_CLK_CYCLES_TO_PROPAGATE+1); 
 reg [CNT_SIZE-1:0] cnt;
@@ -57,8 +59,6 @@ reg [MEMBRANE_WIDTH-1:0] membrane_input;
 
 
 wire [CNT_SIZE-1:0] cnt_next;
-assign cnt_next = cnt + 1;
-
 
 reg [1:0] state;
 reg [1:0] next_state;
@@ -80,18 +80,25 @@ begin
         idx_offset_input    <= 0;
         membrane_input      <= 0;
     end
+    else if (updating_membranes == 1)
+    begin
+        next_state          <= MEMBRANE_UPDATING;
+        new_sample          <= 0;
+
+    end
     else 
     begin
-        if (state == ACCEPTING)
+        if (next_state == ACCEPTING)
         begin
           spike_input       <= spike;
           add_mem_input     <= add_mem;
           idx_offset_input  <= idx_offset;
           membrane_input    <= membrane;
+          cnt               <= 0; 
         end
-        else if (state == WAIT_FOR_PROPAGATION)
+        if (state == WAIT_FOR_PROPAGATION)
         begin
-          cnt               <= cnt_next;
+          cnt               <= cnt + 1;
         end
 
         state <= next_state;
@@ -101,6 +108,10 @@ end
 
 always @(*)
 begin
+  spike_reg = 0;
+  offset_reg = {NEURON_WIDTH{1'bX}};
+  membrane_reg = {MEMBRANE_WIDTH{1'bX}};
+  add_mem_reg = 1'bX;
   case(state)
     WAIT_FOR_PROPAGATION:
     begin
@@ -124,15 +135,26 @@ begin
     end
     GOOD_SAMPLE:
     begin
-        spike_reg = spike_input;
-        offset_reg = idx_offset_input;
-        membrane_reg = membrane_input;
-        add_mem_reg = add_mem_input;
-        next_state = GOOD_SAMPLE;
+
+        next_state         = GOOD_SAMPLE;
+        new_sample         = 0;
+        spike_reg          = spike_input;
+        offset_reg         = idx_offset_input;
+        membrane_reg       = membrane_input;
+        add_mem_reg        = add_mem_input;
+
+    end
+
+    // TODO: Implement this state
+    MEMBRANE_UPDATING:
+    begin
+        new_sample = 0;
+        next_state = WAIT_FOR_PROPAGATION;
     end
     default:
     begin
-      
+        new_sample = 0;
+        next_state = WAIT_FOR_PROPAGATION;
     end
   endcase
 end

@@ -76,7 +76,7 @@ module flipping_unit #(parameter LOG_NOISE_SOURCE_WIDTH = 16,
         reg [REAL_WIDTH-1:0] noise_out_reg, temperature_multiplier_out_reg, flipping_output_reg;
         wire error;
 
-        assign flipping_output = flipping_output_reg;
+        assign flipping_output = flipping_output_reg[FLIPPING_OUTPUT_WIDTH-1:0];
 
         if (USE_FLOAT_POINT == 1)
         begin 
@@ -86,7 +86,7 @@ module flipping_unit #(parameter LOG_NOISE_SOURCE_WIDTH = 16,
         else if (USE_FLOAT_POINT == 0)
         begin 
             fixed_mult #(.BITS(REAL_WIDTH), .FRAC_BITS(FRACTIONAL_PART)) mult(.a(noise_out_reg), .b(temperature_multiplier_out_reg), .product(noise_times_temp), .overflow(error));
-            fixed_to_int #(.TOTAL_BITS(REAL_WIDTH), .FRAC_BITS(FRACTIONAL_PART)) fixed_to_int(.fixed_val(noise_times_temp), .int_fixed_val(flipping_output_int));
+            fixed_to_int #(.TOTAL_BITS(REAL_WIDTH), .FRAC_BITS(FRACTIONAL_PART), .OUT_WIDTH(REAL_WIDTH)) fixed_to_int(.fixed_val(noise_times_temp), .int_fixed_val(flipping_output_int));
         end
 
         always @(posedge clk)

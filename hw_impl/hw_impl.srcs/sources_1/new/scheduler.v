@@ -82,7 +82,8 @@ module scheduler
     reg [UNIT_WIDTH-1:0]            unit_number_reg;
     reg [NEURON_NUM_WIDTH-1:0]      offset_reg;
     reg [MEMBRANE_WIDTH-1:0]        membrane_reg;
-
+    
+    reg to_increment;
 
     assign halt_modules = halt_scheduler;
     assign decrease_temp = &counter[TEMP_INC_WIDTH-1:0];
@@ -97,6 +98,7 @@ module scheduler
     // Sequential Logic for State Transitions and Outputs
     always @(posedge clk or posedge reset) begin
         if (reset) begin
+            to_increment         <= 0;
             current_state        <= STATE_RESETED;
             halt_counter         <= 0;
             update_memories      <= 0;
@@ -138,6 +140,7 @@ module scheduler
                         offset_reg      <= offset;
                         membrane_reg    <= membrane;
                         should_increment     <= add_membrane;
+                        to_increment         <= add_membrane;
 
                     end
                 end
@@ -152,7 +155,7 @@ module scheduler
                     // implements the following
                     // d_cuts = (ds_p[p] - ds_n[p]) * vmem[p]
                     // curr_cuts -= d_cuts
-                    if (should_increment)
+                    if (to_increment)
                         curr_cuts  <= curr_cuts - membrane_reg;
                     else
                         curr_cuts  <= curr_cuts + membrane_reg;
