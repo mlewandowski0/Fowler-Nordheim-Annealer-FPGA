@@ -19,28 +19,23 @@ parameter FIXED_TOTAL_WIDTH=18,
 parameter FRACTIONAL_PART=8
 )
 (
-    input wire clk, 
-    input wire storage_CE,
-    input wire flipping_CE,
-    
-    input wire write_ensemble_seed,
-    input wire [NEURON_SEL_LFSR_WIDTH-1:0] ensemble_seed,
-
-    input wire write_flipping_seed,
-    input wire [LOG_NOISE_SOURCE_WIDTH-1:0] flipping_seed,
-
-    input wire decrease_temp,
-    input wire reset_flipping,
-
-    input wire write,
-    input wire [MEMBRANE_WIDTH-1:0] membrane_data_in,
-    input wire [3:0] neuron_state_in,
-
-    input wire [1:0] control, // 0: GENERATE_STATE, 1: INC_STATE, 2: SUB_STATE, 3: RESET_STATE
-    input wire [(1 << NEURON_WIDTH)-1:0] Q_inp,
-
-    input wire update_ds,
-    input wire [NEURON_WIDTH-1:0] idx_offset_to_update,
+    input wire                                   clk, 
+    input wire                                   storage_CE,
+    input wire                                   advance_index,
+    input wire                                   flipping_CE,
+    input wire                                   write_ensemble_seed,
+    input wire                                   [NEURON_SEL_LFSR_WIDTH-1:0] ensemble_seed,
+    input wire                                   write_flipping_seed,
+    input wire                                   [LOG_NOISE_SOURCE_WIDTH-1:0] flipping_seed,
+    input wire                                   decrease_temp,
+    input wire                                   reset_flipping,
+    input wire                                   write,
+    input wire                                   [MEMBRANE_WIDTH-1:0] membrane_data_in,
+    input wire                                   [3:0] neuron_state_in,
+    input wire                                   [1:0] control, // 0: GENERATE_STATE, 1: INC_STATE, 2: SUB_STATE, 3: RESET_STATE
+    input wire                                   [(1 << NEURON_WIDTH)-1:0] Q_inp,
+    input wire                                   update_ds,
+    input wire                                   [NEURON_WIDTH-1:0] idx_offset_to_update,
 
     output wire                                  spike,
     output wire [UNIT_WIDTH-1:0]                 unit_number,
@@ -71,7 +66,7 @@ neuron_ensemble_storage #(.LFSR_WIDTH(NEURON_SEL_LFSR_WIDTH),
                           .MEMBRANE_WIDTH(MEMBRANE_WIDTH))
                           neuron_ensemble_storage_inst
                                  (.clk(clk),
-                                  .CE(storage_CE),
+                                  .advance_index(advance_index),
                                   .write_seed(write_ensemble_seed), 
                                   .seed(ensemble_seed),
                                   .write(write),                            // write the data to the storage

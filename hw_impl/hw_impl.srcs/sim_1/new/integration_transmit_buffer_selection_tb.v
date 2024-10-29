@@ -46,7 +46,7 @@ module integration_transmit_buffer_selection_tb();
     reg                             clk;
     reg                             updating_membranes;
     reg                             reset;
-    reg                             flipping_CE;
+    reg                             flipping_CE, storage_CE;
 
     reg                             write_ensemble_seed;
     reg [NEURON_SEL_LFSR_WIDTH-1:0] ensemble_seed;;
@@ -93,7 +93,8 @@ module integration_transmit_buffer_selection_tb();
     neuron_ensemble_inst
     (
         .clk(clk), 
-        .storage_CE(new_sample),
+        .advance_index(new_sample),
+        .storage_CE(storage_CE),
         .flipping_CE(flipping_CE),
         
         .write_ensemble_seed(write_ensemble_seed),
@@ -133,6 +134,7 @@ module integration_transmit_buffer_selection_tb();
                        .spike(ensemble_spike_out),
                        .idx_offset(ensemble_offset),
                        .membrane(ensemble_membrane),
+                       .update_ds(update_ds),
                        .add_mem(ensemble_add_mem),
                        .new_sample(new_sample),
                        .spike_reg(spike_reg),
@@ -159,6 +161,7 @@ module integration_transmit_buffer_selection_tb();
         updating_membranes = 0;
         reset = 0;
         flipping_CE = 1;
+        storage_CE = 1;
 
         write_ensemble_seed = 0;
         ensemble_seed = 0;
@@ -183,6 +186,7 @@ module integration_transmit_buffer_selection_tb();
         reset_flipping = 1;
 
         #CLK_CYCLE;
+        flipping_CE = 1;
         write_ensemble_seed = 1;
         write_flipping_seed = 1;
         ensemble_seed       = 0;
@@ -293,7 +297,18 @@ module integration_transmit_buffer_selection_tb();
         reset_flipping = 0;
         write_ensemble_seed = 0;
         write_flipping_seed = 0;
-        #(50 * CLK_CYCLE);
+        #(5 * CLK_CYCLE);
+        updating_membranes = 1;
+        update_ds          = 1;
+        #CLK_CYCLE;
+        updating_membranes = 0;
+        #(10 * CLK_CYCLE);
+
+        updating_membranes = 1;
+        #CLK_CYCLE;
+        updating_membranes = 0;
+
+        #(90 * CLK_CYCLE);
         $finish;
     end
 

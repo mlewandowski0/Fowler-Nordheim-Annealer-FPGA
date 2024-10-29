@@ -28,7 +28,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log neuroSA_top_record_numbers.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuroSA_top_record_numbers.tcl" );
+         "-log ensemble_unit_top_for_record_numbers.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ensemble_unit_top_for_record_numbers.tcl" );
 
 
 

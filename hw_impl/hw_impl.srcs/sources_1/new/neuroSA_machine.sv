@@ -45,7 +45,11 @@ module neuroSA_machine
     parameter int TEMPERATURE_LUT_WIDTH=7,
     parameter int PIPELINED_ROMs=1,
     parameter int PIPELINED_ENSEMBLE_STORAGE=1,
-    parameter int IDX_THAT_FIRED_WIDTH = $clog2(GRAPH_WIDTH)
+    parameter int IDX_THAT_FIRED_WIDTH = $clog2(GRAPH_WIDTH),
+
+    parameter int USE_TRANSMIT_WITH_BUFF=1,
+    parameter int NO_OF_CLK_CYCLES_TO_PROPAGATE=1,
+    parameter int NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE=3
 )
 (input                                  clk, 
  input                                  reset,
@@ -91,6 +95,8 @@ generate
         localparam int UNIT_NO = i;
         localparam string GRAPH_DISTRIB_FILE = $sformatf("adj_matrix_N%0d_A%0d_distributed%0d.mif", GRAPH_WIDTH, UNITS,  UNIT_NO);
 
+        if (USE_TRANSMIT_WITH_BUFF == 0)
+        begin
         neuron_ensemble_with_memory 
         #(
             .UNIT_NO(UNIT_NO),
@@ -138,6 +144,59 @@ generate
                 .membrane_reg(all_membranes[((i+1)*MEMBRANE_WIDTH)-1 -: MEMBRANE_WIDTH]),
                 .add_mem_reg(add_mems[i])
             );
+        end 
+        else if (USE_TRANSMIT_WITH_BUFF == 1)
+        begin
+        neuron_ensemble_with_memory_with_buff 
+        #(
+            .UNIT_NO(UNIT_NO),
+            .GRAPH_WIDTH(GRAPH_WIDTH),
+            .GRAPH_DISTRIB_FILE(GRAPH_DISTRIB_FILE),
+            .LOG_NOISE_SOURCE_WIDTH(LOG_NOISE_SOURCE_WIDTH),
+            .LOG_LUT_BIT_SIZE(LOG_LUT_BIT_SIZE), 
+            .UNIT_WIDTH(UNIT_WIDTH),
+            .NEURON_SEL_LFSR_WIDTH(NEURON_SEL_LFSR_WIDTH),
+            .NEURON_WIDTH(NEURON_NUM_WIDTH),
+            .MEMBRANE_WIDTH(MEMBRANE_WIDTH),
+            .REAL_WIDTH(REAL_WIDTH),
+            .FLIPPING_OUTPUT_WIDTH(FLIPPING_OUTPUT_WIDTH),
+            .LOG_NOISE_LUT_FILENAME(LOG_NOISE_LUT_FILENAME),
+            .TEMPERATURE_LUT_FILENAME(TEMPERATURE_LUT_FILENAME),
+            .TEMPERATURE_LUT_WIDTH(TEMPERATURE_LUT_WIDTH),
+            .PIPELINED_ROMs(PIPELINED_ROMs),
+            .PIPELINED_ENSEMBLE_STORAGE(PIPELINED_ENSEMBLE_STORAGE),
+            .USE_FLOAT_POINT(USE_FLOAT_POINT),
+            .FRACTIONAL_PART(FRACTIONAL_PART),
+            .NO_OF_CLK_CYCLES_TO_PROPAGATE(NO_OF_CLK_CYCLES_TO_PROPAGATE),
+            .NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE(NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE)
+        )
+
+            unit_inst(
+                .clk(clk),
+                .reset_module(reset_module),
+                .halt(halt_modules),
+                .update_memory(update_memory),
+                .should_increment(should_increment),
+                .index_of_neuron_that_fired(idx_that_fired),
+                .write_ensemble_seed(write_ensemble_seed[i]),
+                .ensemble_seed(ensemble_seed),
+
+                .write_flipping_seed(write_flipping_seed[i]),
+                .flipping_seed(flipping_seed),
+
+                .decrease_temp(decrease_temp),
+
+                .write_neuron_state(write_neuron_states[i]),
+                .membrane_data_in(membrane_data_in),
+                .neuron_state_in(neuron_state_in),
+
+                .spike_out(spikes[i]),
+                .unit_number(all_unit_numbers[((i+1)*UNIT_WIDTH)-1 -: UNIT_WIDTH]),
+                .offset_out(offsets[((i+1)*NEURON_NUM_WIDTH)-1 -: NEURON_NUM_WIDTH]),
+                .membrane_out(all_membranes[((i+1)*MEMBRANE_WIDTH)-1 -: MEMBRANE_WIDTH]),
+                .add_mem_out(add_mems[i])
+            );
+        end
     end
 endgenerate
 

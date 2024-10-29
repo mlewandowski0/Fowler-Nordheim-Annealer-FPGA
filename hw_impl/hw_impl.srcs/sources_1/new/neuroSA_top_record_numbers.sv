@@ -40,7 +40,7 @@ module neuroSA_top_record_numbers(  input                                  clk,
     
     // Parameters for the problem
     parameter int GRAPH_WIDTH                       = 800;
-    parameter int UNITS                             = 100;
+    parameter int UNITS                             = 25;
     parameter int NEURONS_PER_UNIT                  = GRAPH_WIDTH / UNITS;
     parameter int UNIT_WIDTH                        = $clog2(UNITS);
     parameter int NEURON_NUM_WIDTH                  = $clog2(NEURONS_PER_UNIT);

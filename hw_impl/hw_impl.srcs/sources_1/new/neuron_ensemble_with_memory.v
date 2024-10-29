@@ -168,6 +168,7 @@ parameter FRACTIONAL_PART=8
     neuron_ensemble_inst
     (
         .clk(clk), 
+        .advance_index(storage_CE),
         .storage_CE(storage_CE),
         .flipping_CE(flipping_CE),
         

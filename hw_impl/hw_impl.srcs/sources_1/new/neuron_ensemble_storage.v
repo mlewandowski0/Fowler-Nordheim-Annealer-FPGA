@@ -5,7 +5,7 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
                                   parameter MEMBRANE_WIDTH=16
                                   )
                                  (input wire clk,
-                                  input wire CE,
+                                  input wire advance_index,
                                   input wire write_seed, 
                                   input wire [LFSR_WIDTH-1:0] seed,
                                   input wire write,                           // write the data to the storage
@@ -47,7 +47,7 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
         .OUT_BITS(NEURON_WIDTH)
     ) index_selection (
         .clk(clk), 
-        .chip_enable(CE), 
+        .chip_enable(advance_index), 
         .write_seed(write_seed), 
         .seed(seed), 
         .out_trunc(idx_offset)
@@ -118,17 +118,10 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
                 end 
             endcase
 
-            if (CE)
-            begin
-                selected_idx_offset <= idx_offset;
-                selected_membrane   <= membrane_storage[idx_offset];
-                neuron_state        <= neuron_states_storage[idx_offset];
-            end
-            else 
-            begin
-                selected_membrane   <= {MEMBRANE_WIDTH{1'bX}};
-                neuron_state        <= 4'bXXXX;
-            end
+            
+            selected_idx_offset <= idx_offset;
+            selected_membrane   <= membrane_storage[idx_offset];
+            neuron_state        <= neuron_states_storage[idx_offset];
         end
     end
 

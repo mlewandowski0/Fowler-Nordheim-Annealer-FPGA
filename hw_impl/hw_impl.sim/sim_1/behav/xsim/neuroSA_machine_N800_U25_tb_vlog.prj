@@ -44,6 +44,7 @@ sv xil_defaultlib "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_
 verilog xil_defaultlib "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/hw_impl/hw_impl.srcs/sources_1/new/DEFINES.v" --include "../../../../hw_impl.srcs/sources_1/new" \
 "../../../../hw_impl.srcs/sources_1/new/transmit_buffer.v" \
 "../../../../hw_impl.srcs/sources_1/new/LFSR_with_adv.v" \
+"../../../../hw_impl.srcs/sources_1/new/neuron_ensemble_with_memory_with_buff.v" \
 "../../../../hw_impl.srcs/sim_1/new/graph_n12_machine_tb2.v" \
 "../../../../hw_impl.srcs/sim_1/new/float16_to_int_tb.v" \
 "../../../../hw_impl.srcs/sim_1/new/graph_n12_machine_tb.v" \

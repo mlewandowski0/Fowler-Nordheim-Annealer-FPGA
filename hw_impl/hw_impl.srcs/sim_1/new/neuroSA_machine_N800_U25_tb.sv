@@ -30,17 +30,17 @@ module neuroSA_machine_N800_U25_tb();
 
     // Parameters for the problem
     parameter int GRAPH_WIDTH                       = 800;
-    parameter int UNITS                             = 50;
+    parameter int UNITS                             = 25;
     parameter int NEURONS_PER_UNIT                  = GRAPH_WIDTH / UNITS;
     parameter int UNIT_WIDTH                        = $clog2(UNITS);
     parameter int NEURON_NUM_WIDTH                  = $clog2(NEURONS_PER_UNIT);
     parameter int PIPELINED_ROMs                    = 1;
     parameter int PIPELINED_ENSEMBLE_STORAGE        = 1;
     parameter int IDX_THAT_FIRED_WIDTH              = $clog2(GRAPH_WIDTH);
-    parameter int USE_ROUND_ROBIN                   = 0;
+    parameter int USE_ROUND_ROBIN                   = 1;
 
     // Parameters (adjust these as needed for your tests)
-    parameter int TEMP_INC_WIDTH                    = 16;
+    parameter int TEMP_INC_WIDTH                    = 12;
     parameter int MEMBRANE_WIDTH                    = 16;
     parameter int COUNTER_WIDTH                     = 40;
     parameter int NO_CLK_CYCLES_AFTER_UPDATE        = 4;
@@ -60,6 +60,11 @@ module neuroSA_machine_N800_U25_tb();
     parameter string TEMPERATURE_LUT_FILENAME       = "temperature_LUT_fixed_N9.mif";
 
     parameter int FLIPPING_OUTPUT_WIDTH             = 16;
+
+    // buffer parameters
+    parameter int USE_TRANSMIT_WITH_BUFF                = 1;
+    parameter int NO_OF_CLK_CYCLES_TO_PROPAGATE         = 1;
+    parameter int NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE   = 3;
     
     // Clock paramaters
     parameter int HALF_CLK_PERIOD = 10;
@@ -116,7 +121,10 @@ module neuroSA_machine_N800_U25_tb();
         .TEMPERATURE_LUT_WIDTH(TEMPERATURE_LUT_WIDTH),
         .PIPELINED_ROMs(PIPELINED_ROMs),
         .PIPELINED_ENSEMBLE_STORAGE(PIPELINED_ENSEMBLE_STORAGE),
-        .IDX_THAT_FIRED_WIDTH(IDX_THAT_FIRED_WIDTH)
+        .IDX_THAT_FIRED_WIDTH(IDX_THAT_FIRED_WIDTH),
+        .USE_TRANSMIT_WITH_BUFF(USE_TRANSMIT_WITH_BUFF),
+        .NO_OF_CLK_CYCLES_TO_PROPAGATE(NO_OF_CLK_CYCLES_TO_PROPAGATE),
+        .NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE(NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE)
     ) DUT (
         .clk(clk),
         .reset(reset),
@@ -268,7 +276,7 @@ module neuroSA_machine_N800_U25_tb();
 
         // #(10_000_000 * CLK_PERIOD);
         //#(100_000 * CLK_PERIOD);
-        #(1000 * CLK_PERIOD);
+        #(50 * CLK_PERIOD);
         $fclose(fd);
         $fclose(fd2);
         $finish;
