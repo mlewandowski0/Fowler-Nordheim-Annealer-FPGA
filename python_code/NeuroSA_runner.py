@@ -245,95 +245,98 @@ if __name__ == "__main__":
                     vmem_f.write(",")
             vmem_f.write("};\n")
 
+    with open("solutions.txt", "w") as sol_f:
  
-    pb = tqdm(range(int(config.MAX_ITER)))
-    with open(log_file_name, 'w') as f:
-        f.write("spikes,best_maxcuts,iter,thld,curr_cuts\n")
-        for iter in pb:
-            if distributed:
-                # Generate noise threshold for every neuron            
-                noisethld = 2.5e4*np.log(2.5*np.rand_like(vmem)+1e-6)/(config.THLD_MAX*math.log(1+thld/config.THLD_MAX))
-                spike = 1 if np.any((noisethld*(s_p-s_n)-vmem)*(s_p-s_n) < 0) else 0
-                if spike:
-                    # Asynchronous firing criteria
-                    spike_ids = np.nonzero((noisethld*(s_p-s_n)-vmem)*(s_p-s_n) < 0, as_tuple=False)
-                    p = spike_ids[np.randint(0, spike_ids.size(0), (1,)).item()].item()
+        pb = tqdm(range(int(config.MAX_ITER)))
+        with open(log_file_name, 'w') as f:
+            f.write("spikes,best_maxcuts,iter,thld,curr_cuts\n")
+            for iter in pb:
+                if distributed:
+                    # Generate noise threshold for every neuron            
+                    noisethld = 2.5e4*np.log(2.5*np.rand_like(vmem)+1e-6)/(config.THLD_MAX*math.log(1+thld/config.THLD_MAX))
+                    spike = 1 if np.any((noisethld*(s_p-s_n)-vmem)*(s_p-s_n) < 0) else 0
+                    if spike:
+                        # Asynchronous firing criteria
+                        spike_ids = np.nonzero((noisethld*(s_p-s_n)-vmem)*(s_p-s_n) < 0, as_tuple=False)
+                        p = spike_ids[np.randint(0, spike_ids.size(0), (1,)).item()].item()
 
-            else:
-                
-                for i, (rng_approximation_selection, rng_approximation_calc) in enumerate(zip(rng_approximation_selections, rng_approximation_calcs)):
-                    # Pick random neuron
-                    offset = offsets[i]
-                    r = ranges[i]
-
-                    p = rng_approximation_selection.get_random_integer(r) + offset
-                    ds_p_p = ds_p[p].item()
-                    ds_n_p = ds_n[p].item()
-                    s_p_p = s_p[p].item()
-                    s_n_p = s_n[p].item()
-                    vmem_p = vmem[p].item()
-
-                    # Generate noisy threshold
-                    noisethld = alpha* rng_approximation_calc.get_random_log() * log_approximation.get(thld)
-                    spike = 1 if (noisethld*(s_p_p-s_n_p)-vmem_p)*(s_p_p-s_n_p) < 0 else 0
+                else:
                     
-                    if spike: 
-                        break
+                    for i, (rng_approximation_selection, rng_approximation_calc) in enumerate(zip(rng_approximation_selections, rng_approximation_calcs)):
+                        # Pick random neuron
+                        offset = offsets[i]
+                        r = ranges[i]
 
-            if spike:
-                # s_spike = time.time_ns()
-                # ds_p[p] = s_n[p] > 0
-                # ds_n[p] = s_p[p] > 0
-                ds_p[p] = s_n[p] > 0
-                ds_n[p] = s_p[p] > 0
+                        p = rng_approximation_selection.get_random_integer(r) + offset
+                        ds_p_p = ds_p[p].item()
+                        ds_n_p = ds_n[p].item()
+                        s_p_p = s_p[p].item()
+                        s_n_p = s_n[p].item()
+                        vmem_p = vmem[p].item()
 
-                # Update Neuron states
-                s_p[p] = np.logical_not(s_p[p])
-                s_n[p] = np.logical_not(s_n[p])
+                        # Generate noisy threshold
+                        noisethld = alpha* rng_approximation_calc.get_random_log() * log_approximation.get(thld)
+                        spike = 1 if (noisethld*(s_p_p-s_n_p)-vmem_p)*(s_p_p-s_n_p) < 0 else 0
+                        
+                        if spike: 
+                            break
+
+                if spike:
+                    # s_spike = time.time_ns()
+                    # ds_p[p] = s_n[p] > 0
+                    # ds_n[p] = s_p[p] > 0
+                    ds_p[p] = s_n[p] > 0
+                    ds_n[p] = s_p[p] > 0
+
+                    # Update Neuron states
+                    s_p[p] = np.logical_not(s_p[p])
+                    s_n[p] = np.logical_not(s_n[p])
+                    
+                    vmem += 2*(ds_p[p]-ds_n[p])*Q[p,:]
+                    d_cuts = (ds_p[p] - ds_n[p]) * vmem[p]
+
+                    curr_cuts -= d_cuts
+
+                    # e_update = time.time_ns()
+                    if curr_cuts.item() > best_maxcuts:
+
+                        best_maxcuts = curr_cuts.item()
+
+                        argmin_s_p = s_p.copy()
+                        argmin_s_n = s_n.copy()
+                        
+                        sol_f.write(",".join([str(x) for x in argmin_s_p]) + "\n")
+
+                    # v_tmp = (s_p-s_n).numpy()
+                    # Q_tmp = Q.numpy()
+                    # maxcuts  = np.sum(np.sum(np.multiply(Q_tmp, 1-np.outer(v_tmp, v_tmp))))/4
+                    # if curr_cuts.item() != maxcuts:
+                    #     print(curr_cuts.item())
+                    #     print(maxcuts)
+                    #     break
+                    num_spikes += 1
+
+                    t_update_vmem += (e_update-s_update)
+                t_spike += (e_spike - s_spike)
+                t_rand += (e_rand-s_rand)
+
+                if config.MAX_ITER <= 1e4 or (iter > 0 and iter%1e5 == 0):
+                    e_sim = time.time_ns()
+                    t_sim = e_sim - s_sim
+                    # v_tmp = (s_p-s_n).numpy()
+                    # Q_tmp = Q.numpy()
+                    # maxcuts  = np.sum(np.sum(np.multiply(Q_tmp, 1-np.outer(v_tmp, v_tmp))))/4
+                    # if maxcuts > best_maxcuts:
+                    #     best_maxcuts = maxcuts
+                    pb.set_description(f'#spikes:{num_spikes}, best{best_maxcuts} thld : {round(thld, 3)}')
+
+                    f.write(f"{num_spikes},{best_maxcuts},{iter},{thld},{curr_cuts.item()}\n")
+                    # print(f'time for update: {t_update_vmem/1e6}, time for sim: {t_sim/1e6}, time for rng: {t_rand/1e6}, t2 process spike: {t_spike/1e6}')
+                    # break
+                    
+                iter += 1
                 
-                vmem += 2*(ds_p[p]-ds_n[p])*Q[p,:]
-                d_cuts = (ds_p[p] - ds_n[p]) * vmem[p]
+                if iter % config.COUNTER == 0:
+                    thld += config.THLD_DELTA * config.COUNTER
 
-                curr_cuts -= d_cuts
-
-                # e_update = time.time_ns()
-                if curr_cuts.item() > best_maxcuts:
-
-                    best_maxcuts = curr_cuts.item()
-
-                    argmin_s_p = s_p.copy()
-                    argmin_s_n = s_n.copy()
-
-                # v_tmp = (s_p-s_n).numpy()
-                # Q_tmp = Q.numpy()
-                # maxcuts  = np.sum(np.sum(np.multiply(Q_tmp, 1-np.outer(v_tmp, v_tmp))))/4
-                # if curr_cuts.item() != maxcuts:
-                #     print(curr_cuts.item())
-                #     print(maxcuts)
-                #     break
-                num_spikes += 1
-
-                t_update_vmem += (e_update-s_update)
-            t_spike += (e_spike - s_spike)
-            t_rand += (e_rand-s_rand)
-
-            if config.MAX_ITER <= 1e4 or (iter > 0 and iter%1e5 == 0):
-                e_sim = time.time_ns()
-                t_sim = e_sim - s_sim
-                # v_tmp = (s_p-s_n).numpy()
-                # Q_tmp = Q.numpy()
-                # maxcuts  = np.sum(np.sum(np.multiply(Q_tmp, 1-np.outer(v_tmp, v_tmp))))/4
-                # if maxcuts > best_maxcuts:
-                #     best_maxcuts = maxcuts
-                pb.set_description(f'#spikes:{num_spikes}, best{best_maxcuts} thld : {round(thld, 3)}')
-
-                f.write(f"{num_spikes},{best_maxcuts},{iter},{thld},{curr_cuts.item()}\n")
-                # print(f'time for update: {t_update_vmem/1e6}, time for sim: {t_sim/1e6}, time for rng: {t_rand/1e6}, t2 process spike: {t_spike/1e6}')
-                # break
-                
-            iter += 1
-            
-            if iter % config.COUNTER == 0:
-                thld += config.THLD_DELTA * config.COUNTER
-
-        # print(f'#spikes:{num_spikes}, #maxcuts{maxcuts}, best{best_maxcuts}') 
+            # print(f'#spikes:{num_spikes}, #maxcuts{maxcuts}, best{best_maxcuts}') 
