@@ -1,0 +1,242 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 10/11/2024 01:50:17 PM
+// Design Name: 
+// Module Name: scheduler_tb
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module scheduler_tb();
+
+
+    localparam UNIT_WIDTH=2;
+    localparam GRAPH_WIDTH=12;
+    localparam NEURON_NUM_WIDTH=2;
+    localparam MEMBRANE_WIDTH=16;
+    localparam COUNTER_WIDTH=40;
+    localparam TEMP_INC_WIDTH=16;
+    localparam NO_CLK_CYCLES_AFTER_UPDATE=0;
+    localparam SOLUTION_WIDTH=16;
+
+    localparam HALF_CLK_PERIOD = 5;
+    localparam CLK_PERIOD = 2 * HALF_CLK_PERIOD;
+
+    reg                             clk, reset, flip, halt_scheduler;
+    reg [UNIT_WIDTH-1:0]            unit_number;
+    reg [NEURON_NUM_WIDTH-1:0]      offset;
+    reg [MEMBRANE_WIDTH-1:0]        membrane;
+    reg                             add_membrane;
+
+
+    wire [$clog2(GRAPH_WIDTH)-1:0] index_of_neuron_that_fired;
+    wire reset_modules, halt_modules, update_memories, should_increment; 
+    wire decrease_temp; 
+    
+    wire [SOLUTION_WIDTH-1:0]       cuts_best_transmit;
+
+    scheduler
+    #(.UNIT_WIDTH(UNIT_WIDTH),
+      .GRAPH_WIDTH(GRAPH_WIDTH),
+      .NEURON_NUM_WIDTH(NEURON_NUM_WIDTH),
+      .MEMBRANE_WIDTH(MEMBRANE_WIDTH),
+      .COUNTER_WIDTH(COUNTER_WIDTH),
+      .TEMP_INC_WIDTH(TEMP_INC_WIDTH),
+      .NO_CLK_CYCLES_AFTER_UPDATE(NO_CLK_CYCLES_AFTER_UPDATE))
+
+      DUT(
+            .clk(clk),
+            .reset(reset),
+            .flip(flip),
+            .halt_scheduler(halt_scheduler),
+            .unit_number(unit_number),
+            .offset(offset),
+            .membrane(membrane),
+            .add_membrane(add_membrane),
+            .index_of_neuron_that_fired(index_of_neuron_that_fired),
+            .reset_modules(reset_modules),
+            .halt_modules(halt_modules),
+            .update_memories(update_memories),
+            .should_increment(should_increment),
+            .decrease_temp(decrease_temp),
+            .cuts_best_transmit(cuts_best_transmit)
+      );
+
+    always
+    begin
+        #HALF_CLK_PERIOD clk = ~clk;
+    end
+
+
+    initial
+    begin
+        halt_scheduler = 0;
+        clk = 0;
+        reset = 0;
+        flip = 0;
+        unit_number = {UNIT_WIDTH{1'b0}};
+        offset = {NEURON_NUM_WIDTH{1'b0}};
+        membrane = {MEMBRANE_WIDTH{1'b0}};
+        add_membrane = 1'b0;
+
+        wait (clk);
+
+        #CLK_PERIOD;
+        reset = 1;
+
+        # CLK_PERIOD;
+        reset = 0;
+
+        # (5 * CLK_PERIOD);
+        
+        // simulate generating a flip/spike
+        flip            = 1;
+        unit_number     = 0;
+        offset          = 1;
+        membrane        = 'd8;
+        add_membrane         = 0;
+        
+        # CLK_PERIOD;
+        flip = 0;
+        
+        #(2 * CLK_PERIOD);
+
+
+        // simulate generating a flip/spike
+        flip            = 1;
+        unit_number     = 0;
+        offset          = 3;
+        membrane        = 'd6;
+        add_membrane         = 0;
+        
+        # CLK_PERIOD;
+        flip = 0;
+        
+        #(2 * CLK_PERIOD);
+
+        // simulate generating a flip/spike
+        flip            = 1;
+        unit_number     = 0;
+        offset          = 3;
+        membrane        = 'd6;
+        add_membrane         = 1;
+        
+        # CLK_PERIOD;
+        flip = 0;
+        
+        #(2 * CLK_PERIOD);
+
+        // simulate generating a flip/spike
+        flip            = 1;
+        unit_number     = 0;
+        offset          = 3;
+        membrane        = 'd6;
+        add_membrane         = 0;
+        
+        # CLK_PERIOD;
+        flip = 0;
+
+        #(2 * CLK_PERIOD);
+
+        // simulate generating a flip/spike
+        flip            = 1;
+        unit_number     = 1;
+        offset          = 1;
+        membrane        = 'd7;
+        add_membrane         = 0;
+        
+        # CLK_PERIOD;
+        flip = 0;
+        
+        #(2 * CLK_PERIOD);
+
+
+        // simulate generating a flip/spike
+        // the value generated is for 7th [unit = 2'b01, offset = 2'b11 ]
+        flip            = 1;
+        unit_number     = 1;
+        offset          = 3;
+        membrane        = 'd5;
+        add_membrane         = 0;
+        
+        # CLK_PERIOD;
+        flip = 0;
+        
+        #(2 * CLK_PERIOD);
+
+        // simulate generating a flip/spike
+        // the value generated is for 7th [unit = 2'b01, offset = 2'b11 ]
+        flip            = 1;
+        unit_number     = 1;
+        offset          = 3;
+        membrane        = 'd5;
+        add_membrane         = 0;
+        
+        # CLK_PERIOD;
+        flip = 0;
+        
+        #(2 * CLK_PERIOD);
+
+
+        // simulate generating a flip/spike
+        // the value generated is for 7th [unit = 2'b01, offset = 2'b11 ]
+        flip            = 1;
+        unit_number     = 1;
+        offset          = 3;
+        membrane        = 'd5;
+        add_membrane         = 1;
+        
+        # CLK_PERIOD;
+        flip = 0;
+        
+        #(2 * CLK_PERIOD);
+
+
+        // simulate generating a flip/spike
+        // the value generated is for 9th [unit = 2'b10, offset = 2'b01 ]
+        flip            = 1;
+        unit_number     = 2;
+        offset          = 1;
+        membrane        = 'd2;
+        add_membrane         = 0;
+        
+        # CLK_PERIOD;
+        flip = 0;
+        
+        #(2 * CLK_PERIOD);
+
+
+        // simulate generating a flip/spike
+        // the value generated is for 11th [unit = 2'b10, offset = 2'b11 ]
+        flip            = 1;
+        unit_number     = 2;
+        offset          = 3;
+        membrane        = -1;
+        add_membrane         = 0;
+        
+        # CLK_PERIOD;
+        flip = 0;
+        
+        #(2 * CLK_PERIOD);
+
+
+
+        #(10 * CLK_PERIOD);
+        $finish;
+    end
+
+
+endmodule

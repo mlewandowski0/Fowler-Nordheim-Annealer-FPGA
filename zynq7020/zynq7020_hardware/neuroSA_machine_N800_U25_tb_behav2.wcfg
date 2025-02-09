@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="neuroSA_machine_N800_U25_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="neuroSA_machine_N800_U25_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="1,003.865775 us"></ZoomEndTime>
+      <Cursor1Time time="235.244648 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="196"></NameColumnWidth>
+      <ValueColumnWidth column_width="119"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject type="logic" fp_name="/neuroSA_machine_N800_U25_tb/SIMULATION_RUNNING">
+      <obj_property name="ElementShortName">SIMULATION_RUNNING</obj_property>
+      <obj_property name="ObjectShortName">SIMULATION_RUNNING</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/decrease_temperature_no">
+      <obj_property name="ElementShortName">decrease_temperature_no[31:0]</obj_property>
+      <obj_property name="ObjectShortName">decrease_temperature_no[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/fd">
+      <obj_property name="ElementShortName">fd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fd[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/fd2">
+      <obj_property name="ElementShortName">fd2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fd2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/fd3">
+      <obj_property name="ElementShortName">fd3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fd3[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/SPIKES_CNT">
+      <obj_property name="ElementShortName">SPIKES_CNT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SPIKES_CNT[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/neuroSA_machine_N800_U25_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/neuroSA_machine_N800_U25_tb/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/neuroSA_machine_N800_U25_tb/halt">
+      <obj_property name="ElementShortName">halt</obj_property>
+      <obj_property name="ObjectShortName">halt</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/write_ensemble_seed">
+      <obj_property name="ElementShortName">write_ensemble_seed[24:0]</obj_property>
+      <obj_property name="ObjectShortName">write_ensemble_seed[24:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/write_flipping_seed">
+      <obj_property name="ElementShortName">write_flipping_seed[24:0]</obj_property>
+      <obj_property name="ObjectShortName">write_flipping_seed[24:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/ensemble_seed">
+      <obj_property name="ElementShortName">ensemble_seed[23:0]</obj_property>
+      <obj_property name="ObjectShortName">ensemble_seed[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/flipping_seed">
+      <obj_property name="ElementShortName">flipping_seed[23:0]</obj_property>
+      <obj_property name="ObjectShortName">flipping_seed[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/membrane_data_in">
+      <obj_property name="ElementShortName">membrane_data_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">membrane_data_in[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/neuron_state_in">
+      <obj_property name="ElementShortName">neuron_state_in[3:0]</obj_property>
+      <obj_property name="ObjectShortName">neuron_state_in[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/write_neuron_states">
+      <obj_property name="ElementShortName">write_neuron_states[24:0]</obj_property>
+      <obj_property name="ObjectShortName">write_neuron_states[24:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/found_solution_value">
+      <obj_property name="ElementShortName">found_solution_value[15:0]</obj_property>
+      <obj_property name="ObjectShortName">found_solution_value[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/data_arrays">
+      <obj_property name="ElementShortName">data_arrays[0:24][0:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_arrays[0:24][0:31][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/clk_counter">
+      <obj_property name="ElementShortName">clk_counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_counter[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/val">
+      <obj_property name="ElementShortName">val[31:0]</obj_property>
+      <obj_property name="ObjectShortName">val[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/DUT/\unit_gen[0].genblk1.unit_inst /neuron_ensemble_inst/neuron_ensemble_storage_inst/selected_membrane">
+      <obj_property name="ElementShortName">selected_membrane[15:0]</obj_property>
+      <obj_property name="ObjectShortName">selected_membrane[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/DUT/\unit_gen[0].genblk1.unit_inst /neuron_ensemble_inst/flipping_unit_tb/flipping_output">
+      <obj_property name="ElementShortName">flipping_output[15:0]</obj_property>
+      <obj_property name="ObjectShortName">flipping_output[15:0]</obj_property>
+   </wvobject>
+</wave_config>

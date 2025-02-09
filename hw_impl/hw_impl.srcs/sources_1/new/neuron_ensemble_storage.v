@@ -82,7 +82,7 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
                     begin
                         if (Q_inp[i])  // If corresponding bit in Q_inp_reg is 1
                         begin
-                            membrane_storage[i] <= membrane_storage[i] + 2;
+                            membrane_storage[i] <= membrane_storage[i] + 2; 
                         end
                     end 
 

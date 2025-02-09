@@ -61,7 +61,7 @@ class CONFIG:
 
 # create the approximations for the hardware-tricky parts (random number generation and 1/log(1 + thld/thld_max))
 
-def get_RNG_approximation(approx, which="selection", seed=None, bits=None):
+def get_RNG_approximation(approx, alpha, fixed_width, frac_bits, which="selection", seed=None, bits=None):
     global config, name_set_guard
     approx = approx.lower()
     
@@ -80,7 +80,8 @@ def get_RNG_approximation(approx, which="selection", seed=None, bits=None):
         if which not in name_set_guard:
             name_set_guard.add(which)
             config.LOG_FILE += f"_rng_{which}_LFSR_b={bits}"        
-        return LFSR(seed=seed, num_of_bits=bits)
+        return LFSR(seed=seed, num_of_bits=bits, alpha=alpha, ID=which,
+                    frac_bits=frac_bits, fixed_width=fixed_width)
 
     elif approx == "halon_software":
         print(f"rng for {which} set to halon software approximation")
@@ -92,39 +93,44 @@ def get_RNG_approximation(approx, which="selection", seed=None, bits=None):
     else:
         raise NotImplementedError("RNG approximation not implemented")
 
-def get_LOG_approximation(approx):
+def get_LOG_approximation(approx, frac_bits, fixed_width):
     global config
     approx = approx.lower()
-    
+
     if approx == "software":
         print("log set to software approximation")
         config.LOG_FILE += f"_log_software"
         return software_exact(config.THLD_MAX)
-    
+
     elif approx == "taylor":
-        print("log set to taylor approximation") 
-        
+        print("log set to taylor approximation")
+
         if config.TAYLOR_ORDER is None:
             raise ValueError("TAYLOR_ORDER not set in config")
-        
+
         config.LOG_FILE += f"_log_taylor_order={config.TAYLOR_ORDER}"
-        return log_taylor_approx(order= config.TAYLOR_ORDER,thld_max=config.THLD_MAX)   
+        return log_taylor_approx(order= config.TAYLOR_ORDER,thld_max=config.THLD_MAX)
 
     elif approx == "pade":
         print("log set to pade approximation")
 
         if config.PADE_ORDER is None:
             raise ValueError("PADE_ORDER not set in config")
-        
+
         config.LOG_FILE += f"_log_pade_order={config.PADE_ORDER}"
         return log_pade_approx(order=config.PADE_ORDER ,thld_max=config.THLD_MAX)
-    
+
     elif approx == 'lut':
         print("log approximation set to LUT")
-        
+
         config.LOG_FILE += f"_log_lut"
-        approx = log_lut_approx(NBITS=config.LUT_NBITS, multiplies_of_thld_max=config.LUT_THLD_MAX_MULTIPLES, thld_delta=config.THLD_DELTA, thld_max=config.THLD_MAX)
-        approx.to_file()
+        approx = log_lut_approx(NBITS=config.LUT_NBITS,
+                                multiplies_of_thld_max=config.LUT_THLD_MAX_MULTIPLES,
+                                thld_delta=config.THLD_DELTA,
+                                thld_max=config.THLD_MAX,
+                                frac_bits=frac_bits,
+                                fixed_width=fixed_width)
+        approx.to_file(filename=f"temperature_fixed_width={fixed_width}_frac_bits={frac_bits}_nbits_of_lut={config.LUT_NBITS}.mif")
         return approx
     else:
         raise NotImplementedError("log approximation not implemented")
@@ -139,9 +145,13 @@ if __name__ == "__main__":
     
     config = CONFIG(args.config)
 
+    fixed_width = 18
+    frac_bits = 8
+
     # make sure the log folder exists
     os.makedirs(config.LOG_FILE, exist_ok=True)
     print(f"to save : {config.LOG_FILE}")
+    alpha = 2.5e4/ config.THLD_MAX
 
     config.LOG_FILE += "approx"
 
@@ -151,15 +161,26 @@ if __name__ == "__main__":
         config.LOG_FILE += f"_problem={config.PROBLEM_PATH[:3]}"
 
     rng_approximation_selections = []
-    
     for i in range(config.UNITS):
-        rng_approximation_selections.append(get_RNG_approximation(config.RNG_APPROX_SELECTION, which="selection", seed=config.RNG_APPROX_SELECTION_SEED, bits=config.RNG_APPROX_SELECTION_BITS))
+        rng_approximation_selections.append(get_RNG_approximation(config.RNG_APPROX_SELECTION,
+                                                                  alpha=alpha,
+                                                                  which="selection",
+                                                                  seed=config.RNG_APPROX_SELECTION_SEED,
+                                                                  bits=config.RNG_APPROX_SELECTION_BITS,
+                                                                  fixed_width=fixed_width,
+                                                                  frac_bits=frac_bits))
 
     rng_approximation_calcs = []
     for i in range(config.UNITS):
-        rng_approximation_calcs.append(get_RNG_approximation(config.RNG_APPROX_CALC, which="calculation", seed=config.RNG_APPROX_CALC_SEED, bits=config.RNG_APPROX_CALC_BITS))
+        rng_approximation_calcs.append(get_RNG_approximation(config.RNG_APPROX_CALC,
+                                                             alpha=alpha,
+                                                             which="calculation",
+                                                             seed=config.RNG_APPROX_CALC_SEED,
+                                                             bits=config.RNG_APPROX_CALC_BITS,
+                                                             fixed_width=fixed_width,
+                                                             frac_bits=frac_bits))
 
-    log_approximation = get_LOG_approximation(config.LOG_APPROX)
+    log_approximation = get_LOG_approximation(config.LOG_APPROX, frac_bits=frac_bits, fixed_width=fixed_width)
 
 
     Q = np.load(config.PROBLEM_PATH)
@@ -199,8 +220,6 @@ if __name__ == "__main__":
     e_rand = 0
     s_spike = 0
     e_spike = 0
-        
-    alpha = 2.5e4/ config.THLD_MAX
 
 
     offsets = [0] * config.UNITS
@@ -245,11 +264,14 @@ if __name__ == "__main__":
                     vmem_f.write(",")
             vmem_f.write("};\n")
 
- 
-    pb = tqdm(range(int(config.MAX_ITER)))
+
     with open(log_file_name, 'w') as f:
         f.write("spikes,best_maxcuts,iter,thld,curr_cuts\n")
+        pb = tqdm(range(int(config.MAX_ITER)))
         for iter in pb:
+            spike_sel = 0
+            p_sel = -1
+
             if distributed:
                 # Generate noise threshold for every neuron            
                 noisethld = 2.5e4*np.log(2.5*np.rand_like(vmem)+1e-6)/(config.THLD_MAX*math.log(1+thld/config.THLD_MAX))
@@ -260,7 +282,7 @@ if __name__ == "__main__":
                     p = spike_ids[np.randint(0, spike_ids.size(0), (1,)).item()].item()
 
             else:
-                
+
                 for i, (rng_approximation_selection, rng_approximation_calc) in enumerate(zip(rng_approximation_selections, rng_approximation_calcs)):
                     # Pick random neuron
                     offset = offsets[i]
@@ -274,25 +296,29 @@ if __name__ == "__main__":
                     vmem_p = vmem[p].item()
 
                     # Generate noisy threshold
-                    noisethld = alpha* rng_approximation_calc.get_random_log() * log_approximation.get(thld)
-                    spike = 1 if (noisethld*(s_p_p-s_n_p)-vmem_p)*(s_p_p-s_n_p) < 0 else 0
-                    
-                    if spike: 
-                        break
+                    noisethld = rng_approximation_calc.get_random_log() * log_approximation.get(thld)
 
-            if spike:
+                    #
+                    # spike = 1 if (noisethld*(s_p_p-s_n_p)-vmem_p)*(s_p_p-s_n_p) < 0 else 0
+                    spike = 1 if noisethld < vmem_p*(s_p_p-s_n_p) else 0
+
+                    if spike and not spike_sel:
+                        spike_sel = spike
+                        p_sel = p
+
+            if spike_sel:
                 # s_spike = time.time_ns()
                 # ds_p[p] = s_n[p] > 0
                 # ds_n[p] = s_p[p] > 0
-                ds_p[p] = s_n[p] > 0
-                ds_n[p] = s_p[p] > 0
+                ds_p[p_sel] = s_n[p_sel] > 0
+                ds_n[p_sel] = s_p[p_sel] > 0
 
                 # Update Neuron states
-                s_p[p] = np.logical_not(s_p[p])
-                s_n[p] = np.logical_not(s_n[p])
+                s_p[p_sel] = np.logical_not(s_p[p_sel])
+                s_n[p_sel] = np.logical_not(s_n[p_sel])
                 
-                vmem += 2*(ds_p[p]-ds_n[p])*Q[p,:]
-                d_cuts = (ds_p[p] - ds_n[p]) * vmem[p]
+                vmem += 2*(ds_p[p_sel]-ds_n[p_sel])*Q[p_sel,:]
+                d_cuts = (ds_p[p_sel] - ds_n[p_sel]) * vmem[p_sel]
 
                 curr_cuts -= d_cuts
 

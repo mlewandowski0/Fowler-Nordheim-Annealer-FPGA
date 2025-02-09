@@ -80,7 +80,8 @@ def XNOR_BITS16(val : int):
     return ~ ( get_bit(val, 15) ^ get_bit(val, 14) ^ get_bit(val, 12) ^ get_bit(val, 3))
  
 class LFSR(random_generator):
-    def __init__(self, seed : int, num_of_bits : int, eps=1e-6) -> None:
+    def __init__(self, seed : int, alpha,
+                 fixed_width, frac_bits, ID, num_of_bits : int, eps=1e-6) -> None:
         
         if seed is None:
             raise ValueError("seed must be provided")
@@ -91,7 +92,8 @@ class LFSR(random_generator):
         super().__init__()
         self.curr_value = seed
         self.num_of_bits = num_of_bits
-        self.mod = 2**num_of_bits   
+        self.mod = 2**num_of_bits
+        self.ID = ID
         LUT_size = 2**num_of_bits
         
         self.XNOR_LUT = [XNOR_BITS3, XNOR_BITS4, XNOR_BITS5, XNOR_BITS6, XNOR_BITS7, XNOR_BITS8, XNOR_BITS9, XNOR_BITS10, XNOR_BITS11, XNOR_BITS12, XNOR_BITS13, XNOR_BITS14, XNOR_BITS15, XNOR_BITS16]
@@ -104,11 +106,34 @@ class LFSR(random_generator):
             fp32_val = val / LUT_size
             fp16_val = np.array([fp32_val], dtype=np.float16)            
             
-            log_fp32_val= np.log(2.5 * fp32_val + eps) 
+            log_fp32_val= alpha * np.log(2.5 * fp32_val + eps)
             log_fp16_val = np.array([log_fp32_val], dtype=np.float16)
             
             self.LUT[i] = fp16_val.item()
             self.LOG_LUT[i] = log_fp16_val.item()
+
+        # now save these file
+        if self.ID == "calculation":
+            print(f"LUT size = {len(self.LUT)}, {math.log2(len(self.LUT))}")
+            filename_to_write = f"log_noise_fixed_width={fixed_width}_frac_bits={frac_bits}_nbits_of_lut={int(math.log2(len(self.LUT)))}.mif"
+
+            with open(filename_to_write,"w") as f_bin:
+                with open(f"{self.ID}_fp16.txt", "w") as f_fp16:
+                    with open(f"{self.ID}_fixed.txt", "w") as f_fixed:
+                        for i in range(len(self.LOG_LUT)):
+                            f_fp16.write(f"{self.LOG_LUT[i]}")
+
+                            fixed = float_to_fixed_point(self.LOG_LUT[i],frac_bits)
+                            f_fixed.write(f"{fixed_point_to_float(fixed, frac_bits)}")
+
+                            binary_string = format(fixed & ((1 << fixed_width) - 1), f'0{fixed_width}b')
+                            f_bin.write(binary_string)
+
+                            if i != len(self.LOG_LUT)-1:
+                                f_fp16.write("\n")
+                                f_fixed.write("\n")
+                                f_bin.write("\n")
+
 
     def next(self) -> None:
         XNOR = self.XNOR_LUT[self.num_of_bits-3](self.curr_value) & 1
@@ -219,7 +244,7 @@ def create_LUT_with_params(_range, MAX_THLD, thld_delta, NBITS = 7):
         x_val = _range * MAX_THLD * i / LUT_SIZE + thld_delta
         x_vals[i] = x_val
         values[i] = 1 / np.log(1 + x_val / MAX_THLD)
-    
+
     return values, x_vals
 
 
@@ -232,14 +257,21 @@ def fp16_view(value):
     bin_rep = np.binary_repr(fp16.view(np.uint16), width=16)
     return bin_rep
 
-    
+
+def fixedpoint_view(value, FRAC, width):
+    return format(value & ((1 << width) - 1), f'0{width}b')
+
+
 class log_lut_approx(scale_log_approximation):
-    def __init__(self, NBITS, multiplies_of_thld_max, thld_delta, thld_max) -> None:
+    def __init__(self, NBITS, multiplies_of_thld_max, thld_delta, thld_max,
+                 frac_bits, fixed_width) -> None:
         super().__init__()
         self.lut, self.x_vals = create_LUT_with_params(multiplies_of_thld_max, thld_max, thld_delta, NBITS)
         self.curr_i = 0
-        self.LUT_SIZE = (1 << NBITS) - 1 
-        
+        self.LUT_SIZE = (1 << NBITS) - 1
+        self.fixed_width = fixed_width
+        self.frac_bits  = frac_bits
+
     def get(self, thld : float) -> None:
         if self.curr_i != self.LUT_SIZE and thld >= self.x_vals[self.curr_i]:
             self.curr_i += 1   
@@ -247,10 +279,11 @@ class log_lut_approx(scale_log_approximation):
                 print("last index of LUT")     
         return self.lut[self.curr_i]
     
-    def to_file(self, filename="log_approximation_LUT.mem"):
+    def to_file(self, filename="log.mem"):
         with open(filename, "w") as f:
             for i,el in enumerate(self.lut):
-                f.write(f"{fp16_view(el)}")
+                value = float_to_fixed_point_with_inf(el, self.frac_bits, self.fixed_width)
+                f.write(f"{fixedpoint_view(value, FRAC=self.frac_bits, width=self.fixed_width)}")
                 if i != self.LUT_SIZE:
                     f.write("\n")
 
@@ -265,9 +298,22 @@ def fixed_point_multiplication(a, b, fractional_bits, integer_bits):
 
 def float_to_fixed_point(value, fractional_bits):
     # Convert the floating-point number to fixed-point representation
+    if value == float("inf"):
+        value = 511.
     fixed_point_value = int(round(value * (1 << fractional_bits)))
     
     return fixed_point_value
+
+
+def float_to_fixed_point_with_inf(value, fractional_bits, fixed_width):
+    # Convert the floating-point number to fixed-point representation
+    if value == float("inf"):
+        return (1 << (fixed_width-1)) - 1
+
+    fixed_point_value = int(round(value * (1 << fractional_bits)))
+
+    return fixed_point_value
+
 
 def fixed_point_to_float(fixed_value, fractional_bits):
     # Convert the fixed-point number to floating-point representation

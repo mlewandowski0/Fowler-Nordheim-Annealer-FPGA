@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="neuroSA_machine_N800_U25_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="neuroSA_machine_N800_U25_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="14,578.145000 us"></ZoomStartTime>
+      <ZoomEndTime time="16,203.935001 us"></ZoomEndTime>
+      <Cursor1Time time="15,594.263750 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="230"></NameColumnWidth>
+      <ValueColumnWidth column_width="85"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="47" />
+   <wvobject type="logic" fp_name="/neuroSA_machine_N800_U25_tb/SIMULATION_RUNNING">
+      <obj_property name="ElementShortName">SIMULATION_RUNNING</obj_property>
+      <obj_property name="ObjectShortName">SIMULATION_RUNNING</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/decrease_temperature_no">
+      <obj_property name="ElementShortName">decrease_temperature_no[31:0]</obj_property>
+      <obj_property name="ObjectShortName">decrease_temperature_no[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/fd">
+      <obj_property name="ElementShortName">fd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fd[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/fd2">
+      <obj_property name="ElementShortName">fd2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fd2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/fd3">
+      <obj_property name="ElementShortName">fd3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fd3[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/SPIKES_CNT">
+      <obj_property name="ElementShortName">SPIKES_CNT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SPIKES_CNT[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/neuroSA_machine_N800_U25_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/neuroSA_machine_N800_U25_tb/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/neuroSA_machine_N800_U25_tb/halt">
+      <obj_property name="ElementShortName">halt</obj_property>
+      <obj_property name="ObjectShortName">halt</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/write_ensemble_seed">
+      <obj_property name="ElementShortName">write_ensemble_seed[24:0]</obj_property>
+      <obj_property name="ObjectShortName">write_ensemble_seed[24:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/write_flipping_seed">
+      <obj_property name="ElementShortName">write_flipping_seed[24:0]</obj_property>
+      <obj_property name="ObjectShortName">write_flipping_seed[24:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/ensemble_seed">
+      <obj_property name="ElementShortName">ensemble_seed[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ensemble_seed[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/flipping_seed">
+      <obj_property name="ElementShortName">flipping_seed[15:0]</obj_property>
+      <obj_property name="ObjectShortName">flipping_seed[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/membrane_data_in">
+      <obj_property name="ElementShortName">membrane_data_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">membrane_data_in[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/neuron_state_in">
+      <obj_property name="ElementShortName">neuron_state_in[3:0]</obj_property>
+      <obj_property name="ObjectShortName">neuron_state_in[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/write_neuron_states">
+      <obj_property name="ElementShortName">write_neuron_states[24:0]</obj_property>
+      <obj_property name="ObjectShortName">write_neuron_states[24:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/found_solution_value">
+      <obj_property name="ElementShortName">found_solution_value[15:0]</obj_property>
+      <obj_property name="ObjectShortName">found_solution_value[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/data_arrays">
+      <obj_property name="ElementShortName">data_arrays[0:24][0:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_arrays[0:24][0:31][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/clk_counter">
+      <obj_property name="ElementShortName">clk_counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_counter[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/val">
+      <obj_property name="ElementShortName">val[31:0]</obj_property>
+      <obj_property name="ObjectShortName">val[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/GRAPH_WIDTH">
+      <obj_property name="ElementShortName">GRAPH_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">GRAPH_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/UNITS">
+      <obj_property name="ElementShortName">UNITS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">UNITS[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/NEURONS_PER_UNIT">
+      <obj_property name="ElementShortName">NEURONS_PER_UNIT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NEURONS_PER_UNIT[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/UNIT_WIDTH">
+      <obj_property name="ElementShortName">UNIT_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">UNIT_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/NEURON_NUM_WIDTH">
+      <obj_property name="ElementShortName">NEURON_NUM_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NEURON_NUM_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/PIPELINED_ROMs">
+      <obj_property name="ElementShortName">PIPELINED_ROMs[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PIPELINED_ROMs[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/PIPELINED_ENSEMBLE_STORAGE">
+      <obj_property name="ElementShortName">PIPELINED_ENSEMBLE_STORAGE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PIPELINED_ENSEMBLE_STORAGE[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/IDX_THAT_FIRED_WIDTH">
+      <obj_property name="ElementShortName">IDX_THAT_FIRED_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IDX_THAT_FIRED_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/USE_ROUND_ROBIN">
+      <obj_property name="ElementShortName">USE_ROUND_ROBIN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">USE_ROUND_ROBIN[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/TEMP_INC_WIDTH">
+      <obj_property name="ElementShortName">TEMP_INC_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TEMP_INC_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/MEMBRANE_WIDTH">
+      <obj_property name="ElementShortName">MEMBRANE_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEMBRANE_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/COUNTER_WIDTH">
+      <obj_property name="ElementShortName">COUNTER_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">COUNTER_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/NO_CLK_CYCLES_AFTER_UPDATE">
+      <obj_property name="ElementShortName">NO_CLK_CYCLES_AFTER_UPDATE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NO_CLK_CYCLES_AFTER_UPDATE[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/SOLUTION_WIDTH">
+      <obj_property name="ElementShortName">SOLUTION_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SOLUTION_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/USE_FLOAT_POINT">
+      <obj_property name="ElementShortName">USE_FLOAT_POINT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">USE_FLOAT_POINT[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/REAL_WIDTH">
+      <obj_property name="ElementShortName">REAL_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">REAL_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/FRACTIONAL_PART">
+      <obj_property name="ElementShortName">FRACTIONAL_PART[31:0]</obj_property>
+      <obj_property name="ObjectShortName">FRACTIONAL_PART[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/NEURON_SEL_LFSR_WIDTH">
+      <obj_property name="ElementShortName">NEURON_SEL_LFSR_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NEURON_SEL_LFSR_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/LOG_NOISE_SOURCE_WIDTH">
+      <obj_property name="ElementShortName">LOG_NOISE_SOURCE_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">LOG_NOISE_SOURCE_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/LOG_LUT_BIT_SIZE">
+      <obj_property name="ElementShortName">LOG_LUT_BIT_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">LOG_LUT_BIT_SIZE[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/TEMPERATURE_LUT_WIDTH">
+      <obj_property name="ElementShortName">TEMPERATURE_LUT_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TEMPERATURE_LUT_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/FLIPPING_OUTPUT_WIDTH">
+      <obj_property name="ElementShortName">FLIPPING_OUTPUT_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">FLIPPING_OUTPUT_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/USE_TRANSMIT_WITH_BUFF">
+      <obj_property name="ElementShortName">USE_TRANSMIT_WITH_BUFF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">USE_TRANSMIT_WITH_BUFF[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/NO_OF_CLK_CYCLES_TO_PROPAGATE">
+      <obj_property name="ElementShortName">NO_OF_CLK_CYCLES_TO_PROPAGATE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NO_OF_CLK_CYCLES_TO_PROPAGATE[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE">
+      <obj_property name="ElementShortName">NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/HALF_CLK_PERIOD">
+      <obj_property name="ElementShortName">HALF_CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HALF_CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/neuroSA_machine_N800_U25_tb/CLK_PERIOD">
+      <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+</wave_config>

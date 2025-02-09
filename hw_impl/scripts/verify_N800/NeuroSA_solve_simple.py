@@ -174,6 +174,10 @@ if __name__ == "__main__":
     s_n = np.zeros_like(ds_p, dtype=config.DTYPE)
     vmem = np.matmul(Q, (s_p-s_n))
 
+    # s =  1, -1, 1, -1, 1, 
+    
+    # 1, 1, 1, 1, 1, 1
+    # [1, 0, 0, 1, 0, 1, 0, 1].T @ [-1, 1, -1, -1, 1,- 1, -1] 
 
     argmin_s_p = np.zeros_like(s_p)
     argmin_s_n = np.zeros_like(s_n)
@@ -319,7 +323,7 @@ if __name__ == "__main__":
                 print("membranes : ", vmem)                
             
                 print("transmitted membrane value Vmem[p]=", vmem[p], ", add=", ds_p[p])
-                d_cuts = (ds_p[p] - ds_n[p]) * vmem[p]
+                d_cuts = (ds_p[p] - ds_n[p] )* vmem[p]
                 print(f"d_cuts = {d_cuts}")
 
                 curr_cuts -= d_cuts

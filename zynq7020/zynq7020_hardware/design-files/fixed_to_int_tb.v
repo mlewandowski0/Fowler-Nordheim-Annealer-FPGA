@@ -1,0 +1,355 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 10/20/2024 11:26:50 AM
+// Design Name: 
+// Module Name: fixed_to_int_tb
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module fixed_to_int_tb();
+
+
+localparam TOTAL_BITS = 18;
+localparam FRAC_BITS = 8;
+localparam CLK = 10;
+
+reg  [TOTAL_BITS-1:0] val;
+wire [TOTAL_BITS-FRAC_BITS-1:0] res;
+
+
+integer fd;
+
+fixed_to_int  #(.TOTAL_BITS(TOTAL_BITS), .FRAC_BITS(FRAC_BITS)) 
+                        DUT(.fixed_val(val), 
+                         .int_fixed_val(res));
+                         
+
+always @(res)
+begin
+    $fwrite(fd, "%d\n", $signed(res));
+end
+
+initial
+begin
+fd = $fopen("fixed_to_int_res.txt");
+
+val = 18'b1101110101_00001010; // is -138.9619144861073, after conversion should be -138
+#CLK;
+
+val = 18'b1101010011_10111000; // is -172.28238064091596, after conversion should be -172
+#CLK;
+
+val = 18'b1010011101_01101000; // is -354.596222798029, after conversion should be -354
+#CLK;
+
+val = 18'b0101000101_10110100; // is 325.7042593147075, after conversion should be 325
+#CLK;
+
+val = 18'b1010100110_01101101; // is -345.57443782896286, after conversion should be -345
+#CLK;
+
+val = 18'b0101010001_00010101; // is 337.084366539925, after conversion should be 337
+#CLK;
+
+val = 18'b0000110000_10101100; // is 48.67496560508758, after conversion should be 48
+#CLK;
+
+val = 18'b0100010001_11011001; // is 273.8492083305122, after conversion should be 273
+#CLK;
+
+val = 18'b1110100001_00000001; // is -94.99775720120104, after conversion should be -94
+#CLK;
+
+val = 18'b1010101100_01100011; // is -339.6167647617987, after conversion should be -339
+#CLK;
+
+val = 18'b1010011011_10000011; // is -356.4921624436405, after conversion should be -356
+#CLK;
+
+val = 18'b1010001011_00001001; // is -372.9680742770041, after conversion should be -372
+#CLK;
+
+val = 18'b1011101011_10101000; // is -276.3460800597215, after conversion should be -276
+#CLK;
+
+val = 18'b0110100100_01101111; // is 420.4356619861753, after conversion should be 420
+#CLK;
+
+val = 18'b0100101001_00010001; // is 297.0685523901942, after conversion should be 297
+#CLK;
+
+val = 18'b1100111011_11010011; // is -196.1788935869642, after conversion should be -196
+#CLK;
+
+val = 18'b0011010111_01100111; // is 215.4032708012394, after conversion should be 215
+#CLK;
+
+val = 18'b0110100001_01101001; // is 417.4105930239631, after conversion should be 417
+#CLK;
+
+val = 18'b1111100011_01111100; // is -28.51612653102381, after conversion should be -28
+#CLK;
+
+val = 18'b1111011011_10101101; // is -36.32502621505731, after conversion should be -36
+#CLK;
+
+val = 18'b0011010001_11111110; // is 209.99278371643993, after conversion should be 209
+#CLK;
+
+val = 18'b1001010011_01001110; // is -428.69876074946677, after conversion should be -428
+#CLK;
+
+val = 18'b0010011101_10100101; // is 157.64606361078916, after conversion should be 157
+#CLK;
+
+val = 18'b0001010101_10000110; // is 85.52711757131708, after conversion should be 85
+#CLK;
+
+val = 18'b1100000101_11010110; // is -250.1649035216203, after conversion should be -250
+#CLK;
+
+val = 18'b0111000001_01100101; // is 449.39598373348394, after conversion should be 449
+#CLK;
+
+val = 18'b0110001100_01100011; // is 396.39047680297875, after conversion should be 396
+#CLK;
+
+val = 18'b1100011001_00001010; // is -230.9637107349142, after conversion should be -230
+#CLK;
+
+val = 18'b1100010001_00110000; // is -238.8141590311172, after conversion should be -238
+#CLK;
+
+val = 18'b0110100000_01011011; // is 416.35578100193436, after conversion should be 416
+#CLK;
+
+val = 18'b1110110011_11011101; // is -76.13740780540792, after conversion should be -76
+#CLK;
+
+val = 18'b1111001110_01011010; // is -49.64982762391032, after conversion should be -49
+#CLK;
+
+val = 18'b1110100111_11001011; // is -88.20958997762135, after conversion should be -88
+#CLK;
+
+val = 18'b0100100100_01110111; // is 292.466704278759, after conversion should be 292
+#CLK;
+
+val = 18'b1100001100_11111101; // is -243.01278412704383, after conversion should be -243
+#CLK;
+
+val = 18'b0000110001_00111000; // is 49.22221841458195, after conversion should be 49
+#CLK;
+
+val = 18'b0101100101_00110011; // is 357.20265061607495, after conversion should be 357
+#CLK;
+
+val = 18'b0110011010_11100110; // is 410.90010570287575, after conversion should be 410
+#CLK;
+
+val = 18'b0111110110_00111001; // is 502.22489988373167, after conversion should be 502
+#CLK;
+
+val = 18'b0001110010_01111110; // is 114.49296260915096, after conversion should be 114
+#CLK;
+
+val = 18'b1010100110_10010100; // is -345.42562224905146, after conversion should be -345
+#CLK;
+
+val = 18'b1101110100_11001101; // is -139.20299448688698, after conversion should be -139
+#CLK;
+
+val = 18'b1010111101_10010011; // is -322.4260658797503, after conversion should be -322
+#CLK;
+
+val = 18'b0000111000_11101001; // is 56.910834957753835, after conversion should be 56
+#CLK;
+
+val = 18'b0000010100_01010100; // is 20.32921481758939, after conversion should be 20
+#CLK;
+
+val = 18'b0100010011_01110110; // is 275.4639875609468, after conversion should be 275
+#CLK;
+
+val = 18'b0010001000_11110000; // is 136.94119569217685, after conversion should be 136
+#CLK;
+
+val = 18'b1101111110_11110100; // is -129.04718633387645, after conversion should be -129
+#CLK;
+
+val = 18'b1011010010_10000010; // is -301.49344889500765, after conversion should be -301
+#CLK;
+
+val = 18'b0000110110_11001100; // is 54.7974726612416, after conversion should be 54
+#CLK;
+
+val = 18'b0000101001_00011110; // is 41.120266359048905, after conversion should be 41
+#CLK;
+
+val = 18'b1110100000_00110011; // is -95.80135145714371, after conversion should be -95
+#CLK;
+
+val = 18'b0011000111_10000100; // is 199.51570610641338, after conversion should be 199
+#CLK;
+
+val = 18'b0110110110_10110101; // is 438.7104702837783, after conversion should be 438
+#CLK;
+
+val = 18'b1100011011_10011101; // is -228.38748692549876, after conversion should be -228
+#CLK;
+
+val = 18'b1000011010_10000010; // is -485.4933719785166, after conversion should be -485
+#CLK;
+
+val = 18'b0111110010_10111011; // is 498.7326523372526, after conversion should be 498
+#CLK;
+
+val = 18'b1000110100_11011010; // is -459.14955316851297, after conversion should be -459
+#CLK;
+
+val = 18'b0001100110_00000101; // is 102.01956953024845, after conversion should be 102
+#CLK;
+
+val = 18'b1000010110_01010101; // is -489.6691559934571, after conversion should be -489
+#CLK;
+
+val = 18'b0001100000_01100101; // is 96.39759376389364, after conversion should be 96
+#CLK;
+
+val = 18'b0011110101_00010010; // is 245.07237561288366, after conversion should be 245
+#CLK;
+
+val = 18'b1011110000_11100011; // is -271.1140106505454, after conversion should be -271
+#CLK;
+
+val = 18'b0111110101_01011100; // is 501.36315111781676, after conversion should be 501
+#CLK;
+
+val = 18'b1000010100_11101010; // is -491.0861386541611, after conversion should be -491
+#CLK;
+
+val = 18'b1001110001_10010111; // is -398.41320419355986, after conversion should be -398
+#CLK;
+
+val = 18'b0100011000_01011011; // is 280.35934076810463, after conversion should be 280
+#CLK;
+
+val = 18'b1111101111_01000001; // is -16.747055124440145, after conversion should be -16
+#CLK;
+
+val = 18'b0101010110_10010001; // is 342.5668182267227, after conversion should be 342
+#CLK;
+
+val = 18'b0000010111_01111111; // is 23.49610824341407, after conversion should be 23
+#CLK;
+
+val = 18'b1010110101_01011001; // is -330.6535251690766, after conversion should be -330
+#CLK;
+
+val = 18'b1001011000_11100111; // is -423.09778199103147, after conversion should be -423
+#CLK;
+
+val = 18'b1000101100_00100011; // is -467.8645710496369, after conversion should be -467
+#CLK;
+
+val = 18'b0111000101_10100010; // is 453.6356470353442, after conversion should be 453
+#CLK;
+
+val = 18'b0100100010_00111000; // is 290.2205737252406, after conversion should be 290
+#CLK;
+
+val = 18'b0101111000_01011110; // is 376.3691628136198, after conversion should be 376
+#CLK;
+
+val = 18'b1101010011_01001110; // is -172.69818384610826, after conversion should be -172
+#CLK;
+
+val = 18'b0000100000_11101011; // is 32.92012292384775, after conversion should be 32
+#CLK;
+
+val = 18'b1000010110_01011110; // is -489.6354877953685, after conversion should be -489
+#CLK;
+
+val = 18'b0011010100_11011101; // is 212.86712735977662, after conversion should be 212
+#CLK;
+
+val = 18'b0001100001_11100111; // is 97.9046680304572, after conversion should be 97
+#CLK;
+
+val = 18'b0100000111_10010000; // is 263.56480704869523, after conversion should be 263
+#CLK;
+
+val = 18'b1010100000_11011011; // is -351.14580713450374, after conversion should be -351
+#CLK;
+
+val = 18'b1110100101_00101000; // is -90.84451791170163, after conversion should be -90
+#CLK;
+
+val = 18'b0100100011_00000010; // is 291.00952882299674, after conversion should be 291
+#CLK;
+
+val = 18'b1100100011_00010010; // is -220.93191461667908, after conversion should be -220
+#CLK;
+
+val = 18'b1001111110_01011001; // is -385.65296100298, after conversion should be -385
+#CLK;
+
+val = 18'b0110100011_00101100; // is 419.17200617082386, after conversion should be 419
+#CLK;
+
+val = 18'b0001111011_11000000; // is 123.75279195527285, after conversion should be 123
+#CLK;
+
+val = 18'b0110100010_00001001; // is 418.0352919198084, after conversion should be 418
+#CLK;
+
+val = 18'b0100111111_10110000; // is 319.6877836482382, after conversion should be 319
+#CLK;
+
+val = 18'b0100001011_00001010; // is 267.039424778799, after conversion should be 267
+#CLK;
+
+val = 18'b0110110101_11101001; // is 437.91066854313004, after conversion should be 437
+#CLK;
+
+val = 18'b0001110011_10000110; // is 115.52371664131545, after conversion should be 115
+#CLK;
+
+val = 18'b0101100100_10001100; // is 356.54975154488955, after conversion should be 356
+#CLK;
+
+val = 18'b0110110000_00010000; // is 432.065403556058, after conversion should be 432
+#CLK;
+
+val = 18'b0001111100_11001101; // is 124.80179285764528, after conversion should be 124
+#CLK;
+
+val = 18'b1010001000_00111000; // is -375.78365417269674, after conversion should be -375
+#CLK;
+
+val = 18'b0101100111_10011100; // is 359.6107567818602, after conversion should be 359
+#CLK;
+
+val = 18'b1100000101_00000010; // is -250.9953396933904, after conversion should be -250
+#CLK;    
+
+$fclose(fd);
+$finish;
+end
+
+
+endmodule
