@@ -39,6 +39,11 @@ module neuroSA_top_record_numbers(  input                                  clk,
     assign flipping_seed = {(LOG_NOISE_SOURCE_WIDTH-1){1'b0}};
     
     // Parameters for the problem
+    parameter string FILE_TO_SAVE                   = "neuroSA_machine_N=800_A25_tb.txt";
+    parameter string PLOT_FIG_SAVE                  = "neuroSA_machine_N=800_A25_tb_sol_vs_clk.txt";
+    parameter string SPIKE_DEBUGGING                = "neuroSA_machine_N=800_A25_tb_spikes.txt";
+
+    // Parameters for the problem
     parameter int GRAPH_WIDTH                       = 800;
     parameter int UNITS                             = 25;
     parameter int NEURONS_PER_UNIT                  = GRAPH_WIDTH / UNITS;
@@ -50,28 +55,36 @@ module neuroSA_top_record_numbers(  input                                  clk,
     parameter int USE_ROUND_ROBIN                   = 0;
 
     // Parameters (adjust these as needed for your tests)
-    parameter int TEMP_INC_WIDTH                    = 16;
+    parameter int TEMP_INC_WIDTH                    = 12;
     parameter int MEMBRANE_WIDTH                    = 10;
     parameter int COUNTER_WIDTH                     = 40;
     parameter int NO_CLK_CYCLES_AFTER_UPDATE        = 4;
     parameter int SOLUTION_WIDTH                    = 16;
 
+
+
+    parameter int NEURON_SEL_LFSR_WIDTH             = 8;
+    parameter int LOG_NOISE_SOURCE_WIDTH            = 8;
+
+
     parameter int USE_FLOAT_POINT                   = 0;
     parameter int REAL_WIDTH                        = 18;
     parameter int FRACTIONAL_PART                   = 8;
-
-    parameter int NEURON_SEL_LFSR_WIDTH             = 5;
-    parameter int LOG_NOISE_SOURCE_WIDTH            = 16;
+        
     parameter int LOG_LUT_BIT_SIZE                  = 7; 
-
+    parameter string LOG_NOISE_LUT_FILENAME         = "log_noise_fixed_width=18_frac_bits=8_nbits_of_lut=7.mif";
     
-    parameter string LOG_NOISE_LUT_FILENAME         = "log_noise_LUT_fixed_7bit.mif";
-    parameter int TEMPERATURE_LUT_WIDTH             = 9;
-    parameter string TEMPERATURE_LUT_FILENAME       = "temperature_LUT_fixed_N9.mif";
+    
+    parameter int TEMPERATURE_LUT_WIDTH             = 7;
+    parameter string TEMPERATURE_LUT_FILENAME       = "temperature_fixed_width=18_frac_bits=8_nbits_of_lut=7.mif";
 
     parameter int FLIPPING_OUTPUT_WIDTH             = 16;
- 
 
+    // buffer parameters
+    parameter int USE_TRANSMIT_WITH_BUFF                = 1;
+    parameter int NO_OF_CLK_CYCLES_TO_PROPAGATE         = 1;
+    parameter int NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE   = 3;
+    
     // Instantiate the module under test (MUT)
     neuroSA_machine #(
         .USE_ROUND_ROBIN(USE_ROUND_ROBIN),
@@ -97,7 +110,10 @@ module neuroSA_top_record_numbers(  input                                  clk,
         .TEMPERATURE_LUT_WIDTH(TEMPERATURE_LUT_WIDTH),
         .PIPELINED_ROMs(PIPELINED_ROMs),
         .PIPELINED_ENSEMBLE_STORAGE(PIPELINED_ENSEMBLE_STORAGE),
-        .IDX_THAT_FIRED_WIDTH(IDX_THAT_FIRED_WIDTH)
+        .IDX_THAT_FIRED_WIDTH(IDX_THAT_FIRED_WIDTH),
+        .USE_TRANSMIT_WITH_BUFF(USE_TRANSMIT_WITH_BUFF),
+        .NO_OF_CLK_CYCLES_TO_PROPAGATE(NO_OF_CLK_CYCLES_TO_PROPAGATE),
+        .NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE(NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE)
     ) DUT (
         .clk(clk),
         .reset(reset),
@@ -111,6 +127,7 @@ module neuroSA_top_record_numbers(  input                                  clk,
         .write_neuron_states(write_neuron_states),
         .found_solution_value(found_solution_value)
     );
+
 
 
 endmodule

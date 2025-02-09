@@ -74,6 +74,8 @@ module flipping_unit #(parameter LOG_NOISE_SOURCE_WIDTH = 16,
     begin
         wire [REAL_WIDTH-1:0] flipping_output_int;
         reg [REAL_WIDTH-1:0] noise_out_reg, temperature_multiplier_out_reg, flipping_output_reg;
+        reg [REAL_WIDTH-1:0] noise_times_temp_reg;
+        
         wire error;
 
         assign flipping_output = flipping_output_reg[FLIPPING_OUTPUT_WIDTH-1:0];
@@ -81,12 +83,15 @@ module flipping_unit #(parameter LOG_NOISE_SOURCE_WIDTH = 16,
         if (USE_FLOAT_POINT == 1)
         begin 
             float16_mult mult(.a(noise_out_reg), .b(temperature_multiplier_out_reg), .c(noise_times_temp), .error(error));
-            float16_to_int float16_to_integer_inst(.fp16(noise_times_temp), .int_out(flipping_output_int));
+            float16_to_int float16_to_integer_inst(.fp16(noise_times_temp_reg), .int_out(flipping_output_int));
         end
         else if (USE_FLOAT_POINT == 0)
         begin 
-            fixed_mult #(.BITS(REAL_WIDTH), .FRAC_BITS(FRACTIONAL_PART)) mult(.a(noise_out_reg), .b(temperature_multiplier_out_reg), .product(noise_times_temp), .overflow(error));
-            fixed_to_int #(.TOTAL_BITS(REAL_WIDTH), .FRAC_BITS(FRACTIONAL_PART), .OUT_WIDTH(REAL_WIDTH)) fixed_to_int(.fixed_val(noise_times_temp), .int_fixed_val(flipping_output_int));
+            fixed_mult #(.BITS(REAL_WIDTH), .FRAC_BITS(FRACTIONAL_PART)) mult(.a(noise_out_reg), 
+                                                                              .b(temperature_multiplier_out_reg),
+                                                                              .product(noise_times_temp), .overflow(error));
+            fixed_to_int #(.TOTAL_BITS(REAL_WIDTH), .FRAC_BITS(FRACTIONAL_PART), .OUT_WIDTH(REAL_WIDTH)) fixed_to_int(.fixed_val(noise_times_temp_reg), 
+                                                                                                                      .int_fixed_val(flipping_output_int));
         end
 
         always @(posedge clk)
@@ -96,12 +101,15 @@ module flipping_unit #(parameter LOG_NOISE_SOURCE_WIDTH = 16,
                 noise_out_reg <= {REAL_WIDTH{1'b0}};
                 temperature_multiplier_out_reg <= {REAL_WIDTH{1'b0}};
                 flipping_output_reg <= {REAL_WIDTH{1'b0}};
+                noise_times_temp_reg <=  {REAL_WIDTH{1'b0}};
             end
             else if (CE == 1)
             begin
                 noise_out_reg <= noise_out;
                 temperature_multiplier_out_reg <= temperature_multiplier_out;
+                noise_times_temp_reg <= noise_times_temp;
                 flipping_output_reg <= flipping_output_int;
+                
             end
         end
 

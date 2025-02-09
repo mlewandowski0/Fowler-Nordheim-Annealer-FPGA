@@ -146,7 +146,7 @@ if __name__ == "__main__":
     config = CONFIG(args.config)
 
     fixed_width = 18
-    frac_bits = 8
+    frac_bits = 10
 
     # make sure the log folder exists
     os.makedirs(config.LOG_FILE, exist_ok=True)
@@ -161,21 +161,34 @@ if __name__ == "__main__":
         config.LOG_FILE += f"_problem={config.PROBLEM_PATH[:3]}"
 
     rng_approximation_selections = []
+
+    selection_seeds = []
+    if isinstance(config.RNG_APPROX_SELECTION_SEED, int):
+        selection_seeds = [config.RNG_APPROX_SELECTION_SEED] * config.UNITS
+    elif isinstance(config.RNG_APPROX_SELECTION_SEED, list):
+        selection_seeds = config.RNG_APPROX_SELECTION_SEED
+
     for i in range(config.UNITS):
         rng_approximation_selections.append(get_RNG_approximation(config.RNG_APPROX_SELECTION,
                                                                   alpha=alpha,
                                                                   which="selection",
-                                                                  seed=config.RNG_APPROX_SELECTION_SEED,
+                                                                  seed=selection_seeds[i],
                                                                   bits=config.RNG_APPROX_SELECTION_BITS,
                                                                   fixed_width=fixed_width,
                                                                   frac_bits=frac_bits))
+
+    calc_seeds = []
+    if isinstance(config.RNG_APPROX_SELECTION_SEED, int):
+        calc_seeds = [config.RNG_APPROX_SELECTION_SEED] * config.UNITS
+    elif isinstance(config.RNG_APPROX_SELECTION_SEED, list):
+        calc_seeds = config.RNG_APPROX_SELECTION_SEED
 
     rng_approximation_calcs = []
     for i in range(config.UNITS):
         rng_approximation_calcs.append(get_RNG_approximation(config.RNG_APPROX_CALC,
                                                              alpha=alpha,
                                                              which="calculation",
-                                                             seed=config.RNG_APPROX_CALC_SEED,
+                                                             seed=calc_seeds[i],
                                                              bits=config.RNG_APPROX_CALC_BITS,
                                                              fixed_width=fixed_width,
                                                              frac_bits=frac_bits))
@@ -265,8 +278,7 @@ if __name__ == "__main__":
             vmem_f.write("};\n")
 
 
-    with open(log_file_name, 'w') as f:
-        f.write("spikes,best_maxcuts,iter,thld,curr_cuts\n")
+    with open(log_file_name, 'a') as f:
         pb = tqdm(range(int(config.MAX_ITER)))
         for iter in pb:
             spike_sel = 0
@@ -329,6 +341,9 @@ if __name__ == "__main__":
 
                     argmin_s_p = s_p.copy()
                     argmin_s_n = s_n.copy()
+                    print(f"{iter}, {best_maxcuts}")
+                    f.write(f"{iter}, {best_maxcuts}\n")
+                    f.flush()
 
                 # v_tmp = (s_p-s_n).numpy()
                 # Q_tmp = Q.numpy()
@@ -352,8 +367,6 @@ if __name__ == "__main__":
                 # if maxcuts > best_maxcuts:
                 #     best_maxcuts = maxcuts
                 pb.set_description(f'#spikes:{num_spikes}, best{best_maxcuts} thld : {round(thld, 3)}')
-
-                f.write(f"{num_spikes},{best_maxcuts},{iter},{thld},{curr_cuts.item()}\n")
                 # print(f'time for update: {t_update_vmem/1e6}, time for sim: {t_sim/1e6}, time for rng: {t_rand/1e6}, t2 process spike: {t_spike/1e6}')
                 # break
                 

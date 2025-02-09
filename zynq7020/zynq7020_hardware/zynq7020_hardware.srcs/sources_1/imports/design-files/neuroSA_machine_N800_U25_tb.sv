@@ -24,9 +24,9 @@ module neuroSA_machine_N800_U25_tb();
 
 
     //    
-    parameter string FILE_TO_SAVE                   = "neuroSA_machine_N=800_A25_tb.txt";
-    parameter string PLOT_FIG_SAVE                  = "neuroSA_machine_N=800_A25_tb_sol_vs_clk.txt";
-    parameter string SPIKE_DEBUGGING                = "neuroSA_machine_N=800_A25_tb_spikes.txt";
+    parameter string FILE_TO_SAVE                   = "neuroSA_machine_N=800_A25_tb2.txt";
+    parameter string PLOT_FIG_SAVE                  = "neuroSA_machine_N=800_A25_tb2_sol_vs_clk.txt";
+    parameter string SPIKE_DEBUGGING                = "neuroSA_machine_N=800_A25_tb2_spikes.txt";
 
     // Parameters for the problem
     parameter int GRAPH_WIDTH                       = 800;
@@ -239,7 +239,11 @@ module neuroSA_machine_N800_U25_tb();
             
             ensemble_seed = 1 + unit;
             flipping_seed = 1 + unit;
-                
+            
+            $display("Unit %d, ensemble_seed = 0b%b", unit, ensemble_seed);
+            $display("Unit %d, flipping_seed = 0b%b", unit, flipping_seed);
+
+               
             for (int i = 0; i < 2; i++)
             begin
                 //ensemble_seed = $urandom_range((1 << NEURON_SEL_LFSR_WIDTH) - 1, 0);
@@ -293,20 +297,14 @@ module neuroSA_machine_N800_U25_tb();
     // Monitor update_memory signal
 
     always @(posedge DUT.update_memory) begin
-        if (DUT.scheduler_instance.should_increment)
-            $fdisplay(fd, "%d, %d, %d", DUT.idx_that_fired, -$signed(DUT.scheduler_instance.membrane_reg), DUT.scheduler_instance.curr_cuts);
-        else 
-            $fdisplay(fd, "%d, %d, %d", DUT.idx_that_fired, $signed(DUT.scheduler_instance.membrane_reg), DUT.scheduler_instance.curr_cuts);
+        //if (DUT.scheduler_instance.should_increment)
+        //    $fdisplay(fd, "%d, %d, %d", DUT.idx_that_fired, -$signed(DUT.scheduler_instance.membrane_reg), DUT.scheduler_instance.curr_cuts);
+        //else 
+        //    $fdisplay(fd, "%d, %d, %d", DUT.idx_that_fired, $signed(DUT.scheduler_instance.membrane_reg), DUT.scheduler_instance.curr_cuts);
     end
-
-    /*
-
-    */
-
-
     always @(DUT.spikes)
     begin
-        $fdisplay(fd3, "%d : %b", $time, DUT.spikes );
+        //$fdisplay(fd3, "%d : %b", $time, DUT.spikes );
     end
 
     always @(posedge DUT.spiked)

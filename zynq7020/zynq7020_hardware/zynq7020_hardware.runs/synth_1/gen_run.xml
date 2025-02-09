@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1739117331" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/neuroSA_top_record_numbers.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="neuroSA_top_record_numbers_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="neuroSA_top_record_numbers.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="neuroSA_top_record_numbers_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="neuroSA_top_record_numbers_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="neuroSA_top_record_numbers_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="neuroSA_top_record_numbers.vds"/>
+  <File Type="REPORTS-TCL" Name="neuroSA_top_record_numbers_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="neuroSA_top_record_numbers_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="neuroSA_top_record_numbers.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/LFSR.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/LFSR.v"/>
+        <Attr Name="ImportTime" Val="1728997649"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/LFSR_inout.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/LFSR_inout.v"/>
+        <Attr Name="ImportTime" Val="1728303389"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/cla_nbit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/cla_nbit.v"/>
+        <Attr Name="ImportTime" Val="1728059038"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/distributed_graph_memory.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/distributed_graph_memory.v"/>
+        <Attr Name="ImportTime" Val="1729770676"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/fixed_mult.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/fixed_mult.v"/>
+        <Attr Name="ImportTime" Val="1728150997"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/fixed_to_int.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/fixed_to_int.v"/>
+        <Attr Name="ImportTime" Val="1729430609"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/flipping_unit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/flipping_unit.v"/>
+        <Attr Name="ImportTime" Val="1729785702"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/float16_mult.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/float16_mult.v"/>
+        <Attr Name="ImportTime" Val="1728210111"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/float16_normalizer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/float16_normalizer.v"/>
+        <Attr Name="ImportTime" Val="1728123248"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/float16_to_int.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/float16_to_int.v"/>
+        <Attr Name="ImportTime" Val="1728213459"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/log_LUT.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/log_LUT.v"/>
+        <Attr Name="ImportTime" Val="1728246536"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/log_noise_generator.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/log_noise_generator.v"/>
+        <Attr Name="ImportTime" Val="1729634521"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/mulBITSxBITS.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/mulBITSxBITS.v"/>
+        <Attr Name="ImportTime" Val="1728146288"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/neuron_ensemble.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/neuron_ensemble.v"/>
+        <Attr Name="ImportTime" Val="1729858902"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/neuron_ensemble_storage.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/neuron_ensemble_storage.v"/>
+        <Attr Name="ImportTime" Val="1736357193"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/neuron_ensemble_with_memory.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/neuron_ensemble_with_memory.v"/>
+        <Attr Name="ImportTime" Val="1729858688"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/neuron_ensemble_with_memory_with_buff.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/neuron_ensemble_with_memory_with_buff.v"/>
+        <Attr Name="ImportTime" Val="1736343587"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/round_robin_priority_selector.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/round_robin_priority_selector.v"/>
+        <Attr Name="ImportTime" Val="1729530951"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/scheduler.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/scheduler.v"/>
+        <Attr Name="ImportTime" Val="1729783795"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/simple_priority_selector.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/simple_priority_selector.v"/>
+        <Attr Name="ImportTime" Val="1729782726"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/temperature_mapping.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/temperature_mapping.v"/>
+        <Attr Name="ImportTime" Val="1728926490"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/temperature_module.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/temperature_module.v"/>
+        <Attr Name="ImportTime" Val="1728238912"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/transmit_buffer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/transmit_buffer.v"/>
+        <Attr Name="ImportTime" Val="1729945757"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/vedic_mul16x16.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/vedic_mul16x16.v"/>
+        <Attr Name="ImportTime" Val="1728125293"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/vedic_mul2x2.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/vedic_mul2x2.v"/>
+        <Attr Name="ImportTime" Val="1728123668"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/vedic_mul4x4.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/vedic_mul4x4.v"/>
+        <Attr Name="ImportTime" Val="1728125271"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/vedic_mul8x8.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/vedic_mul8x8.v"/>
+        <Attr Name="ImportTime" Val="1728125281"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/neuroSA_machine.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/neuroSA_machine.sv"/>
+        <Attr Name="ImportTime" Val="1729865925"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/neuroSA_top_record_numbers.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/neuroSA_top_record_numbers.sv"/>
+        <Attr Name="ImportTime" Val="1729956318"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/fixed_add.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/fixed_add.v"/>
+        <Attr Name="ImportTime" Val="1730217647"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/neuroSA_machine_N800_U25_tb.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/neuroSA_machine_N800_U25_tb.sv"/>
+        <Attr Name="ImportTime" Val="1729987454"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/UTIL.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/UTIL.v"/>
+        <Attr Name="ImportTime" Val="1728213578"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/float16_alignment.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/float16_alignment.v"/>
+        <Attr Name="ImportTime" Val="1728123509"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/membrane_update.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/membrane_update.v"/>
+        <Attr Name="ImportTime" Val="1728340161"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/log_approximation_LUT.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/log_approximation_LUT.v"/>
+        <Attr Name="ImportTime" Val="1728232339"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/ensemble_unit_top_for_record_numbers.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/ensemble_unit_top_for_record_numbers.v"/>
+        <Attr Name="ImportTime" Val="1729968695"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/neuroSA_machine_N12_U3_tb.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/neuroSA_machine_N12_U3_tb.sv"/>
+        <Attr Name="ImportTime" Val="1729516453"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/graph_n12_machine_fixed.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/graph_n12_machine_fixed.v"/>
+        <Attr Name="ImportTime" Val="1729439872"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/DEFINES.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/DEFINES.v"/>
+        <Attr Name="ImportTime" Val="1728409887"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/temp_module.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/temp_module.v"/>
+        <Attr Name="ImportTime" Val="1728227243"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/float16_add.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/float16_add.v"/>
+        <Attr Name="ImportTime" Val="1728210489"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/graph_n12_machine.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/graph_n12_machine.v"/>
+        <Attr Name="ImportTime" Val="1729439767"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/float16_add_normalizer.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/float16_add_normalizer.v"/>
+        <Attr Name="ImportTime" Val="1728123587"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/graph_n12_machine_postsynth.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/graph_n12_machine_postsynth.v"/>
+        <Attr Name="ImportTime" Val="1729428303"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/graph_processor_small.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/graph_processor_small.v"/>
+        <Attr Name="ImportTime" Val="1728343019"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/round_robin_scheduler.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/round_robin_scheduler.v"/>
+        <Attr Name="ImportTime" Val="1728657627"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/LFSR_with_adv.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/LFSR_with_adv.v"/>
+        <Attr Name="ImportTime" Val="1729705803"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design-files/adder.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/design-files/adder.v"/>
+        <Attr Name="ImportTime" Val="1728058555"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed16.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed16.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed5.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed5.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed1.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed1.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed24.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed24.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed11.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed11.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed20.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed20.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed9.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed9.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed10.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed10.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed15.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed15.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed4.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed4.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/log_noise_LUT_fixed_7bit.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/log_noise_LUT_fixed_7bit.mif"/>
+        <Attr Name="ImportTime" Val="1729987458"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed0.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed0.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_distributed2.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_distributed2.mif"/>
+        <Attr Name="ImportTime" Val="1729447020"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed23.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed23.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed14.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed14.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed3.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed3.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed19.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed19.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed8.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed8.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed13.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed13.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed18.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed18.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_distributed1.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_distributed1.mif"/>
+        <Attr Name="ImportTime" Val="1729447020"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed22.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed22.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/temperature_LUT_fixed_N9.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/temperature_LUT_fixed_N9.mif"/>
+        <Attr Name="ImportTime" Val="1729987458"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed17.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed17.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed6.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed6.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed12.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed12.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed2.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed2.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed7.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed7.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_N800_A25_distributed21.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_N800_A25_distributed21.mif"/>
+        <Attr Name="ImportTime" Val="1729464885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/adj_matrix_distributed0.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/adj_matrix_distributed0.mif"/>
+        <Attr Name="ImportTime" Val="1729447020"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/temperature_fixed_width=18_frac_bits=8_nbits_of_lut=8.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/temperature_fixed_width=18_frac_bits=8_nbits_of_lut=8.mif"/>
+        <Attr Name="ImportTime" Val="1739049439"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/log_noise_fixed_width=18_frac_bits=8_nbits_of_lut=8.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/log_noise_fixed_width=18_frac_bits=8_nbits_of_lut=8.mif"/>
+        <Attr Name="ImportTime" Val="1739049439"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/log_noise_fixed_width=18_frac_bits=9_nbits_of_lut=8.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/log_noise_fixed_width=18_frac_bits=9_nbits_of_lut=8.mif"/>
+        <Attr Name="ImportTime" Val="1739049429"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/log_noise_fixed_width=18_frac_bits=10_nbits_of_lut=8.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/log_noise_fixed_width=18_frac_bits=10_nbits_of_lut=8.mif"/>
+        <Attr Name="ImportTime" Val="1739049419"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/temperature_fixed_width=18_frac_bits=10_nbits_of_lut=8.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/temperature_fixed_width=18_frac_bits=10_nbits_of_lut=8.mif"/>
+        <Attr Name="ImportTime" Val="1739049419"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/temperature_fixed_width=18_frac_bits=8_nbits_of_lut=7.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/temperature_fixed_width=18_frac_bits=8_nbits_of_lut=7.mif"/>
+        <Attr Name="ImportTime" Val="1739049356"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/temperature_fixed_width=18_frac_bits=9_nbits_of_lut=8.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/temperature_fixed_width=18_frac_bits=9_nbits_of_lut=8.mif"/>
+        <Attr Name="ImportTime" Val="1739049429"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/temperature_fixed_width=18_frac_bits=9_nbits_of_lut=7.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/temperature_fixed_width=18_frac_bits=9_nbits_of_lut=7.mif"/>
+        <Attr Name="ImportTime" Val="1739049368"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/temperature_fixed_width=18_frac_bits=10_nbits_of_lut=7.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/temperature_fixed_width=18_frac_bits=10_nbits_of_lut=7.mif"/>
+        <Attr Name="ImportTime" Val="1739049377"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/zynq7020ps_neuroSA_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/log_noise_fixed_width=18_frac_bits=8_nbits_of_lut=7.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/log_noise_fixed_width=18_frac_bits=8_nbits_of_lut=7.mif"/>
+        <Attr Name="ImportTime" Val="1739117188"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/log_noise_fixed_width=18_frac_bits=10_nbits_of_lut=7.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/log_noise_fixed_width=18_frac_bits=10_nbits_of_lut=7.mif"/>
+        <Attr Name="ImportTime" Val="1739117211"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mif_files/log_noise_fixed_width=18_frac_bits=9_nbits_of_lut=7.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mif_files/log_noise_fixed_width=18_frac_bits=9_nbits_of_lut=7.mif"/>
+        <Attr Name="ImportTime" Val="1739117204"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="neuroSA_top_record_numbers"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/clock_constraint.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/clock_constraint.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/neuroSA_top_record_numbers.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
+</GenRun>
