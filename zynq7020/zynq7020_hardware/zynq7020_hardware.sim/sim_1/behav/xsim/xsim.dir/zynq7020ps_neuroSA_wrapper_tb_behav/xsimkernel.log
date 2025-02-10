@@ -1,0 +1,7 @@
+Running: xsim.dir/zynq7020ps_neuroSA_wrapper_tb_behav/xsimk -simmode gui -wdb zynq7020ps_neuroSA_wrapper_tb_behav.wdb -simrunnum 0 -socket 56837
+Design successfully loaded
+Design Loading Memory Usage: 21896 KB (Peak: 21904 KB)
+Design Loading CPU Usage: 30 ms
+Simulation completed
+Simulation Memory Usage: 108672 KB (Peak: 161164 KB)
+Simulation CPU Usage: 56040 ms

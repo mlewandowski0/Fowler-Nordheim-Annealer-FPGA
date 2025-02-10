@@ -60,6 +60,7 @@ module neuroSA_machine
  input [LOG_NOISE_SOURCE_WIDTH-1:0]     flipping_seed,
  input [MEMBRANE_WIDTH-1:0]             membrane_data_in,
  input [3:0]                            neuron_state_in,
+ input [NEURON_NUM_WIDTH-1:0]           idx_to_write,
  input [UNITS-1:0]                      write_neuron_states,         
  output [SOLUTION_WIDTH-1:0]            found_solution_value);
 
@@ -135,6 +136,7 @@ generate
                 .decrease_temp(decrease_temp),
 
                 .write_neuron_state(write_neuron_states[i]),
+                .idx_to_write(idx_to_write),
                 .membrane_data_in(membrane_data_in),
                 .neuron_state_in(neuron_state_in),
 
@@ -178,6 +180,9 @@ generate
                 .update_memory(update_memory),
                 .should_increment(should_increment),
                 .index_of_neuron_that_fired(idx_that_fired),
+
+
+                .idx_to_write(idx_to_write),
                 .write_ensemble_seed(write_ensemble_seed[i]),
                 .ensemble_seed(ensemble_seed),
 

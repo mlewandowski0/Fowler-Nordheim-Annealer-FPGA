@@ -9,6 +9,7 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
                                   input wire write_seed, 
                                   input wire [LFSR_WIDTH-1:0] seed,
                                   input wire write,                           // write the data to the storage
+                                  input wire [NEURON_WIDTH-1:0] idx_to_write,
                                   
                                   input wire [MEMBRANE_WIDTH-1:0] membrane_data_in,
                                   input wire [3:0] neuron_state_in,
@@ -52,8 +53,6 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
         .seed(seed), 
         .out_trunc(idx_offset)
     );
-
-    reg [NEURON_WIDTH-1:0] idx;
     integer i;
 
     // Sequential logic for state updates
@@ -65,16 +64,14 @@ module  neuron_ensemble_storage #(parameter LFSR_WIDTH=3,
 
         if (write)
         begin
-            membrane_storage[idx] <= membrane_data_in;
-            neuron_states_storage[idx] <= neuron_state_in;
-            idx <= idx + 1;
+            membrane_storage[idx_to_write] <= membrane_data_in;
+            neuron_states_storage[idx_to_write] <= neuron_state_in;
         end
         else
         begin
             case (Q_control_reg)
                 ENSEMBLE_RESET_STATE: 
                 begin  
-                    idx <= 0;
                 end
                 ENSEMBLE_INC_STATE:
                 begin

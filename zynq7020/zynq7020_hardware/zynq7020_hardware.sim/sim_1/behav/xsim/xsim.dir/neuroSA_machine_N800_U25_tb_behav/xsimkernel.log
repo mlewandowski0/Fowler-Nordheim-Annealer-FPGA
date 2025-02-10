@@ -1,4 +1,4 @@
-Running: xsim.dir/neuroSA_machine_N800_U25_tb_behav/xsimk -simmode gui -wdb neuroSA_machine_N800_U25_tb_behav.wdb -simrunnum 0 -socket 35511
+Running: xsim.dir/neuroSA_machine_N800_U25_tb_behav/xsimk -simmode gui -wdb neuroSA_machine_N800_U25_tb_behav.wdb -simrunnum 0 -socket 52789
 Design successfully loaded
-Design Loading Memory Usage: 21880 KB (Peak: 21888 KB)
-Design Loading CPU Usage: 50 ms
+Design Loading Memory Usage: 21876 KB (Peak: 21884 KB)
+Design Loading CPU Usage: 20 ms

@@ -63,6 +63,7 @@ module neuron_ensemble_with_memory_with_buff
     input wire                                  decrease_temp,
 
     input wire                                  write_neuron_state,
+    input wire [NEURON_WIDTH-1:0]               idx_to_write,
     input wire [MEMBRANE_WIDTH-1:0]             membrane_data_in,
     input wire [3:0]                            neuron_state_in,
 
@@ -173,6 +174,8 @@ module neuron_ensemble_with_memory_with_buff
         .reset_flipping(reset_flipping),
 
         .write(write_neuron_state),
+        .idx_to_write(idx_to_write),
+        
         .membrane_data_in(membrane_data_in),
         .neuron_state_in(neuron_state_in),
 

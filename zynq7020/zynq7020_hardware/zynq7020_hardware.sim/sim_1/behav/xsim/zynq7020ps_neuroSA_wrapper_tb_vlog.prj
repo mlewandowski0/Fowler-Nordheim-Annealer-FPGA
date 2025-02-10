@@ -1,0 +1,39 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../zynq7020_hardware.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../zynq7020_hardware.gen/sources_1/bd/design_1/ipshared/d47c/hdl" --include "../../../../design-files" --include "/home/mlewand/software/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/LFSR.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/LFSR_inout.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/cla_nbit.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/distributed_graph_memory.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/fixed_mult.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/fixed_to_int.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/flipping_unit.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/float16_mult_old.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/float16_normalizer.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/log_LUT.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/log_noise_generator.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/mulBITSxBITS.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/neuron_ensemble.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/neuron_ensemble_storage.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/neuron_ensemble_with_memory.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/neuron_ensemble_with_memory_with_buff.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/round_robin_priority_selector.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/scheduler.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/simple_priority_selector.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/temperature_mapping.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/temperature_module.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/transmit_buffer.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/vedic_mul16x16.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/vedic_mul2x2.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/vedic_mul4x4.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/vedic_mul8x8.v" \
+
+sv xil_defaultlib  --include "../../../../zynq7020_hardware.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../zynq7020_hardware.gen/sources_1/bd/design_1/ipshared/d47c/hdl" --include "../../../../design-files" --include "/home/mlewand/software/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/neuroSA_machine.sv" \
+"../../../../zynq7020_hardware.srcs/sources_1/new/zynq7020ps_neuroSA_wrapper.sv" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/zynq7020ps_neuroSA_wrapper_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

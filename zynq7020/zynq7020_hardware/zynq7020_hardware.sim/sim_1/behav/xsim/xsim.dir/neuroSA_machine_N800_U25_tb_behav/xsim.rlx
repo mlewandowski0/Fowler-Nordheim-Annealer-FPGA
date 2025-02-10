@@ -1,8 +1,8 @@
 
 { 
-    crc :  5767040691570063122  , 
+    crc :  12732245307326202501  , 
     ccp_crc :  0  , 
-    cmdline : " --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot neuroSA_machine_N800_U25_tb_behav xil_defaultlib.neuroSA_machine_N800_U25_tb xil_defaultlib.glbl" , 
+    cmdline : " --incr --debug typical --relax --mt 8 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_18 -L processing_system7_vip_v1_0_20 -L generic_baseblocks_v2_1_2 -L axi_register_slice_v2_1_32 -L fifo_generator_v13_2_10 -L axi_data_fifo_v2_1_31 -L axi_crossbar_v2_1_33 -L axi_protocol_converter_v2_1_32 -L axi_lite_ipif_v3_0_4 -L lib_cdc_v1_0_3 -L interrupt_control_v3_1_5 -L axi_gpio_v2_0_34 -L proc_sys_reset_v5_0_15 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot neuroSA_machine_N800_U25_tb_behav xil_defaultlib.neuroSA_machine_N800_U25_tb xil_defaultlib.glbl" , 
     buildDate : "Sep  5 2024" , 
     buildTime : "14:48:23" , 
     linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/neuroSA_machine_N800_U25_tb_behav/xsimk\"   \"xsim.dir/neuroSA_machine_N800_U25_tb_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/neuroSA_machine_N800_U25_tb_behav/obj/xsim_1.lnx64.o\" \"xsim.dir/neuroSA_machine_N800_U25_tb_behav/obj/xsim_2.lnx64.o\" -L\"/home/mlewand/software/Xilinx/Vivado/2024.1/lib/lnx64.o\" -lrdi_simulator_kernel    -L/home/mlewand/software/Xilinx/Vivado/2024.1/lib/lnx64.o/../../tps/lnx64/gcc-9.3.0/bin/../lib64 -Wl,--disable-new-dtags -Wl,-rpath=/home/mlewand/software/Xilinx/Vivado/2024.1/lib/lnx64.o/../../tps/lnx64/gcc-9.3.0/bin/../lib64 -lrdi_simbridge_kernel" , 

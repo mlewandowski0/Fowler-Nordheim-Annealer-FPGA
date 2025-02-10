@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1739117331" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/neuroSA_top_record_numbers.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="neuroSA_top_record_numbers_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="neuroSA_top_record_numbers.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="neuroSA_top_record_numbers_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="neuroSA_top_record_numbers_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="neuroSA_top_record_numbers_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="neuroSA_top_record_numbers.vds"/>
-  <File Type="REPORTS-TCL" Name="neuroSA_top_record_numbers_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="neuroSA_top_record_numbers_timing_summary_synth.pb"/>
-  <File Type="PA-TCL" Name="neuroSA_top_record_numbers.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1739187262" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/neuroSA_top_record_numbers.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="zynq7020ps_neuroSA_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="zynq7020ps_neuroSA_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="zynq7020ps_neuroSA_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="zynq7020ps_neuroSA_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="zynq7020ps_neuroSA_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="zynq7020ps_neuroSA_wrapper.vds"/>
+  <File Type="REPORTS-TCL" Name="zynq7020ps_neuroSA_wrapper_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="zynq7020ps_neuroSA_wrapper_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="zynq7020ps_neuroSA_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/design-files/LFSR.v">
@@ -263,8 +263,16 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/zynq7020ps_neuroSA_wrapper.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/neuroSA_top_record_numbers.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/neuroSA_top_record_numbers.sv"/>
         <Attr Name="ImportTime" Val="1729956318"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -333,16 +341,6 @@
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/membrane_update.v"/>
         <Attr Name="ImportTime" Val="1728340161"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/design-files/log_approximation_LUT.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/design-files/log_approximation_LUT.v"/>
-        <Attr Name="ImportTime" Val="1728232339"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -790,14 +788,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/zynq7020ps_neuroSA_wrapper.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/mif_files/log_noise_fixed_width=18_frac_bits=8_nbits_of_lut=7.mif">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/mif_files/log_noise_fixed_width=18_frac_bits=8_nbits_of_lut=7.mif"/>
@@ -824,7 +814,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="neuroSA_top_record_numbers"/>
+      <Option Name="TopModule" Val="zynq7020ps_neuroSA_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

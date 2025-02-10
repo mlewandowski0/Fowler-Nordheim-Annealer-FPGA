@@ -1,7 +1,7 @@
 Vivado Simulator v2024.1.2
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/mlewand/software/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot neuroSA_machine_N800_U25_tb_behav xil_defaultlib.neuroSA_machine_N800_U25_tb xil_defaultlib.glbl -log elaborate.log 
+Running: /home/mlewand/software/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot zynq7020ps_neuroSA_wrapper_tb_behav xil_defaultlib.zynq7020ps_neuroSA_wrapper_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -75,6 +75,7 @@ Compiling module xil_defaultlib.neuron_ensemble_with_memory_with...
 Compiling module xil_defaultlib.round_robin_priority_selector(UN...
 Compiling module xil_defaultlib.scheduler(UNIT_WIDTH=5,GRAPH_WID...
 Compiling module xil_defaultlib.neuroSA_machine(NEURON_SEL_LFSR_...
-Compiling module xil_defaultlib.neuroSA_machine_N800_U25_tb
+Compiling module xil_defaultlib.zynq7020ps_neuroSA_wrapper(NEURO...
+Compiling module xil_defaultlib.zynq7020ps_neuroSA_wrapper_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot neuroSA_machine_N800_U25_tb_behav
+Built simulation snapshot zynq7020ps_neuroSA_wrapper_tb_behav

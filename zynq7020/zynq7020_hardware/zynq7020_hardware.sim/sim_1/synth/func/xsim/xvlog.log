@@ -1,0 +1,2 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sim_1/new/zynq7020ps_neuroSA_wrapper_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module zynq7020ps_neuroSA_wrapper_tb

@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../zynq7020_hardware.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../../zynq7020_hardware.gen/sources_1/bd/design_1/ipshared/d47c/hdl" --include "../../../../../design-files" --include "/home/mlewand/software/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"zynq7020ps_neuroSA_wrapper_tb_func_synth.v" \
+
+sv xil_defaultlib  --include "../../../../../zynq7020_hardware.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../../zynq7020_hardware.gen/sources_1/bd/design_1/ipshared/d47c/hdl" --include "../../../../../design-files" --include "/home/mlewand/software/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"../../../../../zynq7020_hardware.srcs/sim_1/new/zynq7020ps_neuroSA_wrapper_tb.sv" \
+
+# Do not sort compile order
+nosort

@@ -89,6 +89,7 @@ module neuroSA_machine_N800_U25_tb();
     logic halt;
 
     // Input stimuli
+    logic [NEURON_NUM_WIDTH-1:0] idx_to_write;
     logic [UNITS-1:0] write_ensemble_seed;
     logic [UNITS-1:0] write_flipping_seed;
     logic [NEURON_SEL_LFSR_WIDTH-1:0] ensemble_seed;
@@ -133,6 +134,7 @@ module neuroSA_machine_N800_U25_tb();
         .clk(clk),
         .reset(reset),
         .halt(halt),
+        .idx_to_write(idx_to_write), 
         .write_ensemble_seed(write_ensemble_seed),
         .write_flipping_seed(write_flipping_seed),
         .ensemble_seed(ensemble_seed),
@@ -217,6 +219,7 @@ module neuroSA_machine_N800_U25_tb();
         write_flipping_seed = '0;
         write_neuron_states = '0;
         neuron_state_in     = 4'b0010;
+        idx_to_write        = 0;
 
         #(2 * CLK_PERIOD);
         reset = 1;
@@ -273,6 +276,7 @@ module neuroSA_machine_N800_U25_tb();
             // write neuron states to the unit
             for (int i = 0; i < 32; ++i)
             begin
+                    idx_to_write = i;
                     membrane_data_in = data_arrays[unit][i];
                     #CLK_PERIOD;
             end

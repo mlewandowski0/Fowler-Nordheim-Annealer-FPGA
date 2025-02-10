@@ -30,6 +30,8 @@ parameter FRACTIONAL_PART=8
     input wire                                   decrease_temp,
     input wire                                   reset_flipping,
     input wire                                   write,
+    input wire  [NEURON_WIDTH-1:0]               idx_to_write,
+    
     input wire                                   [MEMBRANE_WIDTH-1:0] membrane_data_in,
     input wire                                   [3:0] neuron_state_in,
     input wire                                   [1:0] control, // 0: GENERATE_STATE, 1: INC_STATE, 2: SUB_STATE, 3: RESET_STATE
@@ -51,7 +53,6 @@ wire [3:0] neuron_state;
 
 reg [NEURON_WIDTH-1:0] selected_idx_offset_reg;
 reg signed [MEMBRANE_WIDTH-1:0] selected_membrane_reg;
-reg add_reg;
 reg [3:0] neuron_state_reg;
 
 
@@ -70,6 +71,7 @@ neuron_ensemble_storage #(.LFSR_WIDTH(NEURON_SEL_LFSR_WIDTH),
                                   .write_seed(write_ensemble_seed), 
                                   .seed(ensemble_seed),
                                   .write(write),                            // write the data to the storage
+                                  .idx_to_write(idx_to_write),
                                   
                                   .membrane_data_in(membrane_data_in),
                                   .neuron_state_in(neuron_state_in),
