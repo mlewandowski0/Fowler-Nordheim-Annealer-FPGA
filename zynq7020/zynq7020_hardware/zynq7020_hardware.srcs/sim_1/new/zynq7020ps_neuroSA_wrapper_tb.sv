@@ -28,7 +28,7 @@ module zynq7020ps_neuroSA_wrapper_tb();
     parameter int UNITS                             = 25;
     parameter int PIPELINED_ROMs                    = 1;
     parameter int PIPELINED_ENSEMBLE_STORAGE        = 1;
-    parameter int USE_ROUND_ROBIN                   = 1;
+    parameter int USE_ROUND_ROBIN                   = 0;
 
     // Parameters (adjust these as needed for your tests)
     parameter int TEMP_INC_WIDTH                    = 12;

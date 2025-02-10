@@ -317,6 +317,7 @@ if __name__ == "__main__":
                     if spike and not spike_sel:
                         spike_sel = spike
                         p_sel = p
+                        break
 
             if spike_sel:
                 # s_spike = time.time_ns()

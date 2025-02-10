@@ -235,12 +235,6 @@ module neuroSA_machine_N800_U25_tb();
             ensemble_seed = 1 + unit;
             flipping_seed = 1 + unit;
                 
-            for (int i = 0; i < 2; i++)
-            begin
-                //ensemble_seed = $urandom_range((1 << NEURON_SEL_LFSR_WIDTH) - 1, 0);
-                //flipping_seed = $urandom_range((1 << NOISE_SOURCE_WIDTH) - 1, 0);
-
-            end
             #CLK_PERIOD;
             
         end

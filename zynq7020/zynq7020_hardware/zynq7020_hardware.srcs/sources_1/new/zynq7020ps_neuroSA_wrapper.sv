@@ -24,34 +24,31 @@ module zynq7020ps_neuroSA_wrapper
 #(
     // Parameters for the problem
     parameter int GRAPH_WIDTH                       = 800,
-    parameter int UNITS                             = 25,
+    parameter int UNITS                             = 50,
     parameter int PIPELINED_ROMs                    = 1,
     parameter int PIPELINED_ENSEMBLE_STORAGE        = 1,
-    parameter int USE_ROUND_ROBIN                   = 1,
+    parameter int USE_ROUND_ROBIN                   = 0,
 
     // Parameters (adjust these as needed for your tests)
     parameter int TEMP_INC_WIDTH                    = 12,
-    parameter int MEMBRANE_WIDTH                    = 16,
+    parameter int MEMBRANE_WIDTH                    = 12,
     parameter int COUNTER_WIDTH                     = 40,
     parameter int NO_CLK_CYCLES_AFTER_UPDATE        = 4,
     parameter int SOLUTION_WIDTH                    = 16,
 
-
-
     parameter int NEURON_SEL_LFSR_WIDTH             = 10,
     parameter int LOG_NOISE_SOURCE_WIDTH            = 10,
-
 
     parameter int USE_FLOAT_POINT                   = 0,
     parameter int REAL_WIDTH                        = 18,
     parameter int FRACTIONAL_PART                   = 8,
         
-    parameter int LOG_LUT_BIT_SIZE                  = 8,
-    parameter string LOG_NOISE_LUT_FILENAME         = "log_noise_fixed_width=18_frac_bits=8_nbits_of_lut=8.mif",
+    parameter int LOG_LUT_BIT_SIZE                  = 7,
+    parameter string LOG_NOISE_LUT_FILENAME         = "log_noise_fixed_width=18_frac_bits=8_nbits_of_lut=7.mif",
     
     
-    parameter int TEMPERATURE_LUT_WIDTH             = 8,
-    parameter string TEMPERATURE_LUT_FILENAME       = "temperature_fixed_width=18_frac_bits=8_nbits_of_lut=8.mif",
+    parameter int TEMPERATURE_LUT_WIDTH             = 7,
+    parameter string TEMPERATURE_LUT_FILENAME       = "temperature_fixed_width=18_frac_bits=8_nbits_of_lut=7.mif",
 
     parameter int FLIPPING_OUTPUT_WIDTH             = 16,
 

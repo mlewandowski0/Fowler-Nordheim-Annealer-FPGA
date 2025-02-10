@@ -48,36 +48,49 @@ module ensemble_unit_top_for_record_numbers(
     output wire [UNIT_WIDTH-1:0]                unit_number
 );
 
-    localparam UNIT_NO                               = 0;
-    localparam GRAPH_DISTRIB_FILE                    = "adj_matrix_N800_A100_distributed0.mif";
-    localparam GRAPH_WIDTH                           = 800;
-    localparam UNITS                                 = 100;
-    localparam MEMBRANE_WIDTH                        = 10;
-    localparam SOLUTION_WIDTH                        = 16;
-    localparam NEURON_SEL_LFSR_WIDTH                 = 5;
-    localparam LOG_NOISE_SOURCE_WIDTH                = 18;
-    localparam LOG_LUT_BIT_SIZE                      = 7; 
-    localparam LOG_NOISE_LUT_FILENAME                = "log_noise_LUT_fixed_7bit.mif";
-    localparam TEMPERATURE_LUT_WIDTH                 = 9;
-    localparam TEMPERATURE_LUT_FILENAME              = "temperature_LUT_fixed_N9.mif";
-
-
-    localparam NEURONS_PER_UNIT                      = GRAPH_WIDTH / UNITS;
-    localparam UNIT_WIDTH                            = $clog2(UNITS);
-    localparam NEURON_NUM_WIDTH                      = $clog2(NEURONS_PER_UNIT);
-    localparam PIPELINED_ROMs                        = 1;
-    localparam PIPELINED_ENSEMBLE_STORAGE            = 1;
-    localparam IDX_THAT_FIRED_WIDTH                  = $clog2(GRAPH_WIDTH);
-    localparam USE_ROUND_ROBIN                       = 0;
+    // Parameters for the problem
+    localparam GRAPH_WIDTH                       = 800;
+    localparam UNITS                             = 100;
+    localparam NEURONS_PER_UNIT                  = GRAPH_WIDTH / UNITS;
+    localparam UNIT_WIDTH                        = $clog2(UNITS);
+    localparam NEURON_NUM_WIDTH                  = $clog2(NEURONS_PER_UNIT);
+    localparam PIPELINED_ROMs                    = 1;
+    localparam PIPELINED_ENSEMBLE_STORAGE        = 1;
+    localparam IDX_THAT_FIRED_WIDTH              = $clog2(GRAPH_WIDTH);
+    localparam USE_ROUND_ROBIN                   = 0;
 
     // Parameters (adjust these as needed for your tests)
-    localparam TEMP_INC_WIDTH                        = 16;
-    localparam COUNTER_WIDTH                         = 40;
-    localparam NO_CLK_CYCLES_AFTER_UPDATE            = 4;
-    localparam USE_FLOAT_POINT                       = 0;
-    localparam REAL_WIDTH                            = 18;
-    localparam FRACTIONAL_PART                       = 8;
-    localparam FLIPPING_OUTPUT_WIDTH                 = 16;
+    localparam TEMP_INC_WIDTH                    = 12;
+    localparam MEMBRANE_WIDTH                    = 12;
+    localparam COUNTER_WIDTH                     = 40;
+    localparam NO_CLK_CYCLES_AFTER_UPDATE        = 4;
+    localparam SOLUTION_WIDTH                    = 16;
+
+
+
+    localparam NEURON_SEL_LFSR_WIDTH             = 8;
+    localparam LOG_NOISE_SOURCE_WIDTH            = 8;
+
+
+    localparam USE_FLOAT_POINT                   = 0;
+    localparam REAL_WIDTH                        = 18;
+    localparam FRACTIONAL_PART                   = 8;
+        
+    localparam LOG_LUT_BIT_SIZE                  = 7; 
+    localparam LOG_NOISE_LUT_FILENAME         = "log_noise_fixed_width=18_frac_bits=8_nbits_of_lut=7.mif";
+    
+    
+    localparam TEMPERATURE_LUT_WIDTH             = 7;
+    localparam TEMPERATURE_LUT_FILENAME       = "temperature_fixed_width=18_frac_bits=8_nbits_of_lut=7.mif";
+
+    localparam FLIPPING_OUTPUT_WIDTH             = 16;
+
+
+    localparam UNIT_NO                               = 0;
+    localparam GRAPH_DISTRIB_FILE                    = "adj_matrix_N800_A50_distributed0.mif";
+
+
+    // Parameters (adjust these as needed for your tests)
     localparam USE_TRANSMIT_WITH_BUFF                = 1;
     localparam NO_OF_CLK_CYCLES_TO_PROPAGATE         = 1;
     localparam NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE   = 3;

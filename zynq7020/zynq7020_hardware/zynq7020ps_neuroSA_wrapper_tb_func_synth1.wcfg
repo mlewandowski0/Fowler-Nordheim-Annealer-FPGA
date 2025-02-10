@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="zynq7020ps_neuroSA_wrapper_tb_func_synth.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="zynq7020ps_neuroSA_wrapper_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="78,800.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="79,352.001 ns"></ZoomEndTime>
+      <Cursor1Time time="79,260.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="196"></NameColumnWidth>
+      <ValueColumnWidth column_width="91"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject type="array" fp_name="/zynq7020ps_neuroSA_wrapper_tb/CLK_CNT">
+      <obj_property name="ElementShortName">CLK_CNT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_CNT[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/zynq7020ps_neuroSA_wrapper_tb/MACHINE_RUNNING">
+      <obj_property name="ElementShortName">MACHINE_RUNNING[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MACHINE_RUNNING[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/zynq7020ps_neuroSA_wrapper_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/zynq7020ps_neuroSA_wrapper_tb/pl_config">
+      <obj_property name="ElementShortName">pl_config[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pl_config[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/zynq7020ps_neuroSA_wrapper_tb/data">
+      <obj_property name="ElementShortName">data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/zynq7020ps_neuroSA_wrapper_tb/output_data">
+      <obj_property name="ElementShortName">output_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/zynq7020ps_neuroSA_wrapper_tb/interrupt">
+      <obj_property name="ElementShortName">interrupt</obj_property>
+      <obj_property name="ObjectShortName">interrupt</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/zynq7020ps_neuroSA_wrapper_tb/DUT/neuroSA_machine_inst/scheduler_instance/\\index_of_neuron_that_fired_reg[9]_0  ">
+      <obj_property name="ElementShortName">\\index_of_neuron_that_fired_reg[9]_0  [9:0]</obj_property>
+      <obj_property name="ObjectShortName">\\index_of_neuron_that_fired_reg[9]_0  [9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/zynq7020ps_neuroSA_wrapper_tb/DUT/neuroSA_machine_inst/scheduler_instance/membrane_reg">
+      <obj_property name="ElementShortName">membrane_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">membrane_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/zynq7020ps_neuroSA_wrapper_tb/DUT/neuroSA_machine_inst/scheduler_instance/p_0_in">
+      <obj_property name="ElementShortName">p_0_in</obj_property>
+      <obj_property name="ObjectShortName">p_0_in</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/zynq7020ps_neuroSA_wrapper_tb/DUT/neuroSA_machine_inst/scheduler_instance/p_3_in">
+      <obj_property name="ElementShortName">p_3_in</obj_property>
+      <obj_property name="ObjectShortName">p_3_in</obj_property>
+   </wvobject>
+</wave_config>

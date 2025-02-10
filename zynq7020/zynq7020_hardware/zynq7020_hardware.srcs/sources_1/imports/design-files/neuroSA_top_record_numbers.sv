@@ -58,7 +58,7 @@ module neuroSA_top_record_numbers(  input                                  clk,
 
     // Parameters (adjust these as needed for your tests)
     parameter int TEMP_INC_WIDTH                    = 12;
-    parameter int MEMBRANE_WIDTH                    = 10;
+    parameter int MEMBRANE_WIDTH                    = 12;
     parameter int COUNTER_WIDTH                     = 40;
     parameter int NO_CLK_CYCLES_AFTER_UPDATE        = 4;
     parameter int SOLUTION_WIDTH                    = 16;

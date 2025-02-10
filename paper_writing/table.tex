@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{multirow}
+\usepackage{arydshln}
+
+
+\begin{document}
+\begin{table}
+\centering
+\refstepcounter{table}
+\label{blocks_required_accelerator}
+\begin{tabular}{|l|l|r|r|r|r|r|} 
+\hline
+\multirow{2}{*}{\textbf{Parameters}}                                                           & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Utilization\\For\end{tabular}} & \multicolumn{5}{c|}{\textbf{FPGA elements required}}                                                                                                                                                                                                                                                                                              \\ 
+\cline{3-7}
+                                                                                               &                                                                           & \multicolumn{1}{l|}{\textbf{\textit{LUT}}}                & \multicolumn{1}{l|}{\textbf{\textit{LUTRAM}}}         & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}\textbf{\textit{FLIP}}\\\textbf{\textit{FLOPS}}\end{tabular}} & \multicolumn{1}{l|}{\textbf{\textit{BRAM}}}           & \multicolumn{1}{l|}{\textbf{\textit{DSP}}}             \\ 
+\hline
+\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}\textbf{N=800, A=8;}\\$t_c$= 16.013ns\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Single\\Unit\end{tabular}                      & \begin{tabular}[c]{@{}r@{}}241\\(0.45\%)\end{tabular}     & \begin{tabular}[c]{@{}r@{}}8\\(0.05\%)\end{tabular}   & \begin{tabular}[c]{@{}r@{}}208\\(0.2\%)\end{tabular}                                                         & \begin{tabular}[c]{@{}r@{}}1.5\\(1.07\%)\end{tabular} & \begin{tabular}[c]{@{}r@{}}1\\(0.45\%)\end{tabular}    \\ 
+\cdashline{2-7}
+                                                                                               & \begin{tabular}[c]{@{}l@{}}Whole\\Design\end{tabular}                     & \begin{tabular}[c]{@{}r@{}}24594 \\(46.23\%)\end{tabular} & \begin{tabular}[c]{@{}r@{}}800\\(4.6\%)\end{tabular}  & \begin{tabular}[c]{@{}r@{}}19702\\(18.52\%)\end{tabular}                                                     & \begin{tabular}[c]{@{}r@{}}99\\(70.71\%)\end{tabular} & \begin{tabular}[c]{@{}r@{}}100\\(45.5\%)\end{tabular}  \\ 
+\hline
+\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}\textbf{N=800, A=16;}\\$t_c$= 9.361ns\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Single\\Unit\end{tabular}                      & \begin{tabular}[c]{@{}r@{}}368\\(0.69\%)\end{tabular}     & \begin{tabular}[c]{@{}r@{}}8\\(0.05\%)\end{tabular}   & \begin{tabular}[c]{@{}r@{}}293\\(0.28\%)\end{tabular}                                                        & \begin{tabular}[c]{@{}r@{}}1.5\\(1.07\%)\end{tabular} & \begin{tabular}[c]{@{}r@{}}1\\(0.45\%)\end{tabular}    \\ 
+\cdashline{2-7}
+                                                                                               & \begin{tabular}[c]{@{}l@{}}Whole\\Design\end{tabular}                     & \begin{tabular}[c]{@{}r@{}}18738\\(35.22\%)\end{tabular}  & \begin{tabular}[c]{@{}r@{}}400\\(2.3\%)\end{tabular}  & \begin{tabular}[c]{@{}r@{}}14112\\(13.26\%)\end{tabular}                                                     & \begin{tabular}[c]{@{}r@{}}51\\(36.43\%)\end{tabular} & \begin{tabular}[c]{@{}r@{}}50\\(22.73\%)\end{tabular}  \\ 
+\hline
+\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}\textbf{N=800, A=32;}\\$t_c$= 6.937ns\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Single~\\Unit\end{tabular}                     & \begin{tabular}[c]{@{}r@{}}656\\(1.23\%)\end{tabular}     & \begin{tabular}[c]{@{}r@{}}8\\(0.05\%)\end{tabular}   & \begin{tabular}[c]{@{}r@{}}458\\(0.43\%)\end{tabular}                                                        & \begin{tabular}[c]{@{}r@{}}2\\(1.43\%)\end{tabular}   & \begin{tabular}[c]{@{}r@{}}1\\(0.45\%)\end{tabular}    \\ 
+\cdashline{2-7}
+                                                                                               & \begin{tabular}[c]{@{}l@{}}Whole~\\Design\end{tabular}                    & \begin{tabular}[c]{@{}r@{}}16346\\(30.73\%)\end{tabular}  & \begin{tabular}[c]{@{}r@{}}200\\(1.15\%)\end{tabular} & \begin{tabular}[c]{@{}r@{}}11230\\(10.55\%)\end{tabular}                                                     & \begin{tabular}[c]{@{}r@{}}39\\(27.86\%)\end{tabular} & \begin{tabular}[c]{@{}r@{}}25\\(11.36\%)\end{tabular}  \\
+\hline
+\end{tabular}
+\end{table}
+\end{document}

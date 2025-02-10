@@ -3,22 +3,22 @@
 # SW Build 5164865 on Thu Sep  5 14:36:28 MDT 2024
 # IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
 # SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
-# Start of session at: Mon Feb 10 11:34:24 2025
-# Process ID: 58987
+# Start of session at: Mon Feb 10 15:24:06 2025
+# Process ID: 133911
 # Current directory: /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.runs/synth_1
-# Command line: vivado -log zynq7020ps_neuroSA_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zynq7020ps_neuroSA_wrapper.tcl
-# Log file: /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.runs/synth_1/zynq7020ps_neuroSA_wrapper.vds
+# Command line: vivado -log neuroSA_top_record_numbers.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuroSA_top_record_numbers.tcl
+# Log file: /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.runs/synth_1/neuroSA_top_record_numbers.vds
 # Journal file: /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.runs/synth_1/vivado.jou
 # Running On        :mlewan
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04.1 LTS
 # Processor Detail  :12th Gen Intel(R) Core(TM) i7-12700H
-# CPU Frequency     :3628.328 MHz
+# CPU Frequency     :532.598 MHz
 # CPU Physical cores:14
 # CPU Logical cores :20
 # Host memory       :33342 MB
 # Swap memory       :2147 MB
 # Total Virtual     :35489 MB
-# Available Virtual :14932 MB
+# Available Virtual :21794 MB
 #-----------------------------------------------------------
-source zynq7020ps_neuroSA_wrapper.tcl -notrace
+source neuroSA_top_record_numbers.tcl -notrace
