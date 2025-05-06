@@ -136,12 +136,11 @@ module scheduler
                      if (flip) 
                      begin
                         // Capture the associated data when flip is asserted
-                        unit_number_reg <= unit_number;
-                        offset_reg      <= offset;
-                        membrane_reg    <= membrane;
+                        unit_number_reg      <= unit_number;
+                        offset_reg           <= offset;
+                        membrane_reg         <= membrane;
                         should_increment     <= add_membrane;
                         to_increment         <= add_membrane;
-
                     end
                 end
 

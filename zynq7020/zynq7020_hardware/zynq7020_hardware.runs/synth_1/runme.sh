@@ -8,9 +8,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/home/mlewand/software/Xilinx/Vitis/2024.1/bin:/home/mlewand/software/Xilinx/Vivado/2024.1/ids_lite/ISE/bin/lin64:/home/mlewand/software/Xilinx/Vivado/2024.1/bin
+  PATH=/home/mlewand/tools/Vitis/2024.2/bin:/home/mlewand/tools/Vivado/2024.2/ids_lite/ISE/bin/lin64:/home/mlewand/tools/Vivado/2024.2/bin
 else
-  PATH=/home/mlewand/software/Xilinx/Vitis/2024.1/bin:/home/mlewand/software/Xilinx/Vivado/2024.1/ids_lite/ISE/bin/lin64:/home/mlewand/software/Xilinx/Vivado/2024.1/bin:$PATH
+  PATH=/home/mlewand/tools/Vitis/2024.2/bin:/home/mlewand/tools/Vivado/2024.2/ids_lite/ISE/bin/lin64:/home/mlewand/tools/Vivado/2024.2/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.runs/synth_1'
+HD_PWD='/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log neuroSA_top_record_numbers.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuroSA_top_record_numbers.tcl
+EAStep vivado -log neuron_ensemble_with_memory_with_buff.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuron_ensemble_with_memory_with_buff.tcl

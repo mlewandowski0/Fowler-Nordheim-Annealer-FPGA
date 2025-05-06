@@ -1,4 +1,3 @@
-`include "UTIL.v"
 `timescale 1ns / 100ps
 
 module fixed_add_tb;

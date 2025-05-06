@@ -1,0 +1,20 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.sim/sim_1/synth/func/xsim/tb_neuron_ensemble_with_buff_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LFSR
+INFO: [VRFC 10-311] analyzing module LFSR__parameterized0
+INFO: [VRFC 10-311] analyzing module LFSR_inout
+INFO: [VRFC 10-311] analyzing module LFSR_inout__parameterized0
+INFO: [VRFC 10-311] analyzing module distributed_graph_memory
+INFO: [VRFC 10-311] analyzing module flipping_unit
+INFO: [VRFC 10-311] analyzing module float16_mult
+INFO: [VRFC 10-311] analyzing module log_LUT
+INFO: [VRFC 10-311] analyzing module log_noise_generator
+INFO: [VRFC 10-311] analyzing module mulBITSxBITS
+INFO: [VRFC 10-311] analyzing module neuron_ensemble
+INFO: [VRFC 10-311] analyzing module neuron_ensemble_storage
+INFO: [VRFC 10-311] analyzing module neuron_ensemble_with_memory_with_buff
+INFO: [VRFC 10-311] analyzing module temperature_mapping
+INFO: [VRFC 10-311] analyzing module temperature_module
+INFO: [VRFC 10-311] analyzing module transmit_buffer
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sim_1/new/tb_neuron_ensemble_with_memory_with_buff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_neuron_ensemble_with_buff

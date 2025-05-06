@@ -8,6 +8,13 @@ module fixed_mult #(
     output wire          overflow
 );
 
+    // parameter check
+    initial
+    begin
+        if (FRAC_BITS >= BITS - 1)
+            $error("fixed mult: FRAC_BITS must be < BITS - 1");
+    end
+
     // Convert the inputs to signed numbers.
     wire signed [BITS-1:0] a_s = a;
     wire signed [BITS-1:0] b_s = b;

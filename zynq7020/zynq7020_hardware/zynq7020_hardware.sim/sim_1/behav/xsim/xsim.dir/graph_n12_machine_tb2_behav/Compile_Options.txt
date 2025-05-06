@@ -1,1 +1,0 @@
---incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "graph_n12_machine_tb2_behav" "xil_defaultlib.graph_n12_machine_tb2" "xil_defaultlib.glbl" -log "elaborate.log" 

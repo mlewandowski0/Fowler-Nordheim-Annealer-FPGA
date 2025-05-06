@@ -1,4 +1,8 @@
+
 `timescale 1ns / 1ps
+
+// Fibonacci form, MSB feedback LFSR
+// Synchronous clear (active-high)
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -20,132 +24,94 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module LFSR #(parameter BITS=7)  
-(
-    input wire clk,
-    input wire chip_enable,
+module LFSR #(
+              parameter BITS = 7 // 3 - 32 supported
+              )
+              (
+                input wire                  clk,
+                input wire                  reset, // synchronous, active-high
+                input wire                  chip_enable,
+                
+                // optional parallel seed load
+                input wire                  write_seed,
+                input wire [BITS-1:0]       seed,
+                output wire [BITS-1:0]      out
+              
+              );
 
-    // seed
-    input wire write_seed,
-    input wire [BITS:1] seed,
-    output wire [BITS:1] out
-
-);
-
-reg [BITS:1] state;
-reg XNORed;
+// Parameter Sanity check 
+initial 
+    if (BITS < 3 || BITS > 32)
+        $error("LFSR: BITS=%0d is outside supported range 3-32", BITS);
 
 
-assign out = state;
-
-always @(posedge clk) begin
-    if (write_seed)
+    // 2) state register + output 
+    // (* keep = "true" *) 
+    reg [BITS-1:0] state;
+    assign out = state;
+    
+    // Combinational feedback XNOR network
+    
+    reg fb;
+    
+    always @*
+    
     begin
-       state <= seed;
+        fb = 1'b0;
+        case (BITS)
+          3 :  fb = state[2]  ^~ state[1];
+          4 :  fb = state[3]  ^~ state[2];
+          5 :  fb = state[4]  ^~ state[2];
+          6 :  fb = state[5]  ^~ state[4];
+          7 :  fb = state[6]  ^~ state[5];
+          8 :  fb = state[7]  ^~ state[5] ^~ state[4] ^~ state[3];
+          9 :  fb = state[8]  ^~ state[4];
+          10:  fb = state[9]  ^~ state[6];
+          11:  fb = state[10] ^~ state[8];
+          12:  fb = state[11] ^~ state[5] ^~ state[3] ^~ state[0];
+          13:  fb = state[12] ^~ state[3] ^~ state[2] ^~ state[0];
+          14:  fb = state[13] ^~ state[4] ^~ state[2] ^~ state[0];
+          15:  fb = state[14] ^~ state[13];
+          16:  fb = state[15] ^~ state[14] ^~ state[12] ^~ state[3];
+          17:  fb = state[16] ^~ state[13];
+          18:  fb = state[17] ^~ state[10];
+          19:  fb = state[18] ^~ state[5] ^~ state[1] ^~ state[0];
+          20:  fb = state[19] ^~ state[16];
+          21:  fb = state[20] ^~ state[18];
+          22:  fb = state[21] ^~ state[20];
+          23:  fb = state[22] ^~ state[17];
+          24:  fb = state[23] ^~ state[22] ^~ state[21] ^~ state[16];
+          25:  fb = state[24] ^~ state[21];
+          26:  fb = state[25] ^~ state[5] ^~ state[1] ^~ state[0];
+          27:  fb = state[26] ^~ state[4] ^~ state[1] ^~ state[0];
+          28:  fb = state[27] ^~ state[24];
+          29:  fb = state[28] ^~ state[26];
+          30:  fb = state[29] ^~ state[5] ^~ state[3] ^~ state[0];
+          31:  fb = state[30] ^~ state[27];
+          32:  fb = state[31] ^~ state[21] ^~ state[1] ^~ state[0];
+        endcase
     end
-    else if (chip_enable) 
+    
+    // sequential update 
+    
+    always @(posedge clk)
     begin
-        state <= {state[BITS-1:1], XNORed};
+        if (reset) 
+        begin
+            state <= {BITS{1'b1}};
+        end
+        else if (write_seed)
+        begin
+            // avoid lock-up on all-zero seed
+            state <= (seed == {BITS{1'b1}}) ? {BITS{1'b0}} : seed;
+        end
+        else if (chip_enable)
+        begin
+            // shift left, feedback into LSB
+            state <= {state[BITS-2:0], fb};
+        end
     end
-end
 
-  // Create Feedback Polynomials.  Based on Application Note:
-  // http://www.xilinx.com/support/documentation/application_notes/xapp052.pdf
-  always @(*)
-    begin
-      case (BITS)
-        3: begin
-            XNORed =   state[3] ^~   state[2];
-        end
-        4: begin
-            XNORed =   state[4] ^~   state[3];
-        end
-        5: begin
-            XNORed =   state[5] ^~   state[3];
-        end
-        6: begin
-            XNORed =   state[6] ^~   state[5];
-        end
-        7: begin
-            XNORed =   state[7] ^~   state[6];
-        end
-        8: begin
-            XNORed =   state[8] ^~   state[6] ^~   state[5] ^~   state[4];
-        end
-        9: begin
-            XNORed =   state[9] ^~   state[5];
-        end
-        10: begin
-            XNORed =   state[10] ^~   state[7];
-        end
-        11: begin
-            XNORed =   state[11] ^~   state[9];
-        end
-        12: begin
-            XNORed =   state[12] ^~   state[6] ^~   state[4] ^~   state[1];
-        end
-        13: begin
-            XNORed =   state[13] ^~   state[4] ^~   state[3] ^~   state[1];
-        end
-        14: begin
-            XNORed =   state[14] ^~   state[5] ^~   state[3] ^~   state[1];
-        end
-        15: begin
-            XNORed =   state[15] ^~   state[14];
-        end
-        16: begin
-            XNORed =   state[16] ^~   state[15] ^~   state[13] ^~   state[4];
-          end
-        17: begin
-            XNORed =   state[17] ^~   state[14];
-        end
-        18: begin
-            XNORed =   state[18] ^~   state[11];
-        end
-        19: begin
-            XNORed =   state[19] ^~   state[6] ^~   state[2] ^~   state[1];
-        end
-        20: begin
-            XNORed =   state[20] ^~   state[17];
-        end
-        21: begin
-            XNORed =   state[21] ^~   state[19];
-        end
-        22: begin
-            XNORed =   state[22] ^~   state[21];
-        end
-        23: begin
-            XNORed =   state[23] ^~   state[18];
-        end
-        24: begin
-            XNORed =   state[24] ^~   state[23] ^~   state[22] ^~   state[17];
-        end
-        25: begin
-            XNORed =   state[25] ^~   state[22];
-        end
-        26: begin
-            XNORed =   state[26] ^~   state[6] ^~   state[2] ^~   state[1];
-        end
-        27: begin
-            XNORed =   state[27] ^~   state[5] ^~   state[2] ^~   state[1];
-        end
-        28: begin
-            XNORed =   state[28] ^~   state[25];
-        end
-        29: begin
-            XNORed =   state[29] ^~   state[27];
-        end
-        30: begin
-            XNORed =   state[30] ^~   state[6] ^~   state[4] ^~   state[1];
-        end
-        31: begin
-            XNORed =   state[31] ^~   state[28];
-        end
-        32: begin
-            XNORed =   state[32] ^~   state[22] ^~   state[2] ^~   state[1];
-        end
-    endcase // case (NUM_BITS)
-end // always @ (*)
 
     
 endmodule

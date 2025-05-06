@@ -69,25 +69,26 @@ module round_robin_priority_selector
  
    
 
-    always @(*) 
-    begin
-        spiked = 1'b0;
-        unit_numb     = {UNIT_WIDTH{1'bX}};
+always @(*) begin
+  // 1) default everything once
+  spiked    = 1'b0;
+  unit_numb = {UNIT_WIDTH{1'bX}};
+  offset    = {NEURON_NUM_WIDTH{1'bX}};
+  membrane  = {MEMBRANE_WIDTH{1'bX}};
+  add_mem   = 1'bX;
 
-        for (i = 0; i < UNITS; i = i + 1) 
-        begin
-            idx = (priority + i) % UNITS;
-            
-            if (!spiked && spikes[idx]) 
-            begin
-                spiked = 1;
-                unit_numb     = all_unit_numbers[(idx+1)*UNIT_WIDTH-1 -: UNIT_WIDTH];
-                offset        = offsets[(idx+1)*NEURON_NUM_WIDTH-1 -: NEURON_NUM_WIDTH];
-                membrane      = all_membranes[(idx+1)*MEMBRANE_WIDTH-1 -: MEMBRANE_WIDTH];
-                add_mem       = add_mems[idx];
-                selected     = idx;  // Store the selected index (useful for debugging)
-            end
-        end
+  // 2) then scan exactly once
+  for (i = 0; i < UNITS; i = i + 1) begin
+    idx = (priority + i) % UNITS;
+    if (!spiked && spikes[idx]) begin
+      spiked    = 1;
+      unit_numb = all_unit_numbers[(idx+1)*UNIT_WIDTH-1 -: UNIT_WIDTH];
+      offset    = offsets[(idx+1)*NEURON_NUM_WIDTH-1 -: NEURON_NUM_WIDTH];
+      membrane  = all_membranes[(idx+1)*MEMBRANE_WIDTH-1 -: MEMBRANE_WIDTH];
+      add_mem   = add_mems[idx];
     end
+  end
+end
+
 
 endmodule

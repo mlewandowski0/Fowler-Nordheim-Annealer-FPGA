@@ -13,9 +13,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "/home/mlewand/software/Xilinx/Vitis/2024.1/bin:/home/mlewand/software/Xilinx/Vivado/2024.1/ids_lite/ISE/bin/lin64;/home/mlewand/software/Xilinx/Vivado/2024.1/bin;";
+  PathVal = "/home/mlewand/tools/Vitis/2024.2/bin:/home/mlewand/tools/Vivado/2024.2/ids_lite/ISE/bin/lin64;/home/mlewand/tools/Vivado/2024.2/bin;";
 } else {
-  PathVal = "/home/mlewand/software/Xilinx/Vitis/2024.1/bin:/home/mlewand/software/Xilinx/Vivado/2024.1/ids_lite/ISE/bin/lin64;/home/mlewand/software/Xilinx/Vivado/2024.1/bin;" + PathVal;
+  PathVal = "/home/mlewand/tools/Vitis/2024.2/bin:/home/mlewand/tools/Vivado/2024.2/ids_lite/ISE/bin/lin64;/home/mlewand/tools/Vivado/2024.2/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;
@@ -28,7 +28,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log neuroSA_top_record_numbers.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuroSA_top_record_numbers.tcl" );
+         "-log neuron_ensemble_with_memory_with_buff.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuron_ensemble_with_memory_with_buff.tcl" );
 
 
 

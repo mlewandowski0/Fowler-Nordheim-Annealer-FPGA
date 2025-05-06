@@ -248,7 +248,7 @@ begin
                 );
 end
 
-scheduler 
+scheduler_2
 #(
     .UNIT_WIDTH(UNIT_WIDTH),
     .GRAPH_WIDTH(GRAPH_WIDTH),

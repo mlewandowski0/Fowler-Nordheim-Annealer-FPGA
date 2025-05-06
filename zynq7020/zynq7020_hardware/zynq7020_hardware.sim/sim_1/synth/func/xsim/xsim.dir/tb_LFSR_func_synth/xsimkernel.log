@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_LFSR_func_synth/xsimk -simmode gui -wdb tb_LFSR_func_synth.wdb -simrunnum 0 -socket 38751
+Design successfully loaded
+Design Loading Memory Usage: 180772 KB (Peak: 180772 KB)
+Design Loading CPU Usage: 680 ms
+Simulation completed
+Simulation Memory Usage: 263028 KB (Peak: 320040 KB)
+Simulation CPU Usage: 680 ms

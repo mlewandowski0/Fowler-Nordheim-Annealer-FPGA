@@ -1,0 +1,118 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../zynq7020_hardware.srcs/sim_1/imports/design-files" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/LFSR.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/LFSR_inout.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/cla_nbit.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/distributed_graph_memory.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/fixed_mult.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/fixed_to_int.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/flipping_unit.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/float16_mult.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/float16_normalizer.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/float16_to_int.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/log_LUT.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/log_noise_generator.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/mulBITSxBITS.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/neuron_ensemble.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/neuron_ensemble_storage.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/neuron_ensemble_with_memory.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/neuron_ensemble_with_memory_with_buff.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/round_robin_priority_selector.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/new/scheduler_2.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/simple_priority_selector.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/temperature_mapping.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/temperature_module.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/transmit_buffer.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/vedic_mul16x16.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/vedic_mul2x2.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/vedic_mul4x4.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/vedic_mul8x8.v" \
+
+sv xil_defaultlib  --include "../../../../zynq7020_hardware.srcs/sim_1/imports/design-files" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/neuroSA_machine.sv" \
+
+verilog xil_defaultlib  --include "../../../../zynq7020_hardware.srcs/sim_1/imports/design-files" \
+"../../../../zynq7020_hardware.srcs/sources_1/new/neuroSA_machine_verilog_wrapper_N8_A2.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/scheduler.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/new/neuroSA_verilog.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/graph_n12_machine_fixed.v" \
+"../../../../zynq7020_hardware.gen/sources_1/bd/design_1/sim/design_1.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/LFSR_with_adv.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/UTIL.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/adder.v" \
+"../../../../zynq7020_hardware.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/ensemble_unit_top_for_record_numbers.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/fixed_add.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/float16_add.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/float16_add_normalizer.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/float16_alignment.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/graph_n12_machine.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/graph_n12_machine_postsynth.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/graph_processor_small.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/membrane_update.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/round_robin_scheduler.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/temp_module.v" \
+
+sv xil_defaultlib  --include "../../../../zynq7020_hardware.srcs/sim_1/imports/design-files" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/neuroSA_machine_N800_U25_tb.sv" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/neuroSA_top_record_numbers.sv" \
+"../../../../zynq7020_hardware.srcs/sources_1/new/zynq7020ps_neuroSA_wrapper.sv" \
+
+verilog xil_defaultlib  --include "../../../../zynq7020_hardware.srcs/sim_1/imports/design-files" \
+"../../../../zynq7020_hardware.srcs/sources_1/imports/design-files/DEFINES.v" \
+"../../../../zynq7020_hardware.srcs/sources_1/new/fixed_mult_dsp.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/float16_to_int_tb.v" \
+
+sv xil_defaultlib  --include "../../../../zynq7020_hardware.srcs/sim_1/imports/design-files" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/neuroSA_machine_N12_U3_tb.sv" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/zynq7020ps_neuroSA_wrapper_tb.sv" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/neuroSA_machine_N800_U25_tb.sv" \
+
+verilog xil_defaultlib  --include "../../../../zynq7020_hardware.srcs/sim_1/imports/design-files" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/float16_mult_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/float16_add_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/fixed_mult_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/fixed_add_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/adder_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/fixed_to_int_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/flipping_unit_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/graph_n12_machine_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/graph_n12_machine_tb2.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/graph_n12_machine_tb2_fixed.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/integration_transmit_buffer_selection_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/log_noise_generator_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/neuron_ensemble_storage_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/neuron_ensemble_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/neuron_ensemble_with_memory_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/round_robin_priority_scheduler_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/round_robin_priority_selector_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/scheduler2_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/scheduler_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/simple_priority_selector_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/temperature_mapping_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/temperature_module_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/transmit_buffer_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/noise_source_tb.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_LFSR.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_LFSR_inout.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_log_LUT.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_log_noise.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_temperature_mapping.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_temperature_module.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_fixed_mult.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_fixed_to_int.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_fixed_mult_dsp.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_flipping_unit.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_neuron_ensemble_storage.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_distributed_graph_memory.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_transmit_buffer.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_simple_priority_selector.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_scheduler_2.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_neuron_ensemble.v" \
+"../../../../zynq7020_hardware.srcs/sim_1/new/tb_neuron_ensemble_with_memory_with_buff.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

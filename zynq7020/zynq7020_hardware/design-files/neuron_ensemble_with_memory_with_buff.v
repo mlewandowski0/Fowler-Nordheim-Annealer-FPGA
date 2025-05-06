@@ -19,7 +19,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module neuron_ensemble_with_memory_with_buff
 #(
     parameter GRAPH_WIDTH= 12,
@@ -245,7 +244,10 @@ module neuron_ensemble_with_memory_with_buff
                 end
                 ENSEMBLE_WITH_MEM_HOLD:
                 begin
-                    next_state = ENSEMBLE_WITH_MEM_HOLD;
+                    if (halt)
+                       next_state = ENSEMBLE_WITH_MEM_HOLD;
+                    else
+                        next_state = ENSEMBLE_WITH_MEM_GENERATE_1;
                 end
                 ENSEMBLE_WITH_MEM_FETCH_Q:
                 begin

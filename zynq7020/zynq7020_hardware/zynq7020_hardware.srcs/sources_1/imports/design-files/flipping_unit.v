@@ -20,122 +20,101 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module flipping_unit #(parameter LOG_NOISE_SOURCE_WIDTH = 16,
-                       parameter LOG_LUT_BIT_SIZE = 8, 
-                       parameter REAL_WIDTH=16,
-                       parameter FLIPPING_OUTPUT_WIDTH=16,
-                       parameter LOG_NOISE_LUT_FILENAME="log_noise_LUT.mif",
-                       parameter TEMPERATURE_LUT_FILENAME="temperature_LUT.mif",
-                       parameter TEMPERATURE_LUT_WIDTH=7,
-                       parameter PIPELINED_ROMs=1,
-                       parameter USE_FLOAT_POINT=0,
-                       parameter FRACTIONAL_PART=8)
+module flipping_unit
+#(
+    parameter LOG_NOISE_SOURCE_WIDTH = 16,
+    parameter LOG_LUT_BIT_SIZE       = 8,
+    parameter REAL_WIDTH             = 18,   // 16 or 18 bits for fixed path
+    parameter FLIP_OUT_WIDTH         = 16,
+    parameter LOG_LUT_FILE           = "log_noise_fixed_width=18_frac_bits=9_nbits_of_lut=8.mif",
+    parameter TEMP_LUT_FILE          = "temperature_LUT_fixed_N9.mif",
+    parameter TEMP_LUT_WIDTH         = 9,
+    parameter PIPELINED_ROMs         = 1,    // 0 = comb, 1 = +1 reg
+    parameter USE_FLOAT_POINT        = 0,    // 0 = fixed, 1 = FP16
+    parameter FRAC_BITS              = 9
+)
+(
+    input  wire                      clk,
+    input  wire                      reset,          // synchronous
+    input  wire                      CE,             // enable new sample
+    input  wire                      write_seed,
+    input  wire [LOG_NOISE_SOURCE_WIDTH-1:0] seed,
+    input  wire                      decrease_temp,
+    output wire signed [FLIP_OUT_WIDTH-1:0] flipping_output
+);
 
-                    (input wire clk, 
-                     input wire CE,
-                     input wire reset,
-                     input wire write_seed, 
-                     input wire [LOG_NOISE_SOURCE_WIDTH-1:0] seed,
-                     input wire decrease_temp,
-                     output wire [FLIPPING_OUTPUT_WIDTH -1:0] flipping_output);
-
-    wire [REAL_WIDTH-1:0] noise_out, temperature_multiplier_out;
-
-    log_noise_generator #(.NOISE_SOURCE_WIDTH (LOG_NOISE_SOURCE_WIDTH),
+                        
+   // core multiplier (combinational)
+   wire signed  [REAL_WIDTH-1:0] mul_fp, noise_fp, temp_fp;
+   wire mul_err;
+    
+    
+    // sub-blocks - always enabled
+    
+    log_noise_generator #(.NOISE_SOURCE_WIDTH(LOG_NOISE_SOURCE_WIDTH),
                           .LUT_BIT_SIZE(LOG_LUT_BIT_SIZE),
-                            .LUT_WIDTH(REAL_WIDTH),
-                             .filename(LOG_NOISE_LUT_FILENAME))
+                          .LUT_WIDTH(REAL_WIDTH),
+                          .FILENAME(LOG_LUT_FILE))
+                          u_noise(.clk(clk),
+                           .reset(reset),
+                           .CE(CE),
+                           .write_seed(write_seed),
+                           .seed(seed),
+                           .noise_out(noise_fp));
 
-                             noise_generator
-                             (
-                                .clk(clk),
-                                .CE(CE), 
-                                .write_seed(write_seed),
-                                .seed(seed), 
-                                .noise_out(noise_out)
-                             );
+   temperature_module #(.N(TEMP_LUT_WIDTH),
+                        .OUT_WIDTH(REAL_WIDTH),
+                        .LUT_FILE(TEMP_LUT_FILE))
+                        u_temp(.clk(clk),
+                               .reset(reset),
+                               .decrease_temp(decrease_temp),
+                               .temp(temp_fp)
+                        );
 
-
-    temperature_module #(.N(TEMPERATURE_LUT_WIDTH), 
-                         .OUT_WIDTH(REAL_WIDTH), 
-                         .LUT_FILE(TEMPERATURE_LUT_FILENAME))
-
-                         temperature_module_inst
-                         (.clk(clk), 
-                          .decrease_temp(decrease_temp),
-                          .reset(reset),
-                          .temp(temperature_multiplier_out));
-                              
-
-    // TODO : wire error;
-    wire [REAL_WIDTH-1:0] noise_times_temp;
-
-    if (PIPELINED_ROMs == 1)
-    begin
-        wire [REAL_WIDTH-1:0] flipping_output_int;
-        reg [REAL_WIDTH-1:0] noise_out_reg, temperature_multiplier_out_reg, flipping_output_reg;
-        reg [REAL_WIDTH-1:0] noise_times_temp_reg;
-        
-        wire error;
-
-        assign flipping_output = flipping_output_reg[FLIPPING_OUTPUT_WIDTH-1:0];
-
-        if (USE_FLOAT_POINT == 1)
-        begin 
-            float16_mult mult(.a(noise_out_reg), .b(temperature_multiplier_out_reg), .c(noise_times_temp), .error(error));
-            float16_to_int float16_to_integer_inst(.fp16(noise_times_temp_reg), .int_out(flipping_output_int));
-        end
-        else if (USE_FLOAT_POINT == 0)
-        begin 
-            fixed_mult #(.BITS(REAL_WIDTH), .FRAC_BITS(FRACTIONAL_PART)) mult(.a(noise_out_reg), 
-                                                                              .b(temperature_multiplier_out_reg),
-                                                                              .product(noise_times_temp), .overflow(error));
-            fixed_to_int #(.TOTAL_BITS(REAL_WIDTH), .FRAC_BITS(FRACTIONAL_PART), .OUT_WIDTH(REAL_WIDTH)) fixed_to_int(.fixed_val(noise_times_temp_reg), 
-                                                                                                                      .int_fixed_val(flipping_output_int));
-        end
-
-        always @(posedge clk)
-        begin
-            if (reset)
-            begin
-                noise_out_reg <= {REAL_WIDTH{1'b0}};
-                temperature_multiplier_out_reg <= {REAL_WIDTH{1'b0}};
-                flipping_output_reg <= {REAL_WIDTH{1'b0}};
-                noise_times_temp_reg <=  {REAL_WIDTH{1'b0}};
-            end
-            else if (CE == 1)
-            begin
-                noise_out_reg <= noise_out;
-                temperature_multiplier_out_reg <= temperature_multiplier_out;
-                noise_times_temp_reg <= noise_times_temp;
-                flipping_output_reg <= flipping_output_int;
-                
-            end
-        end
-
-        always @(posedge clk)
-        begin
-            if (reset)
-            begin
-            end
-        end
-            
-    end    
-    else
-    begin
-
-        if (USE_FLOAT_POINT == 1)
-        begin 
-            float16_mult mult(.a(noise_out), .b(temperature_multiplier_out), .c(noise_times_temp), .error(error));
-            float16_to_int float16_to_integer_inst(.fp16(noise_times_temp), .int_out(flipping_output));
-        end
-        else if (USE_FLOAT_POINT == 0)
-        begin
-            fixed_mult mult(.a(noise_out), .b(temperature_multiplier_out), .product(noise_times_temp), .overflow(error));
-            fixed_to_int #(.TOTAL_BITS(REAL_WIDTH), .FRAC_BITS(FRACTIONAL_PART)) fixed_to_int(.fixed_val(noise_times_temp), .int_fixed_val(flipping_output));
-
-        end
+   
+   
+   // make the DSP selectable : fp16 was useful for comaprison to python, but is big in comparison
+   // to fixed_mult (single DSP48 and few luts)
+   generate 
+    if (USE_FLOAT_POINT) begin : FP_PATH
+        float16_mult u_fmul(.a(noise_fp),
+                            .b(temp_fp),
+                            .c(mul_fp),
+                            .error(mul_err));
+    end else begin : FX_PATH
+        fixed_mult #(.BITS(REAL_WIDTH),
+                         .FRAC_BITS(FRAC_BITS))
+                       u_fmul (.a(noise_fp),
+                               .b(temp_fp),
+                               .product(mul_fp),
+                               .overflow(mul_err));
+    end   
+   endgenerate                         
+   
+   // optional pipeline
+   wire signed [REAL_WIDTH-1:0] mul_fp_d;
+   reg signed [REAL_WIDTH-1:0] stage1_r;
+   
+   always @(posedge clk) begin
+        if (reset)
+            stage1_r <= {REAL_WIDTH{1'b0}};
+        else if (CE)
+            stage1_r <= mul_fp;
     end
+    assign mul_fp_d = (PIPELINED_ROMs) ? stage1_r : mul_fp;
 
 
+    generate
+        if (USE_FLOAT_POINT) begin : FP_OUT
+            float16_to_int u_conv (.fp16 (mul_fp_d),
+                                   .int_out (flipping_output));
+        end else begin : FX_OUT
+            fixed_to_int #(.TOTAL_BITS (REAL_WIDTH),
+                           .FRAC_BITS  (FRAC_BITS),
+                           .OUT_WIDTH  (FLIP_OUT_WIDTH))
+                         u_conv (.fixed_val (mul_fp_d),
+                                 .int_fixed_val (flipping_output));
+        end
+    endgenerate
+            
 endmodule

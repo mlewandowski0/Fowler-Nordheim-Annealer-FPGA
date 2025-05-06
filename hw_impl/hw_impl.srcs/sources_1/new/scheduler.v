@@ -141,8 +141,8 @@ module scheduler
                         membrane_reg    <= membrane;
                         should_increment     <= add_membrane;
                         to_increment         <= add_membrane;
-
                     end
+                    
                 end
 
                 STATE_DATA_CAPTURED: 

@@ -19,6 +19,8 @@ parameter FIXED_TOTAL_WIDTH=18,
 parameter FRACTIONAL_PART=8
 )
 (
+
+
     input wire                                   clk, 
     input wire                                   storage_CE,
     input wire                                   advance_index,
