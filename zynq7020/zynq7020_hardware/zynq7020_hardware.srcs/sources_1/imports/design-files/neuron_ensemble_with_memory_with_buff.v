@@ -230,12 +230,12 @@ always @(posedge clk) begin
         else 
         begin
             state  <= next_state;
-            
-            if (state == S_FETCH)
-               incrementing_reg <= should_increment;
-    
+                
             if (update_memory)
+            begin
                 index_of_neuron_that_fired_reg <= index_of_neuron_that_fired;
+               incrementing_reg <= should_increment;
+            end
         end
 end
 

@@ -1,7 +1,7 @@
 Vivado Simulator v2024.2.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/mlewand/tools/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L secureip --snapshot tb_neuron_ensemble_with_buff_func_synth xil_defaultlib.tb_neuron_ensemble_with_buff xil_defaultlib.glbl -log elaborate.log 
+Running: /home/mlewand/tools/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L secureip --snapshot tb_neuroSA_machine_verilog_wrapper_N8_A2_func_synth xil_defaultlib.tb_neuroSA_machine_verilog_wrapper_N8_A2 xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -9,42 +9,53 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.FDSE_default
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.LUT4
 Compiling module unisims_ver.x_lut3_mux8
 Compiling module unisims_ver.LUT3
-Compiling module unisims_ver.FDRE_default
-Compiling module unisims_ver.LUT6
-Compiling module xil_defaultlib.distributed_graph_memory
-Compiling module unisims_ver.OBUF
 Compiling module unisims_ver.LUT5
 Compiling module unisims_ver.x_lut1_mux2
 Compiling module unisims_ver.LUT1
-Compiling module unisims_ver.x_lut2_mux4
-Compiling module unisims_ver.LUT2
-Compiling module xil_defaultlib.transmit_buffer
-Compiling module unisims_ver.BUFG
-Compiling module unisims_ver.IBUF
-Compiling module unisims_ver.CARRY4
-Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
-Compiling module xil_defaultlib.mulBITSxBITS
-Compiling module xil_defaultlib.float16_mult
-Compiling module unisims_ver.LUT4
+Compiling module xil_defaultlib.scheduler_2
+Compiling module xil_defaultlib.distributed_graph_memory
+Compiling module xil_defaultlib.transmit_buffer_0
+Compiling module unisims_ver.DSP48E1(ALUMODEREG=0,CARRYINREG=...
+Compiling module unisims_ver.MUXF8
+Compiling module unisims_ver.MUXF7
+Compiling module xil_defaultlib.LFSR__parameterized0_8
+Compiling module xil_defaultlib.LFSR_inout__parameterized0_7
+Compiling module xil_defaultlib.log_noise_generator_5
 Compiling module unisims_ver.RB18_INTERNAL_VLOG(RDADDR_COLLIS...
-Compiling module unisims_ver.RAMB18E1(INITP_00=256'b011111111...
-Compiling module xil_defaultlib.log_LUT
-Compiling module unisims_ver.FDSE_default
+Compiling module unisims_ver.RAMB18E1(INITP_00=256'b0100,INIT...
+Compiling module xil_defaultlib.temperature_module_6
+Compiling module xil_defaultlib.flipping_unit_1
+Compiling module xil_defaultlib.LFSR_4
+Compiling module xil_defaultlib.LFSR_inout_3
+Compiling module xil_defaultlib.neuron_ensemble_storage_2
+Compiling module xil_defaultlib.neuron_ensemble
+Compiling module xil_defaultlib.neuron_ensemble_with_memory_with...
+Compiling module xil_defaultlib.distributed_graph_memory__parame...
+Compiling module xil_defaultlib.transmit_buffer
 Compiling module xil_defaultlib.LFSR__parameterized0
 Compiling module xil_defaultlib.LFSR_inout__parameterized0
 Compiling module xil_defaultlib.log_noise_generator
-Compiling module unisims_ver.RB18_INTERNAL_VLOG(RDADDR_COLLIS...
-Compiling module unisims_ver.RAMB18E1(INITP_00=256'b0100,INIT...
-Compiling module xil_defaultlib.temperature_mapping
 Compiling module xil_defaultlib.temperature_module
 Compiling module xil_defaultlib.flipping_unit
 Compiling module xil_defaultlib.LFSR
 Compiling module xil_defaultlib.LFSR_inout
 Compiling module xil_defaultlib.neuron_ensemble_storage
-Compiling module xil_defaultlib.neuron_ensemble
+Compiling module xil_defaultlib.neuron_ensemble__parameterized0
 Compiling module xil_defaultlib.neuron_ensemble_with_memory_with...
-Compiling module xil_defaultlib.tb_neuron_ensemble_with_buff
+Compiling module xil_defaultlib.neuroSA_machine
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.OBUF
+Compiling module xil_defaultlib.neuroSA_machine_verilog_wrapper_...
+Compiling module xil_defaultlib.tb_neuroSA_machine_verilog_wrapp...
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_neuron_ensemble_with_buff_func_synth
+Built simulation snapshot tb_neuroSA_machine_verilog_wrapper_N8_A2_func_synth

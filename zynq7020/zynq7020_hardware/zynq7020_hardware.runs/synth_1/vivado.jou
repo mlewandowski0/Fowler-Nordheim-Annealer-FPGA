@@ -3,22 +3,22 @@
 # SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Tue May  6 16:47:57 2025
-# Process ID         : 92760
+# Start of session at: Thu May  8 16:00:11 2025
+# Process ID         : 86658
 # Current directory  : /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.runs/synth_1
-# Command line       : vivado -log neuron_ensemble_with_memory_with_buff.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuron_ensemble_with_memory_with_buff.tcl
-# Log file           : /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.runs/synth_1/neuron_ensemble_with_memory_with_buff.vds
+# Command line       : vivado -log neuroSA_machine_verilog_wrapper_N8_A2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuroSA_machine_verilog_wrapper_N8_A2.tcl
+# Log file           : /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.runs/synth_1/neuroSA_machine_verilog_wrapper_N8_A2.vds
 # Journal file       : /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.runs/synth_1/vivado.jou
 # Running On         : mlewan
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.2 LTS
 # Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700H
-# CPU Frequency      : 3756.960 MHz
+# CPU Frequency      : 748.854 MHz
 # CPU Physical cores : 14
 # CPU Logical cores  : 20
 # Host memory        : 33342 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 35489 MB
-# Available Virtual  : 16460 MB
+# Available Virtual  : 21854 MB
 #-----------------------------------------------------------
-source neuron_ensemble_with_memory_with_buff.tcl -notrace
+source neuroSA_machine_verilog_wrapper_N8_A2.tcl -notrace

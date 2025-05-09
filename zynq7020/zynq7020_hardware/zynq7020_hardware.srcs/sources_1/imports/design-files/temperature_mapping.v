@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module temperature_mapping #(parameter N = 7,
+module temperature_mapping #(parameter N = 9,
                              parameter OUT_WIDTH = 18,
                              parameter LUT_FILE = "temperature_LUT_fixed_N9.mif")
                              (
@@ -44,7 +44,7 @@ localparam LUT_SIZE = 1 << N;
 
 
 // ROM declaration 
-(* ram_style = "block", rom_init_file = LUT_FILE *)
+//(* ram_style = "block", rom_init_file = LUT_FILE *)
 reg [OUT_WIDTH-1:0] rom [0:(LUT_SIZE-1)];
 
 initial $readmemb(LUT_FILE, rom);

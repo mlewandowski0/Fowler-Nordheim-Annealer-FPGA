@@ -22,7 +22,7 @@
 
 module tb_temperature_mapping();
 
-    localparam N = 7;
+    localparam N = 9;
     localparam OUT_WIDTH = 18;
     localparam MEMFILE = "temperature_LUT_fixed_N9.mif";
     localparam CLK_T = 10;

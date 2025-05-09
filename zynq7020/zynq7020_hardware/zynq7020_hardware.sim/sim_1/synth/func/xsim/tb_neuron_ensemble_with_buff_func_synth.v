@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-// Date        : Tue May  6 16:49:07 2025
+// Date        : Wed May  7 22:17:04 2025
 // Host        : mlewan running 64-bit Ubuntu 24.04.2 LTS
 // Command     : write_verilog -mode funcsim -nolib -force -file
 //               /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.sim/sim_1/synth/func/xsim/tb_neuron_ensemble_with_buff_func_synth.v

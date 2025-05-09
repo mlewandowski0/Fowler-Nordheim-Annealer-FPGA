@@ -1,0 +1,5 @@
+d_cuts = -5.0, curr_cuts = 0.0, curr_cuts_after_update = 5
+d_cuts = 5.0, curr_cuts = 5.0, curr_cuts_after_update = 0
+d_cuts = -5.0, curr_cuts = 0.0, curr_cuts_after_update = 5
+d_cuts = 5.0, curr_cuts = 5.0, curr_cuts_after_update = 0
+d_cuts = -5.0, curr_cuts = 0.0, curr_cuts_after_update = 5

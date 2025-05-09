@@ -41,17 +41,17 @@ module scheduler_2
     input wire                                 flip, 
     input wire [UNIT_WIDTH-1:0]                unit_number,
     input wire [NEURON_NUM_WIDTH-1:0]          offset,
-    input wire [MEMBRANE_WIDTH-1:0]            membrane,
+    input wire signed [MEMBRANE_WIDTH-1:0]     membrane,
     input wire                                 add_membrane,
 
     // scheduler outputs 
-    output [$clog2(GRAPH_WIDTH)-1:0]       index_of_neuron_that_fired,
+    output [$clog2(GRAPH_WIDTH)-1:0]           index_of_neuron_that_fired,
     output reg                                 reset_modules, 
     output wire                                halt_modules,
     output reg                                 update_memories,
     output reg                                 should_increment,
     output wire                                decrease_temp, 
-    output wire [SOLUTION_WIDTH-1:0]           cuts_best_transmit
+    output wire signed [SOLUTION_WIDTH-1:0]    cuts_best_transmit
 );
 
     // State Definitions
@@ -74,11 +74,11 @@ module scheduler_2
     reg                        flip_r;
     reg [UNIT_WIDTH-1:0]       unit_r;
     reg [NEURON_NUM_WIDTH-1:0] off_r;
-    reg [MEMBRANE_WIDTH-1:0]   mem_r;
+    reg signed [MEMBRANE_WIDTH-1:0]   mem_r;
     reg                        add_r;
     
     // tracking of the best-cut solution
-    reg [SOLUTION_WIDTH-1:0] cuts_cur, cuts_best;
+    reg signed [SOLUTION_WIDTH-1:0] cuts_cur, cuts_best;
     
     
     wire [$clog2(GRAPH_WIDTH)-1:0] idx_comb = {unit_r, off_r};
@@ -89,7 +89,7 @@ module scheduler_2
     assign halt_modules = halt_scheduler;
     
    // next potential cost
-    wire [SOLUTION_WIDTH-1:0] cuts_next = add_r ? (cuts_cur - mem_r) : (cuts_cur + mem_r);
+    wire signed [SOLUTION_WIDTH-1:0] cuts_next = add_r ? (cuts_cur - mem_r) : (cuts_cur + mem_r);
     
     
     // FSM : sequential part 

@@ -55,7 +55,7 @@ input  wire                       reset_flipping,
 output wire                       spike,
 output wire [UNIT_WIDTH-1:0]      unit_number,
 output wire [NEURON_WIDTH-1:0]    offset,
-output wire [MEMBRANE_WIDTH-1:0]  membrane,
+output wire signed [MEMBRANE_WIDTH-1:0]  membrane,
 output wire                       add_mem
 );
 

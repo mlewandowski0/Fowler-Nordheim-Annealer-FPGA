@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.runs/synth_1/neuron_ensemble_with_memory_with_buff.tcl"
+  variable script "/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.runs/synth_1/neuroSA_machine_verilog_wrapper_N8_A2.tcl"
   variable category "vivado_synth"
 }
 
@@ -264,12 +264,13 @@ read_mem {
   /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/adj_matrix_parititon/adj_matrix_N800_A100_distributed31.mif
   /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/adj_matrix_parititon/adj_matrix_N800_A100_distributed87.mif
   /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/adj_matrix_parititon/adj_matrix_N800_A100_distributed57.mif
-  /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/mif_files/membrane_data_N8.mif
   /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/artificial_problem/best_cut_N8.mif
-  /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/artificial_problem/membrane_data_N8.mif
   /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/artificial_problem/adj_matrix_N8_A2_distributed1.mif
   /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/artificial_problem/adj_matrix_N8_A2_distributed0.mif
   /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/artificial_problem/best_assignment_N8.mif
+  /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/scripts/noise_seeds.mif
+  /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/scripts/ensemble_seeds.mif
+  /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/artificial_problem/membrane_data_N8.mif
 }
 read_verilog -library xil_defaultlib -sv {
   /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/neuroSA_machine.sv
@@ -326,6 +327,7 @@ read_verilog -library xil_defaultlib {
   /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/temp_module.v
   /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/DEFINES.v
   /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/new/fixed_mult_dsp.v
+  /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sim_1/new/tb_neuroSA_machine_verilog_wrapper_N8_A2.v
 }
 add_files /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1/design_1_ooc.xdc]
@@ -350,7 +352,7 @@ read_checkpoint -auto_incremental -incremental /home/mlewand/Desktop/PROJS/FPGA-
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top neuron_ensemble_with_memory_with_buff -part xc7z020clg400-1
+synth_design -top neuroSA_machine_verilog_wrapper_N8_A2 -part xc7z020clg400-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -360,10 +362,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef neuron_ensemble_with_memory_with_buff.dcp
+write_checkpoint -force -noxdef neuroSA_machine_verilog_wrapper_N8_A2.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-generate_parallel_reports -reports { "report_utilization -file neuron_ensemble_with_memory_with_buff_utilization_synth.rpt -pb neuron_ensemble_with_memory_with_buff_utilization_synth.pb"  } 
+generate_parallel_reports -reports { "report_utilization -file neuroSA_machine_verilog_wrapper_N8_A2_utilization_synth.rpt -pb neuroSA_machine_verilog_wrapper_N8_A2_utilization_synth.pb"  } 
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

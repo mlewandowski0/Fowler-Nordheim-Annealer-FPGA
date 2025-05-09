@@ -41,7 +41,7 @@ module simple_priority_selector
     output reg                                 spiked, 
     output reg [UNIT_WIDTH-1:0]                unit_numb,
     output reg [NEURON_NUM_WIDTH-1:0]          offset,
-    output reg [MEMBRANE_WIDTH-1:0]            membrane,
+    output reg signed [MEMBRANE_WIDTH-1:0]     membrane,
     output reg                                 add_mem
 );
 

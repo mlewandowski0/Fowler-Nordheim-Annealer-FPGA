@@ -1,6 +1,6 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  --include "../../../../../zynq7020_hardware.srcs/sim_1/imports/design-files" \
-"tb_neuron_ensemble_with_buff_func_synth.v" \
+"tb_neuroSA_machine_verilog_wrapper_N8_A2_func_synth.v" \
 "../../../../../zynq7020_hardware.srcs/sim_1/imports/design-files/float16_to_int_tb.v" \
 
 sv xil_defaultlib  --include "../../../../../zynq7020_hardware.srcs/sim_1/imports/design-files" \
@@ -50,6 +50,7 @@ verilog xil_defaultlib  --include "../../../../../zynq7020_hardware.srcs/sim_1/i
 "../../../../../zynq7020_hardware.srcs/sim_1/new/tb_scheduler_2.v" \
 "../../../../../zynq7020_hardware.srcs/sim_1/new/tb_neuron_ensemble.v" \
 "../../../../../zynq7020_hardware.srcs/sim_1/new/tb_neuron_ensemble_with_memory_with_buff.v" \
+"../../../../../zynq7020_hardware.srcs/sim_1/new/tb_neuroSA_machine_verilog_wrapper_N8_A2.v" \
 
 # Do not sort compile order
 nosort

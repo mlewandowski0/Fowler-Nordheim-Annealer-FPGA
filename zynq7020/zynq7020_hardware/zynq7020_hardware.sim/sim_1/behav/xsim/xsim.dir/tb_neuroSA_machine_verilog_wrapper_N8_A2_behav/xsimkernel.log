@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_neuroSA_machine_verilog_wrapper_N8_A2_behav/xsimk -simmode gui -wdb tb_neuroSA_machine_verilog_wrapper_N8_A2_behav.wdb -simrunnum 0 -socket 49579
+Design successfully loaded
+Design Loading Memory Usage: 180876 KB (Peak: 180876 KB)
+Design Loading CPU Usage: 680 ms

@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log neuron_ensemble_with_memory_with_buff.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuron_ensemble_with_memory_with_buff.tcl
+EAStep vivado -log neuroSA_machine_verilog_wrapper_N8_A2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuroSA_machine_verilog_wrapper_N8_A2.tcl
