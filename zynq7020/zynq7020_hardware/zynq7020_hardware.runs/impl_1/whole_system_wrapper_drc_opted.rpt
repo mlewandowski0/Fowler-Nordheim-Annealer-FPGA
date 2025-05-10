@@ -1,0 +1,46 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sat May 10 15:29:52 2025
+| Host         : mlewan running 64-bit Ubuntu 24.04.2 LTS
+| Command      : report_drc -file whole_system_wrapper_drc_opted.rpt -pb whole_system_wrapper_drc_opted.pb -rpx whole_system_wrapper_drc_opted.rpx
+| Design       : whole_system_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 2
++--------+----------+------------------------+--------+
+| Rule   | Severity | Description            | Checks |
++--------+----------+------------------------+--------+
+| DPOP-2 | Warning  | MREG Output pipelining | 2      |
++--------+----------+------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP whole_system_i/fowler_nordheim_anne_0/inst/fowler_nordheim_annealer_slave_lite_v1_0_S00_AXI_inst/UUT/NEURO_SA/unit_gen[0].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage whole_system_i/fowler_nordheim_anne_0/inst/fowler_nordheim_annealer_slave_lite_v1_0_S00_AXI_inst/UUT/NEURO_SA/unit_gen[0].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP whole_system_i/fowler_nordheim_anne_0/inst/fowler_nordheim_annealer_slave_lite_v1_0_S00_AXI_inst/UUT/NEURO_SA/unit_gen[1].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage whole_system_i/fowler_nordheim_anne_0/inst/fowler_nordheim_annealer_slave_lite_v1_0_S00_AXI_inst/UUT/NEURO_SA/unit_gen[1].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+

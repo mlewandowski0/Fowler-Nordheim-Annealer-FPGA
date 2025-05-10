@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1746716409" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/neuroSA_top_record_numbers.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="neuroSA_machine_verilog_wrapper_N8_A2_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="neuroSA_machine_verilog_wrapper_N8_A2.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="neuroSA_machine_verilog_wrapper_N8_A2_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="neuroSA_machine_verilog_wrapper_N8_A2_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="neuroSA_machine_verilog_wrapper_N8_A2_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="neuroSA_machine_verilog_wrapper_N8_A2.vds"/>
-  <File Type="REPORTS-TCL" Name="neuroSA_machine_verilog_wrapper_N8_A2_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="neuroSA_machine_verilog_wrapper_N8_A2_timing_summary_synth.pb"/>
-  <File Type="PA-TCL" Name="neuroSA_machine_verilog_wrapper_N8_A2.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1746887311" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/neuroSA_top_record_numbers.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="whole_system_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="whole_system_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="whole_system_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="whole_system_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="whole_system_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="whole_system_wrapper.vds"/>
+  <File Type="REPORTS-TCL" Name="whole_system_wrapper_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="whole_system_wrapper_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="whole_system_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/design-files/LFSR.v">
@@ -101,6 +101,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/fowler_nordheim_annealer_slave_lite_v1_0_S00_AXI.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/log_LUT.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/log_LUT.v"/>
@@ -123,6 +130,13 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/mulBITSxBITS.v"/>
         <Attr Name="ImportTime" Val="1728146288"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/neuroSA_comm_wrapper.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -261,8 +275,30 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/fowler_nordheim_annealer.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/whole_system/whole_system.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/whole_system/hdl/whole_system_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/neuroSA_machine_verilog_wrapper_N8_A2.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -270,6 +306,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/scheduler.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/scheduler.v"/>
         <Attr Name="ImportTime" Val="1729783795"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -279,6 +316,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/neuroSA_verilog.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -286,6 +324,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/graph_n12_machine_fixed.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/graph_n12_machine_fixed.v"/>
         <Attr Name="ImportTime" Val="1729439872"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -293,15 +332,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/LFSR_with_adv.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/LFSR_with_adv.v"/>
         <Attr Name="ImportTime" Val="1729705803"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -311,6 +344,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/UTIL.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/UTIL.v"/>
         <Attr Name="ImportTime" Val="1728213578"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -320,6 +354,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/adder.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/adder.v"/>
         <Attr Name="ImportTime" Val="1728058555"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -327,15 +362,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PGENDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/ensemble_unit_top_for_record_numbers.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/ensemble_unit_top_for_record_numbers.v"/>
         <Attr Name="ImportTime" Val="1729968695"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -345,6 +374,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/fixed_add.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/fixed_add.v"/>
         <Attr Name="ImportTime" Val="1730217647"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -354,6 +384,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/float16_add.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/float16_add.v"/>
         <Attr Name="ImportTime" Val="1728210489"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -363,6 +394,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/float16_add_normalizer.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/float16_add_normalizer.v"/>
         <Attr Name="ImportTime" Val="1728123587"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -372,6 +404,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/float16_alignment.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/float16_alignment.v"/>
         <Attr Name="ImportTime" Val="1728123509"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -381,6 +414,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/graph_n12_machine.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/graph_n12_machine.v"/>
         <Attr Name="ImportTime" Val="1729439767"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -390,6 +424,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/graph_n12_machine_postsynth.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/graph_n12_machine_postsynth.v"/>
         <Attr Name="ImportTime" Val="1729428303"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -399,6 +434,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/graph_processor_small.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/graph_processor_small.v"/>
         <Attr Name="ImportTime" Val="1728343019"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -408,6 +444,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/membrane_update.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/membrane_update.v"/>
         <Attr Name="ImportTime" Val="1728340161"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -417,6 +454,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/round_robin_scheduler.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/round_robin_scheduler.v"/>
         <Attr Name="ImportTime" Val="1728657627"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -426,6 +464,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/temp_module.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/temp_module.v"/>
         <Attr Name="ImportTime" Val="1728227243"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -435,6 +474,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/neuroSA_machine_N800_U25_tb.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/neuroSA_machine_N800_U25_tb.sv"/>
         <Attr Name="ImportTime" Val="1729987454"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -444,6 +484,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/neuroSA_top_record_numbers.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/neuroSA_top_record_numbers.sv"/>
         <Attr Name="ImportTime" Val="1729956318"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -453,6 +494,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/zynq7020ps_neuroSA_wrapper.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -460,6 +502,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design-files/DEFINES.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/design-files/DEFINES.v"/>
         <Attr Name="ImportTime" Val="1728409887"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -2037,6 +2080,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/fixed_mult_dsp.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -2058,13 +2102,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sim_1/new/tb_neuroSA_machine_verilog_wrapper_N8_A2.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/artificial_problem/membrane_data_N8.mif">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../python_code/artificial_problem/membrane_data_N8.mif"/>
@@ -2073,21 +2110,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/neuroSA_AXI_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="neuroSA_machine_verilog_wrapper_N8_A2"/>
+      <Option Name="TopModule" Val="whole_system_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/new/clock_constraint.xdc">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/clock_constraint.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -2109,4 +2147,6 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="whole_system_fowler_nordheim_anne_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="whole_system_processing_system7_0_0"/>
 </GenRun>

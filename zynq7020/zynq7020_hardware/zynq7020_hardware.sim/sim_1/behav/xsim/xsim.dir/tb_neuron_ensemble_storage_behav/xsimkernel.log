@@ -1,7 +1,0 @@
-Running: xsim.dir/tb_neuron_ensemble_storage_behav/xsimk -simmode gui -wdb tb_neuron_ensemble_storage_behav.wdb -simrunnum 0 -socket 40517
-Design successfully loaded
-Design Loading Memory Usage: 180664 KB (Peak: 180720 KB)
-Design Loading CPU Usage: 620 ms
-Simulation completed
-Simulation Memory Usage: 262660 KB (Peak: 319932 KB)
-Simulation CPU Usage: 630 ms

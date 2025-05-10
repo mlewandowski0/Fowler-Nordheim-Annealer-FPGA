@@ -1,0 +1,3 @@
+/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/vitis_software/fowler_nordheim_annealer_Neq8_with_uart/zynq_fsbl/build/CMakeFiles/fsbl.elf.dir
+/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/vitis_software/fowler_nordheim_annealer_Neq8_with_uart/zynq_fsbl/build/CMakeFiles/edit_cache.dir
+/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/vitis_software/fowler_nordheim_annealer_Neq8_with_uart/zynq_fsbl/build/CMakeFiles/rebuild_cache.dir

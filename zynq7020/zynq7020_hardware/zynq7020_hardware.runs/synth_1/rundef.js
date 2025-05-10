@@ -28,7 +28,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log neuroSA_machine_verilog_wrapper_N8_A2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuroSA_machine_verilog_wrapper_N8_A2.tcl" );
+         "-log whole_system_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source whole_system_wrapper.tcl" );
 
 
 

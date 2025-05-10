@@ -1,7 +1,0 @@
-Running: xsim.dir/tb_temperature_mapping_behav/xsimk -simmode gui -wdb tb_temperature_mapping_behav.wdb -simrunnum 0 -socket 58627
-Design successfully loaded
-Design Loading Memory Usage: 180648 KB (Peak: 180704 KB)
-Design Loading CPU Usage: 660 ms
-Simulation completed
-Simulation Memory Usage: 262644 KB (Peak: 319916 KB)
-Simulation CPU Usage: 670 ms

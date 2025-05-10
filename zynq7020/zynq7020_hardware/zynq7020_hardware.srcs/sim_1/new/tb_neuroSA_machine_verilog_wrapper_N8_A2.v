@@ -56,14 +56,16 @@ localparam CLK_T = 10;
 reg clk = 0;
 reg reset = 1;
 reg halt = 0;
+
 reg [UNITS-1:0] write_ensemble_seed = 0;
 reg [UNITS-1:0] write_flipping_seed = 0;
+reg [UNITS-1:0] write_neuron_states = 0;
+
 reg [NEURON_SEL_LFSR_WIDTH-1:0] ensemble_seed = 0;
 reg [LOG_NOISE_SOURCE_WIDTH-1:0] flipping_seed = 0;
 reg [MEMBRANE_WIDTH-1:0] membrane_data_in = 0;
 reg [3:0] neuron_state_in = 0;
 reg [NEURON_NUM_WIDTH-1:0] idx_to_write = 0;
-reg [UNITS-1:0] write_neuron_states = 0;
 wire [SOLUTION_WIDTH-1:0] found_solution_value; 
 
 neuroSA_machine_verilog_wrapper_N8_A2 #(.USE_ROUND_ROBIN(USE_ROUND_ROBIN),
