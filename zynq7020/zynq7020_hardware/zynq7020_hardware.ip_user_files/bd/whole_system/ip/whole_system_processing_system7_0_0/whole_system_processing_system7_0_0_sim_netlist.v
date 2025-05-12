@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-// Date        : Fri May  9 19:20:18 2025
+// Date        : Sat May 10 15:28:54 2025
 // Host        : mlewan running 64-bit Ubuntu 24.04.2 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/whole_system/ip/whole_system_processing_system7_0_0/whole_system_processing_system7_0_0_sim_netlist.v
@@ -30,8 +30,6 @@ module whole_system_processing_system7_0_0
     GPIO_I,
     GPIO_O,
     GPIO_T,
-    UART0_TX,
-    UART0_RX,
     USB0_PORT_INDCTL,
     USB0_VBUS_PWRSELECT,
     USB0_VBUS_PWRFAULT,
@@ -111,8 +109,6 @@ module whole_system_processing_system7_0_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO_0 TRI_I" *) (* X_INTERFACE_MODE = "master" *) input [63:0]GPIO_I;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO_0 TRI_O" *) output [63:0]GPIO_O;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO_0 TRI_T" *) output [63:0]GPIO_T;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0 TxD" *) (* X_INTERFACE_MODE = "master" *) output UART0_TX;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0 RxD" *) input UART0_RX;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 PORT_INDCTL" *) (* X_INTERFACE_MODE = "master" *) output [1:0]USB0_PORT_INDCTL;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 VBUS_PWRSELECT" *) output USB0_VBUS_PWRSELECT;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 VBUS_PWRFAULT" *) input USB0_VBUS_PWRFAULT;
@@ -257,8 +253,6 @@ module whole_system_processing_system7_0_0
   wire PS_CLK;
   wire PS_PORB;
   wire PS_SRSTB;
-  wire UART0_RX;
-  wire UART0_TX;
   wire [1:0]USB0_PORT_INDCTL;
   wire USB0_VBUS_PWRFAULT;
   wire USB0_VBUS_PWRSELECT;
@@ -454,6 +448,7 @@ module whole_system_processing_system7_0_0
   wire NLW_inst_TTC1_WAVE2_OUT_UNCONNECTED;
   wire NLW_inst_UART0_DTRN_UNCONNECTED;
   wire NLW_inst_UART0_RTSN_UNCONNECTED;
+  wire NLW_inst_UART0_TX_UNCONNECTED;
   wire NLW_inst_UART1_DTRN_UNCONNECTED;
   wire NLW_inst_UART1_RTSN_UNCONNECTED;
   wire NLW_inst_UART1_TX_UNCONNECTED;
@@ -622,7 +617,7 @@ module whole_system_processing_system7_0_0
   (* C_USE_S_AXI_HP2 = "0" *) 
   (* C_USE_S_AXI_HP3 = "0" *) 
   (* HW_HANDOFF = "whole_system_processing_system7_0_0.hwdef" *) 
-  (* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3(LowVoltage)} dataWidth={16} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS33} bidis={20} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={16} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS33} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={} bidis={0} ioBank={} clockFreq={125.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={50} usageRate={0.5} />/>" *) 
+  (* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3(LowVoltage)} dataWidth={16} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS33} bidis={18} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={14} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS33} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={} bidis={0} ioBank={} clockFreq={125.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={50} usageRate={0.5} />/>" *) 
   (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
   whole_system_processing_system7_0_0_processing_system7_v5_5_processing_system7 inst
        (.CAN0_PHY_RX(1'b0),
@@ -1292,8 +1287,8 @@ module whole_system_processing_system7_0_0
         .UART0_DTRN(NLW_inst_UART0_DTRN_UNCONNECTED),
         .UART0_RIN(1'b0),
         .UART0_RTSN(NLW_inst_UART0_RTSN_UNCONNECTED),
-        .UART0_RX(UART0_RX),
-        .UART0_TX(UART0_TX),
+        .UART0_RX(1'b1),
+        .UART0_TX(NLW_inst_UART0_TX_UNCONNECTED),
         .UART1_CTSN(1'b0),
         .UART1_DCDN(1'b0),
         .UART1_DSRN(1'b0),
@@ -1331,7 +1326,7 @@ endmodule
 (* C_USE_S_AXI_ACP = "0" *) (* C_USE_S_AXI_GP0 = "0" *) (* C_USE_S_AXI_GP1 = "0" *) 
 (* C_USE_S_AXI_HP0 = "0" *) (* C_USE_S_AXI_HP1 = "0" *) (* C_USE_S_AXI_HP2 = "0" *) 
 (* C_USE_S_AXI_HP3 = "0" *) (* HW_HANDOFF = "whole_system_processing_system7_0_0.hwdef" *) (* ORIG_REF_NAME = "processing_system7_v5_5_processing_system7" *) 
-(* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3(LowVoltage)} dataWidth={16} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS33} bidis={20} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={16} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS33} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={} bidis={0} ioBank={} clockFreq={125.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={50} usageRate={0.5} />/>" *) (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
+(* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3(LowVoltage)} dataWidth={16} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS33} bidis={18} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={14} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS33} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={} bidis={0} ioBank={} clockFreq={125.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={50} usageRate={0.5} />/>" *) (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
 module whole_system_processing_system7_0_0_processing_system7_v5_5_processing_system7
    (CAN0_PHY_TX,
     CAN0_PHY_RX,
@@ -3720,6 +3715,7 @@ module whole_system_processing_system7_0_0_processing_system7_v5_5_processing_sy
   wire PS7_i_n_807;
   wire PS7_i_n_808;
   wire PS7_i_n_809;
+  wire PS7_i_n_81;
   wire PS7_i_n_810;
   wire PS7_i_n_811;
   wire PS7_i_n_812;
@@ -3826,8 +3822,6 @@ module whole_system_processing_system7_0_0_processing_system7_v5_5_processing_sy
   (* RTL_KEEP = "true" *) wire [1:0]\TRACE_DATA_PIPE[5] ;
   (* RTL_KEEP = "true" *) wire [1:0]\TRACE_DATA_PIPE[6] ;
   (* RTL_KEEP = "true" *) wire [1:0]\TRACE_DATA_PIPE[7] ;
-  wire UART0_RX;
-  wire UART0_TX;
   wire [1:0]USB0_PORT_INDCTL;
   wire USB0_VBUS_PWRFAULT;
   wire USB0_VBUS_PWRSELECT;
@@ -4912,6 +4906,7 @@ module whole_system_processing_system7_0_0_processing_system7_v5_5_processing_sy
   assign TTC1_WAVE2_OUT = \<const0> ;
   assign UART0_DTRN = \<const0> ;
   assign UART0_RTSN = \<const0> ;
+  assign UART0_TX = \<const0> ;
   assign UART1_DTRN = \<const0> ;
   assign UART1_RTSN = \<const0> ;
   assign UART1_TX = \<const0> ;
@@ -5615,8 +5610,8 @@ module whole_system_processing_system7_0_0_processing_system7_v5_5_processing_sy
         .EMIOUART0DTRN(PS7_i_n_79),
         .EMIOUART0RIN(1'b0),
         .EMIOUART0RTSN(PS7_i_n_80),
-        .EMIOUART0RX(UART0_RX),
-        .EMIOUART0TX(UART0_TX),
+        .EMIOUART0RX(1'b1),
+        .EMIOUART0TX(PS7_i_n_81),
         .EMIOUART1CTSN(1'b0),
         .EMIOUART1DCDN(1'b0),
         .EMIOUART1DSRN(1'b0),

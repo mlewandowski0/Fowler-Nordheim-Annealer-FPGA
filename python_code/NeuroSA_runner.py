@@ -265,17 +265,32 @@ if __name__ == "__main__":
 
     it = N / config.UNITS
 
-    with open("vmems.txt", "w") as vmem_f:
-        print("cfg = ", config.UNITS)
-        for i in range(config.UNITS):
-            sub = vmem[int(it*i):int(it*(i+1))]
+    with open(f"membrane_data_N{len(vmem)}.mif", "w") as vmem_f:
+        for i in range(len(vmem)):
+            vmem_f.write(f"{hex(int(vmem[i]))[2:]}")
+            if i != len(vmem) -1 :
+                vmem_f.write("\n")
 
-            vmem_f.write("data_arrays[" + str(i) + "] = {")
-            for i,el in enumerate(sub):
-                vmem_f.write(f"{int(el)}")
-                if i != len(sub)-1:
-                    vmem_f.write(",")
-            vmem_f.write("};\n")
+    with open(f"membrane_data_N{len(vmem)}.h", "w") as vmem_f:
+        vmem_f.write("u32 vmem[] = {")
+        for i in range(len(vmem)):
+            vmem_f.write(f"{int(vmem[i])}")
+            if i != len(vmem) -1 :
+                vmem_f.write(", ")
+
+        vmem_f.write("};")
+        
+    with open(f"ensemble_seeds_N{len(vmem)}.mif", "w") as ensemble_f:
+        for i in range(len(selection_seeds)):
+            ensemble_f.write(f"{bin(rng_approximation_selections[i].curr_value)[2:]}")
+            if i != len(selection_seeds) -1 :
+                ensemble_f.write("\n")
+
+    with open(f"noise_seeds_N{len(vmem)}.mif", "w") as seed_f:
+        for i in range(len(calc_seeds)):
+            seed_f.write(f"{bin(rng_approximation_calcs[i].curr_value)[2:]}")
+            if i != len(calc_seeds) -1:
+                seed_f.write("\n")
 
 
     with open(log_file_name, 'a') as f:

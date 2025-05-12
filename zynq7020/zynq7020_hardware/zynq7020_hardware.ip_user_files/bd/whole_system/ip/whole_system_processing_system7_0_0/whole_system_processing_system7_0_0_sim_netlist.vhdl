@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
--- Date        : Fri May  9 19:20:18 2025
+-- Date        : Sat May 10 15:28:54 2025
 -- Host        : mlewan running 64-bit Ubuntu 24.04.2 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/whole_system/ip/whole_system_processing_system7_0_0/whole_system_processing_system7_0_0_sim_netlist.vhdl
@@ -818,7 +818,7 @@ entity whole_system_processing_system7_0_0_processing_system7_v5_5_processing_sy
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of whole_system_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "processing_system7_v5_5_processing_system7";
   attribute POWER : string;
-  attribute POWER of whole_system_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3(LowVoltage)} dataWidth={16} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS33} bidis={20} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={16} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS33} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={} bidis={0} ioBank={} clockFreq={125.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={50} usageRate={0.5} />/>";
+  attribute POWER of whole_system_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3(LowVoltage)} dataWidth={16} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS33} bidis={18} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={14} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS33} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={} bidis={0} ioBank={} clockFreq={125.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={50} usageRate={0.5} />/>";
   attribute USE_TRACE_DATA_EDGE_DETECTOR : integer;
   attribute USE_TRACE_DATA_EDGE_DETECTOR of whole_system_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
 end whole_system_processing_system7_0_0_processing_system7_v5_5_processing_system7;
@@ -1771,6 +1771,7 @@ architecture STRUCTURE of whole_system_processing_system7_0_0_processing_system7
   signal PS7_i_n_807 : STD_LOGIC;
   signal PS7_i_n_808 : STD_LOGIC;
   signal PS7_i_n_809 : STD_LOGIC;
+  signal PS7_i_n_81 : STD_LOGIC;
   signal PS7_i_n_810 : STD_LOGIC;
   signal PS7_i_n_811 : STD_LOGIC;
   signal PS7_i_n_812 : STD_LOGIC;
@@ -3105,6 +3106,7 @@ begin
   TTC1_WAVE2_OUT <= \<const0>\;
   UART0_DTRN <= \<const0>\;
   UART0_RTSN <= \<const0>\;
+  UART0_TX <= \<const0>\;
   UART1_DTRN <= \<const0>\;
   UART1_RTSN <= \<const0>\;
   UART1_TX <= \<const0>\;
@@ -4081,8 +4083,8 @@ PS7_i: unisim.vcomponents.PS7
       EMIOUART0DTRN => PS7_i_n_79,
       EMIOUART0RIN => '0',
       EMIOUART0RTSN => PS7_i_n_80,
-      EMIOUART0RX => UART0_RX,
-      EMIOUART0TX => UART0_TX,
+      EMIOUART0RX => '1',
+      EMIOUART0TX => PS7_i_n_81,
       EMIOUART1CTSN => '0',
       EMIOUART1DCDN => '0',
       EMIOUART1DSRN => '0',
@@ -6097,8 +6099,6 @@ entity whole_system_processing_system7_0_0 is
     GPIO_I : in STD_LOGIC_VECTOR ( 63 downto 0 );
     GPIO_O : out STD_LOGIC_VECTOR ( 63 downto 0 );
     GPIO_T : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    UART0_TX : out STD_LOGIC;
-    UART0_RX : in STD_LOGIC;
     USB0_PORT_INDCTL : out STD_LOGIC_VECTOR ( 1 downto 0 );
     USB0_VBUS_PWRSELECT : out STD_LOGIC;
     USB0_VBUS_PWRFAULT : in STD_LOGIC;
@@ -6374,6 +6374,7 @@ architecture STRUCTURE of whole_system_processing_system7_0_0 is
   signal NLW_inst_TTC1_WAVE2_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_UART0_DTRN_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_UART0_RTSN_UNCONNECTED : STD_LOGIC;
+  signal NLW_inst_UART0_TX_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_UART1_DTRN_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_UART1_RTSN_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_UART1_TX_UNCONNECTED : STD_LOGIC;
@@ -6584,7 +6585,7 @@ architecture STRUCTURE of whole_system_processing_system7_0_0 is
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of inst : label is "whole_system_processing_system7_0_0.hwdef";
   attribute POWER : string;
-  attribute POWER of inst : label is "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3(LowVoltage)} dataWidth={16} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS33} bidis={20} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={16} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS33} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={} bidis={0} ioBank={} clockFreq={125.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={50} usageRate={0.5} />/>";
+  attribute POWER of inst : label is "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3(LowVoltage)} dataWidth={16} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS33} bidis={18} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={14} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS33} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={} bidis={0} ioBank={} clockFreq={125.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={50} usageRate={0.5} />/>";
   attribute USE_TRACE_DATA_EDGE_DETECTOR : integer;
   attribute USE_TRACE_DATA_EDGE_DETECTOR of inst : label is 0;
   attribute X_INTERFACE_INFO : string;
@@ -6638,9 +6639,6 @@ architecture STRUCTURE of whole_system_processing_system7_0_0 is
   attribute X_INTERFACE_INFO of PS_CLK : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK";
   attribute X_INTERFACE_INFO of PS_PORB : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
   attribute X_INTERFACE_INFO of PS_SRSTB : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
-  attribute X_INTERFACE_INFO of UART0_RX : signal is "xilinx.com:interface:uart:1.0 UART_0 RxD";
-  attribute X_INTERFACE_INFO of UART0_TX : signal is "xilinx.com:interface:uart:1.0 UART_0 TxD";
-  attribute X_INTERFACE_MODE of UART0_TX : signal is "master";
   attribute X_INTERFACE_INFO of USB0_VBUS_PWRFAULT : signal is "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 VBUS_PWRFAULT";
   attribute X_INTERFACE_INFO of USB0_VBUS_PWRSELECT : signal is "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 VBUS_PWRSELECT";
   attribute X_INTERFACE_INFO of DDR_Addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
@@ -7383,8 +7381,8 @@ inst: entity work.whole_system_processing_system7_0_0_processing_system7_v5_5_pr
       UART0_DTRN => NLW_inst_UART0_DTRN_UNCONNECTED,
       UART0_RIN => '0',
       UART0_RTSN => NLW_inst_UART0_RTSN_UNCONNECTED,
-      UART0_RX => UART0_RX,
-      UART0_TX => UART0_TX,
+      UART0_RX => '1',
+      UART0_TX => NLW_inst_UART0_TX_UNCONNECTED,
       UART1_CTSN => '0',
       UART1_DCDN => '0',
       UART1_DSRN => '0',

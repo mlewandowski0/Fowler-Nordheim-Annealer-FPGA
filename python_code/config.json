@@ -7,7 +7,7 @@
     "LOG_FILE": "./logs/approximations",
     "EXTENSION": ".txt",
     "RNG_APPROX_SELECTION": "LFSR",
-    "RNG_APPROX_CALC": "software",
+    "RNG_APPROX_CALC": "LFSR",
     "LOG_APPROX": "lut",
     "RNG_APPROX_SELECTION_BITS": 10,
     "RNG_APPROX_SELECTION_SEED": -1,

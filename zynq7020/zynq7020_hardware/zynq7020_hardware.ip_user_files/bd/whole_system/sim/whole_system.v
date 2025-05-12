@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-//Date        : Fri May  9 19:19:42 2025
+//Date        : Sat May 10 15:28:19 2025
 //Host        : mlewan running 64-bit Ubuntu 24.04.2 LTS
 //Command     : generate_target whole_system.bd
 //Design      : whole_system
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "whole_system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=whole_system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=4,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_ps7_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "whole_system.hwdef" *) 
+(* CORE_GENERATION_INFO = "whole_system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=whole_system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=4,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_ps7_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "whole_system.hwdef" *) 
 module whole_system
    (DDR_addr,
     DDR_ba,
@@ -197,7 +197,7 @@ module whole_system
         .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID),
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(rst_ps7_0_50M_peripheral_aresetn));
-  whole_system_fowler_nordheim_anne_0_0 fowler_nordheim_anne_0
+  whole_system_fowler_nordheim_anne_0_1 fowler_nordheim_anne_0
        (.s00_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s00_axi_araddr(axi_smc_M00_AXI_ARADDR),
         .s00_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
@@ -291,7 +291,6 @@ module whole_system
         .PS_CLK(FIXED_IO_ps_clk),
         .PS_PORB(FIXED_IO_ps_porb),
         .PS_SRSTB(FIXED_IO_ps_srstb),
-        .UART0_RX(1'b1),
         .USB0_VBUS_PWRFAULT(1'b0));
   whole_system_rst_ps7_0_50M_0 rst_ps7_0_50M
        (.aux_reset_in(1'b1),

@@ -150,3 +150,73 @@ status = platform.build()
 
 comp.build()
 
+platform = client.create_platform_component(name = "fowler_nordheim_annealer_Neq800_v1",hw_design = "$COMPONENT_LOCATION/../design_1_N_eq_800_wrapper.xsa",os = "standalone",cpu = "ps7_cortexa9_0",domain_name = "standalone_ps7_cortexa9_0")
+
+comp = client.create_app_component(name="fowler_nordheim_annealer_Neq800_ps",platform = "$COMPONENT_LOCATION/../fowler_nordheim_annealer_Neq800_v1/export/fowler_nordheim_annealer_Neq800_v1/fowler_nordheim_annealer_Neq800_v1.xpfm",domain = "standalone_ps7_cortexa9_0")
+
+platform = client.get_component(name="fowler_nordheim_annealer_Neq800_v1")
+status = platform.build()
+
+comp = client.get_component(name="fowler_nordheim_annealer_Neq800_ps")
+comp.build()
+
+status = platform.build()
+
+comp.build()
+
+status = platform.build()
+
+comp.build()
+
+status = platform.build()
+
+comp.build()
+
+status = platform.build()
+
+comp.build()
+
+status = platform.build()
+
+comp.build()
+
+status = platform.build()
+
+comp.build()
+
+status = platform.build()
+
+comp.build()
+
+status = platform.build()
+
+comp.build()
+
+status = platform.build()
+
+comp.build()
+
+status = platform.build()
+
+comp.build()
+
+status = platform.build()
+
+comp.build()
+
+status = platform.build()
+
+comp.build()
+
+status = platform.build()
+
+comp.build()
+
+status = platform.build()
+
+comp.build()
+
+status = platform.build()
+
+comp.build()
+

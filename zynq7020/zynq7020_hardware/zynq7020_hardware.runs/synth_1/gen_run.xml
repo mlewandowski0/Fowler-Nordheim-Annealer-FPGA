@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1746887311" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/neuroSA_top_record_numbers.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="whole_system_wrapper_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="whole_system_wrapper.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="whole_system_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="whole_system_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="whole_system_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="whole_system_wrapper.vds"/>
-  <File Type="REPORTS-TCL" Name="whole_system_wrapper_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="whole_system_wrapper_timing_summary_synth.pb"/>
-  <File Type="PA-TCL" Name="whole_system_wrapper.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1746899806" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/neuroSA_top_record_numbers.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="design_1_N_eq_800_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="design_1_N_eq_800_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="design_1_N_eq_800_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="design_1_N_eq_800_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="design_1_N_eq_800_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="design_1_N_eq_800_wrapper.vds"/>
+  <File Type="REPORTS-TCL" Name="design_1_N_eq_800_wrapper_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="design_1_N_eq_800_wrapper_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="design_1_N_eq_800_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/design-files/LFSR.v">
@@ -275,8 +275,30 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/fowler_nordheim_annealer_Neq800.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1_N_eq_800/design_1_N_eq_800.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/design_1_N_eq_800/hdl/design_1_N_eq_800_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/fowler_nordheim_annealer.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -284,6 +306,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/whole_system/whole_system.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -291,6 +314,7 @@
     </File>
     <File Path="$PGENDIR/sources_1/bd/whole_system/hdl/whole_system_wrapper.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -2118,9 +2142,43 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/neuroSA_comm_wrapper_large_problem.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/tbs/membrane_data_N800.mif">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/tbs/ensemble_seeds_N800.mif">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/tbs/noise_seeds_N800.mif">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/fowler_nordheim_annealer_Neq800_slave_lite_v1_0_S00_AXI.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="whole_system_wrapper"/>
+      <Option Name="TopModule" Val="design_1_N_eq_800_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -2147,6 +2205,9 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="whole_system_fowler_nordheim_anne_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_N_eq_800_fowler_nordheim_anne_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="whole_system_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="whole_system_fowler_nordheim_anne_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_N_eq_800_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_N_eq_800_processing_system7_0_0"/>
 </GenRun>

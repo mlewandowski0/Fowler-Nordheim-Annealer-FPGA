@@ -1,89 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1746887312">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1746903538">
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="whole_system_wrapper_postroute_physopted.rqs"/>
-  <File Type="ROUTE-RQS" Name="whole_system_wrapper_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="design_1_N_eq_800_wrapper_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="design_1_N_eq_800_wrapper_routed.rqs"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BG-BGN" Name="whole_system_wrapper.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="whole_system_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="design_1_N_eq_800_wrapper.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="design_1_N_eq_800_wrapper.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="whole_system_wrapper.ltx"/>
-  <File Type="RBD_FILE" Name="whole_system_wrapper.rbd"/>
-  <File Type="NPI_FILE" Name="whole_system_wrapper.npi"/>
-  <File Type="RNPI_FILE" Name="whole_system_wrapper.rnpi"/>
-  <File Type="CFI_FILE" Name="whole_system_wrapper.cfi"/>
-  <File Type="RCFI_FILE" Name="whole_system_wrapper.rcfi"/>
-  <File Type="PL-PDI-FILE" Name="whole_system_wrapper_pld.pdi"/>
-  <File Type="BOOT-PDI-FILE" Name="whole_system_wrapper_boot.pdi"/>
-  <File Type="RDI-RDI" Name="whole_system_wrapper.vdi"/>
-  <File Type="PDI-FILE" Name="whole_system_wrapper.pdi"/>
-  <File Type="BITSTR-MMI" Name="whole_system_wrapper.mmi"/>
-  <File Type="BITSTR-BMM" Name="whole_system_wrapper_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="whole_system_wrapper.nky"/>
-  <File Type="BITSTR-RBT" Name="whole_system_wrapper.rbt"/>
-  <File Type="BITSTR-MSK" Name="whole_system_wrapper.msk"/>
-  <File Type="BG-BIN" Name="whole_system_wrapper.bin"/>
+  <File Type="BITSTR-LTX" Name="design_1_N_eq_800_wrapper.ltx"/>
+  <File Type="RBD_FILE" Name="design_1_N_eq_800_wrapper.rbd"/>
+  <File Type="NPI_FILE" Name="design_1_N_eq_800_wrapper.npi"/>
+  <File Type="RNPI_FILE" Name="design_1_N_eq_800_wrapper.rnpi"/>
+  <File Type="CFI_FILE" Name="design_1_N_eq_800_wrapper.cfi"/>
+  <File Type="RCFI_FILE" Name="design_1_N_eq_800_wrapper.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="design_1_N_eq_800_wrapper_pld.pdi"/>
+  <File Type="RDI-RDI" Name="design_1_N_eq_800_wrapper.vdi"/>
+  <File Type="PDI-FILE" Name="design_1_N_eq_800_wrapper.pdi"/>
+  <File Type="BITSTR-MMI" Name="design_1_N_eq_800_wrapper.mmi"/>
+  <File Type="BITSTR-BMM" Name="design_1_N_eq_800_wrapper_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="design_1_N_eq_800_wrapper.nky"/>
+  <File Type="BITSTR-RBT" Name="design_1_N_eq_800_wrapper.rbt"/>
+  <File Type="BITSTR-MSK" Name="design_1_N_eq_800_wrapper.msk"/>
+  <File Type="BG-BIN" Name="design_1_N_eq_800_wrapper.bin"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
-  <File Type="BG-BIT" Name="whole_system_wrapper.bit"/>
+  <File Type="BG-BIT" Name="design_1_N_eq_800_wrapper.bit"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="whole_system_wrapper_bus_skew_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="whole_system_wrapper_bus_skew_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="whole_system_wrapper_bus_skew_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="whole_system_wrapper_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="whole_system_wrapper_timing_summary_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="whole_system_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="whole_system_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="whole_system_wrapper_postroute_physopt.dcp"/>
-  <File Type="BG-DRC" Name="whole_system_wrapper.drc"/>
-  <File Type="ROUTE-RQS-PB" Name="whole_system_wrapper_rqs_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="whole_system_wrapper_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="whole_system_wrapper_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW" Name="whole_system_wrapper_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="whole_system_wrapper_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="whole_system_wrapper_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="whole_system_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="whole_system_wrapper_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="whole_system_wrapper_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="whole_system_wrapper_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="whole_system_wrapper_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="whole_system_wrapper_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="whole_system_wrapper_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="whole_system_wrapper_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="whole_system_wrapper_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="whole_system_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="whole_system_wrapper_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="whole_system_wrapper_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="whole_system_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="whole_system_wrapper_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="whole_system_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="whole_system_wrapper_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="whole_system_wrapper_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="whole_system_wrapper_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="whole_system_wrapper_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="whole_system_wrapper_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="whole_system_wrapper_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="whole_system_wrapper_postplace_pwropt.dcp"/>
-  <File Type="PLACE-RQA-PB" Name="whole_system_wrapper_rqa_placed.pb"/>
-  <File Type="PLACE-TIMING" Name="whole_system_wrapper_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="whole_system_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="whole_system_wrapper_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="whole_system_wrapper_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="whole_system_wrapper_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="whole_system_wrapper_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="whole_system_wrapper_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="whole_system_wrapper_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="whole_system_wrapper_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="whole_system_wrapper_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="whole_system_wrapper_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="whole_system_wrapper_pwropt.dcp"/>
-  <File Type="OPT-RQA-PB" Name="whole_system_wrapper_rqa_opted.pb"/>
-  <File Type="OPT-HWDEF" Name="whole_system_wrapper.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="whole_system_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="whole_system_wrapper_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="whole_system_wrapper_opt.dcp"/>
-  <File Type="OPT-TIMING" Name="whole_system_wrapper_timing_summary_opted.rpt"/>
-  <File Type="REPORTS-TCL" Name="whole_system_wrapper_reports.tcl"/>
-  <File Type="INIT-TIMING" Name="whole_system_wrapper_timing_summary_init.rpt"/>
-  <File Type="PA-TCL" Name="whole_system_wrapper.tcl"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="design_1_N_eq_800_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="design_1_N_eq_800_wrapper_postroute_physopt.dcp"/>
+  <File Type="BG-DRC" Name="design_1_N_eq_800_wrapper.drc"/>
+  <File Type="ROUTE-RQS-PB" Name="design_1_N_eq_800_wrapper_rqs_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="design_1_N_eq_800_wrapper_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="design_1_N_eq_800_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="design_1_N_eq_800_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="design_1_N_eq_800_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="design_1_N_eq_800_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="design_1_N_eq_800_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="design_1_N_eq_800_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="design_1_N_eq_800_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="design_1_N_eq_800_wrapper_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="design_1_N_eq_800_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="design_1_N_eq_800_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="design_1_N_eq_800_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="design_1_N_eq_800_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="design_1_N_eq_800_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="design_1_N_eq_800_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="design_1_N_eq_800_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="design_1_N_eq_800_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="design_1_N_eq_800_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="design_1_N_eq_800_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="design_1_N_eq_800_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="design_1_N_eq_800_wrapper_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="design_1_N_eq_800_wrapper_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="design_1_N_eq_800_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="design_1_N_eq_800_wrapper_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="design_1_N_eq_800_wrapper_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="design_1_N_eq_800_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="design_1_N_eq_800_wrapper_postplace_pwropt.dcp"/>
+  <File Type="PLACE-RQA-PB" Name="design_1_N_eq_800_wrapper_rqa_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="design_1_N_eq_800_wrapper_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="design_1_N_eq_800_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="design_1_N_eq_800_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="design_1_N_eq_800_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="design_1_N_eq_800_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="design_1_N_eq_800_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="design_1_N_eq_800_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="design_1_N_eq_800_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="design_1_N_eq_800_wrapper_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="design_1_N_eq_800_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="design_1_N_eq_800_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="design_1_N_eq_800_wrapper_pwropt.dcp"/>
+  <File Type="OPT-RQA-PB" Name="design_1_N_eq_800_wrapper_rqa_opted.pb"/>
+  <File Type="OPT-HWDEF" Name="design_1_N_eq_800_wrapper.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="design_1_N_eq_800_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="design_1_N_eq_800_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="design_1_N_eq_800_wrapper_opt.dcp"/>
+  <File Type="OPT-TIMING" Name="design_1_N_eq_800_wrapper_timing_summary_opted.rpt"/>
+  <File Type="REPORTS-TCL" Name="design_1_N_eq_800_wrapper_reports.tcl"/>
+  <File Type="INIT-TIMING" Name="design_1_N_eq_800_wrapper_timing_summary_init.rpt"/>
+  <File Type="PA-TCL" Name="design_1_N_eq_800_wrapper.tcl"/>
+  <File Type="BOOT-PDI-FILE" Name="design_1_N_eq_800_wrapper_boot.pdi"/>
+  <File Type="PA-DCP" Name="design_1_N_eq_800_wrapper.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/design-files/LFSR.v">
@@ -350,8 +351,30 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/fowler_nordheim_annealer_Neq800.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1_N_eq_800/design_1_N_eq_800.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/design_1_N_eq_800/hdl/design_1_N_eq_800_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/fowler_nordheim_annealer.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -359,6 +382,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/whole_system/whole_system.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -366,6 +390,7 @@
     </File>
     <File Path="$PGENDIR/sources_1/bd/whole_system/hdl/whole_system_wrapper.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -2193,9 +2218,43 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/neuroSA_comm_wrapper_large_problem.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/tbs/membrane_data_N800.mif">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/tbs/ensemble_seeds_N800.mif">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/tbs/noise_seeds_N800.mif">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/fowler_nordheim_annealer_Neq800_slave_lite_v1_0_S00_AXI.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="whole_system_wrapper"/>
+      <Option Name="TopModule" Val="design_1_N_eq_800_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -2230,6 +2289,9 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="whole_system_fowler_nordheim_anne_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_N_eq_800_fowler_nordheim_anne_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="whole_system_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="whole_system_fowler_nordheim_anne_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_N_eq_800_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_N_eq_800_processing_system7_0_0"/>
 </GenRun>
