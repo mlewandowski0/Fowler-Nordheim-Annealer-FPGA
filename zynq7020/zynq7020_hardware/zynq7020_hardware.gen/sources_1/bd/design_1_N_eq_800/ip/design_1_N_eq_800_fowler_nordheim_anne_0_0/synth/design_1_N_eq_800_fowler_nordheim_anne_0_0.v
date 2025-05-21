@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "fowler_nordheim_annealer_Neq800,Vivado 2024.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_N_eq_800_fowler_nordheim_anne_0_0,fowler_nordheim_annealer_Neq800,{}" *)
-(* CORE_GENERATION_INFO = "design_1_N_eq_800_fowler_nordheim_anne_0_0,fowler_nordheim_annealer_Neq800,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=fowler_nordheim_annealer_Neq800,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5,USE_ROUND_ROBIN=0,NEURON_SEL_LFSR_WIDTH=9,MEMBRANE_WIDTH=10,LOG_NOISE_SOURCE_WIDTH=16,LOG_LUT_BIT_SIZE=8,COUNTER_WIDTH=40,TEMP_INC_WIDTH=12,NO_CLK_CYCLES_AFTER_UPDATE=4,SOLUTION_WIDTH=16,\
+(* CORE_GENERATION_INFO = "design_1_N_eq_800_fowler_nordheim_anne_0_0,fowler_nordheim_annealer_Neq800,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=fowler_nordheim_annealer_Neq800,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=6,USE_ROUND_ROBIN=0,NEURON_SEL_LFSR_WIDTH=9,MEMBRANE_WIDTH=10,LOG_NOISE_SOURCE_WIDTH=16,LOG_LUT_BIT_SIZE=8,COUNTER_WIDTH=40,TEMP_INC_WIDTH=12,NO_CLK_CYCLES_AFTER_UPDATE=4,SOLUTION_WIDTH=16,\
 USE_FLOAT_POINT=0,REAL_WIDTH=18,FLIPPING_OUTPUT_WIDTH=16,FRACTIONAL_PART=9,LOG_NOISE_LUT_FILENAME=log_noise_fixed_width=18_frac_bits=9_nbits_of_lut=8.mif,TEMPERATURE_LUT_FILENAME=temperature_LUT_fixed_N9.mif,GRAPH_WIDTH=800,UNITS=25,UNIT_WIDTH=5,NEURONS_PER_UNIT=32,NEURON_NUM_WIDTH=5,TEMPERATURE_LUT_WIDTH=9,PIPELINED_ROMs=1,PIPELINED_ENSEMBLE_STORAGE=1,IDX_THAT_FIRED_WIDTH=10,USE_TRANSMIT_WITH_BUFF=1,NO_OF_CLK_CYCLES_TO_PROPAGATE=1,NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE=3}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
@@ -90,9 +90,9 @@ input wire s00_axi_aclk;
 input wire s00_axi_aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi AWADDR" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 50000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN design_1_N_eq_800_processing_system7_0_0_FCLK_CLK0, NUM_READ\
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 50000000, ID_WIDTH 0, ADDR_WIDTH 6, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN design_1_N_eq_800_processing_system7_0_0_FCLK_CLK0, NUM_READ\
 _THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
-input wire [4 : 0] s00_axi_awaddr;
+input wire [5 : 0] s00_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi AWPROT" *)
 input wire [2 : 0] s00_axi_awprot;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi AWVALID" *)
@@ -114,7 +114,7 @@ output wire s00_axi_bvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi BREADY" *)
 input wire s00_axi_bready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi ARADDR" *)
-input wire [4 : 0] s00_axi_araddr;
+input wire [5 : 0] s00_axi_araddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi ARPROT" *)
 input wire [2 : 0] s00_axi_arprot;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi ARVALID" *)
@@ -132,7 +132,7 @@ input wire s00_axi_rready;
 
   fowler_nordheim_annealer_Neq800 #(
     .C_S00_AXI_DATA_WIDTH(32),
-    .C_S00_AXI_ADDR_WIDTH(5),
+    .C_S00_AXI_ADDR_WIDTH(6),
     .USE_ROUND_ROBIN(0),
     .NEURON_SEL_LFSR_WIDTH(9),
     .MEMBRANE_WIDTH(10),

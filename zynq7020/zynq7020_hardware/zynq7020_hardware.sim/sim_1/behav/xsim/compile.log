@@ -1,0 +1,351 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/tools/Vivado/2024.2/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/tools/Vivado/2024.2/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/tools/Vivado/2024.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/tools/Vivado/2024.2/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/tools/Vivado/2024.2/data/xilinx_vip/hdl/axi_vip_pkg.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/tools/Vivado/2024.2/data/xilinx_vip/hdl/axi4stream_vip_if.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/tools/Vivado/2024.2/data/xilinx_vip/hdl/axi_vip_if.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/tools/Vivado/2024.2/data/xilinx_vip/hdl/clk_vip_if.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/tools/Vivado/2024.2/data/xilinx_vip/hdl/rst_vip_if.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/tools/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" into library xpm
+INFO: [VRFC 10-311] analyzing module xpm_fifo_base
+INFO: [VRFC 10-311] analyzing module xpm_fifo_rst
+INFO: [VRFC 10-311] analyzing module xpm_counter_updn
+INFO: [VRFC 10-311] analyzing module xpm_fifo_reg_vec
+INFO: [VRFC 10-311] analyzing module xpm_fifo_reg_bit
+INFO: [VRFC 10-311] analyzing module xpm_reg_pipe_bit
+INFO: [VRFC 10-311] analyzing module xpm_fifo_sync
+INFO: [VRFC 10-311] analyzing module xpm_fifo_async
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axis
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axif
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axil
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axi_reg_slice
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/tools/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" into library xpm
+INFO: [VRFC 10-311] analyzing module xpm_memory_base
+INFO: [VRFC 10-311] analyzing module asym_bwe_bb
+INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
+INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
+INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
+INFO: [VRFC 10-311] analyzing module xpm_memory_spram
+INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
+INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/tools/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xpm
+INFO: [VRFC 10-311] analyzing module xpm_cdc_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
+INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
+INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
+INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
+INFO: [VRFC 10-311] analyzing module xpm_cdc_low_latency_handshake
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/LFSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LFSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/LFSR_inout.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LFSR_inout
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/cla_nbit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cla_nbit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/distributed_graph_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module distributed_graph_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/fixed_mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fixed_mult
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/fixed_to_int.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fixed_to_int
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/flipping_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flipping_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/float16_mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module float16_mult
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/float16_normalizer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module float16_normalizer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/float16_to_int.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module float16_to_int
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/new/fowler_nordheim_annealer_slave_lite_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fowler_nordheim_annealer_slave_lite_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/log_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module log_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/log_noise_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module log_noise_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/mulBITSxBITS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mulBITSxBITS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/new/neuroSA_comm_wrapper_large_problem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neuroSA_comm_wrapper_large_problem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/neuron_ensemble.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neuron_ensemble
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/neuron_ensemble_storage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neuron_ensemble_storage
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/neuron_ensemble_with_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neuron_ensemble_with_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/neuron_ensemble_with_memory_with_buff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neuron_ensemble_with_memory_with_buff
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/round_robin_priority_selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module round_robin_priority_selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/new/scheduler_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scheduler_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/simple_priority_selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_priority_selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/temperature_mapping.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module temperature_mapping
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/temperature_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module temperature_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/transmit_buffer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module transmit_buffer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/vedic_mul16x16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vedic_mul16x16
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/vedic_mul2x2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vedic_mul2x2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/vedic_mul4x4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vedic_mul4x4
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/vedic_mul8x8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vedic_mul8x8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/neuroSA_machine.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neuroSA_machine
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/new/fowler_nordheim_annealer_Neq800.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fowler_nordheim_annealer_Neq800
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" into library axi_infrastructure_v1_1_0
+INFO: [VRFC 10-311] analyzing module axi_infrastructure_v1_1_0_axi2vector
+INFO: [VRFC 10-311] analyzing module axi_infrastructure_v1_1_0_axic_srl_fifo
+INFO: [VRFC 10-311] analyzing module axi_infrastructure_v1_1_0_vector2axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/8c45/hdl/axi_vip_v1_1_vl_rfs.sv" into library axi_vip_v1_1_19
+INFO: [VRFC 10-311] analyzing module axi_vip_v1_1_19_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv" into library processing_system7_vip_v1_0_21
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_arb_wr
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_arb_rd
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_arb_wr_4
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_arb_rd_4
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_arb_hp2_3
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_arb_hp0_1
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_ssw_hp
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_sparse_mem
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_reg_map
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_ocm_mem
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_intr_wr_mem
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_intr_rd_mem
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_fmsw_gp
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_regc
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_ocmc
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_interconnect_model
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_gen_reset
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_gen_clock
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_ddrc
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_axi_slave
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_axi_slave_acp
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_axi_master
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21_afi_slave
+INFO: [VRFC 10-311] analyzing module processing_system7_vip_v1_0_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_processing_system7_0_0/sim/design_1_N_eq_800_processing_system7_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_N_eq_800_processing_system7_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_fowler_nordheim_anne_0_0/sim/design_1_N_eq_800_fowler_nordheim_anne_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_N_eq_800_fowler_nordheim_anne_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v" into library xlconstant_v1_1_9
+INFO: [VRFC 10-311] analyzing module xlconstant_v1_1_9_xlconstant
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_0/sim/bd_3068_one_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_one_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/f0b6/hdl/sc_util_v1_0_vl_rfs.sv" into library smartconnect_v1_0
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_fifo
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_vcafifo
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_vcafifo_progfull
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_afifo_meta
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_mux
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_standard_mux16
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_pipeline
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_onehot_to_binary
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_counter
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_sample_cycle_ratio
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_fifo_output_reg
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_xpm_memory_fifo
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_xpm_fifo_wrapper
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_axic_fifo
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_axi_splitter
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_axi2vector
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_vector2axi
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_axi_reg_stall
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_srl_rtl
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_axic_reg_srl_fifo
+INFO: [VRFC 10-311] analyzing module sc_util_v1_0_4_axic_register_slice
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/3718/hdl/sc_switchboard_v1_0_vl_rfs.sv" into library smartconnect_v1_0
+INFO: [VRFC 10-311] analyzing module sc_switchboard_v1_0_8_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_2/sim/bd_3068_arinsw_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_arinsw_0
+WARNING: [VRFC 10-8772] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_2/sim/bd_3068_arinsw_0.sv:82]
+WARNING: [VRFC 10-8772] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_2/sim/bd_3068_arinsw_0.sv:83]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_3/sim/bd_3068_rinsw_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_rinsw_0
+WARNING: [VRFC 10-8772] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_3/sim/bd_3068_rinsw_0.sv:93]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_4/sim/bd_3068_awinsw_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_awinsw_0
+WARNING: [VRFC 10-8772] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_4/sim/bd_3068_awinsw_0.sv:82]
+WARNING: [VRFC 10-8772] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_4/sim/bd_3068_awinsw_0.sv:83]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_5/sim/bd_3068_winsw_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_winsw_0
+WARNING: [VRFC 10-8772] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_5/sim/bd_3068_winsw_0.sv:82]
+WARNING: [VRFC 10-8772] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_5/sim/bd_3068_winsw_0.sv:83]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_6/sim/bd_3068_binsw_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_binsw_0
+WARNING: [VRFC 10-8772] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_6/sim/bd_3068_binsw_0.sv:93]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_7/sim/bd_3068_aroutsw_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_aroutsw_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_8/sim/bd_3068_routsw_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_routsw_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_9/sim/bd_3068_awoutsw_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_awoutsw_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_10/sim/bd_3068_woutsw_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_woutsw_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_11/sim/bd_3068_boutsw_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_boutsw_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/0127/hdl/sc_node_v1_0_vl_rfs.sv" into library smartconnect_v1_0
+INFO: [VRFC 10-311] analyzing module sc_node_v1_0_17_arb_alg_rr
+INFO: [VRFC 10-311] analyzing module sc_node_v1_0_17_si_handler
+INFO: [VRFC 10-311] analyzing module sc_node_v1_0_17_reg_fifo
+INFO: [VRFC 10-311] analyzing module sc_node_v1_0_17_reg_fifo_async
+INFO: [VRFC 10-311] analyzing module sc_node_v1_0_17_fifo
+INFO: [VRFC 10-311] analyzing module sc_node_v1_0_17_reg_slice3
+INFO: [VRFC 10-311] analyzing module sc_node_v1_0_17_ingress
+INFO: [VRFC 10-311] analyzing module sc_node_v1_0_17_egress
+INFO: [VRFC 10-311] analyzing module sc_node_v1_0_17_downsizer
+INFO: [VRFC 10-311] analyzing module sc_node_v1_0_17_fi_regulator
+INFO: [VRFC 10-311] analyzing module sc_node_v1_0_17_upsizer
+INFO: [VRFC 10-311] analyzing module sc_node_v1_0_17_mi_handler
+INFO: [VRFC 10-311] analyzing module sc_node_v1_0_17_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_12/sim/bd_3068_arni_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_arni_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_13/sim/bd_3068_rni_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_rni_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_14/sim/bd_3068_awni_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_awni_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_15/sim/bd_3068_wni_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_wni_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_16/sim/bd_3068_bni_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_bni_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/f49a/hdl/sc_mmu_v1_0_vl_rfs.sv" into library smartconnect_v1_0
+INFO: [VRFC 10-311] analyzing module sc_mmu_v1_0_14_addr_decoder
+INFO: [VRFC 10-311] analyzing module sc_mmu_v1_0_14_decerr_slave
+INFO: [VRFC 10-311] analyzing module sc_mmu_v1_0_14_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_17/sim/bd_3068_s00mmu_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_s00mmu_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/2da8/hdl/sc_transaction_regulator_v1_0_vl_rfs.sv" into library smartconnect_v1_0
+INFO: [VRFC 10-311] analyzing module sc_transaction_regulator_v1_0_11_singleorder
+INFO: [VRFC 10-311] analyzing module sc_transaction_regulator_v1_0_11_multithread
+INFO: [VRFC 10-311] analyzing module sc_transaction_regulator_v1_0_11_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_18/sim/bd_3068_s00tr_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_s00tr_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/63ed/hdl/sc_si_converter_v1_0_vl_rfs.sv" into library smartconnect_v1_0
+INFO: [VRFC 10-311] analyzing module sc_si_converter_v1_0_14_arb_alg_rr
+INFO: [VRFC 10-311] analyzing module sc_si_converter_v1_0_14_offset_fifo
+INFO: [VRFC 10-311] analyzing module sc_si_converter_v1_0_14_splitter
+INFO: [VRFC 10-311] analyzing module sc_si_converter_v1_0_14_wrap_narrow
+INFO: [VRFC 10-311] analyzing module sc_si_converter_v1_0_14_axilite_conv
+INFO: [VRFC 10-311] analyzing module sc_si_converter_v1_0_14_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_19/sim/bd_3068_s00sic_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_s00sic_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/cef3/hdl/sc_axi2sc_v1_0_vl_rfs.sv" into library smartconnect_v1_0
+INFO: [VRFC 10-311] analyzing module sc_axi2sc_v1_0_10_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_20/sim/bd_3068_s00a2s_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_s00a2s_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_21/sim/bd_3068_sarn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_sarn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_22/sim/bd_3068_srn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_srn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_23/sim/bd_3068_sawn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_sawn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_24/sim/bd_3068_swn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_swn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_25/sim/bd_3068_sbn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_sbn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_26/sim/bd_3068_s01mmu_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_s01mmu_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_27/sim/bd_3068_s01tr_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_s01tr_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_28/sim/bd_3068_s01sic_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_s01sic_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_29/sim/bd_3068_s01a2s_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_s01a2s_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_30/sim/bd_3068_sarn_1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_sarn_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_31/sim/bd_3068_srn_1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_srn_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_32/sim/bd_3068_sawn_1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_sawn_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_33/sim/bd_3068_swn_1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_swn_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_34/sim/bd_3068_sbn_1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_sbn_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/7f4f/hdl/sc_sc2axi_v1_0_vl_rfs.sv" into library smartconnect_v1_0
+INFO: [VRFC 10-311] analyzing module sc_sc2axi_v1_0_10_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_35/sim/bd_3068_m00s2a_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_m00s2a_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_36/sim/bd_3068_m00arn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_m00arn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_37/sim/bd_3068_m00rn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_m00rn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_38/sim/bd_3068_m00awn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_m00awn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_39/sim/bd_3068_m00wn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_m00wn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_40/sim/bd_3068_m00bn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_m00bn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/37bc/hdl/sc_exit_v1_0_vl_rfs.sv" into library smartconnect_v1_0
+INFO: [VRFC 10-311] analyzing module sc_exit_v1_0_16_axi2vector
+INFO: [VRFC 10-311] analyzing module sc_exit_v1_0_16_axi2vector_with_wid
+INFO: [VRFC 10-311] analyzing module sc_exit_v1_0_16_axi3_conv
+INFO: [VRFC 10-311] analyzing module sc_exit_v1_0_16_axic_register_slice
+INFO: [VRFC 10-311] analyzing module sc_exit_v1_0_16_axi_register_slice
+INFO: [VRFC 10-311] analyzing module sc_exit_v1_0_16_axilite_conv
+INFO: [VRFC 10-311] analyzing module sc_exit_v1_0_16_exit
+INFO: [VRFC 10-311] analyzing module sc_exit_v1_0_16_splitter
+INFO: [VRFC 10-311] analyzing module sc_exit_v1_0_16_vector2axi
+INFO: [VRFC 10-311] analyzing module sc_exit_v1_0_16_vector2axi_with_wid
+INFO: [VRFC 10-311] analyzing module sc_exit_v1_0_16_top
+INFO: [VRFC 10-311] analyzing module sc_exit_v1_0_16_multithread
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_41/sim/bd_3068_m00e_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068_m00e_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/sim/bd_3068.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_3068
+INFO: [VRFC 10-311] analyzing module clk_map_imp_L6LJ66
+INFO: [VRFC 10-311] analyzing module i_nodes_imp_13BIM5C
+INFO: [VRFC 10-311] analyzing module m00_exit_pipeline_imp_1E7MRV9
+INFO: [VRFC 10-311] analyzing module m00_nodes_imp_1RH0ZI1
+INFO: [VRFC 10-311] analyzing module s00_entry_pipeline_imp_FI1VVA
+INFO: [VRFC 10-311] analyzing module s00_nodes_imp_9JMX70
+INFO: [VRFC 10-311] analyzing module s01_entry_pipeline_imp_1BWU4OY
+INFO: [VRFC 10-311] analyzing module s01_nodes_imp_1H3XTDM
+INFO: [VRFC 10-311] analyzing module switchboards_imp_KETD3S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/3ee4/hdl/axi_register_slice_v2_1_vl_rfs.v" into library axi_register_slice_v2_1_33
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_33_test_master
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_33_test_slave
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_33_tdm_sample
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_33_auto_slr
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_33_auto_src
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_33_auto_dest
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_33_srl_rtl
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_33_axic_register_slice
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_33_multi_slr
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_33_middle_region_slr
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_33_source_region_slr
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_33_dest_region_slr
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_33_single_slr
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_33_axic_reg_srl_fifo
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_33_axi_register_slice
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/sim/design_1_N_eq_800_axi_smc_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_N_eq_800_axi_smc_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/sim/design_1_N_eq_800.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_N_eq_800
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_vip_0_0/sim/design_1_N_eq_800_axi_vip_0_0_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_vip_0_0/sim/design_1_N_eq_800_axi_vip_0_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_N_eq_800_axi_vip_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/hdl/design_1_N_eq_800_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_N_eq_800_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sim_1/new/tb_system_wrapper2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mlewand/tools/Vivado/2024.2/data/ip/xpm/xpm_VCOMP.vhd" into library xpm
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd" into library lib_cdc_v1_0_3
+INFO: [VRFC 10-3107] analyzing entity 'cdc_sync'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" into library proc_sys_reset_v5_0_16
+INFO: [VRFC 10-3107] analyzing entity 'upcnt_n'
+INFO: [VRFC 10-3107] analyzing entity 'sequence_psr'
+INFO: [VRFC 10-3107] analyzing entity 'lpf'
+INFO: [VRFC 10-3107] analyzing entity 'proc_sys_reset'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_1/sim/bd_3068_psr_aclk_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_3068_psr_aclk_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_rst_ps7_0_50M_0/sim/design_1_N_eq_800_rst_ps7_0_50M_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_1_N_eq_800_rst_ps7_0_50M_0'

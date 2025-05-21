@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_neuroSA_comm_wrapper_large_problem_func_impl/xsimk -simmode gui -wdb tb_neuroSA_comm_wrapper_large_problem_func_impl.wdb -simrunnum 0 -socket 34373
+Design successfully loaded
+Design Loading Memory Usage: 190700 KB (Peak: 190700 KB)
+Design Loading CPU Usage: 710 ms
+Simulation completed
+Simulation Memory Usage: 474500 KB (Peak: 474704 KB)
+Simulation CPU Usage: 37310 ms

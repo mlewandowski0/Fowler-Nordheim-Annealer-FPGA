@@ -1,8 +1,7 @@
 
 `timescale 1 ns / 1 ps
 
-	module fowler_nordheim_annealer_slave_lite_v1_0_S00_AXI #
-	(
+ module fowler_nordheim_annealer_slave_lite_v1_0_S00_AXI #(
 		// Users to add parameters here		
 		parameter USE_ROUND_ROBIN=0,
         parameter NEURON_SEL_LFSR_WIDTH=5,
@@ -38,7 +37,8 @@
 		// Width of S_AXI data bus
 		parameter integer C_S_AXI_DATA_WIDTH	= 32,
 		// Width of S_AXI address bus
-		parameter integer C_S_AXI_ADDR_WIDTH	= 5)
+		parameter integer C_S_AXI_ADDR_WIDTH	= 6
+	)
 	(
 		// Users to add ports here
 
@@ -124,11 +124,11 @@
 	// ADDR_LSB = 2 for 32 bits (n downto 2)
 	// ADDR_LSB = 3 for 64 bits (n downto 3)
 	localparam integer ADDR_LSB = (C_S_AXI_DATA_WIDTH/32) + 1;
-	localparam integer OPT_MEM_ADDR_BITS = 2;
+	localparam integer OPT_MEM_ADDR_BITS = 3;
 	//----------------------------------------------
 	//-- Signals for user logic register space example
 	//------------------------------------------------
-	//-- Number of Slave Registers 8
+	//-- Number of Slave Registers 12
 	reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg0;
 	reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg1;
 	reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg2;
@@ -137,16 +137,11 @@
 	reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg5;
 	reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg6;
 	reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg7;
+	reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg8;
+	reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg9;
+	reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg10;
+	reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg11;
 	integer	 byte_index;
-
-	wire                                   neurosa_reset, neurosa_halt;
-	wire [UNITS-1:0]                       unit_to_write;
-	wire [NEURON_SEL_LFSR_WIDTH-1:0]       ensemble_seed;
-	wire [LOG_NOISE_SOURCE_WIDTH-1:0]      flipping_seed;
-	wire [MEMBRANE_WIDTH-1:0]              membrane_data_in;
-	wire [3:0]                             neuron_state_in;
-	wire [NEURON_NUM_WIDTH-1:0]            idx_to_write;
-	wire [SOLUTION_WIDTH-1:0]              found_solution_value;
 
 	// I/O Connections assignments
 
@@ -250,59 +245,83 @@
 	      slv_reg4 <= 0;
 	      slv_reg5 <= 0;
 	      slv_reg6 <= 0;
+	      slv_reg9 <= 0;
+	      slv_reg10 <= 0;
+	      slv_reg11 <= 0;
 	    end 
 	  else begin
 	    if (S_AXI_WVALID)
 	      begin
 	        case ( (S_AXI_AWVALID) ? S_AXI_AWADDR[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] : axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] )
-	          3'h0:
+	          4'h0:
 	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
 	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 0
 	                slv_reg0[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
 	              end  
-	          3'h1:
+	          4'h1:
 	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
 	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 1
 	                slv_reg1[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
 	              end  
-	          3'h2:
+	          4'h2:
 	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
 	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 2
 	                slv_reg2[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
 	              end  
-	          3'h3:
+	          4'h3:
 	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
 	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 3
 	                slv_reg3[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
 	              end  
-	          3'h4:
+	          4'h4:
 	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
 	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 4
 	                slv_reg4[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
 	              end  
-	          3'h5:
+	          4'h5:
 	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
 	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 5
 	                slv_reg5[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
 	              end  
-	          3'h6:
+	          4'h6:
 	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
 	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 6
 	                slv_reg6[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+	              end  
+	          4'h9:
+	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
+	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
+	                // Respective byte enables are asserted as per write strobes 
+	                // Slave register 9
+	                slv_reg9[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+	              end  
+	          4'hA:
+	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
+	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
+	                // Respective byte enables are asserted as per write strobes 
+	                // Slave register 10
+	                slv_reg10[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+	              end  
+	          4'hB:
+	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
+	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
+	                // Respective byte enables are asserted as per write strobes 
+	                // Slave register 11
+	                slv_reg11[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
 	              end  
 	          default : begin
 	                      slv_reg0 <= slv_reg0;
@@ -312,12 +331,14 @@
 	                      slv_reg4 <= slv_reg4;
 	                      slv_reg5 <= slv_reg5;
 	                      slv_reg6 <= slv_reg6;
+	                      slv_reg9 <= slv_reg9;
+	                      slv_reg10 <= slv_reg10;
+	                      slv_reg11 <= slv_reg11;
 	                    end
 	        endcase
 	      end
 	  end
 	end    
-	
 
 	// Implement read state machine
 	  always @(posedge S_AXI_ACLK)                                       
@@ -330,7 +351,7 @@
 	         axi_rresp <= 1'b0;                                       
 	         state_read <= Idle;                                       
 	        end                                       
-	      else       	                                        
+	      else                                       
 	        begin                                       
 	          case(state_read)                                       
 	            Idle:     //Initial state inidicating reset is done and ready to receive read/write transactions                                       
@@ -367,24 +388,29 @@
 	          end                                       
 	        end                                         
 	// Implement memory mapped register select and read logic generation
-	assign S_AXI_RDATA = (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 3'h0) ? slv_reg0 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 3'h1) ? slv_reg1 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 3'h2) ? slv_reg2 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 3'h3) ? slv_reg3 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 3'h4) ? slv_reg4 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 3'h5) ? slv_reg5 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 3'h6) ? slv_reg6 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 3'h7) ? slv_reg7 : 0; 
+	  assign S_AXI_RDATA = (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 4'h0) ? slv_reg0 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 4'h1) ? slv_reg1 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 4'h2) ? slv_reg2 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 4'h3) ? slv_reg3 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 4'h4) ? slv_reg4 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 4'h5) ? slv_reg5 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 4'h6) ? slv_reg6 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 4'h7) ? slv_reg7 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 4'h8) ? slv_reg8 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 4'h9) ? slv_reg9 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 4'hA) ? slv_reg10 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 4'hB) ? slv_reg11 : 0; 
+
 
 	// Add user logic here
 	wire[(SOLUTION_WIDTH-1):0] reg8_wire;
+	wire [31:0] flip_counts;
 
     always @( posedge S_AXI_ACLK )
     begin
 	  if ( S_AXI_ARESETN == 1'b0 )
 	    begin
-	      slv_reg7 <= 0;
+	       slv_reg7 <= 0;
+	       slv_reg8 <= 0;
 	    end 
 	  else begin	   
 	        slv_reg7 <= reg8_wire;
+	        slv_reg8 <= flip_counts;
        end
     end
 
-	
-neuroSA_comm_wrapper #(.USE_ROUND_ROBIN(USE_ROUND_ROBIN),
+
+
+neuroSA_comm_wrapper_large_problem #(.USE_ROUND_ROBIN(USE_ROUND_ROBIN),
                        .NEURON_SEL_LFSR_WIDTH(NEURON_SEL_LFSR_WIDTH),
                        .MEMBRANE_WIDTH(MEMBRANE_WIDTH),
                        .LOG_NOISE_SOURCE_WIDTH(LOG_NOISE_SOURCE_WIDTH),
@@ -420,10 +446,8 @@ neuroSA_comm_wrapper #(.USE_ROUND_ROBIN(USE_ROUND_ROBIN),
                         .reg5(slv_reg4[NEURON_SEL_LFSR_WIDTH-1:0]),
                         .reg6(slv_reg5[(MEMBRANE_WIDTH+3):0]),
                         .reg7(slv_reg6[NEURON_NUM_WIDTH-1:0]),
-                        .reg8(reg8_wire));
-
-
-    
+                        .reg8(reg8_wire),
+                        .reg9(flip_counts));
 
 
 	// User logic ends

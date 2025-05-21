@@ -1,4 +1,4 @@
-# Install script for directory: /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/vitis_software/fowler_nordheim_annealer_Neq8_with_uart/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/xiltimer/src/core
+# Install script for directory: /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/vitis_software/fowler_nordheim_annealer_Neq8_with_uart/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/xiltimer/src/core
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/vitis_software/fowler_nordheim_annealer_Neq8_with_uart/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src/core/default_timer/cmake_install.cmake")
+  include("/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/vitis_software/fowler_nordheim_annealer_Neq8_with_uart/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src/core/default_timer/cmake_install.cmake")
 
 endif()
 

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xCC6CFA53F622E079",
+      "boundary_crc": "0xCC6CFA53B4580162",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800",
       "name": "design_1_N_eq_800",
@@ -14,7 +14,8 @@
       "processing_system7_0": "",
       "fowler_nordheim_anne_0": "",
       "axi_smc": "",
-      "rst_ps7_0_50M": ""
+      "rst_ps7_0_50M": "",
+      "axi_vip_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1029,7 +1030,7 @@
                 "value_src": "constant"
               },
               "ADDR_WIDTH": {
-                "value": "5",
+                "value": "6",
                 "value_src": "auto"
               },
               "AWUSER_WIDTH": {
@@ -1134,7 +1135,7 @@
               "AWADDR": {
                 "physical_name": "s00_axi_awaddr",
                 "direction": "I",
-                "left": "4",
+                "left": "5",
                 "right": "0"
               },
               "AWPROT": {
@@ -1188,7 +1189,7 @@
               "ARADDR": {
                 "physical_name": "s00_axi_araddr",
                 "direction": "I",
-                "left": "4",
+                "left": "5",
                 "right": "0"
               },
               "ARPROT": {
@@ -1271,7 +1272,7 @@
         "inst_hier_path": "axi_smc",
         "parameters": {
           "NUM_SI": {
-            "value": "1"
+            "value": "2"
           }
         },
         "interface_ports": {
@@ -1285,6 +1286,22 @@
               },
               "NUM_WRITE_OUTSTANDING": {
                 "value": "8"
+              }
+            },
+            "bridges": [
+              "M00_AXI"
+            ]
+          },
+          "S01_AXI": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "1"
               }
             },
             "bridges": [
@@ -1324,6 +1341,62 @@
         "xci_name": "design_1_N_eq_800_rst_ps7_0_50M_0",
         "xci_path": "ip/design_1_N_eq_800_rst_ps7_0_50M_0/design_1_N_eq_800_rst_ps7_0_50M_0.xci",
         "inst_hier_path": "rst_ps7_0_50M"
+      },
+      "axi_vip_0": {
+        "vlnv": "xilinx.com:ip:axi_vip:1.1",
+        "ip_revision": "19",
+        "xci_name": "design_1_N_eq_800_axi_vip_0_0",
+        "xci_path": "ip/design_1_N_eq_800_axi_vip_0_0/design_1_N_eq_800_axi_vip_0_0.xci",
+        "inst_hier_path": "axi_vip_0",
+        "parameters": {
+          "ADDR_WIDTH": {
+            "value": "32"
+          },
+          "DATA_WIDTH": {
+            "value": "32"
+          },
+          "HAS_BRESP": {
+            "value": "1"
+          },
+          "HAS_PROT": {
+            "value": "1"
+          },
+          "HAS_RRESP": {
+            "value": "1"
+          },
+          "HAS_WSTRB": {
+            "value": "1"
+          },
+          "INTERFACE_MODE": {
+            "value": "MASTER"
+          },
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          }
+        },
+        "interface_ports": {
+          "M_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Master_AXI",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Master_AXI": {
+              "range": "4G",
+              "width": "32"
+            }
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1331,6 +1404,12 @@
         "interface_ports": [
           "axi_smc/M00_AXI",
           "fowler_nordheim_anne_0/s00_axi"
+        ]
+      },
+      "axi_vip_0_M_AXI": {
+        "interface_ports": [
+          "axi_vip_0/M_AXI",
+          "axi_smc/S01_AXI"
         ]
       },
       "processing_system7_0_DDR": {
@@ -1358,8 +1437,9 @@
           "processing_system7_0/FCLK_CLK0",
           "processing_system7_0/M_AXI_GP0_ACLK",
           "axi_smc/aclk",
-          "fowler_nordheim_anne_0/s00_axi_aclk",
-          "rst_ps7_0_50M/slowest_sync_clk"
+          "rst_ps7_0_50M/slowest_sync_clk",
+          "axi_vip_0/aclk",
+          "fowler_nordheim_anne_0/s00_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -1371,8 +1451,9 @@
       "rst_ps7_0_50M_peripheral_aresetn": {
         "ports": [
           "rst_ps7_0_50M/peripheral_aresetn",
-          "fowler_nordheim_anne_0/s00_axi_aresetn",
-          "axi_smc/aresetn"
+          "axi_smc/aresetn",
+          "axi_vip_0/aresetn",
+          "fowler_nordheim_anne_0/s00_axi_aresetn"
         ]
       }
     },
@@ -1380,6 +1461,19 @@
       "/processing_system7_0": {
         "address_spaces": {
           "Data": {
+            "segments": {
+              "SEG_fowler_nordheim_anne_0_reg0": {
+                "address_block": "/fowler_nordheim_anne_0/s00_axi/reg0",
+                "offset": "0x40000000",
+                "range": "4K"
+              }
+            }
+          }
+        }
+      },
+      "/axi_vip_0": {
+        "address_spaces": {
+          "Master_AXI": {
             "segments": {
               "SEG_fowler_nordheim_anne_0_reg0": {
                 "address_block": "/fowler_nordheim_anne_0/s00_axi/reg0",

@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed May 21 21:11:11 2025
+# Process ID         : 551253
+# Current directory  : /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/ip_repo
+# Command line       : vivado edit_myip_v1_0.xpr
+# Log file           : /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/ip_repo/vivado.log
+# Journal file       : /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/ip_repo/vivado.jou
+# Running On         : mlewand
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.2 LTS
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700H
+# CPU Frequency      : 705.325 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 33341 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41931 MB
+# Available Virtual  : 5529 MB
+#-----------------------------------------------------------
+start_gui
+open_project edit_myip_v1_0.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /home/mlewand/tools/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /home/mlewand/tools/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /home/mlewand/tools/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/ip_repo/edit_myip_v1_0.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/ip_repo/myip_1_0'.
+WARNING: [IP_Flow 19-2207] Repository '/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/ip_repo/myip_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/ip_repo/myip_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/fowler_nordheim_IP/fowler_nordheim_annealer_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/mlewand/tools/Vivado/2024.2/data/ip'.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed May 21 21:31:06 2025...

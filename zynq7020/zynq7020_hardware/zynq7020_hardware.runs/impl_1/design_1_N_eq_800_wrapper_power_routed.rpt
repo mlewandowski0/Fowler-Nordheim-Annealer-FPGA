@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date             : Sat May 10 20:00:35 2025
-| Host             : mlewan running 64-bit Ubuntu 24.04.2 LTS
+| Date             : Wed May 21 21:51:11 2025
+| Host             : mlewand running 64-bit Ubuntu 24.04.2 LTS
 | Command          : report_power -file design_1_N_eq_800_wrapper_power_routed.rpt -pb design_1_N_eq_800_wrapper_power_summary_routed.pb -rpx design_1_N_eq_800_wrapper_power_routed.rpx
 | Design           : design_1_N_eq_800_wrapper
 | Device           : xc7z020clg400-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.420        |
+| Total On-Chip Power (W)  | 1.421        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.283        |
+| Dynamic (W)              | 1.284        |
 | Device Static (W)        | 0.137        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 68.6         |
@@ -49,24 +49,25 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+-------------------------+-----------+----------+-----------+-----------------+
-| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
-+-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.024 |        3 |       --- |             --- |
-| Slice Logic             |     0.037 |    53702 |       --- |             --- |
-|   LUT as Logic          |     0.030 |    26898 |     53200 |           50.56 |
-|   CARRY4                |     0.007 |     2463 |     13300 |           18.52 |
-|   Register              |    <0.001 |    14176 |    106400 |           13.32 |
-|   F7/F8 Muxes           |    <0.001 |     2676 |     53200 |            5.03 |
-|   Others                |     0.000 |      506 |       --- |             --- |
-|   LUT as Shift Register |     0.000 |        2 |     17400 |            0.01 |
-| Signals                 |     0.031 |    34652 |       --- |             --- |
-| Block RAM               |     0.001 |      6.5 |       140 |            4.64 |
-| DSPs                    |     0.014 |       25 |       220 |           11.36 |
-| PS7                     |     1.175 |        1 |       --- |             --- |
-| Static Power            |     0.137 |          |           |                 |
-| Total                   |     1.420 |          |           |                 |
-+-------------------------+-----------+----------+-----------+-----------------+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.025 |        3 |       --- |             --- |
+| Slice Logic              |     0.038 |    54551 |       --- |             --- |
+|   LUT as Logic           |     0.030 |    27188 |     53200 |           51.11 |
+|   CARRY4                 |     0.007 |     2471 |     13300 |           18.58 |
+|   Register               |    <0.001 |    14533 |    106400 |           13.66 |
+|   F7/F8 Muxes            |    <0.001 |     2642 |     53200 |            4.97 |
+|   LUT as Shift Register  |    <0.001 |        4 |     17400 |            0.02 |
+|   Others                 |     0.000 |      628 |       --- |             --- |
+|   LUT as Distributed RAM |     0.000 |        2 |     17400 |            0.01 |
+| Signals                  |     0.031 |    35338 |       --- |             --- |
+| Block RAM                |     0.001 |        7 |       140 |            5.00 |
+| DSPs                     |     0.014 |       25 |       220 |           11.36 |
+| PS7                      |     1.175 |        1 |       --- |             --- |
+| Static Power             |     0.137 |          |           |                 |
+| Total                    |     1.421 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -75,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.121 |       0.108 |      0.014 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.122 |       0.109 |      0.014 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -151,12 +152,12 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| design_1_N_eq_800_wrapper  |     1.283 |
-|   design_1_N_eq_800_i      |     1.283 |
-|     axi_smc                |     0.002 |
-|       inst                 |     0.002 |
-|     fowler_nordheim_anne_0 |     0.105 |
-|       inst                 |     0.105 |
+| design_1_N_eq_800_wrapper  |     1.284 |
+|   design_1_N_eq_800_i      |     1.284 |
+|     axi_smc                |     0.003 |
+|       inst                 |     0.003 |
+|     fowler_nordheim_anne_0 |     0.106 |
+|       inst                 |     0.106 |
 |     processing_system7_0   |     1.175 |
 |       inst                 |     1.175 |
 +----------------------------+-----------+

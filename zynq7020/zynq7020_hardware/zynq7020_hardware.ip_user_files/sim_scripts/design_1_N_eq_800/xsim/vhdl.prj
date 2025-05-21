@@ -1,0 +1,15 @@
+vhdl xpm  \
+"/home/mlewand/tools/Vivado/2024.2/data/ip/xpm/xpm_VCOMP.vhd" \
+
+vhdl lib_cdc_v1_0_3  \
+"../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd" \
+
+vhdl proc_sys_reset_v5_0_16  \
+"../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/ip/ip_1/sim/bd_3068_psr_aclk_0.vhd" \
+"../../../bd/design_1_N_eq_800/ip/design_1_N_eq_800_rst_ps7_0_50M_0/sim/design_1_N_eq_800_rst_ps7_0_50M_0.vhd" \
+
+# Do not sort compile order
+nosort

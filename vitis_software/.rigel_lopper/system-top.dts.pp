@@ -1,6 +1,6 @@
-#line 1 "../fowler_nordheim_annealer_Neq800_v1/hw/sdt/system-top.dts"
+#line 1 "../fw_ann_Neq800_flips_and_uart/hw/sdt/system-top.dts"
 /dts-v1/;
-#line 1 "../fowler_nordheim_annealer_Neq800_v1/hw/sdt/zynq-7000.dtsi"
+#line 1 "../fw_ann_Neq800_flips_and_uart/hw/sdt/zynq-7000.dtsi"
 // SPDX-License-Identifier: GPL-2.0+
 /*
  * Xilinx Zynq 7000 DTSI
@@ -590,14 +590,14 @@
 		};
 	};
 };
-#line 1 "../fowler_nordheim_annealer_Neq800_v1/hw/sdt/pl.dtsi"
+#line 1 "../fw_ann_Neq800_flips_and_uart/hw/sdt/pl.dtsi"
 / {
 	amba_pl: amba_pl {
 		ranges;
 		compatible = "simple-bus";
 		#address-cells = <1>;
 		#size-cells = <1>;
-		firmware-name = "design_1_N_eq_800_wrapper.bit.bin";
+		firmware-name = "design_1_N_eq_800_wrapper_with_flips.bit.bin";
 		clocking0: clocking0 {
 			compatible = "xlnx,fclk";
 			assigned-clocks = <&clkc 15>;
@@ -637,7 +637,7 @@
 			xlnx,no-of-clk-cycles-to-propagate = <1>;
 			status = "okay";
 			clock-names = "s00_axi_aclk";
-			xlnx,s00-axi-addr-width = <5>;
+			xlnx,s00-axi-addr-width = <6>;
 			xlnx,fractional-part = <9>;
 			xlnx,log-noise-source-width = <16>;
 			xlnx,log-lut-bit-size = <8>;
@@ -647,7 +647,7 @@
 		};
 	};
 };
-#line 1 "../fowler_nordheim_annealer_Neq800_v1/hw/sdt/pcw.dtsi"
+#line 1 "../fw_ann_Neq800_flips_and_uart/hw/sdt/pcw.dtsi"
 	&ps7_cortexa9_0 {
 		xlnx,rable = <0>;
 		xlnx,i-cache-size = <0x8000>;
@@ -919,7 +919,7 @@
 		fclk-enable = <0x1>;
 		ps-clk-frequency = <33333333>;
 	};
-#line 5 "../fowler_nordheim_annealer_Neq800_v1/hw/sdt/system-top.dts"
+#line 5 "../fw_ann_Neq800_flips_and_uart/hw/sdt/system-top.dts"
 / {
 	device_id = "7z020";
 	slrcount = <1>;

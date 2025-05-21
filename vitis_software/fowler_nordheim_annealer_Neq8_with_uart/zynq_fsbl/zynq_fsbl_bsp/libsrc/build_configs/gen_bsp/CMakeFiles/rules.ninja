@@ -327,7 +327,7 @@ rule C_STATIC_LIBRARY_LINKER__xilrsa_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /home/mlewand/tools/Vitis/2024.2/tps/lnx64/cmake-3.24.2/bin/cmake --regenerate-during-build -S/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/vitis_software/fowler_nordheim_annealer_Neq8_with_uart/zynq_fsbl/zynq_fsbl_bsp -B/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/vitis_software/fowler_nordheim_annealer_Neq8_with_uart/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp
+  command = /home/mlewand/tools/Vitis/2024.2/tps/lnx64/cmake-3.24.2/bin/cmake --regenerate-during-build -S/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/vitis_software/fowler_nordheim_annealer_Neq8_with_uart/zynq_fsbl/zynq_fsbl_bsp -B/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/vitis_software/fowler_nordheim_annealer_Neq8_with_uart/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp
   description = Re-running CMake...
   generator = 1
 

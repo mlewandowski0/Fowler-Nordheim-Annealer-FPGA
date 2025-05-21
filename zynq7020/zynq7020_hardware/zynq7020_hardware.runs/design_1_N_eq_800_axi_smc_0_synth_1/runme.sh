@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.runs/design_1_N_eq_800_axi_smc_0_synth_1'
+HD_PWD='/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.runs/design_1_N_eq_800_axi_smc_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

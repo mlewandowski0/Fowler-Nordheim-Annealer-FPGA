@@ -4,10 +4,10 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="68" Path="/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/ip_repo/edit_myip_v1_0.xpr">
+<Project Product="Vivado" Version="7" Minor="68" Path="/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/ip_repo/edit_myip_v1_0.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="6bf2c8e7c5a3419a8019ae8be248767c"/>
+    <Option Name="Id" Val="85c49e27b8604dc690dc73467d52196e"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -44,10 +44,10 @@
     <Option Name="SimulatorGccVersionRiviera" Val="9.3.0"/>
     <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
     <Option Name="BoardPart" Val=""/>
-    <Option Name="BoardPartRepoPaths" Val="$PPRDIR/../../../../../.Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/myip_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/myip_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../fowler_nordheim_IP/fowler_nordheim_annealer_1_0"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>

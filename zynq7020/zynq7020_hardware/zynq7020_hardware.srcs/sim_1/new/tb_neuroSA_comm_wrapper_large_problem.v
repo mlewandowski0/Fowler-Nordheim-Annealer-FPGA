@@ -72,7 +72,7 @@ reg [31:0] reg4 = 0;
 reg [31:0] reg5 = 0;
 reg [31:0] reg6 = 0;
 reg [31:0] reg7 = 0;
-wire [31:0] reg8;
+wire [31:0] reg8, reg9;
 
 assign reg8[31:SOLUTION_WIDTH] = 0;
 
@@ -113,7 +113,8 @@ neuroSA_comm_wrapper_large_problem #(.USE_ROUND_ROBIN(USE_ROUND_ROBIN),
                                              .reg5(reg5[NEURON_SEL_LFSR_WIDTH-1:0]),
                                              .reg6(reg6[(MEMBRANE_WIDTH+3):0]),
                                              .reg7(reg7[NEURON_NUM_WIDTH-1:0]),
-                                             .reg8(reg8[(SOLUTION_WIDTH-1):0]));
+                                             .reg8(reg8[(SOLUTION_WIDTH-1):0]),
+                                             .reg9(reg9));
 
                                              
 
@@ -208,7 +209,7 @@ neuroSA_comm_wrapper_large_problem #(.USE_ROUND_ROBIN(USE_ROUND_ROBIN),
         // unhalt the machine 
         `CTR_REG_ADDR <= 32'b11;
 
-        repeat (1000) @(posedge clk);
+        repeat (100000) @(posedge clk);
         $fclose(fd);
         $finish;
     end

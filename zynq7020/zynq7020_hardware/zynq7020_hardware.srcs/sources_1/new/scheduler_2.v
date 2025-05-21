@@ -51,7 +51,8 @@ module scheduler_2
     output reg                                 update_memories,
     output reg                                 should_increment,
     output wire                                decrease_temp, 
-    output wire signed [SOLUTION_WIDTH-1:0]    cuts_best_transmit
+    output wire signed [SOLUTION_WIDTH-1:0]    cuts_best_transmit,
+    output wire [31:0]                         flips_cnt
 );
 
     // State Definitions
@@ -79,7 +80,7 @@ module scheduler_2
     
     // tracking of the best-cut solution
     reg signed [SOLUTION_WIDTH-1:0] cuts_cur, cuts_best;
-    
+    reg [31:0] flips;
     
     wire [$clog2(GRAPH_WIDTH)-1:0] idx_comb = {unit_r, off_r};
     assign index_of_neuron_that_fired = idx_comb;
@@ -87,6 +88,8 @@ module scheduler_2
     assign decrease_temp = &step_cnt[TEMP_INC_WIDTH-1:0];
     assign cuts_best_transmit = cuts_best;
     assign halt_modules = halt_scheduler;
+    assign flips_cnt = flips;
+    
     
    // next potential cost
     wire signed [SOLUTION_WIDTH-1:0] cuts_next = add_r ? (cuts_cur - mem_r) : (cuts_cur + mem_r);
@@ -108,6 +111,7 @@ module scheduler_2
             add_r      <= 0;
             cuts_cur   <= 0;
             cuts_best  <= 0;
+            flips      <= 0;
         end
         else
         begin
@@ -117,6 +121,7 @@ module scheduler_2
             case(state)
                 S_WAIT:
                 begin
+                    flips <= flips + 1;
                     if (flip)
                     begin
                         flip_r <= 1;

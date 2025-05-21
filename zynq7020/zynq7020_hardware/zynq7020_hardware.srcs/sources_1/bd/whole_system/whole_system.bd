@@ -7,8 +7,7 @@
       "name": "whole_system",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.2",
-      "validated": "true"
+      "tool_version": "2024.2"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -1093,6 +1092,11 @@
         "xci_name": "whole_system_fowler_nordheim_anne_0_1",
         "xci_path": "ip/whole_system_fowler_nordheim_anne_0_1/whole_system_fowler_nordheim_anne_0_1.xci",
         "inst_hier_path": "fowler_nordheim_anne_0",
+        "parameters": {
+          "C_S00_AXI_ADDR_WIDTH": {
+            "value": "6"
+          }
+        },
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "fowler_nordheim_annealer",
@@ -1121,7 +1125,7 @@
                 "value_src": "constant"
               },
               "ADDR_WIDTH": {
-                "value": "5",
+                "value": "6",
                 "value_src": "auto"
               },
               "AWUSER_WIDTH": {
@@ -1226,7 +1230,7 @@
               "AWADDR": {
                 "physical_name": "s00_axi_awaddr",
                 "direction": "I",
-                "left": "4",
+                "left": "5",
                 "right": "0"
               },
               "AWPROT": {
@@ -1280,7 +1284,7 @@
               "ARADDR": {
                 "physical_name": "s00_axi_araddr",
                 "direction": "I",
-                "left": "4",
+                "left": "5",
                 "right": "0"
               },
               "ARPROT": {

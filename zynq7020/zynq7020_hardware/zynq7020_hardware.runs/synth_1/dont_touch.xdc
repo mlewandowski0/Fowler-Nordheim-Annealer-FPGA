@@ -16,4 +16,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_N_
 # IP: bd/design_1_N_eq_800/ip/design_1_N_eq_800_rst_ps7_0_50M_0/design_1_N_eq_800_rst_ps7_0_50M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_N_eq_800_rst_ps7_0_50M_0 || ORIG_REF_NAME==design_1_N_eq_800_rst_ps7_0_50M_0} -quiet] -quiet
 
-# XDC: /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/design_1_N_eq_800_ooc.xdc
+# IP: bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_vip_0_0/design_1_N_eq_800_axi_vip_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_N_eq_800_axi_vip_0_0 || ORIG_REF_NAME==design_1_N_eq_800_axi_vip_0_0} -quiet] -quiet
+
+# XDC: /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/design_1_N_eq_800_ooc.xdc

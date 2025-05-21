@@ -1,24 +1,4 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 05/10/2025 06:42:42 PM
-// Design Name: 
-// Module Name: fowler_nordheim_annealer_Neq800
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
+`timescale 1 ns / 1 ps
 
 module fowler_nordheim_annealer_Neq800 #(
 		// Users to add parameters here
@@ -29,8 +9,8 @@ module fowler_nordheim_annealer_Neq800 #(
 
 		// Parameters of Axi Slave Bus Interface S00_AXI
 		parameter integer C_S00_AXI_DATA_WIDTH	= 32,
-		parameter integer C_S00_AXI_ADDR_WIDTH	= 5,
-
+		parameter integer C_S00_AXI_ADDR_WIDTH	= 6,
+		
 		parameter USE_ROUND_ROBIN=0,
 		parameter NEURON_SEL_LFSR_WIDTH=9,
 		parameter MEMBRANE_WIDTH=10,
@@ -58,6 +38,7 @@ module fowler_nordheim_annealer_Neq800 #(
 		parameter USE_TRANSMIT_WITH_BUFF=1,
 		parameter NO_OF_CLK_CYCLES_TO_PROPAGATE=1,
 		parameter NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE=3
+
 	)
 	(
 		// Users to add ports here

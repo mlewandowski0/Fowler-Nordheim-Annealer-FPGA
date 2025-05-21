@@ -1,0 +1,4 @@
+domain_path: /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/vitis_software/fw_ann_Neq800_flips_and_uart/zynq_fsbl/zynq_fsbl_bsp
+app_src_dir: /home/mlewand/tools/Vitis/2024.2/data/embeddedsw/lib/sw_apps/zynq_fsbl
+template: zynq_fsbl
+lang: c

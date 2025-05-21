@@ -1,14 +1,145 @@
 Vivado Simulator v2024.2.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/mlewand/tools/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_19 -L processing_system7_vip_v1_0_21 -L xlconstant_v1_1_9 -L lib_cdc_v1_0_3 -L proc_sys_reset_v5_0_16 -L smartconnect_v1_0 -L axi_register_slice_v2_1_33 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_neuroSA_comm_wrapper_large_problem_behav xil_defaultlib.tb_neuroSA_comm_wrapper_large_problem xil_defaultlib.glbl -log elaborate.log 
+Running: /home/mlewand/tools/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L xpm -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_19 -L processing_system7_vip_v1_0_21 -L xlconstant_v1_1_9 -L lib_cdc_v1_0_3 -L proc_sys_reset_v5_0_16 -L smartconnect_v1_0 -L axi_register_slice_v2_1_33 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 128 differs from formal bit length 64 for port 'WR_DATA_STRB' [../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_21_axi_gp.v:208]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 6 for port 'm_axi_bid' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:5546]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 6 for port 'm_axi_rid' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:5564]
+WARNING: [VRFC 10-3091] actual bit length 128 differs from formal bit length 64 for port 'WR_DATA_STRB' [../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_21_axi_gp.v:292]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'WR_BYTES' [../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_21_axi_hp.v:80]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'RD_BYTES' [../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_21_axi_hp.v:89]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 6 for port 'm_axi_bid' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10256]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 6 for port 'm_axi_rid' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10274]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'm_axi_rdata' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10275]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'WR_BYTES' [../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_21_axi_hp.v:165]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'RD_BYTES' [../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_21_axi_hp.v:174]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'WR_BYTES' [../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_21_axi_hp.v:251]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'RD_BYTES' [../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_21_axi_hp.v:260]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'WR_BYTES' [../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_21_axi_hp.v:337]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'RD_BYTES' [../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_21_axi_hp.v:346]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 3 for port 'm_axi_bid' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7157]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 3 for port 'm_axi_rid' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7175]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'm_axi_rdata' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7176]
+WARNING: [VRFC 10-5021] port 'mb_reset' is not connected on this instance [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/sim/design_1_N_eq_800.v:354]
+WARNING: [VRFC 10-5021] port 'mb_reset' is not connected on this instance [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_axi_smc_0/bd_0/sim/bd_3068.v:1212]
+WARNING: [VRFC 10-5021] port 'ENET0_GMII_RXD' is not connected on this instance [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.ip_user_files/bd/design_1_N_eq_800/ip/design_1_N_eq_800_processing_system7_0_0/sim/design_1_N_eq_800_processing_system7_0_0.v:213]
+WARNING: [VRFC 10-3129] assignment to input 'wr_dv_ocm_gp0' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:4372]
+WARNING: [VRFC 10-3129] assignment to input 'wr_dv_ddr_gp0' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:4373]
+WARNING: [VRFC 10-3129] assignment to input 'wr_dv_ocm_gp1' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:4394]
+WARNING: [VRFC 10-3129] assignment to input 'wr_dv_ddr_gp1' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:4395]
+WARNING: [VRFC 10-3129] assignment to input 'wr_dv_ddr_hp0' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:4465]
+WARNING: [VRFC 10-3129] assignment to input 'wr_dv_ddr_hp1' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:4483]
+WARNING: [VRFC 10-3129] assignment to input 'wr_dv_ddr_hp2' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:4501]
+WARNING: [VRFC 10-3129] assignment to input 'wr_dv_ddr_hp3' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:4519]
+WARNING: [VRFC 10-3129] assignment to input 'ddr_wr_qos' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:1253]
+WARNING: [VRFC 10-3129] assignment to input 'ddr_rd_qos' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:1276]
+WARNING: [VRFC 10-3129] assignment to input 'ddr_wr_qos' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:1091]
+WARNING: [VRFC 10-3129] assignment to input 'ddr_rd_qos' [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:1115]
+WARNING: [VRFC 10-3027] 'ocm_wr_strb_port0' was previously declared with a different range [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:3809]
+WARNING: [VRFC 10-3705] select index 64 into 'wrp_strb' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:6134]
+WARNING: [VRFC 10-3705] select index 128 into 'wrp_strb' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10898]
+WARNING: [VRFC 10-3705] select index 128 into 'wrp_strb' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7772]
+WARNING: [VRFC 10-3705] select index 4 into 'wr_fifo_rd_ptr' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7985]
+WARNING: [VRFC 10-3705] select index 4 into 'ar_cnt' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8124]
+WARNING: [VRFC 10-3705] select index 4 into 'wr_rresp_cnt' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8221]
+WARNING: [VRFC 10-3705] select index 4 into 'rd_fifo_wr_ptr' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8240]
+WARNING: [VRFC 10-3705] select index 4 into 'rd_cnt' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8381]
+WARNING: [VRFC 10-3705] select index 4 into 'rresp_time_cnt' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8386]
+WARNING: [VRFC 10-3705] select index 4 into 'rd_fifo_rd_ptr' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8391]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package ieee.std_logic_arith
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package smartconnect_v1_0.sc_util_v1_0_4_pkg
+Compiling package xilinx_vip.axi_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling package std.std
+Compiling module xlconstant_v1_1_9.xlconstant_v1_1_9_xlconstant(CON...
+Compiling module xil_defaultlib.bd_3068_one_0
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture fdre_v of entity unisim.FDRE [\FDRE(init='1')\]
+Compiling architecture fdr_v of entity unisim.FDR [fdr_default]
+Compiling architecture implementation of entity lib_cdc_v1_0_3.cdc_sync [\cdc_sync(c_vector_width=2,c_mtb...]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E(init="1111111111111111")...]
+Compiling architecture srl16_v of entity unisim.SRL16 [\SRL16(init="1111111111111111")(...]
+Compiling architecture imp of entity proc_sys_reset_v5_0_16.lpf [\lpf(c_ext_rst_width=4,c_aux_rst...]
+Compiling architecture imp of entity proc_sys_reset_v5_0_16.upcnt_n [\upcnt_n(c_size=6)\]
+Compiling architecture imp of entity proc_sys_reset_v5_0_16.sequence_psr [sequence_psr_default]
+Compiling architecture imp of entity proc_sys_reset_v5_0_16.proc_sys_reset [\proc_sys_reset(c_family="zynq",...]
+Compiling architecture bd_3068_psr_aclk_0_arch of entity xil_defaultlib.bd_3068_psr_aclk_0 [bd_3068_psr_aclk_0_default]
+Compiling module xil_defaultlib.clk_map_imp_L6LJ66
+Compiling module xpm.xpm_cdc_async_rst(DEST_SYNC_FF=3...
+Compiling module xil_defaultlib.bd_3068_m00e_0
+Compiling module xil_defaultlib.m00_exit_pipeline_imp_1E7MRV9
+Compiling module xil_defaultlib.bd_3068_m00arn_0
+Compiling module xil_defaultlib.bd_3068_m00awn_0
+Compiling module xil_defaultlib.bd_3068_m00bn_0
+Compiling module xil_defaultlib.bd_3068_m00rn_0
+Compiling module xil_defaultlib.bd_3068_m00wn_0
+Compiling module xil_defaultlib.m00_nodes_imp_1RH0ZI1
+Compiling module xil_defaultlib.bd_3068_m00s2a_0
+Compiling module xil_defaultlib.bd_3068_s00a2s_0
+Compiling module xil_defaultlib.bd_3068_s00mmu_0
+Compiling module xil_defaultlib.bd_3068_s00sic_0
+Compiling module xil_defaultlib.bd_3068_s00tr_0
+Compiling module xil_defaultlib.s00_entry_pipeline_imp_FI1VVA
+Compiling module xil_defaultlib.bd_3068_sarn_0
+Compiling module xil_defaultlib.bd_3068_sawn_0
+Compiling module xil_defaultlib.bd_3068_sbn_0
+Compiling module xil_defaultlib.bd_3068_srn_0
+Compiling module xil_defaultlib.bd_3068_swn_0
+Compiling module xil_defaultlib.s00_nodes_imp_9JMX70
+Compiling module xil_defaultlib.bd_3068_s01a2s_0
+Compiling module xil_defaultlib.bd_3068_s01mmu_0
+Compiling module xil_defaultlib.bd_3068_s01sic_0
+Compiling module xil_defaultlib.bd_3068_s01tr_0
+Compiling module xil_defaultlib.s01_entry_pipeline_imp_1BWU4OY
+Compiling module xil_defaultlib.bd_3068_sarn_1
+Compiling module xil_defaultlib.bd_3068_sawn_1
+Compiling module xil_defaultlib.bd_3068_sbn_1
+Compiling module xil_defaultlib.bd_3068_srn_1
+Compiling module xil_defaultlib.bd_3068_swn_1
+Compiling module xil_defaultlib.s01_nodes_imp_1H3XTDM
+Compiling module xil_defaultlib.bd_3068_arinsw_0
+Compiling module xil_defaultlib.bd_3068_aroutsw_0
+Compiling module xil_defaultlib.bd_3068_awinsw_0
+Compiling module xil_defaultlib.bd_3068_awoutsw_0
+Compiling module xil_defaultlib.bd_3068_binsw_0
+Compiling module xil_defaultlib.bd_3068_boutsw_0
+Compiling module xil_defaultlib.bd_3068_arni_0
+Compiling module xil_defaultlib.bd_3068_awni_0
+Compiling module xil_defaultlib.bd_3068_bni_0
+Compiling module xil_defaultlib.bd_3068_rni_0
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_memory_sdpram(MEMORY_SIZE=4,...
+Compiling module xil_defaultlib.bd_3068_wni_0
+Compiling module xil_defaultlib.i_nodes_imp_13BIM5C
+Compiling module xil_defaultlib.bd_3068_rinsw_0
+Compiling module xil_defaultlib.bd_3068_routsw_0
+Compiling module xil_defaultlib.bd_3068_winsw_0
+Compiling module xil_defaultlib.bd_3068_woutsw_0
+Compiling module xil_defaultlib.switchboards_imp_KETD3S
+Compiling module xil_defaultlib.bd_3068
+Compiling module xil_defaultlib.design_1_N_eq_800_axi_smc_0
+Compiling module xilinx_vip.axi_vip_axi4pc(WDATA_WIDTH=32,RD...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_PROTOCOL=2,C_AX...
+Compiling module axi_vip_v1_1_19.axi_vip_v1_1_19_top(C_AXI_PROTOC...
+Compiling module xil_defaultlib.design_1_N_eq_800_axi_vip_0_0
 Compiling module xil_defaultlib.distributed_graph_memory(NEURON_...
 Compiling module xil_defaultlib.LFSR(BITS=9)
 Compiling module xil_defaultlib.LFSR_inout(LFSR_BITS=9,OUT_BITS=...
@@ -100,7 +231,70 @@ Compiling module xil_defaultlib.neuron_ensemble_with_memory_with...
 Compiling module xil_defaultlib.simple_priority_selector(UNITS=2...
 Compiling module xil_defaultlib.scheduler_2(UNIT_WIDTH=5,GRAPH_W...
 Compiling module xil_defaultlib.neuroSA_machine(USE_ROUND_ROBIN=...
-Compiling module xil_defaultlib.neuroSA_comm_wrapper(NEURON_SEL_...
-Compiling module xil_defaultlib.tb_neuroSA_comm_wrapper_large_pr...
+Compiling module xil_defaultlib.neuroSA_comm_wrapper_large_probl...
+Compiling module xil_defaultlib.fowler_nordheim_annealer_slave_l...
+Compiling module xil_defaultlib.fowler_nordheim_annealer_Neq800(...
+Compiling module xil_defaultlib.design_1_N_eq_800_fowler_nordhei...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_g...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_g...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_a...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_a...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_f...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_a...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_a...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_a...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_a...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_s...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_i...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_s...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_d...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_o...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_o...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_r...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_r...
+Compiling module xilinx_vip.axi_vip_axi4pc(WDATA_WIDTH=32,RD...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_PROTOCOL=1,C_AX...
+Compiling module axi_vip_v1_1_19.axi_vip_v1_1_19_top(C_AXI_PROTOC...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_a...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_a...
+Compiling module xilinx_vip.axi_vip_axi4pc(WDATA_WIDTH=32,RD...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_PROTOCOL=1,C_AX...
+Compiling module axi_vip_v1_1_19.axi_vip_v1_1_19_top(C_AXI_PROTOC...
+WARNING: [VRFC 10-3705] select index 64 into 'wrp_strb' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:6134]
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_a...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_a...
+Compiling module xilinx_vip.axi_vip_axi4pc(PROTOCOL=1,RID_WI...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_PROTOCOL=1,C_AX...
+Compiling module axi_vip_v1_1_19.axi_vip_v1_1_19_top(C_AXI_PROTOC...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_i...
+WARNING: [VRFC 10-3705] select index 128 into 'wrp_strb' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10898]
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_a...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_a...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_a...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_a...
+Compiling module xilinx_vip.axi_vip_axi4pc(PROTOCOL=1,RID_WI...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_PROTOCOL=1,C_AX...
+Compiling module axi_vip_v1_1_19.axi_vip_v1_1_19_top(C_AXI_PROTOC...
+WARNING: [VRFC 10-3705] select index 128 into 'wrp_strb' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7772]
+WARNING: [VRFC 10-3705] select index 4 into 'wr_fifo_rd_ptr' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7985]
+WARNING: [VRFC 10-3705] select index 4 into 'ar_cnt' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8124]
+WARNING: [VRFC 10-3705] select index 4 into 'wr_rresp_cnt' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8221]
+WARNING: [VRFC 10-3705] select index 4 into 'rd_fifo_wr_ptr' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8240]
+WARNING: [VRFC 10-3705] select index 4 into 'rd_cnt' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8381]
+WARNING: [VRFC 10-3705] select index 4 into 'rresp_time_cnt' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8386]
+WARNING: [VRFC 10-3705] select index 4 into 'rd_fifo_rd_ptr' is out of bounds [/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8391]
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21_a...
+Compiling module processing_system7_vip_v1_0_21.processing_system7_vip_v1_0_21(C...
+Compiling module xil_defaultlib.design_1_N_eq_800_processing_sys...
+Compiling architecture imp of entity proc_sys_reset_v5_0_16.lpf [\lpf(c_ext_rst_width=4,c_aux_rst...]
+Compiling architecture imp of entity proc_sys_reset_v5_0_16.proc_sys_reset [\proc_sys_reset(c_family="zynq",...]
+Compiling architecture design_1_n_eq_800_rst_ps7_0_50m_0_arch of entity xil_defaultlib.design_1_N_eq_800_rst_ps7_0_50M_0 [design_1_n_eq_800_rst_ps7_0_50m_...]
+Compiling module xil_defaultlib.design_1_N_eq_800
+Compiling module xil_defaultlib.design_1_N_eq_800_wrapper
+Compiling module xil_defaultlib.tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_neuroSA_comm_wrapper_large_problem_behav
+Built simulation snapshot tb_behav

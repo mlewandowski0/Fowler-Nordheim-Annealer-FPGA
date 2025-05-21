@@ -106,7 +106,26 @@ module design_1_N_eq_800_axi_smc_0 (
   output bit_as_bool S00_AXI_rlast,
   output bit_as_bool S00_AXI_rvalid,
   input bit_as_bool S00_AXI_rready,
-  output bit [4 : 0] M00_AXI_awaddr,
+  input bit [31 : 0] S01_AXI_awaddr,
+  input bit [2 : 0] S01_AXI_awprot,
+  input bit_as_bool S01_AXI_awvalid,
+  output bit_as_bool S01_AXI_awready,
+  input bit [31 : 0] S01_AXI_wdata,
+  input bit [3 : 0] S01_AXI_wstrb,
+  input bit_as_bool S01_AXI_wvalid,
+  output bit_as_bool S01_AXI_wready,
+  output bit [1 : 0] S01_AXI_bresp,
+  output bit_as_bool S01_AXI_bvalid,
+  input bit_as_bool S01_AXI_bready,
+  input bit [31 : 0] S01_AXI_araddr,
+  input bit [2 : 0] S01_AXI_arprot,
+  input bit_as_bool S01_AXI_arvalid,
+  output bit_as_bool S01_AXI_arready,
+  output bit [31 : 0] S01_AXI_rdata,
+  output bit [1 : 0] S01_AXI_rresp,
+  output bit_as_bool S01_AXI_rvalid,
+  input bit_as_bool S01_AXI_rready,
+  output bit [5 : 0] M00_AXI_awaddr,
   output bit [2 : 0] M00_AXI_awprot,
   output bit_as_bool M00_AXI_awvalid,
   input bit_as_bool M00_AXI_awready,
@@ -117,7 +136,7 @@ module design_1_N_eq_800_axi_smc_0 (
   input bit [1 : 0] M00_AXI_bresp,
   input bit_as_bool M00_AXI_bvalid,
   output bit_as_bool M00_AXI_bready,
-  output bit [4 : 0] M00_AXI_araddr,
+  output bit [5 : 0] M00_AXI_araddr,
   output bit [2 : 0] M00_AXI_arprot,
   output bit_as_bool M00_AXI_arvalid,
   input bit_as_bool M00_AXI_arready,
@@ -131,7 +150,7 @@ endmodule
 
 `ifdef XCELIUM
 (* XMSC_MODULE_EXPORT *)
-module design_1_N_eq_800_axi_smc_0 (aclk,aresetn,S00_AXI_awid,S00_AXI_awaddr,S00_AXI_awlen,S00_AXI_awsize,S00_AXI_awburst,S00_AXI_awlock,S00_AXI_awcache,S00_AXI_awprot,S00_AXI_awqos,S00_AXI_awvalid,S00_AXI_awready,S00_AXI_wid,S00_AXI_wdata,S00_AXI_wstrb,S00_AXI_wlast,S00_AXI_wvalid,S00_AXI_wready,S00_AXI_bid,S00_AXI_bresp,S00_AXI_bvalid,S00_AXI_bready,S00_AXI_arid,S00_AXI_araddr,S00_AXI_arlen,S00_AXI_arsize,S00_AXI_arburst,S00_AXI_arlock,S00_AXI_arcache,S00_AXI_arprot,S00_AXI_arqos,S00_AXI_arvalid,S00_AXI_arready,S00_AXI_rid,S00_AXI_rdata,S00_AXI_rresp,S00_AXI_rlast,S00_AXI_rvalid,S00_AXI_rready,M00_AXI_awaddr,M00_AXI_awprot,M00_AXI_awvalid,M00_AXI_awready,M00_AXI_wdata,M00_AXI_wstrb,M00_AXI_wvalid,M00_AXI_wready,M00_AXI_bresp,M00_AXI_bvalid,M00_AXI_bready,M00_AXI_araddr,M00_AXI_arprot,M00_AXI_arvalid,M00_AXI_arready,M00_AXI_rdata,M00_AXI_rresp,M00_AXI_rvalid,M00_AXI_rready)
+module design_1_N_eq_800_axi_smc_0 (aclk,aresetn,S00_AXI_awid,S00_AXI_awaddr,S00_AXI_awlen,S00_AXI_awsize,S00_AXI_awburst,S00_AXI_awlock,S00_AXI_awcache,S00_AXI_awprot,S00_AXI_awqos,S00_AXI_awvalid,S00_AXI_awready,S00_AXI_wid,S00_AXI_wdata,S00_AXI_wstrb,S00_AXI_wlast,S00_AXI_wvalid,S00_AXI_wready,S00_AXI_bid,S00_AXI_bresp,S00_AXI_bvalid,S00_AXI_bready,S00_AXI_arid,S00_AXI_araddr,S00_AXI_arlen,S00_AXI_arsize,S00_AXI_arburst,S00_AXI_arlock,S00_AXI_arcache,S00_AXI_arprot,S00_AXI_arqos,S00_AXI_arvalid,S00_AXI_arready,S00_AXI_rid,S00_AXI_rdata,S00_AXI_rresp,S00_AXI_rlast,S00_AXI_rvalid,S00_AXI_rready,S01_AXI_awaddr,S01_AXI_awprot,S01_AXI_awvalid,S01_AXI_awready,S01_AXI_wdata,S01_AXI_wstrb,S01_AXI_wvalid,S01_AXI_wready,S01_AXI_bresp,S01_AXI_bvalid,S01_AXI_bready,S01_AXI_araddr,S01_AXI_arprot,S01_AXI_arvalid,S01_AXI_arready,S01_AXI_rdata,S01_AXI_rresp,S01_AXI_rvalid,S01_AXI_rready,M00_AXI_awaddr,M00_AXI_awprot,M00_AXI_awvalid,M00_AXI_awready,M00_AXI_wdata,M00_AXI_wstrb,M00_AXI_wvalid,M00_AXI_wready,M00_AXI_bresp,M00_AXI_bvalid,M00_AXI_bready,M00_AXI_araddr,M00_AXI_arprot,M00_AXI_arvalid,M00_AXI_arready,M00_AXI_rdata,M00_AXI_rresp,M00_AXI_rvalid,M00_AXI_rready)
 (* integer foreign = "SystemC";
 *);
   input bit aclk;
@@ -174,7 +193,26 @@ module design_1_N_eq_800_axi_smc_0 (aclk,aresetn,S00_AXI_awid,S00_AXI_awaddr,S00
   output wire S00_AXI_rlast;
   output wire S00_AXI_rvalid;
   input bit S00_AXI_rready;
-  output wire [4 : 0] M00_AXI_awaddr;
+  input bit [31 : 0] S01_AXI_awaddr;
+  input bit [2 : 0] S01_AXI_awprot;
+  input bit S01_AXI_awvalid;
+  output wire S01_AXI_awready;
+  input bit [31 : 0] S01_AXI_wdata;
+  input bit [3 : 0] S01_AXI_wstrb;
+  input bit S01_AXI_wvalid;
+  output wire S01_AXI_wready;
+  output wire [1 : 0] S01_AXI_bresp;
+  output wire S01_AXI_bvalid;
+  input bit S01_AXI_bready;
+  input bit [31 : 0] S01_AXI_araddr;
+  input bit [2 : 0] S01_AXI_arprot;
+  input bit S01_AXI_arvalid;
+  output wire S01_AXI_arready;
+  output wire [31 : 0] S01_AXI_rdata;
+  output wire [1 : 0] S01_AXI_rresp;
+  output wire S01_AXI_rvalid;
+  input bit S01_AXI_rready;
+  output wire [5 : 0] M00_AXI_awaddr;
   output wire [2 : 0] M00_AXI_awprot;
   output wire M00_AXI_awvalid;
   input bit M00_AXI_awready;
@@ -185,7 +223,7 @@ module design_1_N_eq_800_axi_smc_0 (aclk,aresetn,S00_AXI_awid,S00_AXI_awaddr,S00
   input bit [1 : 0] M00_AXI_bresp;
   input bit M00_AXI_bvalid;
   output wire M00_AXI_bready;
-  output wire [4 : 0] M00_AXI_araddr;
+  output wire [5 : 0] M00_AXI_araddr;
   output wire [2 : 0] M00_AXI_arprot;
   output wire M00_AXI_arvalid;
   input bit M00_AXI_arready;

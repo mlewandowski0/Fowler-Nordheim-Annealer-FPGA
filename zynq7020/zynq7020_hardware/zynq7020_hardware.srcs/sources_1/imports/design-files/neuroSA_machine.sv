@@ -62,7 +62,8 @@ module neuroSA_machine
  input [3:0]                            neuron_state_in,
  input [NEURON_NUM_WIDTH-1:0]           idx_to_write,
  input [UNITS-1:0]                      write_neuron_states,         
- output [SOLUTION_WIDTH-1:0]            found_solution_value);
+ output [SOLUTION_WIDTH-1:0]            found_solution_value,
+ output [31:0]                          flips_cnt);
 
 
 // Signals for interaction with units
@@ -276,7 +277,8 @@ scheduler_instance(
     .update_memories(update_memory),
     .should_increment(should_increment),
     .decrease_temp(decrease_temp),
-    .cuts_best_transmit(found_solution_value)
+    .cuts_best_transmit(found_solution_value),
+    .flips_cnt(flips_cnt)
 );
 
 

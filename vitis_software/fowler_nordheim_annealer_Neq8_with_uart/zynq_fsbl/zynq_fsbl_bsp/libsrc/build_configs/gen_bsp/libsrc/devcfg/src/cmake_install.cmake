@@ -1,4 +1,4 @@
-# Install script for directory: /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/vitis_software/fowler_nordheim_annealer_Neq8_with_uart/zynq_fsbl/zynq_fsbl_bsp/libsrc/devcfg/src
+# Install script for directory: /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/vitis_software/fowler_nordheim_annealer_Neq8_with_uart/zynq_fsbl/zynq_fsbl_bsp/libsrc/devcfg/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

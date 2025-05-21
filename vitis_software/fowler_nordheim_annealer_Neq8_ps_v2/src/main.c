@@ -380,13 +380,17 @@ int main()
     // sanity check : The solution value should be 0 ! 
     solution_value = read_reg(SOLUTION_VAL_ADDR);
     delay(100);
+
     start_machine();
 
     solution_value = read_reg(SOLUTION_VAL_ADDR);
     solution_reads[0] = solution_value;
     prev_solution_idx = 1;
-    for (int i = 1; i < 1000000; ++i) {
+
+    for (int i = 1; i < 1000000; ++i) 
+    {
         solution_value = read_reg(SOLUTION_VAL_ADDR);
+
         if (solution_value != solution_reads[prev_solution_idx - 1] &&
             prev_solution_idx < SOLUTION_READ_SIZE) 
             {

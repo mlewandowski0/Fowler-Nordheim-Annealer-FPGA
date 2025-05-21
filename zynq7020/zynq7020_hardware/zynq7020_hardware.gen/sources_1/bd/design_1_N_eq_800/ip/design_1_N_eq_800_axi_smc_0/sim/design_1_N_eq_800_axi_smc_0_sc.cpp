@@ -70,6 +70,8 @@ design_1_N_eq_800_axi_smc_0_sc::design_1_N_eq_800_axi_smc_0_sc(const sc_core::sc
   // initialize AXI sockets
   S00_AXI_tlm_aximm_read_socket = mp_impl->S00_AXI_tlm_aximm_read_socket;
   S00_AXI_tlm_aximm_write_socket = mp_impl->S00_AXI_tlm_aximm_write_socket;
+  S01_AXI_tlm_aximm_read_socket = mp_impl->S01_AXI_tlm_aximm_read_socket;
+  S01_AXI_tlm_aximm_write_socket = mp_impl->S01_AXI_tlm_aximm_write_socket;
   M00_AXI_tlm_aximm_read_socket = mp_impl->M00_AXI_tlm_aximm_read_socket;
   M00_AXI_tlm_aximm_write_socket = mp_impl->M00_AXI_tlm_aximm_write_socket;
 }

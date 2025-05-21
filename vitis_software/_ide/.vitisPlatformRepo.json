@@ -1,5 +1,4 @@
 [
-  "/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/vitis_software/fowler_nordheim_annealer_Neq8/export/fowler_nordheim_annealer_Neq8",
-  "/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/vitis_software/fowler_nordheim_annealer_Neq8_with_uart/export/fowler_nordheim_annealer_Neq8_with_uart",
-  "/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/vitis_software/fowler_nordheim_annealer_Neq800_v1/export/fowler_nordheim_annealer_Neq800_v1"
+  "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/vitis_software/fowler_nordheim_annealer_Neq8_with_uart/export/fowler_nordheim_annealer_Neq8_with_uart",
+  "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/vitis_software/fw_ann_Neq800_flips_and_uart/export/fw_ann_Neq800_flips_and_uart"
 ]

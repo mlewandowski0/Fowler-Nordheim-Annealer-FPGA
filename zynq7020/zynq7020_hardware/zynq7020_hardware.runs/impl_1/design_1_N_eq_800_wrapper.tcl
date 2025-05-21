@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "/home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.runs/impl_1/design_1_N_eq_800_wrapper.tcl"
+  variable script "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.runs/impl_1/design_1_N_eq_800_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -107,9 +107,11 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 5
-  set_param runs.launchOptions { -jobs 20  }
+  set_param xicom.use_bs_reader 1
+  set_param bd.open.in_stealth_mode 1
+  set_param runs.launchOptions { -jobs 15  }
   open_checkpoint design_1_N_eq_800_wrapper_routed.dcp
-  set_property webtalk.parent_dir /home/mlewand/Desktop/PROJS/FPGA-simulated-annealing/zynq7020/zynq7020_hardware/zynq7020_hardware.cache/wt [current_project]
+  set_property webtalk.parent_dir /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/zynq7020/zynq7020_hardware/zynq7020_hardware.cache/wt [current_project]
 set_property TOP design_1_N_eq_800_wrapper [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }

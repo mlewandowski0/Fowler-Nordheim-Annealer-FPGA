@@ -78,7 +78,8 @@ module neuroSA_comm_wrapper_large_problem   #(parameter USE_ROUND_ROBIN=0,
                                                              input [NEURON_SEL_LFSR_WIDTH-1:0]                      reg5,
                                                              input [(MEMBRANE_WIDTH+3):0]                           reg6,
                                                              input [NEURON_NUM_WIDTH-1:0]                           reg7,
-                                                             output [(SOLUTION_WIDTH-1):0]                          reg8);
+                                                             output [(SOLUTION_WIDTH-1):0]                          reg8,
+                                                             output [31:0]                                          reg9);
                 
             
  wire                                  reset;
@@ -91,7 +92,8 @@ module neuroSA_comm_wrapper_large_problem   #(parameter USE_ROUND_ROBIN=0,
  wire [3:0]                            neuron_state_in;
  wire [NEURON_NUM_WIDTH-1:0]           idx_to_write;
  wire [UNITS-1:0]                      write_neuron_states;        
- wire [SOLUTION_WIDTH-1:0]            found_solution_value;
+ wire [SOLUTION_WIDTH-1:0]             found_solution_value;
+ wire [31:0]                           flips_cnt;
  
  assign reset = ~reg1[0];
  assign halt = ~reg1[1];
@@ -110,6 +112,7 @@ module neuroSA_comm_wrapper_large_problem   #(parameter USE_ROUND_ROBIN=0,
  
 assign reg8 = found_solution_value;
 
+assign reg9 = flips_cnt;
 
 neuroSA_machine#(.USE_ROUND_ROBIN(USE_ROUND_ROBIN),
                  .NEURON_SEL_LFSR_WIDTH(NEURON_SEL_LFSR_WIDTH),
@@ -149,7 +152,8 @@ neuroSA_machine#(.USE_ROUND_ROBIN(USE_ROUND_ROBIN),
                           .neuron_state_in(neuron_state_in),
                           .idx_to_write(idx_to_write),
                           .write_neuron_states(write_neuron_states),         
-                          .found_solution_value(found_solution_value));
+                          .found_solution_value(found_solution_value),
+                          .flips_cnt(flips_cnt));
 
 
 

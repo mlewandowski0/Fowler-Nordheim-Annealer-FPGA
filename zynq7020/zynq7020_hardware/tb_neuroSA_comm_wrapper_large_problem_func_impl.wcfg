@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_neuroSA_comm_wrapper_large_problem_func_impl.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_neuroSA_comm_wrapper_large_problem" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="998,285.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,000,831.001 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="44" />
+   <wvobject type="logic" fp_name="/tb_neuroSA_comm_wrapper_large_problem/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/reg1">
+      <obj_property name="ElementShortName">reg1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/reg2">
+      <obj_property name="ElementShortName">reg2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/reg3">
+      <obj_property name="ElementShortName">reg3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg3[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/reg4">
+      <obj_property name="ElementShortName">reg4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg4[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/reg5">
+      <obj_property name="ElementShortName">reg5[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg5[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/reg6">
+      <obj_property name="ElementShortName">reg6[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg6[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/reg7">
+      <obj_property name="ElementShortName">reg7[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg7[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/reg8">
+      <obj_property name="ElementShortName">reg8[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg8[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/reg9">
+      <obj_property name="ElementShortName">reg9[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg9[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/ensemble_seeds">
+      <obj_property name="ElementShortName">ensemble_seeds[0:24][8:0]</obj_property>
+      <obj_property name="ObjectShortName">ensemble_seeds[0:24][8:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/flipping_seeds">
+      <obj_property name="ElementShortName">flipping_seeds[0:24][15:0]</obj_property>
+      <obj_property name="ObjectShortName">flipping_seeds[0:24][15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/fd">
+      <obj_property name="ElementShortName">fd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fd[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/membranes">
+      <obj_property name="ElementShortName">membranes[0:799][9:0]</obj_property>
+      <obj_property name="ObjectShortName">membranes[0:799][9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/i">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/j">
+      <obj_property name="ElementShortName">j[31:0]</obj_property>
+      <obj_property name="ObjectShortName">j[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/USE_ROUND_ROBIN">
+      <obj_property name="ElementShortName">USE_ROUND_ROBIN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">USE_ROUND_ROBIN[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/NEURON_SEL_LFSR_WIDTH">
+      <obj_property name="ElementShortName">NEURON_SEL_LFSR_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NEURON_SEL_LFSR_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/MEMBRANE_WIDTH">
+      <obj_property name="ElementShortName">MEMBRANE_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEMBRANE_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/LOG_NOISE_SOURCE_WIDTH">
+      <obj_property name="ElementShortName">LOG_NOISE_SOURCE_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">LOG_NOISE_SOURCE_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/LOG_LUT_BIT_SIZE">
+      <obj_property name="ElementShortName">LOG_LUT_BIT_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">LOG_LUT_BIT_SIZE[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/COUNTER_WIDTH">
+      <obj_property name="ElementShortName">COUNTER_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">COUNTER_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/TEMP_INC_WIDTH">
+      <obj_property name="ElementShortName">TEMP_INC_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TEMP_INC_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/NO_CLK_CYCLES_AFTER_UPDATE">
+      <obj_property name="ElementShortName">NO_CLK_CYCLES_AFTER_UPDATE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NO_CLK_CYCLES_AFTER_UPDATE[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/SOLUTION_WIDTH">
+      <obj_property name="ElementShortName">SOLUTION_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SOLUTION_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/USE_FLOAT_POINT">
+      <obj_property name="ElementShortName">USE_FLOAT_POINT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">USE_FLOAT_POINT[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/REAL_WIDTH">
+      <obj_property name="ElementShortName">REAL_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">REAL_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/FLIPPING_OUTPUT_WIDTH">
+      <obj_property name="ElementShortName">FLIPPING_OUTPUT_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">FLIPPING_OUTPUT_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/FRACTIONAL_PART">
+      <obj_property name="ElementShortName">FRACTIONAL_PART[31:0]</obj_property>
+      <obj_property name="ObjectShortName">FRACTIONAL_PART[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/LOG_NOISE_LUT_FILENAME">
+      <obj_property name="ElementShortName">LOG_NOISE_LUT_FILENAME[439:0]</obj_property>
+      <obj_property name="ObjectShortName">LOG_NOISE_LUT_FILENAME[439:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/TEMPERATURE_LUT_FILENAME">
+      <obj_property name="ElementShortName">TEMPERATURE_LUT_FILENAME[223:0]</obj_property>
+      <obj_property name="ObjectShortName">TEMPERATURE_LUT_FILENAME[223:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/GRAPH_WIDTH">
+      <obj_property name="ElementShortName">GRAPH_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">GRAPH_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/UNITS">
+      <obj_property name="ElementShortName">UNITS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">UNITS[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/UNIT_WIDTH">
+      <obj_property name="ElementShortName">UNIT_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">UNIT_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/NEURONS_PER_UNIT">
+      <obj_property name="ElementShortName">NEURONS_PER_UNIT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NEURONS_PER_UNIT[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/NEURON_NUM_WIDTH">
+      <obj_property name="ElementShortName">NEURON_NUM_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NEURON_NUM_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/TEMPERATURE_LUT_WIDTH">
+      <obj_property name="ElementShortName">TEMPERATURE_LUT_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TEMPERATURE_LUT_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/PIPELINED_ROMs">
+      <obj_property name="ElementShortName">PIPELINED_ROMs[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PIPELINED_ROMs[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/PIPELINED_ENSEMBLE_STORAGE">
+      <obj_property name="ElementShortName">PIPELINED_ENSEMBLE_STORAGE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PIPELINED_ENSEMBLE_STORAGE[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/IDX_THAT_FIRED_WIDTH">
+      <obj_property name="ElementShortName">IDX_THAT_FIRED_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IDX_THAT_FIRED_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/USE_TRANSMIT_WITH_BUFF">
+      <obj_property name="ElementShortName">USE_TRANSMIT_WITH_BUFF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">USE_TRANSMIT_WITH_BUFF[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/NO_OF_CLK_CYCLES_TO_PROPAGATE">
+      <obj_property name="ElementShortName">NO_OF_CLK_CYCLES_TO_PROPAGATE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NO_OF_CLK_CYCLES_TO_PROPAGATE[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE">
+      <obj_property name="ElementShortName">NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NO_OF_CLK_CYCLES_TO_UPDATE_MEMBRANE[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_neuroSA_comm_wrapper_large_problem/CLK_T">
+      <obj_property name="ElementShortName">CLK_T[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_T[31:0]</obj_property>
+   </wvobject>
+</wave_config>
