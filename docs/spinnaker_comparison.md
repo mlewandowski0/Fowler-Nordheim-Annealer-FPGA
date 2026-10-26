@@ -4,7 +4,7 @@
 [arXiv:2406.05224v2, Figure S3a, PDF page 38](https://arxiv.org/pdf/2406.05224v2#page=38),
 with the timing definition in Section S5.2 on PDF pages 37–38. These are
 supplementary printed pages 6–7. The figure also appears in the journal
-supplement supplied here as `results.pdf`, page 7.
+Supplementary Information, page 7 (SHA-256 in `results/spinnaker_comparison/sources.json`).
 
 The green bars report approximately:
 

@@ -1,0 +1,27 @@
+{
+  "generator": "scripts/render_readme_visuals.py",
+  "templates": {
+    "scripts/visuals/architecture.html": "ecee867fd88c99cc38f4efc4d61fe92b0a823e4d5eced4c9c7cbe9f9b37811cb",
+    "scripts/visuals/fpga-search.html": "ec0ebe5489434f82c954be51e0b5fba4a4aa6036a6b178cbf9528289212888e0"
+  },
+  "generator_sha256": "72c8ffd5089608bf59b5c632821f041b9793ec54487f353142277e5ff1242368",
+  "base_figure": {
+    "diagrams/final_diagram_simplified.svg": "187c74851cc2538bd97b63c3a54ebb81ba17f07eaea8369b02b4da0b2efd5d37"
+  },
+  "inputs": {
+    "results/demo/classic/fpga_seed1.json": "30b82bca849889226356730e812a7680d927ce2c3d4c31f5b68009c6cb62772e",
+    "results/demo/g15/fpga_seed1.json": "6477580ba8028635ff7b3904fef88b95b8c8ca8e597a0eb03a0e16f2ac718a3a",
+    "results/readme/tiny12/recording.json": "f1870d9fd04ca7bea0ebde6e23b5aee81381664773e865cc41ebe765a7e17636"
+  },
+  "architecture": "Accepted flips 1-2 and 900 in five explanatory steps each; flips 3-899 fast-forwarded. Times assume 100 MHz.",
+  "fpga_replay": "Recorded best states on one device-time axis (active cycles / clock); log-scaled replay.",
+  "outputs": {
+    "architecture-still.png": "5f849747a38db5f12f90847f1dad448df25f9d69c5f64d8f85a41f2c227d6d08",
+    "architecture.gif": "27625e9eed7fde8e4bb2f231807b14d3bae03650ac705e953c5bfd9f06d1f534",
+    "architecture.html": "2e1ed592a0a3ccf8494477d4631711a749487cf60be5dd17844a003548e95b73",
+    "fpga-search-still.png": "15b5f17965147449d954be6b9637419446b9cc1ccf434eb486ce158ca29895ba",
+    "fpga-search.gif": "0f82810016dda03ddb673d85cf6b96e69d64b0d383f44285454f1add6c335973",
+    "zynq-system.png": "96eef013808b3d1d4e83346794f7b3a6bf4be83e40fbc809e8129adc749dbd12",
+    "zynq-system.svg": "4cbfeda6058a91cba69fb7788fa729da93858ace7d7c90e033c0e7c424bd7f76"
+  }
+}

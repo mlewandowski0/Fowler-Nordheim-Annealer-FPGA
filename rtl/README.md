@@ -2,7 +2,7 @@
 
 The explicit source list is [files.f](files.f). It selects the buffered,
 fixed-point, binary-edge implementation; selected historical inputs remain as provenance. The full old project trees
-are retained in Git history and the local ignored `.research-archive/`.
+are retained in Git history.
 
 These files were initially copied from
 `zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/imports/design-files/`,

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="t d" font-family="Helvetica, Arial, 'Nimbus Sans', 'Liberation Sans', sans-serif" fill="#1b1d20">
+<title id="t">QUBO accelerator on the Zynq-7020</title>
+<desc id="d">Logical block diagram. A host PC reaches the Zynq processing system over Ethernet; PYNQ configures the accelerator in programmable logic over AXI4-Lite. The accelerator contains M units, each holding a Q-matrix fragment, membrane potentials and spins, and a noise generator; a spike selector; and a scheduler that broadcasts each accepted flip back to all units.</desc>
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1b1d20"/></marker>
+  <style>
+    .box{stroke:#36393d;stroke-width:1.5}
+    .w{stroke:#1b1d20;stroke-width:1.6;fill:none}
+    .h{font-size:16px;font-weight:700}
+    .b{font-size:14px;font-weight:700}
+    .n{font-size:13px}
+    .m{font-size:12.5px;fill:#5d636b}
+    .i{font-family:'Latin Modern Roman','Times New Roman','Liberation Serif',serif;font-style:italic}
+  </style>
+</defs>
+<rect width="1200" height="600" fill="#fff"/>
+
+<!-- Host -->
+<rect class="box" x="20" y="232" width="160" height="96" rx="8" fill="#fff"/>
+<text class="b" x="100" y="262" text-anchor="middle">Host PC</text>
+<text class="n" x="100" y="284" text-anchor="middle">Jupyter / Python</text>
+<text class="m" x="100" y="304" text-anchor="middle">scripts, analysis</text>
+<line class="w" x1="180" y1="280" x2="248" y2="280" stroke-dasharray="6 4" marker-start="url(#a)" marker-end="url(#a)"/>
+<text class="m" x="221" y="270" text-anchor="middle">Ethernet</text>
+
+<!-- SoC -->
+<rect x="230" y="30" width="950" height="500" rx="12" fill="none" stroke="#1b1d20" stroke-width="2" stroke-dasharray="9 5"/>
+<text class="h" x="250" y="58">Zynq-7020 SoC (XC7Z020)</text>
+
+<!-- Processing system -->
+<rect class="box" x="250" y="80" width="210" height="430" rx="10" fill="#e6e6e6"/>
+<text class="h" x="355" y="108" text-anchor="middle">Processing system (PS)</text>
+<rect class="box" x="266" y="126" width="178" height="44" rx="6" fill="#fff"/>
+<text class="n" x="355" y="153" text-anchor="middle">2 × ARM Cortex-A9</text>
+<rect class="box" x="266" y="184" width="178" height="44" rx="6" fill="#fff"/>
+<text class="n" x="355" y="211" text-anchor="middle">PYNQ Linux</text>
+<rect class="box" x="266" y="242" width="178" height="120" rx="6" fill="#fff"/>
+<text class="b" x="355" y="266" text-anchor="middle">Python driver</text>
+<text class="n" x="278" y="290">• load Q fragments, seed</text>
+<text class="n" x="278" y="310">• start / halt / reset</text>
+<text class="n" x="278" y="330">• poll counters</text>
+<text class="n" x="278" y="350">• read best assignment</text>
+<rect class="box" x="266" y="446" width="178" height="44" rx="6" fill="#fff"/>
+<text class="n" x="355" y="473" text-anchor="middle">DDR controller</text>
+
+<!-- AXI -->
+<line class="w" x1="462" y1="141" x2="558" y2="141" marker-start="url(#a)" marker-end="url(#a)"/>
+<text class="b" x="500" y="130" text-anchor="middle">AXI4-Lite</text>
+<text class="m" x="500" y="160" text-anchor="middle">GP0</text>
+
+<!-- Programmable logic -->
+<rect class="box" x="540" y="80" width="620" height="430" rx="10" fill="#f7f7f7"/>
+<text class="h" x="560" y="108">Programmable logic (PL): QUBO accelerator</text>
+<rect class="box" x="560" y="122" width="580" height="38" rx="6" fill="#fff"/>
+<text class="n" x="850" y="146" text-anchor="middle">AXI4-Lite register file: control, status, counters, best-assignment readback</text>
+
+<line class="w" x1="700" y1="160" x2="700" y2="186" marker-end="url(#a)"/>
+<text class="m" x="708" y="179">Q fragments, seed</text>
+<line class="w" x1="1040" y1="160" x2="1040" y2="226" marker-start="url(#a)" marker-end="url(#a)"/>
+<text class="m" x="1048" y="190">halt, temperature,</text>
+<text class="m" x="1048" y="206">best assignment</text>
+
+<!-- Units -->
+<g id="unit">
+  <rect class="box" x="600" y="190" width="232" height="72" rx="8" fill="#cce5ff"/>
+  <rect class="box" x="610" y="216" width="66" height="36" rx="4" fill="#ffcccc"/>
+  <text class="n" x="643" y="238" text-anchor="middle">Q frag.</text>
+  <rect class="box" x="684" y="216" width="70" height="36" rx="4" fill="#cdeb8b"/>
+  <text class="n" x="719" y="238" text-anchor="middle"><tspan class="i">V</tspan><tspan font-size="9" class="i" dy="3">mem</tspan><tspan dy="-3">, </tspan><tspan class="i">s</tspan></text>
+  <rect class="box" x="762" y="216" width="62" height="36" rx="4" fill="#e1d5e7" stroke="#9673a6"/>
+  <text class="n" x="793" y="238" text-anchor="middle">noise</text>
+</g>
+<text class="b" x="610" y="208">Unit 0</text>
+<text class="m" x="822" y="207" text-anchor="end"><tspan class="i">A</tspan> variables</text>
+<use href="#unit" y="84"/>
+<text class="b" x="610" y="292">Unit 1</text>
+<text class="b" x="716" y="370" text-anchor="middle" font-size="22">⋮</text>
+<use href="#unit" y="192"/>
+<text class="b" x="610" y="400">Unit <tspan class="i">M</tspan>−1</text>
+
+<!-- Spike selector and scheduler -->
+<rect class="box" x="862" y="190" width="46" height="274" rx="4" fill="#ffcc99"/>
+<text class="b" x="885" y="327" text-anchor="middle" transform="rotate(-90 885 327)">Spike selector</text>
+<line class="w" x1="832" y1="226" x2="860" y2="226" marker-end="url(#a)"/>
+<line class="w" x1="832" y1="310" x2="860" y2="310" marker-end="url(#a)"/>
+<line class="w" x1="832" y1="418" x2="860" y2="418" marker-end="url(#a)"/>
+
+<rect class="box" x="940" y="230" width="200" height="176" rx="10" fill="#cfcfcf"/>
+<text class="h" x="1040" y="256" text-anchor="middle">Scheduler</text>
+<text class="n" x="954" y="284">• accept flip <tspan class="i">k</tspan>*</text>
+<text class="n" x="954" y="306">• current / best cut</text>
+<text class="n" x="954" y="328">• best assignment</text>
+<text class="n" x="954" y="350">• flip, cycle counters</text>
+<text class="n" x="954" y="372">• temperature schedule</text>
+<line class="w" x1="908" y1="318" x2="938" y2="318" marker-end="url(#a)"/>
+<text class="m" x="923" y="310" text-anchor="middle"><tspan class="i">k</tspan>*</text>
+
+<!-- Broadcast -->
+<path class="w" d="M1040 406 V488 H580 V226 H597" marker-end="url(#a)"/>
+<line class="w" x1="580" y1="310" x2="597" y2="310" marker-end="url(#a)"/>
+<line class="w" x1="580" y1="418" x2="597" y2="418" marker-end="url(#a)"/>
+<text class="n" x="810" y="480" text-anchor="middle">broadcast accepted flip <tspan class="i">k</tspan>* and old spin <tspan class="i">s</tspan>[<tspan class="i">k</tspan>*] to every unit</text>
+
+<!-- Notes -->
+<text class="n" x="230" y="560">G15 build: <tspan class="i">M</tspan> = 25 units × <tspan class="i">A</tspan> = 32 variables at 142.857 MHz. Loadable Gset (up to 2,000 variables) and Sudoku builds use the same core at 100 MHz.</text>
+<text class="m" x="230" y="582">Logical view, not a floorplan. Each unit keeps its Q fragment, membranes and spins in its own on-chip storage; Vivado chooses the RAM/register mapping.</text>
+</svg>

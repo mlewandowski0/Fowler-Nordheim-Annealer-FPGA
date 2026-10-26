@@ -15,13 +15,12 @@ Preview locally from the repository root:
 python3 -m http.server 8000 --directory ISCAS2025-FPGA-QUBO
 ```
 
-This directory is a deliberate website export tracked directly by the main
-repository. The former nested `.git` metadata is preserved only in the ignored
-local research archive. Committing this export does not deploy the live site.
+This directory is a copy of the project website, tracked directly by the main
+repository. Committing it does not deploy the live site.
 
 ## Template attribution and license
 
 Built using the [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template),
 adopted from [Nerfies](https://nerfies.github.io/).
 The website template is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
-This notice does not license the accelerator RTL or the paper.
+This notice covers the template only; the rest of the repository is MIT-licensed.

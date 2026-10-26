@@ -1,4 +1,4 @@
-.PHONY: inputs sim test audit overlay package demo sudoku-test gset-test iteration-test
+.PHONY: inputs sim test audit overlay package demo sudoku-test gset-test iteration-test readme-trace readme-visuals
 inputs:
 	python3 scripts/prepare_inputs.py
 sim:
@@ -33,3 +33,9 @@ gset-test:
 
 iteration-test:
 	python3 scripts/test_iterations.py
+
+readme-trace:
+	python3 scripts/record_readme_tiny.py
+
+readme-visuals:
+	python3 scripts/render_readme_visuals.py

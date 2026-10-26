@@ -10,9 +10,11 @@ __pycache__/
 /.Xil/
 /core
 
-# Local research archive and machine/agent configuration.
-/.research-archive/*
-!/.research-archive/README.md
+# Local-only material: research archive, notes, and third-party/publisher PDFs.
+/.research-archive/
+/.handover.md
+/paper.pdf
+/results.pdf
 /.agents/
 /.aws/
 /.codex/

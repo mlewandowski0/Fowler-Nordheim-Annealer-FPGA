@@ -8,6 +8,7 @@ measured results, and attribution. These guides provide the next level of detail
 | Run the RTL, build an overlay, or deploy to PYNQ | [Reproduction](reproduce.md) |
 | Understand what has actually been verified | [Validation and limitations](validation.md) |
 | Explore the Sudoku and MAX-CUT viewer | [Demo](demo.md) |
+| Understand or regenerate README animations | [Visual provenance](visuals.md) |
 | Understand the 729-variable Sudoku formulation | [Sudoku](sudoku.md) |
 | Inspect the 39-graph evaluation and named CPU baseline | [Benchmarks](benchmarks.md) |
 | Interpret the published SpiNNaker2 runtimes fairly | [SpiNNaker2 comparison](spinnaker_comparison.md) |
@@ -21,5 +22,6 @@ saved-result checks. These do not require an FPGA or Vivado. Building an overlay
 requires Vivado; running hardware requires a compatible Zynq-7020/PYNQ board.
 Browser QA has separate Playwright dependencies.
 
-`paper.pdf` is the five-page FPGA paper. `results.pdf` is the NeuroSA
-supplementary material with the original evaluation tables on pages 11–12.
+The FPGA paper is on [IEEE Xplore](https://ieeexplore.ieee.org/document/11044179/). The original NeuroSA evaluation
+tables are Tables S1/S2 (pages 11–12) of the Supplementary Information of
+[Chen et al., Nat. Commun. 2025](https://www.nature.com/articles/s41467-025-58231-5). Neither PDF is redistributed here.

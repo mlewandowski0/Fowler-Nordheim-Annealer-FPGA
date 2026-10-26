@@ -14,6 +14,7 @@ timing boundaries.
 | `spinnaker_comparison/` | Published-source registry and 90 FPGA target trials; no matched SpiNNaker2 speedup. |
 | `iterations/` | Nine runs at exactly 100M native arbitration iterations, counter tests, and timing reports. |
 | `demo/` | Actual Sudoku and MAX-CUT trajectories used by the viewer, including unsuccessful attempts. |
+| `readme/` | Checked 12-variable RTL trace and input/output hashes for README visualizations. |
 | `archive/`, `comparison_audit/` | Historical-log summaries and counter/claim audits. |
 | `baseline_50mhz/` | Earlier validation snapshot, separate from optimized results. |
 

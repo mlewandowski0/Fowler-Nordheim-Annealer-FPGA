@@ -1,9 +1,10 @@
 # Gset evaluation and platform comparisons
 
-The requested tables are **Tables S1/S2 on pages 11–12 of `results.pdf`**,
-the supplement to [Chen et al., ON-OFF neuromorphic ISING machines using
-Fowler-Nordheim annealers](https://www.nature.com/articles/s41467-025-58231-5).
-`paper.pdf` is the separate five-page FPGA implementation paper. The inventory
+The reference values are **Tables S1/S2 on pages 11–12 of the Supplementary
+Information** of [Chen et al., ON-OFF neuromorphic ISING machines using
+Fowler-Nordheim annealers](https://www.nature.com/articles/s41467-025-58231-5). The PDF is not redistributed; its SHA-256
+is recorded in `results/gset/inventory.json`, and saving it as `results.pdf` in
+the repository root lets `make audit` re-check the transcription. The inventory
 preserves all 59 table entries, including the omission of G8/G9.
 
 ## What ran

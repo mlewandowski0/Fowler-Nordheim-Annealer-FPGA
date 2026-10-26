@@ -117,9 +117,8 @@ longer/higher-clock experiments. Configure the cooling period while paused.
 An archived overlay can be examined with `--legacy`. That mode only reports
 its scalar score, does not change its inherited clock, and explicitly marks
 the assignment as unverified. It is not equivalent to validating the rebuilt
-core. These legacy artifacts are not part of the maintained checkout. On the original
-development machine they are preserved under `.research-archive/`, at the
-following relative paths; they can also be recovered from Git history:
+core. These legacy artifacts are not part of the maintained checkout; they can be
+recovered from Git history at the following paths:
 
 - `zynq7020/zynq7020_hardware/zynq7020_hardware.runs/impl_1/design_1_N_eq_800_wrapper.bit`
 - `zynq7020/zynq7020_hardware/zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/hw_handoff/design_1_N_eq_800.hwh`

@@ -11,7 +11,7 @@ files=set()
 for folder in ['rtl','sim','scripts','docs','results','demo','third_party','.github','diagrams']:
     files.update(p for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
 files.update(p for p in (ROOT/'ISCAS2025-FPGA-QUBO').rglob('*') if p.is_file() and '.git' not in p.relative_to(ROOT).parts)
-files.update(ROOT/n for n in ['README.md','.handover.md','.research-archive/README.md','Makefile','requirements.txt','requirements-analysis.txt','paper.pdf','results.pdf','.gitignore','python_code/G15.npy','paper_writing/current_best.txt'])
+files.update(ROOT/n for n in ['README.md','LICENSE','Makefile','requirements.txt','requirements-analysis.txt','requirements-visuals.txt','.gitignore','python_code/G15.npy','paper_writing/current_best.txt'])
 files.update(ROOT/n for n in ['paper_writing/comparison.ipynb','paper_writing/s.ipynb','python_code/NeuroSA_runner.py','zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/new/scheduler_2.v','vitis_software/fw_ann_Neq800_flips_and_uart_app/src/main.c'])
 files.update((ROOT/'python_code/problems').glob('G*'))
 files.update(MIFS.glob('adj_matrix_N800_A25_distributed*.mif'))
