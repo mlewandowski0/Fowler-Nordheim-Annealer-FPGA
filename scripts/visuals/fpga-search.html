@@ -12,7 +12,7 @@
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); }
-#frame { width: 1000px; height: 600px; padding: 18px 24px 14px; display: flex; flex-direction: column; }
+#frame { width: 1000px; height: 620px; padding: 18px 24px 14px; display: flex; flex-direction: column; }
 header { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
 header h1 { font-size: 19px; margin: 0 0 4px; }
 header p { margin: 0; font-size: 14px; color: var(--muted); }
@@ -23,7 +23,7 @@ header p { margin: 0; font-size: 14px; color: var(--muted); }
 .cols .rule { background: var(--rule); }
 .col h2 { font-size: 18px; margin: 0; display: flex; justify-content: space-between; align-items: baseline; }
 .col h2 span { font-size: 13px; font-weight: 400; color: var(--muted); }
-.body { display: flex; gap: 18px; margin-top: 12px; height: 236px; }
+.body { display: flex; gap: 18px; margin-top: 12px; height: 256px; }
 .stats { display: grid; grid-auto-rows: min-content; row-gap: 10px; font-variant-numeric: tabular-nums; }
 .stats .k { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
 .stats .v { font-size: 26px; font-weight: 700; line-height: 1.05; }
@@ -34,9 +34,11 @@ header p { margin: 0; font-size: 14px; color: var(--muted); }
 .sudoku div.clue { color: var(--ink); background: var(--soft); }
 .sudoku div.bad { background: #fde2e1; color: var(--accent); }
 .sudoku div.c3 { border-right: 2px solid var(--ink); } .sudoku div.r3 { border-bottom: 2px solid var(--ink); }
-.spins { flex: none; }
-.legend { display: flex; gap: 14px; font-size: 12.5px; color: var(--muted); align-items: center; }
-.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+.cutview { flex: none; position: relative; width: 290px; height: 238px; }
+.cutview canvas { position: absolute; left: 0; top: 18px; }
+.cutview .side { position: absolute; top: 0; font-size: 12px; font-weight: 700; }
+.legend { display: flex; gap: 12px; font-size: 12px; color: var(--muted); align-items: center; margin-top: 2px; }
+.legend i { display: inline-block; width: 16px; height: 0; border-top: 2px solid; margin-right: 5px; vertical-align: 3px; }
 .chart { margin-top: 10px; }
 footer { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 8px; }
 </style>
@@ -56,9 +58,10 @@ footer { display: flex; justify-content: space-between; font-size: 12px; color: 
     </section>
     <div class="rule"></div>
     <section class="col">
-      <h2>G15 MAX-CUT <span>800 vertices · 4,661 edges · 142.857 MHz</span></h2>
-      <div class="body"><div class="spins"><svg id="spins" width="256" height="216"></svg>
-        <div class="legend"><span><i style="background:var(--plus)"></i>s = +1</span><span><i style="background:var(--minus)"></i>s = −1</span><span>25 units × 32</span></div></div>
+      <h2>G15 MAX-CUT <span>800 vertices · 4,661 edges · 142.857 MHz build</span></h2>
+      <div class="body"><div><div class="cutview"><span class="side" style="left:30px;color:var(--plus)">Set A</span>
+          <span class="side" style="right:30px;color:#b37a00">Set B</span><canvas id="cut" width="290" height="220"></canvas></div>
+        <div class="legend"><span><i style="border-color:#7d848c"></i>cut edge (counts)</span><span><i style="border-color:var(--accent)"></i>uncut edge</span></div></div>
         <div class="stats" id="gstats"></div></div>
       <svg class="chart" id="gchart" width="452" height="168"></svg>
     </section>
@@ -110,7 +113,7 @@ function chart(svg, d, t, key, lo, hi, ticks, ref, refLabel, yLabel) {
   el('circle', { cx: x(tEnd), cy: Math.max(y(last[key]), Tp - 2), r: 3.5, fill: 'var(--accent)' }, svg);
 }
 
-function render(t) {
+function render(t, prevK, u) {
   document.getElementById('clock').textContent = `t = ${fmt(t)}`;
   // Sudoku
   const sf = S.frames[at(S, t)], grid = document.getElementById('grid');
@@ -128,16 +131,57 @@ function render(t) {
      <div><div class="k">Cycle</div><div class="s" style="color:var(--ink);font-size:14px">${sf.cycle.toLocaleString('en')} · ${fmt(ms(sf, S))}</div>
      ${solved ? `<div class="flag">Valid solution at ${fmt(ms(sf, S))}</div>` : '<div class="s">searching</div>'}</div>`;
   chart(document.getElementById('schart'), S, t, 'energy', -85, -28, [-30, -50, -70], S.target, 'valid solution, energy −81', 'Energy');
-  // MAX-CUT: spins in hardware order, one row per unit.
-  const gf = G.frames[at(G, t)], spins = document.getElementById('spins');
-  spins.replaceChildren();
-  for (let i = 0; i < 800; i++) el('rect', { x: (i % 32) * 8, y: Math.floor(i / 32) * 8 + 8, width: 7, height: 7, fill: gf.bits[i] === '1' ? 'var(--plus)' : 'var(--minus)' }, spins);
+  // MAX-CUT: the two sets side by side; nodes slide across when they flip.
+  const k = at(G, t), kp = prevK === undefined ? k : prevK, gf = G.frames[k], gp = G.frames[kp];
+  drawCut(gp.bits, gf.bits, u === undefined ? 1 : u);
+  const pct = 100 * gf.cut / G.best_known, best = gf.cut >= G.best_known;
   document.getElementById('gstats').innerHTML =
-    `<div><div class="k">Cut</div><div class="v">${num(gf.cut)}</div><div class="s">${(100 * gf.cut / G.best_known).toFixed(1)}% of best known ${num(G.best_known)}</div></div>
-     <div><div class="k">Cycle</div><div class="s" style="color:var(--ink);font-size:14px">${gf.cycle.toLocaleString('en')} · ${fmt(ms(gf, G))}</div></div>`;
+    `<div><div class="k">Cut</div><div class="v">${num(gf.cut)}</div><div class="s">of ${num(G.edges.length)} edges</div></div>
+     <div><div class="k">Best known</div><div class="v" style="font-size:20px">${pct.toFixed(1)}%</div><div class="s">of ${num(G.best_known)}</div></div>
+     <div><div class="k">Cycle</div><div class="s" style="color:var(--ink);font-size:14px">${gf.cycle.toLocaleString('en')} · ${fmt(ms(gf, G))}</div>
+     ${best ? `<div class="flag">Best-known cut at ${fmt(ms(gf, G))}</div>` : '<div class="s">searching</div>'}</div>`;
   chart(document.getElementById('gchart'), G, t, 'cut', 2500, G.best_known + 30, [2500, 2750, 3000], G.best_known, `best known ${num(G.best_known)}`, 'Cut');
-  document.getElementById('footl').textContent = 'Seed 1 for both · this short G15 demo run ends at 3,045; unpaused runs reach 3,050';
+  document.getElementById('footl').textContent = `Sudoku seed ${S.seed} · G15 seed ${G.seed} · capture pauses between 25k-cycle chunks`;
 }
+// Node slots: columns within each set, ordered by the graph's Fiedler vector so neighbours sit close.
+const CW = 290, CH = 220, COLS = 8, DX = 7, ROWS = Math.ceil(800 / COLS), LEFT = 38, RIGHT = CW - 38 - (COLS - 1) * DX;
+function slot(i, side) {
+  const r = G.rank[i], col = r % COLS, row = Math.floor(r / COLS);
+  return [(side ? LEFT + col * DX : RIGHT + (COLS - 1 - col) * DX), 4 + row * (CH - 8) / (ROWS - 1)];
+}
+function drawCut(prevBits, bits, u) {
+  const ctx = document.getElementById('cut').getContext('2d');
+  ctx.clearRect(0, 0, CW, CH);
+  const ease = u < 1 ? u * u * (3 - 2 * u) : 1;
+  const P = Array.from({ length: 800 }, (_, i) => {
+    const a = slot(i, prevBits[i] === '1'), b = slot(i, bits[i] === '1');
+    return [a[0] + (b[0] - a[0]) * ease, a[1] + (b[1] - a[1]) * ease];
+  });
+  ctx.lineWidth = 0.5; ctx.strokeStyle = 'rgba(93,99,107,0.13)'; ctx.beginPath();
+  for (const [a, b] of G.edges) if (bits[a] !== bits[b]) { ctx.moveTo(...P[a]); ctx.lineTo(...P[b]); }
+  ctx.stroke();
+  // Uncut edges bow outward, away from the gap, so they do not hide the cut.
+  ctx.lineWidth = 0.6; ctx.strokeStyle = 'rgba(209,36,47,0.22)'; ctx.beginPath();
+  for (const [a, b] of G.edges) if (bits[a] === bits[b]) {
+    const left = bits[a] === '1', bow = Math.min(34, 8 + Math.abs(P[a][1] - P[b][1]) * 0.18);
+    const cx = left ? Math.min(P[a][0], P[b][0]) - bow : Math.max(P[a][0], P[b][0]) + bow;
+    ctx.moveTo(...P[a]); ctx.quadraticCurveTo(cx, (P[a][1] + P[b][1]) / 2, ...P[b]);
+  }
+  ctx.stroke();
+  for (let i = 0; i < 800; i++) {
+    ctx.fillStyle = bits[i] === '1' ? '#0072b2' : '#e69f00';
+    ctx.beginPath(); ctx.arc(P[i][0], P[i][1], 1.35, 0, 2 * Math.PI); ctx.fill();
+  }
+}
+// Replay sequence: one view per time step, plus two in-between views whenever G15 improves.
+const SEQ = [];
+DATA.times.forEach((t, j) => {
+  const k = at(G, t), kp = j ? at(G, DATA.times[j - 1]) : k;
+  if (k !== kp) for (const u of [0.35, 0.7]) SEQ.push([t, kp, u]);
+  SEQ.push([t, k, 1]);
+});
+window.SEQ = SEQ;
+window.renderSeq = j => render(...SEQ[j]);
 window.render = render;
 window.TIMES = DATA.times;
 render(DATA.times[DATA.times.length - 1]);

@@ -1,0 +1,42 @@
+name: Demo site
+# Publishes demo/ and the architecture walkthrough to GitHub Pages.
+# Pages is unavailable for private repositories on the free plan, so the job
+# only runs once the repository is public.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    if: ${{ !github.event.repository.private }}
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble site
+        run: |
+          blob="https://github.com/${GITHUB_REPOSITORY}/blob/main"
+          mkdir -p _site/docs _site/diagrams _site/results/readme/tiny12 _site/ISCAS2025-FPGA-QUBO/static/images
+          cp -r demo _site/demo
+          cp -r docs/assets _site/docs/assets
+          cp diagrams/final_diagram_simplified.svg _site/diagrams/
+          cp results/readme/tiny12/recording.json _site/results/readme/tiny12/
+          cp ISCAS2025-FPGA-QUBO/static/images/favicon.svg _site/ISCAS2025-FPGA-QUBO/static/images/
+          # Markdown and repository links open on GitHub rather than as raw files.
+          sed -i -E "s#href=\"\.\./docs/([A-Za-z_]+\.md)\"#href=\"${blob}/docs/\1\"#g; s#href=\"\.\./README\.md\"#href=\"https://github.com/${GITHUB_REPOSITORY}\"#g" _site/demo/index.html
+          printf '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=demo/"><title>QUBO accelerator demo</title><a href="demo/">Open the demo</a>\n' > _site/index.html
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+      - id: deployment
+        uses: actions/deploy-pages@v4

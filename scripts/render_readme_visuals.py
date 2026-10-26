@@ -24,7 +24,8 @@ BUILD = ROOT/'build/visuals'
 TINY_CLOCK_MHZ = 100.0     # clock of the loadable overlays built from the same core
 G15_BEST_KNOWN = 3050      # best-known G15 cut (paper Table I; independently reached on the board)
 ARCH_STEP_MS, ARCH_FAST_MS, ARCH_END_MS = 2300, 150, 4500
-SEARCH_FRAMES, SEARCH_FRAME_MS, SEARCH_END_MS = 72, 90, 4500
+SEARCH_FRAMES, SEARCH_FRAME_MS, SEARCH_TWEEN_MS, SEARCH_START_MS, SEARCH_END_MS = 110, 120, 70, 1500, 6000
+G15_RECORDING = ROOT/'results/demo/g15/sweep/fpga_seed10.json'
 
 
 def sha(path):
@@ -32,7 +33,7 @@ def sha(path):
 
 
 def read_recordings():
-    paths = {'sudoku': ROOT/'results/demo/classic/fpga_seed1.json', 'maxcut': ROOT/'results/demo/g15/fpga_seed1.json',
+    paths = {'sudoku': ROOT/'results/demo/classic/fpga_seed1.json', 'maxcut': G15_RECORDING,
              'architecture': ROOT/'results/readme/tiny12/recording.json'}
     data = {k: json.loads(p.read_text()) for k, p in paths.items()}
     d = data['sudoku']; assert d['mode'] == 'fpga'
@@ -85,11 +86,17 @@ def architecture_data(d):
 
 
 def search_data(s, g):
-    sudoku = {'clock_mhz': s['clock_mhz'], 'puzzle': s['problem']['puzzle'], 'target': -81,
+    sudoku = {'clock_mhz': s['clock_mhz'], 'puzzle': s['problem']['puzzle'], 'target': -81, 'seed': s['seed'],
               'end_ms': s['final_cycle']/(s['clock_mhz']*1e3),
               'frames': [{k: f[k] for k in ['cycle', 'grid', 'energy', 'filled_cells', 'conflict_pairs', 'solved']} | {'bad': conflicts(f['grid'])}
                          for f in s['frames']]}
+    # Order vertices by the Fiedler vector so graph neighbours sit close together in the drawing.
+    n = len(g['frames'][0]['bits']); adj = np.zeros((n, n))
+    for a, b in g['edges']: adj[a, b] = adj[b, a] = 1
+    fiedler = np.linalg.eigh(np.diag(adj.sum(1)) - adj)[1][:, 1]
+    rank = np.empty(n, dtype=int); rank[np.argsort(fiedler, kind='stable')] = np.arange(n)
     maxcut = {'clock_mhz': g['clock_mhz'], 'best_known': G15_BEST_KNOWN, 'end_ms': g['final_cycle']/(g['clock_mhz']*1e3),
+              'seed': g['seed'], 'edges': g['edges'], 'rank': rank.tolist(),
               'frames': [{k: f[k] for k in ['cycle', 'bits', 'cut']} for f in g['frames']]}
     assert s['frames'][-1]['solved'] and s['frames'][-1]['energy'] == -81
     # Log-spaced device times from 50 µs to just past the last G15 improvement, starting at t = 0.
@@ -160,8 +167,12 @@ def main():
         save_gif(ASSETS/'architecture.gif', frames, durations)
         frames[-1].save(ASSETS/'architecture-still.png', optimize=True)
 
-        frames = capture(search, len(sdata['times']), 'render(TIMES[%d])', (1000, 600))
-        durations = [1200] + [SEARCH_FRAME_MS]*(len(frames)-2) + [SEARCH_END_MS]
+        with sync_playwright() as p:
+            b = p.chromium.launch(args=['--disable-gpu']); pg = b.new_page()
+            pg.goto(search.as_uri() + '?capture'); seq = pg.evaluate('SEQ'); b.close()
+        frames = capture(search, len(seq), 'renderSeq(%d)', (1000, 620))
+        durations = [SEARCH_FRAME_MS if u == 1 else SEARCH_TWEEN_MS for _, _, u in seq]
+        durations[0], durations[-1] = SEARCH_START_MS, SEARCH_END_MS
         save_gif(ASSETS/'fpga-search.gif', frames, durations)
         frames[-1].save(ASSETS/'fpga-search-still.png', optimize=True)
 

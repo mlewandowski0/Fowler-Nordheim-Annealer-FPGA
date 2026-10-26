@@ -6,7 +6,7 @@ import numpy as np
 from sudoku_model import inspect,model
 ROOT=Path(__file__).resolve().parents[1]
 recordings={}
-paths={'classic':ROOT/'results/demo/classic/fpga_seed1.json','paper':ROOT/'results/demo/paper/fpga_seed2.json','paper_initial':ROOT/'results/demo/paper/fpga_seed1.json','g15':ROOT/'results/demo/g15/fpga_seed1.json'}
+paths={'classic':ROOT/'results/demo/classic/fpga_seed1.json','paper':ROOT/'results/demo/paper/fpga_seed2.json','paper_initial':ROOT/'results/demo/paper/fpga_seed1.json','g15':ROOT/'results/demo/g15/sweep/fpga_seed10.json'}
 if not paths['paper'].is_file():paths['paper']=ROOT/'results/demo/paper/rtl_seed1.json'
 for key,path in paths.items():
     if not path.is_file():continue

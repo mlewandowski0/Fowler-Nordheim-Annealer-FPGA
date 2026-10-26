@@ -1,0 +1,11 @@
+23:40:27 seed 2 {"frames": 65, "cycles": 12006001, "solved": false, "final": {"cycle": 7214423, "score": 3042, "cut": 3042}}
+23:41:14 seed 3 {"frames": 56, "cycles": 12007216, "solved": false, "final": {"cycle": 8564306, "score": 3041, "cut": 3041}}
+23:42:00 seed 4 {"frames": 56, "cycles": 12005595, "solved": false, "final": {"cycle": 5942718, "score": 3049, "cut": 3049}}
+23:42:46 seed 5 {"frames": 52, "cycles": 12004476, "solved": false, "final": {"cycle": 7421595, "score": 3045, "cut": 3045}}
+23:43:31 seed 6 {"frames": 55, "cycles": 12006228, "solved": false, "final": {"cycle": 7300505, "score": 3049, "cut": 3049}}
+23:44:15 seed 7 {"frames": 63, "cycles": 12005589, "solved": false, "final": {"cycle": 8602175, "score": 3039, "cut": 3039}}
+23:45:00 seed 8 {"frames": 59, "cycles": 12005294, "solved": false, "final": {"cycle": 8532421, "score": 3039, "cut": 3039}}
+23:45:45 seed 9 {"frames": 48, "cycles": 12006743, "solved": false, "final": {"cycle": 8547410, "score": 3047, "cut": 3047}}
+23:46:29 seed 10 {"frames": 58, "cycles": 12005387, "solved": false, "final": {"cycle": 7796923, "score": 3050, "cut": 3050}}
+FOUND 10
+DONE

@@ -38,4 +38,5 @@ readme-trace:
 	python3 scripts/record_readme_tiny.py
 
 readme-visuals:
+	python3 scripts/plot_readme_charts.py
 	python3 scripts/render_readme_visuals.py

@@ -60,9 +60,11 @@ Read [Sudoku implementation and reproduction](sudoku.md) and
 The restored G15 clock-scaling result does not transfer to Sudoku, and the
 demo is not evidence of a CPU or SpiNNaker2 speedup.
 
-The captured G15 replay reaches cut 3045 over roughly 10M active cycles. It is
-a separate, paused demonstration run, not the continuous 100M-accepted-flip
-performance measurement that returned 3050. Pausing drains and refills the
+The G15 replay is seed 10 of a ten-seed paused capture sweep and reaches the
+best-known cut 3050 at active cycle 7,796,923 (54.6 ms); all ten attempts are in
+`results/demo/g15/sweep/`. The older 10M-cycle capture (`g15/fpga_seed1.json`,
+cut 3045) is retained. Neither is the continuous 100M-accepted-flip
+performance measurement. Pausing drains and refills the
 selection pipeline and can change the subsequent trajectory.
 
 For browser regression checks, install optional Playwright and NumPy, install

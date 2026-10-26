@@ -5,7 +5,8 @@ animation, a still image, and (for the architecture) an interactive page.
 
 | Asset | Content | Source data |
 | --- | --- | --- |
-| `assets/fpga-search.gif`, `fpga-search-still.png` | Board replay: Sudoku and G15 best assignments | `results/demo/classic/fpga_seed1.json`, `results/demo/g15/fpga_seed1.json` |
+| `assets/fpga-search.gif`, `fpga-search-still.png` | Board replay: Sudoku and G15 best assignments | `results/demo/classic/fpga_seed1.json`, `results/demo/g15/sweep/fpga_seed10.json` |
+| `assets/speed.png`, `assets/gset.png` | Speed and Gset quality charts | `results/gset/summary.json`, `results/spinnaker_comparison/summary.json` |
 | `assets/zynq-system.svg` (+ PNG) | Logical system block diagram | Hand-drawn; reflects the maintained RTL and drivers |
 | `assets/architecture.gif`, `architecture-still.png`, `architecture.html` | The paper figure, animated with a 12-variable RTL trace | `diagrams/final_diagram_simplified.svg`, `results/readme/tiny12/` |
 
@@ -17,16 +18,19 @@ Zynq-7020:
 - **Sudoku** (`classic/fpga_seed1.json`): 729-bit encoding of the classic
   puzzle on the separate 100 MHz Sudoku build; 30 clues clamp all but 153 bits.
   17 saved best states; valid solution at active cycle 1,591,779 = **15.92 ms**.
-- **G15** (`g15/fpga_seed1.json`): 800 variables on the static 142.857143 MHz
-  build. 55 saved best states; final cut 3,045 at active cycle 8,158,857 =
-  **57.11 ms** (99.8% of the best-known 3,050). This short demo run paused
-  between chunks for readout; the unpaused performance runs reach 3,050.
+- **G15** (`g15/sweep/fpga_seed10.json`): 800 variables on the static
+  142.857143 MHz build. 58 saved best states; best-known cut **3,050** at
+  active cycle 7,796,923 = **54.58 ms**. Seeds 1–10 were captured and all are
+  kept; seed 10 was the first to reach 3,050 ([sweep](../results/demo/g15/sweep/README.md)).
 
 Both runs are placed on one **device-time axis**: active cycles divided by the
 build's clock. Readout pauses are not counted. The replay advances
 logarithmically in device time so the early, fast improvements stay visible;
-the charts use the same log axis. The G15 spins are drawn in hardware order,
-one row per unit (25 units × 32 variables). Sudoku cells that repeat a digit in
+the charts use the same log axis. G15 is drawn as the two sets of the
+partition side by side: edges crossing between them are cut (grey), edges
+inside one set are not (red arcs). Within a set, vertices are ordered by the
+graph's Fiedler vector so neighbours sit close; when a vertex changes sides it
+slides across over two in-between frames. Sudoku cells that repeat a digit in
 a row, column or box are marked red. The renderer independently re-checks every
 Sudoku objective, clue and solution and recounts every G15 crossing edge. The
 replay's short captures are not runtime benchmarks: use
@@ -73,6 +77,8 @@ This is RTL simulation, not a 12-variable board measurement. No sealed
 performance source or overlay is modified.
 
 ## Regenerate
+
+`scripts/plot_readme_charts.py` draws the two charts with Matplotlib.
 
 The checked recordings are committed. Rendering needs Python, Pillow,
 Playwright and its Chromium build, but no FPGA:
