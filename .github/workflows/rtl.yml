@@ -5,10 +5,16 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+      # Ubuntu's Verilator 5.020 cannot evaluate the $sformatf graph-file
+      # parameters in rtl/neuroSA_machine.sv; use a pinned, current release.
+      - uses: YosysHQ/setup-oss-cad-suite@v4
+        with:
+          version: '2026-10-01'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: sudo apt-get update && sudo apt-get install -y verilator
+      - run: verilator --version && python3 --version
       - run: python -m pip install -r requirements.txt
       - run: make test audit sudoku-test gset-test iteration-test
       - uses: actions/upload-artifact@v4
