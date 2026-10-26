@@ -1,0 +1,18 @@
+G6 PASS ITERATION AXI: exact arbitration budget, rejected decisions, drain, signed scoring, target latches, independent AW/W, strobes, backpressure, halt/resume, reset, assignment cut=1080
+- /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/sim/iteration_tb.sv:146: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 6ms; walltime 2.191 s; speed 2.881 ms/s
+- Verilator: cpu 2.191 s on 1 threads; allocated 8 MB
+
+G15 PASS ITERATION AXI: exact arbitration budget, rejected decisions, drain, signed scoring, target latches, independent AW/W, strobes, backpressure, halt/resume, reset, assignment cut=2549
+- /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/sim/iteration_tb.sv:146: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 6ms; walltime 2.133 s; speed 2.959 ms/s
+- Verilator: cpu 2.133 s on 1 threads; allocated 8 MB
+
+PASS iteration counters: 18 exact budgets, accepted-last drain, no-flip decisions, pause/reset/resume and cycle identity
+- /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/sim/iteration_counter_tb.sv:46: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 14us; walltime 0.001 s; speed 24.687 ms/s
+- Verilator: cpu 0.001 s on 1 threads; allocated 7 MB
+

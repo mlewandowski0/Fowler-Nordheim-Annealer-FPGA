@@ -1,7 +1,0 @@
-Running: xsim.dir/fixed_to_int_tb_behav/xsimk -simmode gui -wdb fixed_to_int_tb_behav.wdb -simrunnum 0 -socket 36597
-Design successfully loaded
-Design Loading Memory Usage: 20164 KB (Peak: 20728 KB)
-Design Loading CPU Usage: 10 ms
-Simulation completed
-Simulation Memory Usage: 101900 KB (Peak: 159432 KB)
-Simulation CPU Usage: 20 ms

@@ -1,0 +1,5 @@
+PASS cycles=10000000 accepted_flips=1037773 best_cut=3050
+- /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/sim/reproduce_tb.sv:112: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 100ms; walltime 54.559 s; speed 1.834 ms/s
+- Verilator: cpu 54.523 s on 1 threads; allocated 7 MB

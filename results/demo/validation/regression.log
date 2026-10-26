@@ -1,0 +1,157 @@
+python3 scripts/run_sim.py --cycles 100000
+PASS cycles=100000 accepted_flips=11070 best_cut=2559
+- /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/sim/reproduce_tb.sv:112: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 1ms; walltime 0.331 s; speed 3.044 ms/s
+- Verilator: cpu 0.331 s on 1 threads; allocated 7 MB
+
+Independently verified saved assignment: cut=2559
+python3 scripts/test_selector.py
+PASS selector: idle, every unit, and 49974 randomized priority/payload cases
+- /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/sim/selector_tb.sv:34: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 50us; walltime 0.016 s; speed 3.156 ms/s
+- Verilator: cpu 0.016 s on 1 threads; allocated 7 MB
+
+python3 scripts/test_axi.py
+PASS AXI: independent AW/W, strobes, backpressure, halt/resume, reset, assignment cut=2559
+- /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/sim/axi_tb.sv:98: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 1ms; walltime 0.337 s; speed 3.931 ms/s
+- Verilator: cpu 0.333 s on 1 threads; allocated 8 MB
+
+python3 scripts/audit_results.py
+{
+  "groups": [
+    {
+      "folder": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800",
+      "runs": 40,
+      "mean_gap_to_paper_reference_3050": 122.425,
+      "best_cut": 2942.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800",
+      "runs": 30,
+      "mean_gap_to_paper_reference_3050": 108.63333333333334,
+      "best_cut": 2956.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800",
+      "runs": 30,
+      "mean_gap_to_paper_reference_3050": 97.36666666666666,
+      "best_cut": 2966.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "paper_writing/simulation_results/MT_UNITS=25_N=800",
+      "runs": 30,
+      "mean_gap_to_paper_reference_3050": 97.9,
+      "best_cut": 2964.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "paper_writing/simulation_results/halon_UNITS=25_N=800",
+      "runs": 30,
+      "mean_gap_to_paper_reference_3050": 101.26666666666667,
+      "best_cut": 2964.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800",
+      "runs": 20,
+      "mean_gap_to_paper_reference_3050": 5.05,
+      "best_cut": 3049.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 49300000,
+      "max_last_logged_iteration": 99900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800",
+      "runs": 21,
+      "mean_gap_to_paper_reference_3050": 2.3333333333333335,
+      "best_cut": 3049.0,
+      "runs_at_best": 19,
+      "min_last_logged_iteration": 99900000,
+      "max_last_logged_iteration": 99900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800",
+      "runs": 26,
+      "mean_gap_to_paper_reference_3050": 1.1153846153846154,
+      "best_cut": 3050.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 32900000,
+      "max_last_logged_iteration": 99900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800",
+      "runs": 21,
+      "mean_gap_to_paper_reference_3050": 2.761904761904762,
+      "best_cut": 3049.0,
+      "runs_at_best": 20,
+      "min_last_logged_iteration": 65400000,
+      "max_last_logged_iteration": 99900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800",
+      "runs": 22,
+      "mean_gap_to_paper_reference_3050": 1.0,
+      "best_cut": 3049.0,
+      "runs_at_best": 22,
+      "min_last_logged_iteration": 38700000,
+      "max_last_logged_iteration": 99900000
+    }
+  ],
+  "historical_curve": {
+    "file": "paper_writing/current_best.txt",
+    "sha256": "45f6440dcc4f03a312907ed6a375169c1873c82934c399000ac27049529920e4",
+    "points": 661,
+    "best_cut": 3049,
+    "first_cycle_at_3049": 75516185
+  },
+  "limitations": [
+    "Logs do not contain completion markers or saved assignments.",
+    "The exact 20-run population for Table I is not identified; all available logs are included.",
+    "A last logged iteration is not proof of successful run completion."
+  ]
+}
+python3 scripts/audit_comparison.py
+{
+  "verdict": "CPU/SpiNNaker2 advertised speedups are unvalidated: historical timed work and current accepted-flip budget are not established as equivalent.",
+  "audited_legacy_logs": 110,
+  "same_seed_fpga_throughput_gain": 2.8571528795433725,
+  "results": "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/results/comparison_audit"
+}
+python3 scripts/test_sudoku_model.py
+test_clamping_and_unbiased_free_initialization (__main__.SudokuModelAudit.test_clamping_and_unbiased_free_initialization) ... ok
+test_full_graph_and_overlap_deduplication (__main__.SudokuModelAudit.test_full_graph_and_overlap_deduplication) ... ok
+test_independent_solution_and_invalid_states (__main__.SudokuModelAudit.test_independent_solution_and_invalid_states) ... ok
+test_paper_clues_match_published_coordinates (__main__.SudokuModelAudit.test_paper_clues_match_published_coordinates) ... ok
+test_prepared_files_contain_clues_only_and_disabled_padding (__main__.SudokuModelAudit.test_prepared_files_contain_clues_only_and_disabled_padding) ... ok
+test_random_clamped_energy_and_hardware_flip_identities (__main__.SudokuModelAudit.test_random_clamped_energy_and_hardware_flip_identities) ... ok
+test_rtl_specialization_structural_contract (__main__.SudokuModelAudit.test_rtl_specialization_structural_contract) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.946s
+
+OK
+python3 scripts/run_sudoku_sim.py --cycles 2000000 --require-solved
+PASS Sudoku RTL cycles=1547537 flips=150449 best_gain=102 goal=102
+- /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/sim/sudoku_tb.sv:82: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 15ms; walltime 6.232 s; speed 2.494 ms/s
+- Verilator: cpu 6.210 s on 1 threads; allocated 7 MB
+
+Final independent validation: -81 True

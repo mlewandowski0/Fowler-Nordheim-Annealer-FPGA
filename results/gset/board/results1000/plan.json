@@ -1,0 +1,185 @@
+{
+  "names": [
+    "G43",
+    "G44",
+    "G45",
+    "G46",
+    "G47",
+    "G51",
+    "G52",
+    "G53",
+    "G54"
+  ],
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "accepted_flip_budget": 10000000,
+  "max_active_cycles": 1000000000,
+  "clock_request_mhz": 100,
+  "cooling_period": 65536,
+  "build": {
+    "variant": "gset_loadable_unsigned_1024",
+    "abi": "0x47535432",
+    "vertices": 1024,
+    "weight_values": [
+      0,
+      1
+    ],
+    "requested_clock_mhz": 100,
+    "sources": {
+      "scripts/build_gset1024.py": "12213c1fa522654691811fe33d191d05a36972fbd1dbc44d97ee0941774560ac",
+      "scripts/prepare_gset1024_rtl.py": "705941ca0a3aed08f1a4a8be9ff0f285cb1559ffbb251192c920a6cdcb44e996",
+      "scripts/prepare_gset_rtl.py": "3a3645a972897fc08df059875a0bf3409fd9377d208f85ce37cf2165d3ec8ba9",
+      "scripts/prepare_sudoku_rtl.py": "94098c788184654822ca47bf5ad84d7f965c6e7bf2a05ebd15cf98d17fde57a3",
+      "scripts/build_overlay.tcl": "8cca49438e492e0561eb3d596646837431c80dae66a6307bf859c24c0bdfda11",
+      "rtl/files.f": "4650b260c41f2c0aafa154a7d17a6a29b8d08e1fb895647b5bf35c3733304b9f",
+      "rtl/LFSR.v": "858787b90a5ce00e9994f0984d6acd95236e13678cb0f7ea4feb6945c1d5eae8",
+      "rtl/LFSR_inout.v": "f3887b14980b2476b4b8b343855426c4c439adc1ae91b58434ae11f7c5b9002d",
+      "rtl/distributed_graph_memory.v": "d7a5e11cca71cec3cefc1ca4364440bb2c2b8110232311ed93714b332b176ac7",
+      "rtl/fixed_mult.v": "4a90500c9bff976c62e2dab22424c1310750ef830a573da663d790a4837d03ad",
+      "rtl/fixed_to_int.v": "dad0cbb07cd7f54ebf09f70f9da710d5f30475331b44bf9140a1ff68601824c7",
+      "rtl/flipping_unit.v": "055e6231629220bc659dcf176bf54e0fc05bf336126137615d67152c4a9d604b",
+      "rtl/log_LUT.v": "84549ca77b6bdf0e18a148ad16cecec1ce4fa312d68c22233360f75ee690098c",
+      "rtl/log_noise_generator.v": "e3e8d153524a40a0af3e34cb220ad238be2978f4dbe48cb784eb35fff5eaf1c0",
+      "rtl/neuron_ensemble.v": "be74c7233e8e14a7dedb7b36aa823a594538c8e5c91721aae27b88b47c30db4b",
+      "rtl/neuron_ensemble_storage.v": "c89d8b450fa751be2a54b26a9b435b8d344ed7fd0594f569dd514f7209fb4f4a",
+      "rtl/neuron_ensemble_with_memory_with_buff.v": "dd3ed14d828780c38a97d4fcce62827136235f48b5eb77b2dbb31448f0ac46fb",
+      "rtl/simple_priority_selector.v": "7b87480e3f6db5ba69808b6c7edb2462a6a736f20162b8b84f1cbaca7f128587",
+      "rtl/round_robin_priority_selector.v": "62fe7f8bee8ebb0a62703fb06d1a354f2de280e42dda1c1ed0e080dab93c7442",
+      "rtl/temperature_mapping.v": "eb59cc195dca33a17b813b9223f61a0635ef0d9df52ceabcdb047eb4f25c0791",
+      "rtl/temperature_module.v": "693221daa734a7af1123491c2ca4e21fd686cc2e7036a312f5b3db7cade0cf75",
+      "rtl/transmit_buffer.v": "2bc46285df180229d88aa6954e83c25095051ba9a952d3b61321f3e9da4d6112",
+      "rtl/scheduler_2.v": "495b5f4e04116161df3e09f84ff59b4395b24e11d95b83bf93661b67ff9ebd61",
+      "rtl/neuroSA_machine.sv": "536a974b3cf7a0abf0b4a2ec1fe73710d7f097dd4e6b9396610a65059dc2a2ef",
+      "rtl/qubo_axi.v": "a582bfaac8d0835836d539130f4b3f0e984c162d8c02663519bb390191a936e1"
+    },
+    "generated_sources": {
+      "generated/rtl/LFSR.v": "858787b90a5ce00e9994f0984d6acd95236e13678cb0f7ea4feb6945c1d5eae8",
+      "generated/rtl/LFSR_inout.v": "f3887b14980b2476b4b8b343855426c4c439adc1ae91b58434ae11f7c5b9002d",
+      "generated/rtl/distributed_graph_memory.v": "a308bc6133ad7f59e60d3e290ffb4c89859eeab1949ba733451d575dab00f280",
+      "generated/rtl/fixed_mult.v": "4a90500c9bff976c62e2dab22424c1310750ef830a573da663d790a4837d03ad",
+      "generated/rtl/fixed_to_int.v": "dad0cbb07cd7f54ebf09f70f9da710d5f30475331b44bf9140a1ff68601824c7",
+      "generated/rtl/flipping_unit.v": "055e6231629220bc659dcf176bf54e0fc05bf336126137615d67152c4a9d604b",
+      "generated/rtl/log_LUT.v": "84549ca77b6bdf0e18a148ad16cecec1ce4fa312d68c22233360f75ee690098c",
+      "generated/rtl/log_noise_generator.v": "e3e8d153524a40a0af3e34cb220ad238be2978f4dbe48cb784eb35fff5eaf1c0",
+      "generated/rtl/neuron_ensemble.v": "772429d2887c52effdae11a9ccea16dc73bab6f1fa9f2b8326123a7db9e73e82",
+      "generated/rtl/neuron_ensemble_storage.v": "88cbc88c9abdb13db15ce16beba8e815eea1d4d479cfaff6ebf2e967cd437251",
+      "generated/rtl/neuron_ensemble_with_memory_with_buff.v": "3fe42fe41b3569139f502f9fae1c6c085031b140e42d633bde425b7b18b150ad",
+      "generated/rtl/simple_priority_selector.v": "7b87480e3f6db5ba69808b6c7edb2462a6a736f20162b8b84f1cbaca7f128587",
+      "generated/rtl/round_robin_priority_selector.v": "62fe7f8bee8ebb0a62703fb06d1a354f2de280e42dda1c1ed0e080dab93c7442",
+      "generated/rtl/temperature_mapping.v": "eb59cc195dca33a17b813b9223f61a0635ef0d9df52ceabcdb047eb4f25c0791",
+      "generated/rtl/temperature_module.v": "693221daa734a7af1123491c2ca4e21fd686cc2e7036a312f5b3db7cade0cf75",
+      "generated/rtl/transmit_buffer.v": "2bc46285df180229d88aa6954e83c25095051ba9a952d3b61321f3e9da4d6112",
+      "generated/rtl/scheduler_2.v": "52f235c82aee72c8e7aa90b9c7eb20dff27daeac1a767b19fea25380a4e95b96",
+      "generated/rtl/neuroSA_machine.sv": "db770bbea424d1fee6972670f61ba40b36971194a525533632ff91c05b63fb11",
+      "generated/rtl/qubo_axi.v": "bf650e7db701b7e81cd4ae6e1c707b5018f8bdde9bc998314a45a957690c3247"
+    },
+    "artifacts": {
+      "qubo.bit": "2032f3533fd2838ea5c957eb24a2cc49371376833484f100e171bdc523e294a4",
+      "qubo.hwh": "f468493354126fc4dda3c65093885782ba397249fb832e4b63b28e00dba6f421"
+    }
+  },
+  "graphs": [
+    {
+      "name": "G43",
+      "vertices": 1000,
+      "edges": 9990,
+      "negative_edges": 0,
+      "sha256": "9af5445b4b066cbf1eabe218d4e0d907cb6f211651cae557c761ec344dc37be8",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G43",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 6660,
+      "paper_neurosa_worst_cut": 6660
+    },
+    {
+      "name": "G44",
+      "vertices": 1000,
+      "edges": 9990,
+      "negative_edges": 0,
+      "sha256": "929e7687b9a04699d6b1c1399a0cff0d0a5bfed9b650732f496ca422cb51c181",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G44",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 6650,
+      "paper_neurosa_worst_cut": 6650
+    },
+    {
+      "name": "G45",
+      "vertices": 1000,
+      "edges": 9990,
+      "negative_edges": 0,
+      "sha256": "e1514f22a23c5b6822c22c484f9cfa1459e3114e52f0c87c9dee0f472bbdf21d",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G45",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 6654,
+      "paper_neurosa_worst_cut": 6654
+    },
+    {
+      "name": "G46",
+      "vertices": 1000,
+      "edges": 9990,
+      "negative_edges": 0,
+      "sha256": "f734bc1d84824610066134f30642da14a54d5f02f4a3a3e608800bdafa25a1ef",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G46",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 6649,
+      "paper_neurosa_worst_cut": 6646
+    },
+    {
+      "name": "G47",
+      "vertices": 1000,
+      "edges": 9990,
+      "negative_edges": 0,
+      "sha256": "1e4b6fd99bfa1a14886bf15f49b8f11fc31051660d1a0b629de71ff91cbf8ee5",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G47",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 6657,
+      "paper_neurosa_worst_cut": 6656
+    },
+    {
+      "name": "G51",
+      "vertices": 1000,
+      "edges": 5909,
+      "negative_edges": 0,
+      "sha256": "23b7111e929fe1c9be8dfc75d9b8d2f395552e59981bb1f2d23f5e14a7a987a5",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G51",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 3848,
+      "paper_neurosa_worst_cut": 3847
+    },
+    {
+      "name": "G52",
+      "vertices": 1000,
+      "edges": 5916,
+      "negative_edges": 0,
+      "sha256": "48ab066f1a3b0c104b21d91bcc358aac1a50160bff13d17b2b0967191cb74469",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G52",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 3851,
+      "paper_neurosa_worst_cut": 3847
+    },
+    {
+      "name": "G53",
+      "vertices": 1000,
+      "edges": 5914,
+      "negative_edges": 0,
+      "sha256": "10ebfc718012f0855535bf360ca0d1dab9f7d2205e033e23d9ccd4467c87ce66",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G53",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 3850,
+      "paper_neurosa_worst_cut": 3850
+    },
+    {
+      "name": "G54",
+      "vertices": 1000,
+      "edges": 5916,
+      "negative_edges": 0,
+      "sha256": "a6150a5ff80de8f268c3e60a9b37c708cbbfdff7f079008e9501e8a89569e7cc",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G54",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 3852,
+      "paper_neurosa_worst_cut": 3848
+    }
+  ]
+}

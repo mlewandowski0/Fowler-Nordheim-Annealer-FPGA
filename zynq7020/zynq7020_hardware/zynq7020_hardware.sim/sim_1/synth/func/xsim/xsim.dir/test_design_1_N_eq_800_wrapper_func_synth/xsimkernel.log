@@ -1,7 +1,0 @@
-Running: xsim.dir/test_design_1_N_eq_800_wrapper_func_synth/xsimk -simmode gui -wdb test_design_1_N_eq_800_wrapper_func_synth.wdb -simrunnum 0 -socket 58913
-Design successfully loaded
-Design Loading Memory Usage: 424868 KB (Peak: 424868 KB)
-Design Loading CPU Usage: 1110 ms
-Simulation completed
-Simulation Memory Usage: 536812 KB (Peak: 564136 KB)
-Simulation CPU Usage: 1460 ms

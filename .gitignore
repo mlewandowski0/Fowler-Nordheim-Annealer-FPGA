@@ -1,0 +1,30 @@
+/build/
+__pycache__/
+*.pyc
+.venv/
+/.pytest_cache/
+*.jou
+*.log
+!results/**/*.log
+*.str
+/.Xil/
+/core
+
+# Local research archive and machine/agent configuration.
+/.research-archive/*
+!/.research-archive/README.md
+/.agents/
+/.aws/
+/.codex/
+/.vscode/
+/_ide/
+/Fowler-Nordheim-Annealer-FPGA/
+# Archived project trees; selected required inputs/evidence are tracked explicitly.
+/hw_impl/
+/fowler_nordheim_IP/
+/logs/
+/python_code/
+/paper_writing/
+/zynq7020/
+/vitis_software/
+/diagrams/.$*

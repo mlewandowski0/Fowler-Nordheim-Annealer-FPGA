@@ -1,0 +1,127 @@
+python3 scripts/audit_results.py
+{
+  "groups": [
+    {
+      "folder": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800",
+      "runs": 40,
+      "mean_gap_to_paper_reference_3050": 122.425,
+      "best_cut": 2942.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800",
+      "runs": 30,
+      "mean_gap_to_paper_reference_3050": 108.63333333333334,
+      "best_cut": 2956.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800",
+      "runs": 30,
+      "mean_gap_to_paper_reference_3050": 97.36666666666666,
+      "best_cut": 2966.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "paper_writing/simulation_results/MT_UNITS=25_N=800",
+      "runs": 30,
+      "mean_gap_to_paper_reference_3050": 97.9,
+      "best_cut": 2964.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "paper_writing/simulation_results/halon_UNITS=25_N=800",
+      "runs": 30,
+      "mean_gap_to_paper_reference_3050": 101.26666666666667,
+      "best_cut": 2964.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800",
+      "runs": 20,
+      "mean_gap_to_paper_reference_3050": 5.05,
+      "best_cut": 3049.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 49300000,
+      "max_last_logged_iteration": 99900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800",
+      "runs": 21,
+      "mean_gap_to_paper_reference_3050": 2.3333333333333335,
+      "best_cut": 3049.0,
+      "runs_at_best": 19,
+      "min_last_logged_iteration": 99900000,
+      "max_last_logged_iteration": 99900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800",
+      "runs": 26,
+      "mean_gap_to_paper_reference_3050": 1.1153846153846154,
+      "best_cut": 3050.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 32900000,
+      "max_last_logged_iteration": 99900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800",
+      "runs": 21,
+      "mean_gap_to_paper_reference_3050": 2.761904761904762,
+      "best_cut": 3049.0,
+      "runs_at_best": 20,
+      "min_last_logged_iteration": 65400000,
+      "max_last_logged_iteration": 99900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800",
+      "runs": 22,
+      "mean_gap_to_paper_reference_3050": 1.0,
+      "best_cut": 3049.0,
+      "runs_at_best": 22,
+      "min_last_logged_iteration": 38700000,
+      "max_last_logged_iteration": 99900000
+    }
+  ],
+  "historical_curve": {
+    "file": "paper_writing/current_best.txt",
+    "sha256": "45f6440dcc4f03a312907ed6a375169c1873c82934c399000ac27049529920e4",
+    "points": 661,
+    "best_cut": 3049,
+    "first_cycle_at_3049": 75516185
+  },
+  "limitations": [
+    "Logs do not contain completion markers or saved assignments.",
+    "The exact 20-run population for Table I is not identified; all available logs are included.",
+    "A last logged iteration is not proof of successful run completion."
+  ]
+}
+python3 scripts/audit_comparison.py
+{
+  "verdict": "CPU/SpiNNaker2 advertised speedups are unvalidated: historical timed work and current accepted-flip budget are not established as equivalent.",
+  "audited_legacy_logs": 110,
+  "same_seed_fpga_throughput_gain": 2.8571528795433725,
+  "results": "/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/results/comparison_audit"
+}
+python3 scripts/audit_gset_inputs.py
+59 table entries; 37 fit planned builds
+python3 scripts/summarize_gset.py
+PASS 117 board runs; 37 / 59 table entries; 39 graphs
+Best-of-three/reference minimum 0.9929435483870968
+{"name": "G4", "accepted_flips": 1000000, "fpga_median_seconds": 0.16625669, "cpu_median_seconds": 7.583477282998501, "fpga_cut_range": [11622, 11641], "cpu_cut_range": [11453, 11483], "target99": 11530, "fpga_target_hits": 3, "fpga_target_seconds": [0.00842836, 0.00787782, 0.00853503], "cpu_target_hits": 3, "cpu_target_seconds": [8.542351251999207, 8.35710848799863, 9.035683062997123], "cpu_tts_timeout_seconds": 30}
+{"name": "G11", "accepted_flips": 1000000, "fpga_median_seconds": 0.0929468, "cpu_median_seconds": 5.464181858998927, "fpga_cut_range": [562, 562], "cpu_cut_range": [234, 240], "target99": 559, "fpga_target_hits": 3, "fpga_target_seconds": [0.08365046, 0.0538426, 0.06430794], "cpu_target_hits": 0, "cpu_target_seconds": [null, null, null], "cpu_tts_timeout_seconds": 30}
+{"name": "G15", "accepted_flips": 1000000, "fpga_median_seconds": 0.0949119, "cpu_median_seconds": 5.588619297002879, "fpga_cut_range": [3047, 3050], "cpu_cut_range": [2712, 2728], "target99": 3020, "fpga_target_hits": 3, "fpga_target_seconds": [0.0290746, 0.03235839, 0.03221059], "cpu_target_hits": 0, "cpu_target_seconds": [null, null, null], "cpu_tts_timeout_seconds": 30}
+python3 scripts/summarize_spinnaker.py
+PASS: 90 FPGA attempts independently checked
+G4 primary 0 /30 median hit None secondary 12 /30
+G11 primary 17 /30 median hit 0.16366315 secondary 17 /30
+G15 primary 5 /30 median hit 0.07387038 secondary 12 /30

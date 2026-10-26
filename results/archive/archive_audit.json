@@ -1,0 +1,1729 @@
+{
+  "reference_cut_from_paper": 3050,
+  "groups": [
+    {
+      "folder": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800",
+      "runs": 40,
+      "mean_gap_to_paper_reference_3050": 122.425,
+      "best_cut": 2942.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800",
+      "runs": 30,
+      "mean_gap_to_paper_reference_3050": 108.63333333333334,
+      "best_cut": 2956.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800",
+      "runs": 30,
+      "mean_gap_to_paper_reference_3050": 97.36666666666666,
+      "best_cut": 2966.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "paper_writing/simulation_results/MT_UNITS=25_N=800",
+      "runs": 30,
+      "mean_gap_to_paper_reference_3050": 97.9,
+      "best_cut": 2964.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "paper_writing/simulation_results/halon_UNITS=25_N=800",
+      "runs": 30,
+      "mean_gap_to_paper_reference_3050": 101.26666666666667,
+      "best_cut": 2964.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800",
+      "runs": 20,
+      "mean_gap_to_paper_reference_3050": 5.05,
+      "best_cut": 3049.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 49300000,
+      "max_last_logged_iteration": 99900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800",
+      "runs": 21,
+      "mean_gap_to_paper_reference_3050": 2.3333333333333335,
+      "best_cut": 3049.0,
+      "runs_at_best": 19,
+      "min_last_logged_iteration": 99900000,
+      "max_last_logged_iteration": 99900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800",
+      "runs": 26,
+      "mean_gap_to_paper_reference_3050": 1.1153846153846154,
+      "best_cut": 3050.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 32900000,
+      "max_last_logged_iteration": 99900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800",
+      "runs": 21,
+      "mean_gap_to_paper_reference_3050": 2.761904761904762,
+      "best_cut": 3049.0,
+      "runs_at_best": 20,
+      "min_last_logged_iteration": 65400000,
+      "max_last_logged_iteration": 99900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800",
+      "runs": 22,
+      "mean_gap_to_paper_reference_3050": 1.0,
+      "best_cut": 3049.0,
+      "runs_at_best": 22,
+      "min_last_logged_iteration": 38700000,
+      "max_last_logged_iteration": 99900000
+    }
+  ],
+  "runs": [
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=0.txt",
+      "best_cut": 2929.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "d602c4b8facd7f10e106c1d34f453f8efb2610d50eb3c81b566040886b296dce"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=1.txt",
+      "best_cut": 2933.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "436f039d55da5aeb388644e871d1417c29743524c00c6f4c16b5cbe95913213d"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=10.txt",
+      "best_cut": 2942.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "e3e0a12549227dce2860f39b34caf9b047e11ddaa1ca560ead07dfd7d4177c4c"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=11.txt",
+      "best_cut": 2932.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "f4aca44d2d8f92165cdaf6fd2a3871686adce00780f70f6816b44e7f98ffd221"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=12.txt",
+      "best_cut": 2921.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "c3e799d1eb0fd6e7009f9ae7f23c211ba9b3d09e61526e4b9649f6ce81d323c0"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=13.txt",
+      "best_cut": 2924.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "afd574bc90d594e434fbe7fd5efc4e09f0ce6213285d7a1d47d0592b1965d7aa"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=14.txt",
+      "best_cut": 2921.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "bb7edd4b9392b0d4825e4f556797eb8bf947300d90bcf566bd981a1f4f7b4f9d"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=15.txt",
+      "best_cut": 2922.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "2df4c0e8ae19d4d29bad328ae7f34818464673d159f827cce0c46675cc0ecdd3"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=16.txt",
+      "best_cut": 2922.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "1594c0fdc434a35407bd2084f3baf84f9a01579f811c17b804e7d524db3d9b6c"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=17.txt",
+      "best_cut": 2919.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "991ce5be9203cabed810321a39454d94ff4924cce6cf29225e25bff707819ab1"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=18.txt",
+      "best_cut": 2933.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "236b24b2cffeda814f506b9640562fae4249ab8979e92f65409669fa7a10d234"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=19.txt",
+      "best_cut": 2936.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "104396127aaaf45720e45692ad2d105c844ddb1636355cbab8ac39078a69de8c"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=2.txt",
+      "best_cut": 2923.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "53e19a20eddf9ea11442b330a80334a94005a1b43ae9c8c341bf512dce55a672"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=20.txt",
+      "best_cut": 2936.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "e6ade2c78d53fd756a5ec609788503c90caf2bc6b8af822f57c6d6e10d3e768d"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=21.txt",
+      "best_cut": 2925.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "3fbb86e4e06b2fbc0bdd79c3c582c987f979054ae497dec7d41ac358177b5035"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=22.txt",
+      "best_cut": 2932.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "1d3925b4acb34cdf8bba7027f1b3ec8b65bf479867d5b1c9b6e4512649c3b014"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=23.txt",
+      "best_cut": 2922.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "5c4714c63f1d5551aaadf64238d2d03045d8dc4519dc8a167396671249c255a6"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=24.txt",
+      "best_cut": 2930.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "6b2efb09210348c42df2e3463f7e4892eab13233ad64990f955dd3e027fce98c"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=25.txt",
+      "best_cut": 2926.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "e4a3311b290fa717896267b356a0e42b0bb19e04caf2775a3bdf0a4fa4af7a17"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=26.txt",
+      "best_cut": 2928.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "98403b29566cb0c675b02095da766a0c7b83ddf3b1187bea60463a6717442693"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=27.txt",
+      "best_cut": 2927.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "2e97002ec48722d9bc95208c595c89ac638628a4fd9392b5c21de3ab915bf72b"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=28.txt",
+      "best_cut": 2922.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "1accd95f9f13da16a5fc22b6394ef4dea4d75907ffd86367d278281ac15bc39e"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=29.txt",
+      "best_cut": 2932.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "fde10a2e9e796c394ddcd9c047ac61492a41f0aa26da2cabdf4244b3973b0cd6"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=3.txt",
+      "best_cut": 2925.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "541c66e762cf1ba0f95516c4857964ad7b76d7e707306c4ddab0f4d3907ee9ae"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=30.txt",
+      "best_cut": 2934.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "1b27ed09681c0e2a90267fe141a5e6a0877bb61cef5a24ba8a7e5208945e74a5"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=31.txt",
+      "best_cut": 2926.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "ad04f19660d00fbe01bc22a79b11fda340673710b908d77e05f371f1bde618fc"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=32.txt",
+      "best_cut": 2926.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "39156583efa2ace2931d94edc5d2e24ddb4e261af23ede240c9306d7f5472979"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=33.txt",
+      "best_cut": 2928.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "0a9ffa3efdd6ad18ff741c998a51f948c5dd49666b8751438a754a8b524c04cd"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=34.txt",
+      "best_cut": 2929.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "eb8a927defbf1385d674f0e3af853cf461525502c2b5939b4ebfd6f0d999d601"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=35.txt",
+      "best_cut": 2925.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "2bc4f3b78d750e513882983756b44c60ab964e1932a563ef8078f1f2cfb1f04c"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=36.txt",
+      "best_cut": 2935.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "6769c91563ada138dae67fef70cb0093303e76873b8e403ff758fff41a9d5eb9"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=37.txt",
+      "best_cut": 2930.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "45c700aefd9c89942b272b0fbbd933c04ffa21170233cae25c67c43b136f0d50"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=38.txt",
+      "best_cut": 2926.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "0a0fd58fc51463f0dc73eb3caf37c036614359ecf0824354e99487571b6b4df0"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=39.txt",
+      "best_cut": 2923.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "2899504f077c6c6dc3cd1bb7512cf26333a5317c8b50c1f4a8deece7b75edd97"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=4.txt",
+      "best_cut": 2933.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "1f32c4542b54f9b7010952a2c4c611c2dddede64fc47d138cfb9dae2776f725c"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=5.txt",
+      "best_cut": 2922.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "6c5c6f99c4acf2cbc40f790f8e6f7e19f185b7e2ae3a701692ee00b8a95a1640"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=6.txt",
+      "best_cut": 2929.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "d5b448dbaa7c68ee0224500db09bb5ffee4ac4ed83164cf82283f0af9a86e508"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=7.txt",
+      "best_cut": 2929.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "0d46f0e8755e4afc957f3132557c060ad2f56a6e49ad9c8ca4d9028d0c5f789e"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=8.txt",
+      "best_cut": 2922.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "214d0c614433cf2480c56f4ebda17bfc554587975a28272bdd00f447c1505be4"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=9.txt",
+      "best_cut": 2924.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "c5cbeb760344d0d030ef974a4f0619670c0b5849e12fc48b49e0d0615f3155ed"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=0.txt",
+      "best_cut": 2940.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "26a3fbc3e879c58aea12d3a1fa88fa90820ce4277d3555b9f68efe6f31aac615"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=1.txt",
+      "best_cut": 2940.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "43c79eed3762c936a2739404f33f2f4cb162e0c6bb3032e27f08fb11979ab83b"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=10.txt",
+      "best_cut": 2941.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "c50c07fa3029e29e2cd71532e798f5c69acbeb9d91862fdb1888c59aa9a49897"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=11.txt",
+      "best_cut": 2942.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "d69a25df0570357a20139e341bfb2245f499efaca81ea26512ec0576609ff125"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=12.txt",
+      "best_cut": 2945.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "4247bac3b5b133ee98509717048c6a7b81eedd61c4ff13aa0a6647c94bcb4e19"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=13.txt",
+      "best_cut": 2951.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "55e2b636ce11140107dd9808c501ce80d3c0914eced885a7ae3b6bfe0667ae46"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=14.txt",
+      "best_cut": 2942.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "857208e9f136ec6484e7341358a592597958bbf52fef1a2bf61f02652b31876f"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=15.txt",
+      "best_cut": 2935.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "530ec8753324764d9d812ccf7cc89473239e431f1e5104d5a34029c7ff6ecc9b"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=16.txt",
+      "best_cut": 2941.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "c9c96372f2e55ea545259e818b280e7879975f4a8e156962e5f069dbb57b5309"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=17.txt",
+      "best_cut": 2942.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "ba1fffbd17f8826e6a60183c4213619a9a6af4fe8da93cb9f6c456fe03d62334"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=18.txt",
+      "best_cut": 2943.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "b8f07ae44aef5ce02f05603853a685b69141d94b72734e0fbd8dca4129d1fd35"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=19.txt",
+      "best_cut": 2956.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "385b29cf695b9e7648a340103f5c30cc6d5e53af8d8163ec20a06806e2a8b0d1"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=2.txt",
+      "best_cut": 2935.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "23cc303b10f348cfca0553210fc01a34309d0ef48e6dad47e5a080df1ebe6c4f"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=20.txt",
+      "best_cut": 2942.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "118d2433d5986aaf539769f2d17c6e5cf6ba0ad61dd363f76836f0dc66ba68f9"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=21.txt",
+      "best_cut": 2939.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "e47eeeab615f6ef93b7558d1436a86b89bbdbfd1b13e9e522a902190dc223dee"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=22.txt",
+      "best_cut": 2939.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "e45e92ac967f73ef1c45c12103fd8a055416dc0ad0698eb649b52279af878c6e"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=23.txt",
+      "best_cut": 2938.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "d78203e72784e8da14c9331473ebd78831a0958a52239f4d210160f97a2a4fb7"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=24.txt",
+      "best_cut": 2940.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "c8549a1336a8f9ac03d22fb6e4ff6224941b145bc6a991fe243c4ae0e29a8dea"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=25.txt",
+      "best_cut": 2944.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "2ac01656d533a5341d05b940a19492ae036611320e354dc2f2ba6560f917e715"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=26.txt",
+      "best_cut": 2940.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "075d2849fe5f52c9e31849be16a7bec390baac2f8a6413d71310f0a57a8a05d0"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=27.txt",
+      "best_cut": 2939.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "46847306adb414cc37b78509d8e8b3b74f6c4423843e6e204cf428f3c76f58ad"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=28.txt",
+      "best_cut": 2949.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "5f2d885de05b67685569c8dd831379105c389802c331ccc6fb5bd5a757fc12f5"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=29.txt",
+      "best_cut": 2945.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "1b8f045f0c29ada990eb3064b8f480f8debe1b8ebb301b22da22038a4d404825"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=3.txt",
+      "best_cut": 2938.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "8d56fe4900face4c81751fd0ed90db8a9446253a3ab0c303e3cddbc5c6f08186"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=4.txt",
+      "best_cut": 2942.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "3fa231e7824c434a0ebc543caa052878e00569380132164bebec56b7690b062a"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=5.txt",
+      "best_cut": 2940.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "34be7b46592a315953742e12c5badf557306b0fe03d36046fb678d55bbd46119"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=6.txt",
+      "best_cut": 2934.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "1c26d18d544b370e79039df4e35bc259a66deb96af1eac989314879549f6b977"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=7.txt",
+      "best_cut": 2933.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "534dc217014479805f13b74c620643af84f94b05f9e81054339a4802bb2db573"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=8.txt",
+      "best_cut": 2948.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "211076067c2d6d510b4b8d3f9ff68a5ae8f77d8edc6e3f4a5199ece3073d4d69"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=9.txt",
+      "best_cut": 2938.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "4c1d596da8dc10ba0d20914aeaea2c9545e3819aaa1f4a1982a2d8ee41739d35"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=0.txt",
+      "best_cut": 2951.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "865030e06cf9bb2822795ca8806e79e319ff45333331f94fe248b6ef91897f63"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=1.txt",
+      "best_cut": 2944.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "c2ee32b8a9edb593cee89188cbf84b33140cae5954732444035e36601c7583fe"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=10.txt",
+      "best_cut": 2961.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "5ec72d53eb447eb13aebb3f7db15365c1803665b2d22cdf6d975d60fc6a41c0d"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=11.txt",
+      "best_cut": 2950.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "a1deee4ff5c3b0adabd2276bb44bed02f57161c27e9abceef929611bb536354c"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=12.txt",
+      "best_cut": 2949.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "91a358b7c9e277e57107c5b3d1dcfea1199afbc014edec1fd26f8a7d48aa4848"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=13.txt",
+      "best_cut": 2957.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "64c54f0ee3847424c70911abd82e37f3dc8fe52413b2b5de8e59af43901645c5"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=14.txt",
+      "best_cut": 2956.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "d2d524339a34418bfd3f9732d53a8515c655da18482276704c5dc9a2cbcd01d5"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=15.txt",
+      "best_cut": 2966.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "805273683c7b76d479558cbe39b08038640e08e743f799d867c1fe44d28f1d29"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=16.txt",
+      "best_cut": 2951.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "8a52b71ad36375c874b6d2184cb90228eb5a8c14ffcb9e85aeadc71560a0db84"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=17.txt",
+      "best_cut": 2959.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "a3aad7f4a8bb577afb74ee967e1baa2441b6666e1cd8aa9fff69b29cf5380aaf"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=18.txt",
+      "best_cut": 2947.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "da759db2faa1d64465dbc1d1049d48904a5209c6a939d57747bda5911ad789af"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=19.txt",
+      "best_cut": 2955.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "3fd7e8fd1149ff0136749e75b82c174f2598a7451b21ed3355ffd60b952f066d"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=2.txt",
+      "best_cut": 2955.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "f9af3b76e56d2d8fe652c26e2991bd89541d7db3dbe41e30b9deed56cdd0585f"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=20.txt",
+      "best_cut": 2951.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "71fc9668bcc08327e66a63c11fa85565e1177a2196f1aa85b7846ac942eed671"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=21.txt",
+      "best_cut": 2952.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "3de5478de699d77f33473361cda26303c7c49b21feb49fa943693fd737c098ef"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=22.txt",
+      "best_cut": 2957.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "09c7f0d762eec4ca9d4b4d8b15010f9d7a0b43d60bb03926f9eceaf2c481dc51"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=23.txt",
+      "best_cut": 2950.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "916000fc3bf93fee6a5efa09325840309995522b8e32350b4e6fededca90fa20"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=24.txt",
+      "best_cut": 2946.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "ca49731ddc540ff5974fd5ab6fbdd7663189990d15a449eb520913bd6d5a4e0b"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=25.txt",
+      "best_cut": 2941.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "a84a69b822d3e26afc6c98d86084aafd172314690a50eed64a348672d296890d"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=26.txt",
+      "best_cut": 2953.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "5008f19dd891643e2cba621a605efe89cf23ce1cb550ce2972f255f25a93a026"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=27.txt",
+      "best_cut": 2949.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "14b7aed0077f68aab4fb4f39017a5d766841fe21b94c0866ea0463d285a66c13"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=28.txt",
+      "best_cut": 2945.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "df3e761c64624131a74c73d7c5e95be351389a4868a4fa337e23f016e05db7c7"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=29.txt",
+      "best_cut": 2953.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "b3ad7b9fccd08533e0f96ba4f52810dc2b405f0a88972dd860f97056a666aa94"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=3.txt",
+      "best_cut": 2957.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "16dcf3a6a0564b6b7e466e75e69d99de1264251b9d028f195297c491e2674d8e"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=4.txt",
+      "best_cut": 2957.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "c1ca2bc18ab8a705177140b13d67b0923e26218955e69d53921fddbbeac7bdc9"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=5.txt",
+      "best_cut": 2945.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "390ac451c85931e63121c140159b3dc90c7a8f6806e776d15e168bb728fffa42"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=6.txt",
+      "best_cut": 2953.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "498a2e50a6896353298f68be03596d13dd521099544b22008a70b837ef72bdda"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=7.txt",
+      "best_cut": 2956.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "8c8f863910821fd6507ad51d3006485e04dfb7f2afdeac4803349e73dc60d0f5"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=8.txt",
+      "best_cut": 2959.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "90ad1719931c24c3312fa5d980ddfcde6025d15114d89953cb073a88e9f9e8d6"
+    },
+    {
+      "file": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=9.txt",
+      "best_cut": 2954.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "85d22a962375c51135f063350a6ca0f3109127d73cac2534d392f95afb714529"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=0.txt",
+      "best_cut": 2956.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "eb776489f4cc5f425437bde53873e4f7a832dbe35de6d5d6369be307b0adc6d8"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=1.txt",
+      "best_cut": 2948.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "e76f7994dc10a0ae7f93c1167027dadf4518cdaf845e56914431ca904b837719"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=10.txt",
+      "best_cut": 2960.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "366511d8c60fc5272c86288d544d35b45b238e736d19da6b0331e99f9f1465b5"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=11.txt",
+      "best_cut": 2949.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "1d783d8dc9e31be786da1dd6e31b9329bd73949ed0b390154fe74538915a601d"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=12.txt",
+      "best_cut": 2956.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "07ddde671824dd061ac89f98ce04c40cda93d64e0e3b76400bccb365869d3cd4"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=13.txt",
+      "best_cut": 2950.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "8de922185c3a16a0371066ab63cf0c6a19794be69d71e864031c4322bed70dba"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=14.txt",
+      "best_cut": 2960.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "15e22e02e21c217d79501603733e30f858156971b001e10a858aed0a22a67b69"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=15.txt",
+      "best_cut": 2947.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "8ae03b2af7a5f71fa855e8d06715a375bd24d214523e9a8c3bfb5b24c5a5249d"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=16.txt",
+      "best_cut": 2949.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "f15051001da0e0254ae8d0200516443b0d7cef325a9fccab020105cdc41160f3"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=17.txt",
+      "best_cut": 2946.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "7fb9fd4bd068cc1e5625381b83481feb68e27a5a02d34da8219d1b2b768bae43"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=18.txt",
+      "best_cut": 2958.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "cd9f797932685846ce147329faa7a518ce06f64ca733d1890ce734c5c6d19ed3"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=19.txt",
+      "best_cut": 2953.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "d588ed4c8d81fae7b8cf4dd267e30a8d7d1676f823572c5859110f69f7dec9b0"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=2.txt",
+      "best_cut": 2949.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "f6df3153dc0adfa7b214aee130e0c7e39491da1e15943ba0dde18903be4c1950"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=20.txt",
+      "best_cut": 2954.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "0c279da6807d317c1671fbb078a6a34dce56a18d542b1316169f7c5d6c20ff20"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=21.txt",
+      "best_cut": 2951.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "49824b72df663deca59fcf6277defb1d50a242d05376d9dc362d53ac7a9c51ff"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=22.txt",
+      "best_cut": 2951.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "a4a7a423609e9b9c71e5f599e6f83bdb1edd9322845a54a3e43e71add3e65b8c"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=23.txt",
+      "best_cut": 2944.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "f078ebbddaf0f33a7debd3b74cc25c33189994cc2752b31bd74390c6952547e1"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=24.txt",
+      "best_cut": 2954.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "e81ae504679dc868c1ebd8919d4193a1d0d55fc8da5e32d9e528858b41e22a93"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=25.txt",
+      "best_cut": 2956.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "90fdeedb01e4bc294e38d7777eeb4babad022a1023ffbb1f8863e6ca2463db24"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=26.txt",
+      "best_cut": 2951.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "488660b77d99bc5cd39c7274df7205b21f9cb9cf14bcedc6160b0b2eccc283c1"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=27.txt",
+      "best_cut": 2964.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "72c3d5afbc835e2a197dcfdf5062f93efa940006ad309cb919f7b1e34ee623e0"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=28.txt",
+      "best_cut": 2947.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "741faa0cb1d0184a3692f5201102caf83fd8a8a2b29ad58e942bb7601653facb"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=29.txt",
+      "best_cut": 2951.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "22abd2e270f92810c05125226d6d4553aa3ea976b411bcfc5e1095ccf6cbc258"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=3.txt",
+      "best_cut": 2952.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "9d3883a69f17aa9f514ffeb9e0a312681fa675c8db36009d5e2603ddc51c18b6"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=4.txt",
+      "best_cut": 2959.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "bc8a291483dab56d29aad032d772a2f094ef3bd9c16cd2589464a8d197f868f2"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=5.txt",
+      "best_cut": 2949.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "322ebdc38c69e740edacebd8bddbc4f42e006fe1954a617e3b9aca66acedb03b"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=6.txt",
+      "best_cut": 2951.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "8b947ab22dbeca5db767144d49845312a08a00c11f31fc2cc79c81c8d18c4fc1"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=7.txt",
+      "best_cut": 2953.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "bc541020071eef62b93b5fcaca6c8dc4625493ed922491efd013b52ac3b77a85"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=8.txt",
+      "best_cut": 2953.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "0fd2d0d586824f37212cb61dc1ec382e71122058e893360bb2a9f982dfa8b40b"
+    },
+    {
+      "file": "paper_writing/simulation_results/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=9.txt",
+      "best_cut": 2942.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "13cb52907deb00e924b9482bf48463daf449f53fe7d4777ce6e418b4cada3de2"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=0.txt",
+      "best_cut": 2948.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "2d90b5b42c51d2081a8102be767781b8ee9b2ae7314961671b88a20d40319e21"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=1.txt",
+      "best_cut": 2953.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "6a5771342d5a75a13c84812a7c580264062b245bb72da8fcba1b9a7dac015630"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=10.txt",
+      "best_cut": 2954.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "c6eac0544d88ef9c834451f39e748ad7827e194a23b2a5707caaa80442c9a1b8"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=11.txt",
+      "best_cut": 2948.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "54d3ff1b5345f923e11cc2cfcc91373e87a966aafaa720326f2c10f7d6fef69d"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=12.txt",
+      "best_cut": 2944.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "66b3670be590bf973128c3cdf2756570e7fecd08b17b2afac584e7ae60ab45c1"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=13.txt",
+      "best_cut": 2946.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "27f032356eca43333ba902fd83e5c5240fd1a51323ae8519155df8369bfd81c0"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=14.txt",
+      "best_cut": 2955.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "42a956f92f3b3a07e2a4ed76874497a7eb292f8286e41fe89356681016f63702"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=15.txt",
+      "best_cut": 2945.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "65172c1e5e1643f0aadbc0a90e90f9ffd2f4ff7f5449edbc1b60daa9213c1f0b"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=16.txt",
+      "best_cut": 2946.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "3c20c73e160697da57441b577f1e745a7056fa41fbe6b1e566c745f3102d883b"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=17.txt",
+      "best_cut": 2943.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "44a5e179295533fc8c9cf6452da25dbe635207d0421c16444ec92c6b05000a7e"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=18.txt",
+      "best_cut": 2964.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "ccb2b1fafe202e205d22538f26732da2d341c5485f3dd35552e1f27bebab0a0f"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=19.txt",
+      "best_cut": 2947.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "e55451792b29b3ded08cfd82d50b36f33c49a00532d8e59cfb1bc1abad275b32"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=2.txt",
+      "best_cut": 2945.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "c8e47871795bd946d223081d714dd9752f45ea0c45538aebfb17faca4c8e0760"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=20.txt",
+      "best_cut": 2949.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "2784ecc56bf6452976315e2abde65182f98ae6b639b236f63e84c018bebb40e8"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=21.txt",
+      "best_cut": 2955.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "a0e2d486c035e99a7f4d4c0e9c537129155eb55fb572f8155d1eb33d531449e1"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=22.txt",
+      "best_cut": 2952.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "ec5f2e3ebc5f81aa636b5ab1e01e553a6c9ba5dedc10f785737def03459ce0bc"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=23.txt",
+      "best_cut": 2947.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "ae63ed67c60aad6cb8805ef441665a11bb5989e028cc240238abd8566f01ff5d"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=24.txt",
+      "best_cut": 2961.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "e0110530e28a84b3e835c7ceadc6209b0011b1c47de97b9882b649c961b93337"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=25.txt",
+      "best_cut": 2947.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "f0345090854be8b4d0485f32576b0925bed351c372da280452461c90ab4d8ddf"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=26.txt",
+      "best_cut": 2947.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "bb6549a534db6ba24eee5b656df35797168f6240990628b9605a1aad58ce607a"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=27.txt",
+      "best_cut": 2945.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "d2742b824c991b4766eee8e09d54d933d9b04b04436e0e8b72e889b6e662c413"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=28.txt",
+      "best_cut": 2950.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "8e0fd3536f736acde73a8b7e7b91aa18c8dab13ff7f896b5761f15f099aa034c"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=29.txt",
+      "best_cut": 2945.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "dadc299af7dd0d4d59f3f08ae1290e35492c08134ab9b57c272070b4888cf5b9"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=3.txt",
+      "best_cut": 2945.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "220eba56f47e57f3124cba1ffa08ead2afb3be3128b617d34d78f4d3a13d35b4"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=4.txt",
+      "best_cut": 2941.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "a26c2bafaef4196d28967e18e3dfbd0f6163c34865f8dc389e15a4264bca9d28"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=5.txt",
+      "best_cut": 2951.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "f2dc1ab8e4c6e3fcf477c87d7e9e21f6165132451437c6d12cd8b2443ff2aa7e"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=6.txt",
+      "best_cut": 2941.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "86c8cc47773c099467d7a8f825e6c724ddb727cf64ca64939ab5b7d2ccf5462f"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=7.txt",
+      "best_cut": 2954.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "f8f8f5cb4333cb2ecb2b008fe5fafb927e4f8a87a0b1f798805b7eff3b89498c"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=8.txt",
+      "best_cut": 2948.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "cd3bca1584c5f8413aaded3e3f892190e78513f2e27866df286f04830119c8e9"
+    },
+    {
+      "file": "paper_writing/simulation_results/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=9.txt",
+      "best_cut": 2946.0,
+      "last_logged_iteration": 9900000,
+      "sha256": "7e124f461df2afb298fb94e8acf06a0ae5b72fc72cc7b8e08733066da49c36de"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=0.txt",
+      "best_cut": 3047.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "86b67f009e64a6f9c4e15d5520ae80bbf9983b24d8119b0df5b0232beb2e8a31"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=1.txt",
+      "best_cut": 3046.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "158b6d7a60a0e98e6721b79eae486c7f1e0f4462b3c4aa3e2dfe3c5e84994a6b"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=10.txt",
+      "best_cut": 3047.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "955155274e540c346039c7f291d76686a2a111bedc67ad238fe570e7c87696b5"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=11.txt",
+      "best_cut": 3032.0,
+      "last_logged_iteration": 49300000,
+      "sha256": "a892f3d72cd2264c427d6d083e7cd8ac3090941a4c3d87f67dc4b6e7923ba862"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=12.txt",
+      "best_cut": 3045.0,
+      "last_logged_iteration": 85000000,
+      "sha256": "6d09916cf1bf0460ef624f9c14d28b71acd530f285d88efc1513babc8c6302ad"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=13.txt",
+      "best_cut": 3047.0,
+      "last_logged_iteration": 80400000,
+      "sha256": "dcaed2fc1394dbf00a83d830b50befff89a4c4999d529f53c8190d22064f3a87"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=14.txt",
+      "best_cut": 3047.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "345b17b071f2b6d61613c9edc30eddf9a495f6350d68c28fa62163ebdb4f9dfc"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=15.txt",
+      "best_cut": 3046.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "493f3f903d76662a9354e287cf8b1e629160177470458c98f2e7e36c8596ac8a"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=16.txt",
+      "best_cut": 3047.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "326de85e080a0b33fe1302d2452780de55e57f91d6f8d7ca16d1aa653dba535a"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=17.txt",
+      "best_cut": 3046.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "991e7e2423ba8c183339e87426ac3c47ba9f2063bb3aa6450f6385f26aab57e7"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=18.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "ff370fddd26a9883ec47269f486fc3b06c3c422a77f00e84e9e185985d19dd90"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=19.txt",
+      "best_cut": 3047.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "90cf7890df31f253e508061d18e349693c2e9cce189ab79a9f83f8f9226dee86"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=2.txt",
+      "best_cut": 3048.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "06bb08c28bf4708f860d6b8d14798b9315e4207067966ca3d5a1a5829d9f8e74"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=3.txt",
+      "best_cut": 3046.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "8219d92eaacfb422a04d62f84654e6d5938707e266def6dd402a04962ee6a6de"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=4.txt",
+      "best_cut": 3047.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "bd844b8fe6257d7a131cac2f2830a528634398e2d448225bb5d189faed024d94"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=5.txt",
+      "best_cut": 3046.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "683a1d60f9e7db192d50b31df9a14b157c861d17fe3ea06ace1c50ccbba3e92e"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=6.txt",
+      "best_cut": 3027.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "54ef997c611e0687abf9ae9f59b97a400bce55ee4f5d0b4e981bf0dc36d50045"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=7.txt",
+      "best_cut": 3046.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "4ced436fa05663bb6517015606298d8df59eb00b459e8e53d26ba2e3b56f9c41"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=8.txt",
+      "best_cut": 3047.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "6c993fc75b38c0f1838ecc3a5e3be94dc44b7013302eeb56567bdff7daa53a09"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=9.txt",
+      "best_cut": 3046.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "895c519effb1b0b1fa3855b9af489b8e7505e0edb9a36a460929478242c351a2"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=0.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "01a6cb88dfb70314cc32fdb6a61a2b72690fc94377e5d5add1702c5cd88efeef"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=1.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "a385f5240c5b3b796d32aaae5718bdf475b46b6e8f386fabe1f6e7714b9abaa0"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=11.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "13128c8b2f80003359e215ce702c2837df746c4893d9fd50f975d447c9f7ff06"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=12.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "4d7bb9799ea2b89891b432148d61b3c91ff7bd61dc689c0a4d51a8bfa2ffc279"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=13.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "50b295d81e1ad1e10da66c481036540d8f1e702c5f64e081920c1b87de926ab2"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=14.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "830d269298e09a9a39d60c6420f2813a41ab29cb363767184a402d8447775d0b"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=15.txt",
+      "best_cut": 3038.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "914b4ff09b5e79fdd9e6c5bdcfd4d5d941a2834eab35455b0218588444305890"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=16.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "911d057125fbc078199b52b9c8ac6814bb6e225a8f3f05ac671ea15f1938e430"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=17.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "23e88650d9b777bd813a404077883a2dcbccf2eede1f4cbfff46a790c70060db"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=18.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "b646e7bb5f3257a246ae76dac5b20bb8290ed71403df15e4bca699eaed714080"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=19.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "6a6cbfbb50eed369a86ad4e5cf1bf16552447d4a81369283127268a8acbc9be4"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=2.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "bff44aeda2af0680237c7941534ea439477fa8a7f13936f0710b87ab9fbb95e3"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=20.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "9dddf9c74d0c3f63a913198eeaa189dd3729809454977f9a254d188cd924066a"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=21.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "25c5a6a17569243fd15af812686e1c366a40254a221542139cf4c0d3dcd1105e"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=3.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "2956d4b119147d7db6e3a9880c4d1f37377c4e02a9a3d7a15ed7065b96d9b2f4"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=4.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "79daac27671012a2f99c3f3f8e1e0ec95f8813baf6fd36ba2ab1ac247d84fc30"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=5.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "f942b23b01d89cee6c5d2fc30a5505075be6bb1773072b49d81b49008386b902"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=6.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "65e1ecff2b1e76cbec44927b12ac72b69fa49b3b4d02b9ea3e27713677177052"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=7.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "71532ce316b314bc80888ebec9d10f53a1c1f0a0953980e30bfdadc504067f4d"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=8.txt",
+      "best_cut": 3032.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "e853914b46dbb1193e99eb3bc695c3527c8e04a017e77f30d64133983e2838fa"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=9.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "e778416f35371603530a34f6a3860ff17932071251abb80cf89f40aadaebb494"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=0.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "c43766cb01c13609748b49af1c2b524bb8245696cc31fe1800b27cb43cf54f6c"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=1.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "bad1c3be0e2d563c6f9fce38ffe10382b961a1d092986595cd9a32e2367be2db"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=10.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "97cbffcdb39af9d034df33e8f7fcb8f6ff9efb31b37831f24f77854cfb731b66"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=11.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "971a18e5525ccbba07134d8a37169da5e4060c92cd9c4d43982112f064b37c71"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=12.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "4905632b720b526756f04a4b8ab8e68c9587e8a2afe6f1987d00e15a306660ca"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=13.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 57400000,
+      "sha256": "b3fc7cc78930a035ef0395e81dc52d46c518dd96bd7160c038213d6bbb6dd66f"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=14.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "e182cd631b3ca2168e8d45347504568a4720a5c330f660d28db0ae47829d21fc"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=15.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "73b1f3aa1389144955e915d0ad530fc6fd29e19de639aa0dab643f50bcb16e5a"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=16.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "6872d57f398825989ef72c14d7cf8a03e7998b0e848bdc68c051d086f8d13431"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=17.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "85ac93c99dd1679cca8a7f1233dd8376d986a3b4aec62f744f1f98d8d000b35b"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=18.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "e60bc41b718db1a193c58bdbe909b58bd97a1a287c4b375d7526e74fac18e232"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=19.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "8bb433f35262b47366165a4b9d540539f77af391a4845ed2771bf3694a6c4cb6"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=2.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "cfb3cc60e67668e95defb55adb3f616ae0e7b888c52c8235cf42dc1e1822dc1d"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=20.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "981b3c1881feafab357205b3205c84200c0761316cab0f06e2f4873505e94028"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=21.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "39b1be286394ea4c254f386215862d25692d0cb2526feebe00986ed7fc969901"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=22.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "2da30471800156f6611ddb90d786953326fbc79a9e3803d86326df7e83a0f634"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=23.txt",
+      "best_cut": 3050.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "66f9527be30300069d6ce00515d2cf759bdec40da5022eb3d8d9daff1af8d5cb"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=24.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "b041381282e18a78022e40f1436d7cefe2371045cec581200389dd02dce7a1c8"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=25.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "b00635446295a3c680cd5769d7ba2d1f4d3be80f542ff8139653f7eb81974635"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=3.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "343facf7b9d4e35514addc71c8e7fb7c892243c1bda68d4213f2ce78d128c15b"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=4.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "6536180c84a8ae0e2f4cc64db22382b78f7e2dc9f1363aace053a686bfa3dd55"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=5.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "8765f7f1ae91580a884e0583cebf905c07bedb31235d26f9ee16edfcec295e4d"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=6.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "f01760f7ab3ef9bb31adc42e157d0578341e814817d622956f428b1fd9b60e72"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=7.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "b14b82d7b0a966cfc62f53a5b4436762e1042a183638a7a5c397fa8f171d4286"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=8.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "061df3ff312977916b86136a5d97f7fe3dcba5e1c8ae10ba1c6e73594e0a86ee"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=9.txt",
+      "best_cut": 3045.0,
+      "last_logged_iteration": 32900000,
+      "sha256": "e6da6597d4e14908585b653426010b3a84254f871cce9cf273f6ec349ad73362"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=0.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "b952b2af0c42b96e43f92ce36637f87eb606aeb5e4a12c5ea483886dc662644f"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=1.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "03b94f80b167652cd8b1f31574993e931f3ebfae301673b8ddae16776f90b779"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=10.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "1c82329ba9b053b23bdb9d676cecb1d1efed1a452784c4ba917da1d8147f3724"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=11.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "7177fa36e290712540cab93cc2ee1735f43df4da381d3a89f61c2b2b1d87913f"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=12.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "0ac80bdfbfa8482e41e09c19b6180ef6742bdc1b30d77682bffc197aeb158569"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=13.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "55f0f46c721ccb6cef61b6576104c995bf86e0c91944a4f7dfe1755de01da76e"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=14.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "564addbbd0418ca02687e6d4faad19879f6ae18ec55ee34e0a1ce8ad144b1a98"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=15.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "2e9171c7aa895a29bc78fbd5f20a68582f32428e859f2ec483b7c78165899846"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=16.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "f650056bd01c510b5b2218fdfb61b0bca4acb3d5ec0b48069efc4e79e93c99fc"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=17.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "245dc8da3b53d0ba1bc40c2ac4cd465d2eddaad3d5e80990b85c3f40a1e77479"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=18.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "381077a900e5691b4ae1011bdeffa63a0e42a61e7dfff6efcafbfe95a02970c2"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=19.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "63bbc367c457db1071758079b7bcd192fb3e60896d85f529a5819d985bd7031f"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=2.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "a004682415dd6d443441684d6b8779c0eb1a6c08606014066b936acb6fdf765a"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=20.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 65400000,
+      "sha256": "e4868c02007f6f405122c15a3c9894d2724e15a25abc4868deebb6f879800def"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=3.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "f4a8ec7b064198d7f96e7ed928a51c608efe83c36794f70d8d23fb93ed09bc6f"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=4.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "8b077c344499a5ec463d44bbff51141ad919a37400a37b2424cfe819966a4db8"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=5.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "bcb2298f68c27498a9fd09b9bcf319add9fb569c8ee3d78ffff3648410763425"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=6.txt",
+      "best_cut": 3012.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "ad215561017444cfddb770f9ff9a038721304da7e3d214eb8a447d86cb488b50"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=7.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "c7e421678eebe13796206b03061e16da2e733f2babb63fe5141e567d9ce37f13"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=8.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 79100000,
+      "sha256": "08ff27884f5cf6fddff144870511402ba3dc10d60ebdd771f8a498cdad547546"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=9.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "090ede7ff496833b9994582c8462f3cba36b284588bc88abf9c0ae4ac54cea27"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=1.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "3abf9345201d847f55dee4c83cc824a9e36852323d01b200362829d1db14e74c"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=10.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "a13647bf37c9b8cd8480dfe633a186e22594e45a2d1485080769f77f983e69d0"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=11.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "d5e3c196f3bc61e2fc06c6441bdb39d63a51d59fb6cb5ea09019ec3be1655a16"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=12.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "c99cb4ba66529f84f6376cdb7ac3a83785eed9311c8b9d60e0ff8d50308bb324"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=13.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "0650d5b7b4e5a9e5f7f2bf64f900406143a9d2416ca570b28e9252a3d2106160"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=14.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "7313f43f9bee67a52850986f885831ded3568826f7ea79252c258b588dc2d60b"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=15.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "4b1883702414c3e910a347f4d34dcffb835cf884f2399c228f25f2b4c92e4e1f"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=16.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "bd39b2308b1fd28edd40ad886a908d8284eae916266ab2887a416fac9fb775d6"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=17.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "ad8ddfd6f24455f8af29bb356ddc9afbf3d8377ff9471524aaf174e3cb94ee2f"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=18.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "a4da3e62724795bfa3448e153841152a7531b67c4e16d18aa77bcc0e7ac1d8b7"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=19.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "e3f334debd87e792ce7506a2a853094686416ebaf1cd87fcfd878082eff0debc"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=2.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "86220ba58528a3181663a220c0f65ca0a9ba6633f8f2e744ad3aa08cac92c348"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=20.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "569db0784d76d3a01e52799617875fda5402ac853462dcc0f9a3247743baf97a"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=21.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 54100000,
+      "sha256": "4a558b3341958ee12d0aac603a32d80a12e1687e6b4a5528af0e8bc1498c5ffd"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=22.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 38700000,
+      "sha256": "7d3dab31dac6fbd863ee0f6b83be8946380f45dbed8044b2721cc783faca9b96"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=3.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "d3b3ca7c8c7939798a20b8a122728d6796d46f02dd34dceab993c13ff92733f1"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=4.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "167ffd470dc9a619f7497d6160b27b21beb640a585555f544799299d924dfb44"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=5.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 49300000,
+      "sha256": "0ec18792ecd9e392f830bb5a0c31f1033eea2f0c928ba7ae14cc956198352e96"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=6.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "0e4c5a5d9fc30a26eb6398db15eb4f91808da7981b88e05f87fb133a68b25e7e"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=7.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "4e79a0cb855eee1582d1c30ea85aed22be049486dcb62e9562308b08f116c392"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=8.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "ef34084e4ffb10548f7cdf22fc721747a1754e1d69eef917a78746b7fb2a52d4"
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=9.txt",
+      "best_cut": 3049.0,
+      "last_logged_iteration": 99900000,
+      "sha256": "5df4b2f59ada19c8680dc5712e525f8078a00ec24bacea1d6920c7f435a2caa1"
+    }
+  ],
+  "historical_curve": {
+    "file": "paper_writing/current_best.txt",
+    "sha256": "45f6440dcc4f03a312907ed6a375169c1873c82934c399000ac27049529920e4",
+    "points": 661,
+    "best_cut": 3049,
+    "first_cycle_at_3049": 75516185
+  },
+  "limitations": [
+    "Logs do not contain completion markers or saved assignments.",
+    "The exact 20-run population for Table I is not identified; all available logs are included.",
+    "A last logged iteration is not proof of successful run completion."
+  ]
+}

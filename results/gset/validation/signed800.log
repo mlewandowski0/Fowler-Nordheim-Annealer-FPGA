@@ -1,0 +1,12 @@
+G6 PASS GSET AXI: signed graph upload, exact budget, target-cycle latch, independent AW/W, strobes, backpressure, halt/resume, reset, assignment cut=1085
+- /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/sim/gset_tb.sv:137: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 7ms; walltime 2.572 s; speed 2.573 ms/s
+- Verilator: cpu 2.571 s on 1 threads; allocated 8 MB
+
+G15 PASS GSET AXI: signed graph upload, exact budget, target-cycle latch, independent AW/W, strobes, backpressure, halt/resume, reset, assignment cut=2559
+- /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/sim/gset_tb.sv:137: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 7ms; walltime 2.251 s; speed 2.941 ms/s
+- Verilator: cpu 2.250 s on 1 threads; allocated 8 MB
+

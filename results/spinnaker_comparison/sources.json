@@ -1,0 +1,124 @@
+{
+  "sources": [
+    {
+      "id": "original2025",
+      "title": "ON-OFF neuromorphic ISING machines using Fowler-Nordheim annealers",
+      "article_url": "https://www.nature.com/articles/s41467-025-58231-5",
+      "local_supplement": "results.pdf",
+      "local_supplement_sha256": "5a66bf13a2c07a33351bb618508aebf940c5e98a91b64a3482dec186a5b3a693",
+      "timing_location": "Supplement Section S5.2, Figure S3, printed page 7",
+      "metric": "Reported execution time after a fixed number of NeuroSA iterations; not measured first-passage time to a specified cut",
+      "clock_mhz": 300,
+      "rng": "on-chip TRNG",
+      "power_system_w": 0.5619,
+      "raw_per_run_hit_times_available": false
+    },
+    {
+      "id": "followup2026",
+      "title": "Higher-order neuromorphic Ising machines\u2014autoencoders and Fowler-Nordheim annealers are all you need for scalability",
+      "article_url": "https://www.nature.com/articles/s41467-026-71937-4",
+      "pdf_sha256": "97cb85e26952cdf64e01712598b66a4873b605802c861b46290c59059ceb3ea0",
+      "figure": "Figure 2c, printed page 6",
+      "supplement_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-026-71937-4/MediaObjects/41467_2026_71937_MOESM1_ESM.pdf",
+      "finding": "Main Figure 2c distinguishes CPU and SpiNNaker2 runtime bars, but the teal SpiNNaker2 quality bars are not visible in the displayed quality range. Supplementary Table S1 has one generic NeuroSA column (540/525/480 s), not a SpiNNaker2-specific column. Therefore those timings and cuts must not be assigned to SpiNNaker2.",
+      "generic_neurosa_table_rows": [
+        {
+          "graph": "G4",
+          "cut": 11641,
+          "seconds": 540
+        },
+        {
+          "graph": "G11",
+          "cut": 564,
+          "seconds": 525
+        },
+        {
+          "graph": "G15",
+          "cut": 3049,
+          "seconds": 480
+        }
+      ]
+    },
+    {
+      "id": "original_code",
+      "url": "https://github.com/aimlab-wustl/neuroSA",
+      "commit": "989b9697b3fb64142eaf859bc6c443e75d328302",
+      "available": "CPU solver and Gset matrices; no SpiNNaker2 per-run timing data in inspected tree"
+    },
+    {
+      "id": "followup_code",
+      "url": "https://github.com/aimlab-wustl/NeuroSA-HO",
+      "commit": "6652931942cb5ddcfecc480a327c42c68be3479e",
+      "tree_sha256": "70d1223dd68ae48e269d757247d65354b9f8b9ce7f128ef008798e69267df6ac",
+      "available": "New higher-order CPU/FPGA data; no identified SpiNNaker2 per-run logs or event counts"
+    }
+  ],
+  "speedup_claim_status": "No matched FPGA/SpiNNaker2 speedup established. Published fixed-budget runtimes are compared descriptively with freshly measured reference-quality FPGA success/hit times.",
+  "arxiv": {
+    "pdf_url": "https://arxiv.org/pdf/2406.05224v2#page=38",
+    "source_url": "https://arxiv.org/src/2406.05224v2",
+    "pdf_sha256": "d61454ec250de0e77adcf64eb4fa27209bbc95cfca8c9aadb56a4096ace90d1c",
+    "source_archive_sha256": "26c5f6e20cfe2f7a62950e361e6749ecdd98641d72efa2ecb8c0826620b8168a",
+    "source_figure_name": "Figures/nc_supp_advantage.pdf",
+    "source_figure_sha256": "5796b9f8141eb21f18babee400a53feaea8e78cbd85ce29446fa0cb513d12a33",
+    "figure": "S3a",
+    "section": "S5.2",
+    "pdf_pages": [
+      37,
+      38
+    ],
+    "supplement_printed_pages": [
+      6,
+      7
+    ]
+  },
+  "reported_runtime_digitization": {
+    "status": "Approximate graph readings, not reported numeric constants or recovered raw traces",
+    "image_size": [
+      4275,
+      1793
+    ],
+    "image_rgb": [
+      115,
+      176,
+      67
+    ],
+    "calibration": {
+      "zero_y": 1594,
+      "3000_seconds_y": 849,
+      "method": "Linear pixel height calibration of the green bars in the original source-archive figure; rounded to the nearest 100 seconds to avoid implying raw-data precision."
+    },
+    "rows": [
+      {
+        "graph": "G4",
+        "bar_top_y": 988,
+        "pixel_height_estimate_seconds": 2440.268456375839,
+        "rounded_seconds": 2400,
+        "approximation_uncertainty_seconds": 100
+      },
+      {
+        "graph": "G11",
+        "bar_top_y": 957,
+        "pixel_height_estimate_seconds": 2565.1006711409395,
+        "rounded_seconds": 2600,
+        "approximation_uncertainty_seconds": 100
+      },
+      {
+        "graph": "G15",
+        "bar_top_y": 951,
+        "pixel_height_estimate_seconds": 2589.261744966443,
+        "rounded_seconds": 2600,
+        "approximation_uncertainty_seconds": 100
+      }
+    ]
+  },
+  "github_history": {
+    "repo": "aimlab-wustl/neuroSA",
+    "commits_checked": [
+      "989b9697b3fb64142eaf859bc6c443e75d328302",
+      "aac4a0b5b96eb2126a315cf4e8184cdcc8c0aa34",
+      "5b26a5c0a7f29e6d778391f60b6e20aefa017aeb"
+    ],
+    "finding": "All three trees contain Gset arrays, CPU solver, README/LICENSE/.gitignore, without timing or SpiNNaker2 run logs."
+  }
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <meta name="description" content="Near-memory QUBO accelerator on Zynq-7020, presented at ISCAS 2025">
+  <meta property="og:title" content="Near-memory QUBO accelerator on Zynq-7020, presented at ISCAS 2025"/>
+  <meta property="og:description" content="FPGA implementation of the NeuroSA algorithm to solve combinatorial optimization problems (QUBO accelerator). Presented at ISCAS2025."/>
+  <meta property="og:url" content="https://mlewandowski0.github.io/ISCAS2025-FPGA-QUBO/"/>
+  
+  <meta property="og:image" content="static/images/diagram.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="keywords" content="FPGA, QUBO, NeuroSA, MAX-CUT, Combinatorial Optimization, Hardware Accelerator, ISCAS2025">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Design and FPGA Realization of QUBO Hardware Accelerator for MAX-CUT problem</title>
+  <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Design and FPGA Realization of QUBO hardware accelerator for MAX-CUT problem</h1>
+            <div class="is-size-5 publication-authors">
+              
+                <span class="author-block">
+                <a href="https://mlewandowski0.github.io/" target="_blank">Maciej Lewandowski</a>,</span>
+                <span class="author-block">
+                <a href="https://personalpages.manchester.ac.uk/staff/p.dudek/pdudek.htm" target="_blank">Piotr Dudek</a></span>
+                  
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">University of Manchester<br>IEEE International Symposium on Circuits and Systems 2025, London, UK</span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         
+                      <span class="link-block">
+                        <a href="https://personalpages.manchester.ac.uk/staff/p.dudek/papers/lewandowski-iscas2025.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>preprint</span>
+                      </a>
+                    </span>
+
+                    <span class="link-block">
+                        <a href="https://ieeexplore.ieee.org/document/11044179/" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>IEEE Xplore</span>
+                      </a>
+                    </span>
+
+                  <span class="link-block">
+                    <a href="https://github.com/mlewandowski0/Fowler-Nordheim-Annealer-FPGA" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        
+        <source src="static/videos/solver_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+          Historical visualization of a G15 MAX-CUT search with 800 variables. The plots show solution quality and the evolving graph partition. See the repository validation report for provenance and current independently checked board results.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+              Combinatorial optimization problems are fundamental to many industrial and scientific applications, but are often NP-hard, requiring heuristic and probabilistic approaches to find good solutions fast. This paper presents the first hardware implementation of the neuromorphic-inspired NeuroSA algorithm, for accelerating Quadratic Unconstrained Binary Optimization (QUBO) problems. We show that it is possible to run a standard QUBO benchmark problem with 800 variables on a low-cost FPGA with a clock speed of approximately 144 MHz, which converges to the same solution value found by the numerical solver.  
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reproducibility">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Near-memory acceleration: restored clock, verified results</h2>
+    <p><strong>Extended evaluation:</strong> 39 full Gset graphs, 117 verified board runs, including 37 original-table instances. Signed 800-node and unsigned 1000/2000-node variants run at 100 MHz. <a href="demo/#benchmarks">Explore all results and the fresh named CPU comparison</a>.</p>
+    <p>25 compute units keep graph fragments and local state beside their update logic,
+      with compact global flip broadcasts. The search algorithm is based on NeuroSA.</p>
+    <p>The optimized design closes timing at <strong>145.455 MHz</strong> and runs on the
+      Zynq-7020 PYNQ board at <strong>142.857 MHz</strong>. Across three seeds,
+      100 million accepted flips take <strong>7.33-7.93 seconds</strong>, with a
+      <strong>7.60-second median</strong>. Independently verified best cuts are 3050, 3049, and 3049.</p>
+    <p>The matched seed-1 throughput gain over 50 MHz is <strong>2.857x</strong>.
+      FPGA durations use hardware counters, exclude host setup, and are normalized for
+      polling overshoot. The abstract above retains the original paper's timing-derived results.</p>
+    <p><a href="demo/">Interactive Sudoku &amp; MAX-CUT demo</a> · <a href="https://github.com/mlewandowski0/Fowler-Nordheim-Annealer-FPGA/blob/main/docs/comparison_audit.md">Comparison audit</a> · <a href="https://github.com/mlewandowski0/Fowler-Nordheim-Annealer-FPGA/blob/main/docs/performance.md">Performance comparison and provenance</a> ·
+      <a href="https://github.com/mlewandowski0/Fowler-Nordheim-Annealer-FPGA/blob/main/docs/validation.md">Validation report</a> ·
+      <a href="https://github.com/mlewandowski0/Fowler-Nordheim-Annealer-FPGA/blob/main/docs/reproduce.md">Reproduction instructions</a></p>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"> Results </h2>
+        <div class="content has-text-justified">
+          <p>
+              The NeuroSA algorithm is a neuromorphic-inspired approach to solving combinatorial optimization problems, such as the MAX-CUT problem. It uses a simulated annealing process to explore the solution space and find optimal or near-optimal solutions. The algorithm is designed to be efficient and effective, making it suitable for hardware implementation on FPGAs. In this paper, we present the first hardware implementation of the NeuroSA algorithm, demonstrating its potential for accelerating QUBO problems on low-cost FPGA platforms.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        
+        <img src="static/images/diagram.png" alt="Partitioned FPGA accelerator architecture"/>
+        <h2 class="subtitle has-text-centered">
+          Diagram from the paper showing the designed architecture for the NeuroSA algorithm.
+        </h2>
+      </div>
+        
+      <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/partitioning_anim.mp4"
+            type="video/mp4">
+          </video>
+      </div>
+
+      <div class="item">
+        
+        <img src="static/images/performance_verified.png" alt="Matched FPGA clock throughput and independently verified solution quality"/>
+        <h2 class="subtitle has-text-centered">
+          Measured FPGA clock scaling: 2.857× throughput at the restored clock. CPU and SpiNNaker2 speedup claims have been withdrawn because the original work counters are incompatible. No measured energy-efficiency claim is made.
+        </h2>
+      </div>
+
+    </div>
+  </div>
+</div>
+</section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{lewandowski2025qubo,
+  author = {Maciej Lewandowski and Piotr Dudek},
+  title = {Design and FPGA Realization of QUBO Hardware Accelerator for MAX-CUT Problem},
+  booktitle = {2025 IEEE International Symposium on Circuits and Systems (ISCAS)},
+  year = {2025},
+  url = {https://ieeexplore.ieee.org/document/11044179/}
+}</code></pre>
+    </div>
+</section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+  </html>

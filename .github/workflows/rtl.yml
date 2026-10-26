@@ -1,0 +1,26 @@
+name: RTL and archived results
+on: [push, pull_request]
+jobs:
+  simulation:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: sudo apt-get update && sudo apt-get install -y verilator
+      - run: python -m pip install -r requirements.txt
+      - run: make test audit sudoku-test gset-test iteration-test
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: validation-logs
+          path: |
+            build/sim/*.log
+            build/sim/*.json
+            build/sim/*.csv
+            build/sim/best_assignment.txt
+            build/axi/*.log
+            build/audit/*
+            build/sudoku_sim/simulation.log
+            build/sudoku_sim/recording.json

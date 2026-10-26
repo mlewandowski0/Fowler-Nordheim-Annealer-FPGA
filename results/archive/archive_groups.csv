@@ -1,0 +1,11 @@
+folder,runs,mean_gap_to_paper_reference_3050,best_cut,runs_at_best,min_last_logged_iteration,max_last_logged_iteration
+paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800,40,122.425,2942.0,1,9900000,9900000
+paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800,30,108.63333333333334,2956.0,1,9900000,9900000
+paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800,30,97.36666666666666,2966.0,1,9900000,9900000
+paper_writing/simulation_results/MT_UNITS=25_N=800,30,97.9,2964.0,1,9900000,9900000
+paper_writing/simulation_results/halon_UNITS=25_N=800,30,101.26666666666667,2964.0,1,9900000,9900000
+python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800,20,5.05,3049.0,1,49300000,99900000
+python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800,21,2.3333333333333335,3049.0,19,99900000,99900000
+python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800,26,1.1153846153846154,3050.0,1,32900000,99900000
+python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800,21,2.761904761904762,3049.0,20,65400000,99900000
+python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800,22,1.0,3049.0,22,38700000,99900000

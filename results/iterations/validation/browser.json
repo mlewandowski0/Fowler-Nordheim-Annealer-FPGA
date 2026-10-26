@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "model_fixtures": 16,
+  "worker_steps_to_solution": 599320,
+  "worker_frames": 49,
+  "widths": [
+    1440,
+    768,
+    390,
+    360
+  ],
+  "page_errors": [],
+  "checks": [
+    "playback",
+    "scrubbing",
+    "candidate inspection",
+    "clue validation",
+    "tampered import rejection",
+    "valid import",
+    "MAX-CUT",
+    "paper attempts",
+    "browser worker",
+    "responsive overflow",
+    "benchmark table and filters",
+    "CPU and first-hit tables",
+    "fixed native-iteration table"
+  ]
+}

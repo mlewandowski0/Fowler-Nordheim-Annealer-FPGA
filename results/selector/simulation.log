@@ -1,0 +1,5 @@
+PASS selector: idle, every unit, and 49974 randomized priority/payload cases
+- /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/sim/selector_tb.sv:34: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 50us; walltime 0.021 s; speed 2.329 ms/s
+- Verilator: cpu 0.021 s on 1 threads; allocated 7 MB

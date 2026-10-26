@@ -1,0 +1,1351 @@
+{
+  "scope": "All predeclared runs. Fixed 10M accepted flips, seeds 1/2/3, cooling period 65536, configured 100 MHz. G8/G9 extra; no graph-specific tuning. Compute timings exclude host setup.",
+  "board_runs": 117,
+  "additional_comparison_board_runs": 9,
+  "covered_table_entries": 37,
+  "table_entries": 59,
+  "graphs": [
+    {
+      "name": "G1",
+      "vertices": 800,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 11624,
+      "paper_neurosa_worst": 11624,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        11593,
+        11597
+      ],
+      "median_cut": 11594,
+      "best_cut": 11597,
+      "median_seconds": 2.24812574,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.00917206,
+        0.0092882,
+        0.00953995
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G1_seed1.json",
+        "results/gset/board/results800/G1_seed2.json",
+        "results/gset/board/results800/G1_seed3.json"
+      ]
+    },
+    {
+      "name": "G2",
+      "vertices": 800,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 11620,
+      "paper_neurosa_worst": 11617,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        11594,
+        11620
+      ],
+      "median_cut": 11611,
+      "best_cut": 11620,
+      "median_seconds": 3.41160924,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.00887664,
+        0.00899282,
+        0.0087956
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G2_seed1.json",
+        "results/gset/board/results800/G2_seed2.json",
+        "results/gset/board/results800/G2_seed3.json"
+      ]
+    },
+    {
+      "name": "G3",
+      "vertices": 800,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 11622,
+      "paper_neurosa_worst": 11622,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        11593,
+        11617
+      ],
+      "median_cut": 11594,
+      "best_cut": 11617,
+      "median_seconds": 2.12283333,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.00864512,
+        0.00900294,
+        0.00957272
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G3_seed1.json",
+        "results/gset/board/results800/G3_seed2.json",
+        "results/gset/board/results800/G3_seed3.json"
+      ]
+    },
+    {
+      "name": "G4",
+      "vertices": 800,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 11646,
+      "paper_neurosa_worst": 11641,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        11622,
+        11641
+      ],
+      "median_cut": 11638,
+      "best_cut": 11641,
+      "median_seconds": 2.83866051,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.00842836,
+        0.00787782,
+        0.00853503
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G4_seed1.json",
+        "results/gset/board/results800/G4_seed2.json",
+        "results/gset/board/results800/G4_seed3.json"
+      ]
+    },
+    {
+      "name": "G5",
+      "vertices": 800,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 11631,
+      "paper_neurosa_worst": 11631,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        11601,
+        11616
+      ],
+      "median_cut": 11602,
+      "best_cut": 11616,
+      "median_seconds": 2.36963103,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.00900268,
+        0.00942077,
+        0.00891659
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G5_seed1.json",
+        "results/gset/board/results800/G5_seed2.json",
+        "results/gset/board/results800/G5_seed3.json"
+      ]
+    },
+    {
+      "name": "G6",
+      "vertices": 800,
+      "negative_edges": 9511,
+      "in_tables": true,
+      "reference": 2178,
+      "paper_neurosa_worst": 2178,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        2146,
+        2176
+      ],
+      "median_cut": 2176,
+      "best_cut": 2176,
+      "median_seconds": 2.62913934,
+      "target99_hits": 2,
+      "target99_seconds": [
+        null,
+        0.01302081,
+        0.01343313
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G6_seed1.json",
+        "results/gset/board/results800/G6_seed2.json",
+        "results/gset/board/results800/G6_seed3.json"
+      ]
+    },
+    {
+      "name": "G7",
+      "vertices": 800,
+      "negative_edges": 9663,
+      "in_tables": true,
+      "reference": 2006,
+      "paper_neurosa_worst": 2006,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        1970,
+        1996
+      ],
+      "median_cut": 1987,
+      "best_cut": 1996,
+      "median_seconds": 2.85121728,
+      "target99_hits": 2,
+      "target99_seconds": [
+        0.0217559,
+        0.01541172,
+        null
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G7_seed1.json",
+        "results/gset/board/results800/G7_seed2.json",
+        "results/gset/board/results800/G7_seed3.json"
+      ]
+    },
+    {
+      "name": "G8",
+      "vertices": 800,
+      "negative_edges": 9673,
+      "in_tables": false,
+      "reference": null,
+      "paper_neurosa_worst": null,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        1985,
+        1990
+      ],
+      "median_cut": 1986,
+      "best_cut": 1990,
+      "median_seconds": 4.04737008,
+      "target99_hits": 0,
+      "target99_seconds": [
+        null,
+        null,
+        null
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G8_seed1.json",
+        "results/gset/board/results800/G8_seed2.json",
+        "results/gset/board/results800/G8_seed3.json"
+      ]
+    },
+    {
+      "name": "G9",
+      "vertices": 800,
+      "negative_edges": 9620,
+      "in_tables": false,
+      "reference": null,
+      "paper_neurosa_worst": null,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        2028,
+        2054
+      ],
+      "median_cut": 2029,
+      "best_cut": 2054,
+      "median_seconds": 3.52420064,
+      "target99_hits": 0,
+      "target99_seconds": [
+        null,
+        null,
+        null
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G9_seed1.json",
+        "results/gset/board/results800/G9_seed2.json",
+        "results/gset/board/results800/G9_seed3.json"
+      ]
+    },
+    {
+      "name": "G10",
+      "vertices": 800,
+      "negative_edges": 9668,
+      "in_tables": true,
+      "reference": 2000,
+      "paper_neurosa_worst": 1999,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        1985,
+        1999
+      ],
+      "median_cut": 1986,
+      "best_cut": 1999,
+      "median_seconds": 4.34821527,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.01475378,
+        0.01903129,
+        0.02444886
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G10_seed1.json",
+        "results/gset/board/results800/G10_seed2.json",
+        "results/gset/board/results800/G10_seed3.json"
+      ]
+    },
+    {
+      "name": "G11",
+      "vertices": 800,
+      "negative_edges": 783,
+      "in_tables": true,
+      "reference": 564,
+      "paper_neurosa_worst": 564,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        562,
+        564
+      ],
+      "median_cut": 564,
+      "best_cut": 564,
+      "median_seconds": 0.97121834,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.08365046,
+        0.0538426,
+        0.06430794
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G11_seed1.json",
+        "results/gset/board/results800/G11_seed2.json",
+        "results/gset/board/results800/G11_seed3.json"
+      ]
+    },
+    {
+      "name": "G12",
+      "vertices": 800,
+      "negative_edges": 802,
+      "in_tables": true,
+      "reference": 556,
+      "paper_neurosa_worst": 556,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        554,
+        556
+      ],
+      "median_cut": 554,
+      "best_cut": 556,
+      "median_seconds": 0.97053625,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.04909856,
+        0.06202056,
+        0.04926039
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G12_seed1.json",
+        "results/gset/board/results800/G12_seed2.json",
+        "results/gset/board/results800/G12_seed3.json"
+      ]
+    },
+    {
+      "name": "G13",
+      "vertices": 800,
+      "negative_edges": 783,
+      "in_tables": true,
+      "reference": 582,
+      "paper_neurosa_worst": 582,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        578,
+        580
+      ],
+      "median_cut": 578,
+      "best_cut": 580,
+      "median_seconds": 0.97024596,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.09641574,
+        0.05921667,
+        0.22539909
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G13_seed1.json",
+        "results/gset/board/results800/G13_seed2.json",
+        "results/gset/board/results800/G13_seed3.json"
+      ]
+    },
+    {
+      "name": "G14",
+      "vertices": 800,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 3064,
+      "paper_neurosa_worst": 3063,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        3051,
+        3061
+      ],
+      "median_cut": 3058,
+      "best_cut": 3061,
+      "median_seconds": 1.10344733,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.0320513,
+        0.03685556,
+        0.03439752
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G14_seed1.json",
+        "results/gset/board/results800/G14_seed2.json",
+        "results/gset/board/results800/G14_seed3.json"
+      ]
+    },
+    {
+      "name": "G15",
+      "vertices": 800,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 3050,
+      "paper_neurosa_worst": 3049,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        3047,
+        3050
+      ],
+      "median_cut": 3049,
+      "best_cut": 3050,
+      "median_seconds": 1.05699082,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.0290746,
+        0.03235839,
+        0.03221059
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G15_seed1.json",
+        "results/gset/board/results800/G15_seed2.json",
+        "results/gset/board/results800/G15_seed3.json"
+      ]
+    },
+    {
+      "name": "G16",
+      "vertices": 800,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 3052,
+      "paper_neurosa_worst": 3052,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        3043,
+        3047
+      ],
+      "median_cut": 3045,
+      "best_cut": 3047,
+      "median_seconds": 1.07138867,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.0361096,
+        0.03560564,
+        0.03461326
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G16_seed1.json",
+        "results/gset/board/results800/G16_seed2.json",
+        "results/gset/board/results800/G16_seed3.json"
+      ]
+    },
+    {
+      "name": "G17",
+      "vertices": 800,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 3047,
+      "paper_neurosa_worst": 3045,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        3038,
+        3044
+      ],
+      "median_cut": 3041,
+      "best_cut": 3044,
+      "median_seconds": 1.05976934,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.03434813,
+        0.03375342,
+        0.03095663
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G17_seed1.json",
+        "results/gset/board/results800/G17_seed2.json",
+        "results/gset/board/results800/G17_seed3.json"
+      ]
+    },
+    {
+      "name": "G18",
+      "vertices": 800,
+      "negative_edges": 2315,
+      "in_tables": true,
+      "reference": 992,
+      "paper_neurosa_worst": 988,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        977,
+        985
+      ],
+      "median_cut": 984,
+      "best_cut": 985,
+      "median_seconds": 1.08123942,
+      "target99_hits": 2,
+      "target99_seconds": [
+        null,
+        0.04082745,
+        0.03914105
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G18_seed1.json",
+        "results/gset/board/results800/G18_seed2.json",
+        "results/gset/board/results800/G18_seed3.json"
+      ]
+    },
+    {
+      "name": "G19",
+      "vertices": 800,
+      "negative_edges": 2387,
+      "in_tables": true,
+      "reference": 906,
+      "paper_neurosa_worst": 905,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        904,
+        906
+      ],
+      "median_cut": 905,
+      "best_cut": 906,
+      "median_seconds": 1.07958895,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.02964702,
+        0.03021633,
+        0.03472432
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G19_seed1.json",
+        "results/gset/board/results800/G19_seed2.json",
+        "results/gset/board/results800/G19_seed3.json"
+      ]
+    },
+    {
+      "name": "G20",
+      "vertices": 800,
+      "negative_edges": 2359,
+      "in_tables": true,
+      "reference": 941,
+      "paper_neurosa_worst": 941,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        929,
+        941
+      ],
+      "median_cut": 931,
+      "best_cut": 941,
+      "median_seconds": 1.04443914,
+      "target99_hits": 1,
+      "target99_seconds": [
+        null,
+        0.0291731,
+        null
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G20_seed1.json",
+        "results/gset/board/results800/G20_seed2.json",
+        "results/gset/board/results800/G20_seed3.json"
+      ]
+    },
+    {
+      "name": "G21",
+      "vertices": 800,
+      "negative_edges": 2367,
+      "in_tables": true,
+      "reference": 931,
+      "paper_neurosa_worst": 928,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        920,
+        927
+      ],
+      "median_cut": 921,
+      "best_cut": 927,
+      "median_seconds": 1.05208534,
+      "target99_hits": 1,
+      "target99_seconds": [
+        0.03415819,
+        null,
+        null
+      ],
+      "raw_files": [
+        "results/gset/board/results800/G21_seed1.json",
+        "results/gset/board/results800/G21_seed2.json",
+        "results/gset/board/results800/G21_seed3.json"
+      ]
+    },
+    {
+      "name": "G22",
+      "vertices": 2000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 13359,
+      "paper_neurosa_worst": 13358,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        13301,
+        13314
+      ],
+      "median_cut": 13309,
+      "best_cut": 13314,
+      "median_seconds": 1.60185659,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.01906175,
+        0.019818,
+        0.02081534
+      ],
+      "raw_files": [
+        "results/gset/board/results2000/G22_seed1.json",
+        "results/gset/board/results2000/G22_seed2.json",
+        "results/gset/board/results2000/G22_seed3.json"
+      ]
+    },
+    {
+      "name": "G23",
+      "vertices": 2000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 13344,
+      "paper_neurosa_worst": 13341,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        13303,
+        13320
+      ],
+      "median_cut": 13303,
+      "best_cut": 13320,
+      "median_seconds": 1.4711599,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.01889699,
+        0.01860669,
+        0.01705355
+      ],
+      "raw_files": [
+        "results/gset/board/results2000/G23_seed1.json",
+        "results/gset/board/results2000/G23_seed2.json",
+        "results/gset/board/results2000/G23_seed3.json"
+      ]
+    },
+    {
+      "name": "G24",
+      "vertices": 2000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 13337,
+      "paper_neurosa_worst": 13335,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        13280,
+        13315
+      ],
+      "median_cut": 13309,
+      "best_cut": 13315,
+      "median_seconds": 1.40394394,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.01891227,
+        0.01788284,
+        0.019558
+      ],
+      "raw_files": [
+        "results/gset/board/results2000/G24_seed1.json",
+        "results/gset/board/results2000/G24_seed2.json",
+        "results/gset/board/results2000/G24_seed3.json"
+      ]
+    },
+    {
+      "name": "G25",
+      "vertices": 2000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 13340,
+      "paper_neurosa_worst": 13333,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        13295,
+        13329
+      ],
+      "median_cut": 13303,
+      "best_cut": 13329,
+      "median_seconds": 1.45106069,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.01885518,
+        0.01993211,
+        0.01785763
+      ],
+      "raw_files": [
+        "results/gset/board/results2000/G25_seed1.json",
+        "results/gset/board/results2000/G25_seed2.json",
+        "results/gset/board/results2000/G25_seed3.json"
+      ]
+    },
+    {
+      "name": "G26",
+      "vertices": 2000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 13328,
+      "paper_neurosa_worst": 13324,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        13299,
+        13312
+      ],
+      "median_cut": 13303,
+      "best_cut": 13312,
+      "median_seconds": 1.44147027,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.01760791,
+        0.01902103,
+        0.01885372
+      ],
+      "raw_files": [
+        "results/gset/board/results2000/G26_seed1.json",
+        "results/gset/board/results2000/G26_seed2.json",
+        "results/gset/board/results2000/G26_seed3.json"
+      ]
+    },
+    {
+      "name": "G35",
+      "vertices": 2000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 7687,
+      "paper_neurosa_worst": 7675,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        7661,
+        7670
+      ],
+      "median_cut": 7667,
+      "best_cut": 7670,
+      "median_seconds": 1.01613074,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.04311788,
+        0.04451601,
+        0.04008401
+      ],
+      "raw_files": [
+        "results/gset/board/results2000/G35_seed1.json",
+        "results/gset/board/results2000/G35_seed2.json",
+        "results/gset/board/results2000/G35_seed3.json"
+      ]
+    },
+    {
+      "name": "G36",
+      "vertices": 2000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 7680,
+      "paper_neurosa_worst": 7663,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        7654,
+        7661
+      ],
+      "median_cut": 7659,
+      "best_cut": 7661,
+      "median_seconds": 1.01708545,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.04485572,
+        0.04444275,
+        0.04012823
+      ],
+      "raw_files": [
+        "results/gset/board/results2000/G36_seed1.json",
+        "results/gset/board/results2000/G36_seed2.json",
+        "results/gset/board/results2000/G36_seed3.json"
+      ]
+    },
+    {
+      "name": "G37",
+      "vertices": 2000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 7691,
+      "paper_neurosa_worst": 7683,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        7661,
+        7676
+      ],
+      "median_cut": 7670,
+      "best_cut": 7676,
+      "median_seconds": 1.01746434,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.04298466,
+        0.04307658,
+        0.04862111
+      ],
+      "raw_files": [
+        "results/gset/board/results2000/G37_seed1.json",
+        "results/gset/board/results2000/G37_seed2.json",
+        "results/gset/board/results2000/G37_seed3.json"
+      ]
+    },
+    {
+      "name": "G38",
+      "vertices": 2000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 7688,
+      "paper_neurosa_worst": 7672,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        7657,
+        7665
+      ],
+      "median_cut": 7660,
+      "best_cut": 7665,
+      "median_seconds": 1.02502107,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.04262054,
+        0.04491828,
+        0.04552152
+      ],
+      "raw_files": [
+        "results/gset/board/results2000/G38_seed1.json",
+        "results/gset/board/results2000/G38_seed2.json",
+        "results/gset/board/results2000/G38_seed3.json"
+      ]
+    },
+    {
+      "name": "G43",
+      "vertices": 1000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 6660,
+      "paper_neurosa_worst": 6660,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        6615,
+        6644
+      ],
+      "median_cut": 6637,
+      "best_cut": 6644,
+      "median_seconds": 1.60633764,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.0156371,
+        0.02152389,
+        0.01735291
+      ],
+      "raw_files": [
+        "results/gset/board/results1000/G43_seed1.json",
+        "results/gset/board/results1000/G43_seed2.json",
+        "results/gset/board/results1000/G43_seed3.json"
+      ]
+    },
+    {
+      "name": "G44",
+      "vertices": 1000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 6650,
+      "paper_neurosa_worst": 6650,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        6641,
+        6650
+      ],
+      "median_cut": 6643,
+      "best_cut": 6650,
+      "median_seconds": 1.48661648,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.0151787,
+        0.01559487,
+        0.01405883
+      ],
+      "raw_files": [
+        "results/gset/board/results1000/G44_seed1.json",
+        "results/gset/board/results1000/G44_seed2.json",
+        "results/gset/board/results1000/G44_seed3.json"
+      ]
+    },
+    {
+      "name": "G45",
+      "vertices": 1000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 6654,
+      "paper_neurosa_worst": 6654,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        6637,
+        6646
+      ],
+      "median_cut": 6646,
+      "best_cut": 6646,
+      "median_seconds": 1.45478569,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.0160857,
+        0.01524792,
+        0.0152465
+      ],
+      "raw_files": [
+        "results/gset/board/results1000/G45_seed1.json",
+        "results/gset/board/results1000/G45_seed2.json",
+        "results/gset/board/results1000/G45_seed3.json"
+      ]
+    },
+    {
+      "name": "G46",
+      "vertices": 1000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 6649,
+      "paper_neurosa_worst": 6646,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        6635,
+        6647
+      ],
+      "median_cut": 6642,
+      "best_cut": 6647,
+      "median_seconds": 1.50433742,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.01417247,
+        0.01697298,
+        0.01452602
+      ],
+      "raw_files": [
+        "results/gset/board/results1000/G46_seed1.json",
+        "results/gset/board/results1000/G46_seed2.json",
+        "results/gset/board/results1000/G46_seed3.json"
+      ]
+    },
+    {
+      "name": "G47",
+      "vertices": 1000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 6657,
+      "paper_neurosa_worst": 6656,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        6641,
+        6654
+      ],
+      "median_cut": 6644,
+      "best_cut": 6654,
+      "median_seconds": 1.69300683,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.01617486,
+        0.01613648,
+        0.01556361
+      ],
+      "raw_files": [
+        "results/gset/board/results1000/G47_seed1.json",
+        "results/gset/board/results1000/G47_seed2.json",
+        "results/gset/board/results1000/G47_seed3.json"
+      ]
+    },
+    {
+      "name": "G51",
+      "vertices": 1000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 3848,
+      "paper_neurosa_worst": 3847,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        3834,
+        3848
+      ],
+      "median_cut": 3836,
+      "best_cut": 3848,
+      "median_seconds": 1.01716222,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.03163444,
+        0.03432881,
+        0.03845897
+      ],
+      "raw_files": [
+        "results/gset/board/results1000/G51_seed1.json",
+        "results/gset/board/results1000/G51_seed2.json",
+        "results/gset/board/results1000/G51_seed3.json"
+      ]
+    },
+    {
+      "name": "G52",
+      "vertices": 1000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 3851,
+      "paper_neurosa_worst": 3847,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        3834,
+        3843
+      ],
+      "median_cut": 3840,
+      "best_cut": 3843,
+      "median_seconds": 1.05854416,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.04260356,
+        0.03691826,
+        0.04134284
+      ],
+      "raw_files": [
+        "results/gset/board/results1000/G52_seed1.json",
+        "results/gset/board/results1000/G52_seed2.json",
+        "results/gset/board/results1000/G52_seed3.json"
+      ]
+    },
+    {
+      "name": "G53",
+      "vertices": 1000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 3850,
+      "paper_neurosa_worst": 3850,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        3845,
+        3849
+      ],
+      "median_cut": 3846,
+      "best_cut": 3849,
+      "median_seconds": 1.03989477,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.0330115,
+        0.0363578,
+        0.03446616
+      ],
+      "raw_files": [
+        "results/gset/board/results1000/G53_seed1.json",
+        "results/gset/board/results1000/G53_seed2.json",
+        "results/gset/board/results1000/G53_seed3.json"
+      ]
+    },
+    {
+      "name": "G54",
+      "vertices": 1000,
+      "negative_edges": 0,
+      "in_tables": true,
+      "reference": 3852,
+      "paper_neurosa_worst": 3848,
+      "runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "cut_range": [
+        3836,
+        3848
+      ],
+      "median_cut": 3841,
+      "best_cut": 3848,
+      "median_seconds": 1.0132914,
+      "target99_hits": 3,
+      "target99_seconds": [
+        0.03607201,
+        0.03966871,
+        0.04314617
+      ],
+      "raw_files": [
+        "results/gset/board/results1000/G54_seed1.json",
+        "results/gset/board/results1000/G54_seed2.json",
+        "results/gset/board/results1000/G54_seed3.json"
+      ]
+    }
+  ],
+  "cpu_comparison": [
+    {
+      "name": "G4",
+      "accepted_flips": 1000000,
+      "fpga_median_seconds": 0.16625669,
+      "cpu_median_seconds": 7.583477282998501,
+      "fpga_cut_range": [
+        11622,
+        11641
+      ],
+      "cpu_cut_range": [
+        11453,
+        11483
+      ],
+      "target99": 11530,
+      "fpga_target_hits": 3,
+      "fpga_target_seconds": [
+        0.00842836,
+        0.00787782,
+        0.00853503
+      ],
+      "cpu_target_hits": 3,
+      "cpu_target_seconds": [
+        8.542351251999207,
+        8.35710848799863,
+        9.035683062997123
+      ],
+      "cpu_tts_timeout_seconds": 30
+    },
+    {
+      "name": "G11",
+      "accepted_flips": 1000000,
+      "fpga_median_seconds": 0.0929468,
+      "cpu_median_seconds": 5.464181858998927,
+      "fpga_cut_range": [
+        562,
+        562
+      ],
+      "cpu_cut_range": [
+        234,
+        240
+      ],
+      "target99": 559,
+      "fpga_target_hits": 3,
+      "fpga_target_seconds": [
+        0.08365046,
+        0.0538426,
+        0.06430794
+      ],
+      "cpu_target_hits": 0,
+      "cpu_target_seconds": [
+        null,
+        null,
+        null
+      ],
+      "cpu_tts_timeout_seconds": 30
+    },
+    {
+      "name": "G15",
+      "accepted_flips": 1000000,
+      "fpga_median_seconds": 0.0949119,
+      "cpu_median_seconds": 5.588619297002879,
+      "fpga_cut_range": [
+        3047,
+        3050
+      ],
+      "cpu_cut_range": [
+        2712,
+        2728
+      ],
+      "target99": 3020,
+      "fpga_target_hits": 3,
+      "fpga_target_seconds": [
+        0.0290746,
+        0.03235839,
+        0.03221059
+      ],
+      "cpu_target_hits": 0,
+      "cpu_target_seconds": [
+        null,
+        null,
+        null
+      ],
+      "cpu_tts_timeout_seconds": 30
+    }
+  ],
+  "spinnaker_comparison_status": "Published fixed-iteration runtimes only; no verified common accepted-flip budget or common target/hit-time data. No validated FPGA/SpiNNaker2 speedup ratio.",
+  "limitations": [
+    "Three seeds are demonstrations, not a confidence-qualified time-to-solution distribution.",
+    "Paper reference values are historical best-known values, not optimality certificates.",
+    "NumPy baseline and FPGA have different candidate policies, noise arithmetic and cooling. This is not a hardware-only speedup comparison.",
+    "CPU is a Core Ultra 9 275HX here, distinct from the paper's 185H.",
+    "No board energy measurement or clock-normalized extrapolated speedup is claimed."
+  ]
+}

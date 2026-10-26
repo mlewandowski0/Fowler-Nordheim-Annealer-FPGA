@@ -1,0 +1,161 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2.1 (lin64) Build 6403652 Thu Mar 19 13:47:00 MDT 2026
+| Date         : Mon Oct 26 16:18:56 2026
+| Host         : mlewand running 64-bit Ubuntu 26.04.1 LTS
+| Command      : report_drc -file qubo_system_wrapper_drc_routed.rpt -pb qubo_system_wrapper_drc_routed.pb -rpx qubo_system_wrapper_drc_routed.rpx
+| Design       : qubo_system_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 25
++--------+----------+------------------------+--------+
+| Rule   | Severity | Description            | Checks |
++--------+----------+------------------------+--------+
+| DPOP-2 | Warning  | MREG Output pipelining | 25     |
++--------+----------+------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[0].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[0].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[10].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[10].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#3 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[11].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[11].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#4 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[12].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[12].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#5 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[13].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[13].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#6 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[14].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[14].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#7 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[15].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[15].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#8 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[16].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[16].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#9 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[17].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[17].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#10 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[18].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[18].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#11 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[19].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[19].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#12 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[1].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[1].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#13 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[20].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[20].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#14 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[21].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[21].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#15 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[22].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[22].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#16 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[23].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[23].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#17 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[24].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[24].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#18 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[2].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[2].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#19 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[3].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[3].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#20 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[4].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[4].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#21 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[5].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[5].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#22 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[6].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[6].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#23 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[7].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[7].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#24 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[8].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[8].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#25 Warning
+MREG Output pipelining  
+DSP qubo_system_i/qubo_accelerator/inst/core/unit_gen[9].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg multiplier stage qubo_system_i/qubo_accelerator/inst/core/unit_gen[9].unit_inst/neuron_ensemble_inst/u_flip/stage1_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+

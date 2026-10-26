@@ -1,0 +1,1276 @@
+{
+  "audit_version": 1,
+  "verdict": "CPU/SpiNNaker2 advertised speedups are unvalidated: historical timed work and current accepted-flip budget are not established as equivalent.",
+  "historical_plot_constants": {
+    "file": "paper_writing/comparison.ipynb",
+    "sha256": "5ef9ecd63aebf9232112245b62e250902777b739419effbb686c417e3ca82417",
+    "references": [
+      {
+        "platform": "Intel Core Ultra 9 185H",
+        "reported_seconds": 504,
+        "code_cell_index": 0,
+        "origin": "literal list in plotting code",
+        "raw_timing_record_identified": false,
+        "accepted_flip_definition_established": false,
+        "validated_cross_platform_speedup": false
+      },
+      {
+        "platform": "SpiNNaker 2",
+        "reported_seconds": 2460,
+        "code_cell_index": 0,
+        "origin": "literal list in plotting code",
+        "raw_timing_record_identified": false,
+        "accepted_flip_definition_established": false,
+        "validated_cross_platform_speedup": false
+      },
+      {
+        "platform": "This Work",
+        "reported_seconds": 20,
+        "code_cell_index": 0,
+        "origin": "literal list in plotting code",
+        "raw_timing_record_identified": false,
+        "accepted_flip_definition_established": false,
+        "validated_cross_platform_speedup": false
+      },
+      {
+        "platform": "Bifurcation Machine",
+        "reported_seconds": 0.06,
+        "code_cell_index": 0,
+        "origin": "literal list in plotting code",
+        "raw_timing_record_identified": false,
+        "accepted_flip_definition_established": false,
+        "validated_cross_platform_speedup": false
+      },
+      {
+        "platform": "Intel Core Ultra 9 185H",
+        "reported_seconds": 504,
+        "code_cell_index": 1,
+        "origin": "literal list in plotting code",
+        "raw_timing_record_identified": false,
+        "accepted_flip_definition_established": false,
+        "validated_cross_platform_speedup": false
+      },
+      {
+        "platform": "SpiNNaker 2",
+        "reported_seconds": 2460,
+        "code_cell_index": 1,
+        "origin": "literal list in plotting code",
+        "raw_timing_record_identified": false,
+        "accepted_flip_definition_established": false,
+        "validated_cross_platform_speedup": false
+      },
+      {
+        "platform": "This Work",
+        "reported_seconds": 20,
+        "code_cell_index": 1,
+        "origin": "literal list in plotting code",
+        "raw_timing_record_identified": false,
+        "accepted_flip_definition_established": false,
+        "validated_cross_platform_speedup": false
+      },
+      {
+        "platform": "Bifurcation Machine",
+        "reported_seconds": 0.06,
+        "code_cell_index": 1,
+        "origin": "literal list in plotting code",
+        "raw_timing_record_identified": false,
+        "accepted_flip_definition_established": false,
+        "validated_cross_platform_speedup": false
+      }
+    ],
+    "mixed_figure_metrics": "NeuroSA: 100 mln flips; bifurcation machine: time to solution"
+  },
+  "python_budget_semantics": {
+    "file": "python_code/NeuroSA_runner.py",
+    "sha256": "42f4aaffe8a784b8e7f2efaadd1e92a27c5c7ed0d1ee7503b17787285fbe759c",
+    "iteration_budget_loops": [
+      {
+        "line": 298,
+        "bound": "pb",
+        "resolved_bound": "tqdm(range(int(config.MAX_ITER)))"
+      }
+    ],
+    "accepted_counter_increments": [
+      {
+        "line": 371,
+        "enclosing_conditions": [
+          "spike_sel",
+          "__name__ == '__main__'"
+        ]
+      }
+    ],
+    "max_iter_counts_accepted_flips": false
+  },
+  "legacy_log_groups": [
+    {
+      "directory": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800",
+      "logs": 20,
+      "minimum_last_logged_rounds": 49300001,
+      "maximum_last_logged_rounds": 99900001,
+      "minimum_accepted_fraction": 0.8152994012482543,
+      "maximum_accepted_fraction": 0.9236324559100921
+    },
+    {
+      "directory": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800",
+      "logs": 21,
+      "minimum_last_logged_rounds": 99900001,
+      "maximum_last_logged_rounds": 99900001,
+      "minimum_accepted_fraction": 0.7352487814289411,
+      "maximum_accepted_fraction": 0.7574946971221752
+    },
+    {
+      "directory": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800",
+      "logs": 26,
+      "minimum_last_logged_rounds": 32900001,
+      "maximum_last_logged_rounds": 99900001,
+      "minimum_accepted_fraction": 0.6705782715657831,
+      "maximum_accepted_fraction": 0.905619151804889
+    },
+    {
+      "directory": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800",
+      "logs": 21,
+      "minimum_last_logged_rounds": 65400001,
+      "maximum_last_logged_rounds": 99900001,
+      "minimum_accepted_fraction": 0.5964021561921706,
+      "maximum_accepted_fraction": 0.7102153714034347
+    },
+    {
+      "directory": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800",
+      "logs": 22,
+      "minimum_last_logged_rounds": 38700001,
+      "maximum_last_logged_rounds": 99900001,
+      "minimum_accepted_fraction": 0.6159913952353213,
+      "maximum_accepted_fraction": 0.8444963347675366
+    }
+  ],
+  "legacy_logs": [
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=0.txt",
+      "sha256": "86b67f009e64a6f9c4e15d5520ae80bbf9983b24d8119b0df5b0232beb2e8a31",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 83160717,
+      "accepted_fraction": 0.8324396012768809,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=1.txt",
+      "sha256": "158b6d7a60a0e98e6721b79eae486c7f1e0f4462b3c4aa3e2dfe3c5e84994a6b",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 83202706,
+      "accepted_fraction": 0.8328599115829839,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=10.txt",
+      "sha256": "955155274e540c346039c7f291d76686a2a111bedc67ad238fe570e7c87696b5",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 83180654,
+      "accepted_fraction": 0.8326391708444527,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=11.txt",
+      "sha256": "a892f3d72cd2264c427d6d083e7cd8ac3090941a4c3d87f67dc4b6e7923ba862",
+      "last_logged_zero_based_iteration": 49300000,
+      "candidate_rounds_through_last_log": 49300001,
+      "accepted_flips_through_last_log": 45535081,
+      "accepted_fraction": 0.9236324559100921,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=12.txt",
+      "sha256": "6d09916cf1bf0460ef624f9c14d28b71acd530f285d88efc1513babc8c6302ad",
+      "last_logged_zero_based_iteration": 85000000,
+      "candidate_rounds_through_last_log": 85000001,
+      "accepted_flips_through_last_log": 72852812,
+      "accepted_fraction": 0.8570918957989189,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=13.txt",
+      "sha256": "dcaed2fc1394dbf00a83d830b50befff89a4c4999d529f53c8190d22064f3a87",
+      "last_logged_zero_based_iteration": 80400000,
+      "candidate_rounds_through_last_log": 80400001,
+      "accepted_flips_through_last_log": 69638420,
+      "accepted_fraction": 0.8661494917145586,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=14.txt",
+      "sha256": "345b17b071f2b6d61613c9edc30eddf9a495f6350d68c28fa62163ebdb4f9dfc",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 83127689,
+      "accepted_fraction": 0.8321089906695797,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=15.txt",
+      "sha256": "493f3f903d76662a9354e287cf8b1e629160177470458c98f2e7e36c8596ac8a",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 83163852,
+      "accepted_fraction": 0.8324709826579482,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=16.txt",
+      "sha256": "326de85e080a0b33fe1302d2452780de55e57f91d6f8d7ca16d1aa653dba535a",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 81448411,
+      "accepted_fraction": 0.8152994012482543,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=17.txt",
+      "sha256": "991e7e2423ba8c183339e87426ac3c47ba9f2063bb3aa6450f6385f26aab57e7",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 83172600,
+      "accepted_fraction": 0.8325585502246391,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=18.txt",
+      "sha256": "ff370fddd26a9883ec47269f486fc3b06c3c422a77f00e84e9e185985d19dd90",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 83133940,
+      "accepted_fraction": 0.8321715632415259,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=19.txt",
+      "sha256": "90cf7890df31f253e508061d18e349693c2e9cce189ab79a9f83f8f9226dee86",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 83130426,
+      "accepted_fraction": 0.8321363880667029,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=2.txt",
+      "sha256": "06bb08c28bf4708f860d6b8d14798b9315e4207067966ca3d5a1a5829d9f8e74",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 83172464,
+      "accepted_fraction": 0.8325571888632914,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=3.txt",
+      "sha256": "8219d92eaacfb422a04d62f84654e6d5938707e266def6dd402a04962ee6a6de",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 83197431,
+      "accepted_fraction": 0.8328071087807096,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=4.txt",
+      "sha256": "bd844b8fe6257d7a131cac2f2830a528634398e2d448225bb5d189faed024d94",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 83136001,
+      "accepted_fraction": 0.83219219387195,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=5.txt",
+      "sha256": "683a1d60f9e7db192d50b31df9a14b157c861d17fe3ea06ace1c50ccbba3e92e",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 81944413,
+      "accepted_fraction": 0.8202643861835397,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=6.txt",
+      "sha256": "54ef997c611e0687abf9ae9f59b97a400bce55ee4f5d0b4e981bf0dc36d50045",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 84628888,
+      "accepted_fraction": 0.8471360075361761,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=7.txt",
+      "sha256": "4ced436fa05663bb6517015606298d8df59eb00b459e8e53d26ba2e3b56f9c41",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 83149241,
+      "accepted_fraction": 0.8323247264031559,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=8.txt",
+      "sha256": "6c993fc75b38c0f1838ecc3a5e3be94dc44b7013302eeb56567bdff7daa53a09",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 83147695,
+      "accepted_fraction": 0.8323092509278354,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=6_log_lut_memory_close_UNITS=25_run=9.txt",
+      "sha256": "895c519effb1b0b1fa3855b9af489b8e7505e0edb9a36a460929478242c351a2",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 83257602,
+      "accepted_fraction": 0.8334094210869928,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=0.txt",
+      "sha256": "01a6cb88dfb70314cc32fdb6a61a2b72690fc94377e5d5add1702c5cd88efeef",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74566277,
+      "accepted_fraction": 0.7464091717076159,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=1.txt",
+      "sha256": "a385f5240c5b3b796d32aaae5718bdf475b46b6e8f386fabe1f6e7714b9abaa0",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74568650,
+      "accepted_fraction": 0.7464329254611318,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=11.txt",
+      "sha256": "13128c8b2f80003359e215ce702c2837df746c4893d9fd50f975d447c9f7ff06",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74507265,
+      "accepted_fraction": 0.7458184610028182,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=12.txt",
+      "sha256": "4d7bb9799ea2b89891b432148d61b3c91ff7bd61dc689c0a4d51a8bfa2ffc279",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74555548,
+      "accepted_fraction": 0.7463017743112935,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=13.txt",
+      "sha256": "50b295d81e1ad1e10da66c481036540d8f1e702c5f64e081920c1b87de926ab2",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74561069,
+      "accepted_fraction": 0.7463570395760056,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=14.txt",
+      "sha256": "830d269298e09a9a39d60c6420f2813a41ab29cb363767184a402d8447775d0b",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74536629,
+      "accepted_fraction": 0.7461123949338099,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=15.txt",
+      "sha256": "914b4ff09b5e79fdd9e6c5bdcfd4d5d941a2834eab35455b0218588444305890",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 75673721,
+      "accepted_fraction": 0.7574946971221752,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=16.txt",
+      "sha256": "911d057125fbc078199b52b9c8ac6814bb6e225a8f3f05ac671ea15f1938e430",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74502864,
+      "accepted_fraction": 0.7457744069492052,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=17.txt",
+      "sha256": "23e88650d9b777bd813a404077883a2dcbccf2eede1f4cbfff46a790c70060db",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74572083,
+      "accepted_fraction": 0.7464672898251522,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=18.txt",
+      "sha256": "b646e7bb5f3257a246ae76dac5b20bb8290ed71403df15e4bca699eaed714080",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74550568,
+      "accepted_fraction": 0.7462519244619427,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=19.txt",
+      "sha256": "6a6cbfbb50eed369a86ad4e5cf1bf16552447d4a81369283127268a8acbc9be4",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 73451354,
+      "accepted_fraction": 0.7352487814289411,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=2.txt",
+      "sha256": "bff44aeda2af0680237c7941534ea439477fa8a7f13936f0710b87ab9fbb95e3",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74537585,
+      "accepted_fraction": 0.7461219645032836,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=20.txt",
+      "sha256": "9dddf9c74d0c3f63a913198eeaa189dd3729809454977f9a254d188cd924066a",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74571425,
+      "accepted_fraction": 0.7464607032386316,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=21.txt",
+      "sha256": "25c5a6a17569243fd15af812686e1c366a40254a221542139cf4c0d3dcd1105e",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74549740,
+      "accepted_fraction": 0.7462436361737373,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=3.txt",
+      "sha256": "2956d4b119147d7db6e3a9880c4d1f37377c4e02a9a3d7a15ed7065b96d9b2f4",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74618985,
+      "accepted_fraction": 0.7469367793099422,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=4.txt",
+      "sha256": "79daac27671012a2f99c3f3f8e1e0ec95f8813baf6fd36ba2ab1ac247d84fc30",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74569118,
+      "accepted_fraction": 0.7464376101457697,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=5.txt",
+      "sha256": "f942b23b01d89cee6c5d2fc30a5505075be6bb1773072b49d81b49008386b902",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74555277,
+      "accepted_fraction": 0.746299061598608,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=6.txt",
+      "sha256": "65e1ecff2b1e76cbec44927b12ac72b69fa49b3b4d02b9ea3e27713677177052",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74564123,
+      "accepted_fraction": 0.7463876101462702,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=7.txt",
+      "sha256": "71532ce316b314bc80888ebec9d10f53a1c1f0a0953980e30bfdadc504067f4d",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74561303,
+      "accepted_fraction": 0.7463593819183245,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=8.txt",
+      "sha256": "e853914b46dbb1193e99eb3bc695c3527c8e04a017e77f30d64133983e2838fa",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 73936572,
+      "accepted_fraction": 0.7401058184173592,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=7_log_lut_memory_close_UNITS=25_run=9.txt",
+      "sha256": "e778416f35371603530a34f6a3860ff17932071251abb80cf89f40aadaebb494",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 74560171,
+      "accepted_fraction": 0.7463480505871066,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=0.txt",
+      "sha256": "c43766cb01c13609748b49af1c2b524bb8245696cc31fe1800b27cb43cf54f6c",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68331851,
+      "accepted_fraction": 0.6840025056656406,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=1.txt",
+      "sha256": "bad1c3be0e2d563c6f9fce38ffe10382b961a1d092986595cd9a32e2367be2db",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68370175,
+      "accepted_fraction": 0.6843861292854241,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=10.txt",
+      "sha256": "97cbffcdb39af9d034df33e8f7fcb8f6ff9efb31b37831f24f77854cfb731b66",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68267151,
+      "accepted_fraction": 0.6833548580244759,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=11.txt",
+      "sha256": "971a18e5525ccbba07134d8a37169da5e4060c92cd9c4d43982112f064b37c71",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68384057,
+      "accepted_fraction": 0.6845250882429921,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=12.txt",
+      "sha256": "4905632b720b526756f04a4b8ab8e68c9587e8a2afe6f1987d00e15a306660ca",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68452522,
+      "accepted_fraction": 0.6852104235714672,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=13.txt",
+      "sha256": "b3fc7cc78930a035ef0395e81dc52d46c518dd96bd7160c038213d6bbb6dd66f",
+      "last_logged_zero_based_iteration": 57400000,
+      "candidate_rounds_through_last_log": 57400001,
+      "accepted_flips_through_last_log": 45574674,
+      "accepted_fraction": 0.7939838537633475,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=14.txt",
+      "sha256": "e182cd631b3ca2168e8d45347504568a4720a5c330f660d28db0ae47829d21fc",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68269774,
+      "accepted_fraction": 0.6833811142804693,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=15.txt",
+      "sha256": "73b1f3aa1389144955e915d0ad530fc6fd29e19de639aa0dab643f50bcb16e5a",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68355725,
+      "accepted_fraction": 0.6842414846422273,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=16.txt",
+      "sha256": "6872d57f398825989ef72c14d7cf8a03e7998b0e848bdc68c051d086f8d13431",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68401785,
+      "accepted_fraction": 0.6847025456986732,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=17.txt",
+      "sha256": "85ac93c99dd1679cca8a7f1233dd8376d986a3b4aec62f744f1f98d8d000b35b",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68325330,
+      "accepted_fraction": 0.6839372303910187,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=18.txt",
+      "sha256": "e60bc41b718db1a193c58bdbe909b58bd97a1a287c4b375d7526e74fac18e232",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68263871,
+      "accepted_fraction": 0.6833220251919717,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=19.txt",
+      "sha256": "8bb433f35262b47366165a4b9d540539f77af391a4845ed2771bf3694a6c4cb6",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68397958,
+      "accepted_fraction": 0.6846642373907483,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=2.txt",
+      "sha256": "cfb3cc60e67668e95defb55adb3f616ae0e7b888c52c8235cf42dc1e1822dc1d",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68283716,
+      "accepted_fraction": 0.6835206738386319,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=20.txt",
+      "sha256": "981b3c1881feafab357205b3205c84200c0761316cab0f06e2f4873505e94028",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68305826,
+      "accepted_fraction": 0.6837419951577378,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=21.txt",
+      "sha256": "39b1be286394ea4c254f386215862d25692d0cb2526feebe00986ed7fc969901",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68379597,
+      "accepted_fraction": 0.6844804435987943,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=22.txt",
+      "sha256": "2da30471800156f6611ddb90d786953326fbc79a9e3803d86326df7e83a0f634",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68421588,
+      "accepted_fraction": 0.6849007739249172,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=23.txt",
+      "sha256": "66f9527be30300069d6ce00515d2cf759bdec40da5022eb3d8d9daff1af8d5cb",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 67812717,
+      "accepted_fraction": 0.6788059691811215,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=24.txt",
+      "sha256": "b041381282e18a78022e40f1436d7cefe2371045cec581200389dd02dce7a1c8",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68409166,
+      "accepted_fraction": 0.6847764295818175,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=25.txt",
+      "sha256": "b00635446295a3c680cd5769d7ba2d1f4d3be80f542ff8139653f7eb81974635",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68348510,
+      "accepted_fraction": 0.6841692624207281,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=3.txt",
+      "sha256": "343facf7b9d4e35514addc71c8e7fb7c892243c1bda68d4213f2ce78d128c15b",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68387895,
+      "accepted_fraction": 0.6845635066610259,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=4.txt",
+      "sha256": "6536180c84a8ae0e2f4cc64db22382b78f7e2dc9f1363aace053a686bfa3dd55",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68452447,
+      "accepted_fraction": 0.685209672820724,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=5.txt",
+      "sha256": "8765f7f1ae91580a884e0583cebf905c07bedb31235d26f9ee16edfcec295e4d",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68359324,
+      "accepted_fraction": 0.6842775106678928,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=6.txt",
+      "sha256": "f01760f7ab3ef9bb31adc42e157d0578341e814817d622956f428b1fd9b60e72",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68365848,
+      "accepted_fraction": 0.6843428159725444,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=7.txt",
+      "sha256": "b14b82d7b0a966cfc62f53a5b4436762e1042a183638a7a5c397fa8f171d4286",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 66990770,
+      "accepted_fraction": 0.6705782715657831,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=8.txt",
+      "sha256": "061df3ff312977916b86136a5d97f7fe3dcba5e1c8ae10ba1c6e73594e0a86ee",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 68395520,
+      "accepted_fraction": 0.6846398329865883,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_LFSR_b=8_log_lut_memory_close_UNITS=25_run=9.txt",
+      "sha256": "e6da6597d4e14908585b653426010b3a84254f871cce9cf273f6ec349ad73362",
+      "last_logged_zero_based_iteration": 32900000,
+      "candidate_rounds_through_last_log": 32900001,
+      "accepted_flips_through_last_log": 29794871,
+      "accepted_fraction": 0.905619151804889,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=0.txt",
+      "sha256": "b952b2af0c42b96e43f92ce36637f87eb606aeb5e4a12c5ea483886dc662644f",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61523671,
+      "accepted_fraction": 0.6158525563978723,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=1.txt",
+      "sha256": "03b94f80b167652cd8b1f31574993e931f3ebfae301673b8ddae16776f90b779",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61469616,
+      "accepted_fraction": 0.6153114653121975,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=10.txt",
+      "sha256": "1c82329ba9b053b23bdb9d676cecb1d1efed1a452784c4ba917da1d8147f3724",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61605217,
+      "accepted_fraction": 0.6166688326659776,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=11.txt",
+      "sha256": "7177fa36e290712540cab93cc2ee1735f43df4da381d3a89f61c2b2b1d87913f",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61491753,
+      "accepted_fraction": 0.615533056901571,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=12.txt",
+      "sha256": "0ac80bdfbfa8482e41e09c19b6180ef6742bdc1b30d77682bffc197aeb158569",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61493960,
+      "accepted_fraction": 0.615555148993442,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=13.txt",
+      "sha256": "55f0f46c721ccb6cef61b6576104c995bf86e0c91944a4f7dfe1755de01da76e",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61484158,
+      "accepted_fraction": 0.615457030876306,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=14.txt",
+      "sha256": "564addbbd0418ca02687e6d4faad19879f6ae18ec55ee34e0a1ce8ad144b1a98",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61505638,
+      "accepted_fraction": 0.6156720458891687,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=15.txt",
+      "sha256": "2e9171c7aa895a29bc78fbd5f20a68582f32428e859f2ec483b7c78165899846",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61488054,
+      "accepted_fraction": 0.6154960298749146,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=16.txt",
+      "sha256": "f650056bd01c510b5b2218fdfb61b0bca4acb3d5ec0b48069efc4e79e93c99fc",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61535275,
+      "accepted_fraction": 0.6159687125528658,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=17.txt",
+      "sha256": "245dc8da3b53d0ba1bc40c2ac4cd465d2eddaad3d5e80990b85c3f40a1e77479",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61553089,
+      "accepted_fraction": 0.616147030869399,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=18.txt",
+      "sha256": "381077a900e5691b4ae1011bdeffa63a0e42a61e7dfff6efcafbfe95a02970c2",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61443435,
+      "accepted_fraction": 0.6150493932427488,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=19.txt",
+      "sha256": "63bbc367c457db1071758079b7bcd192fb3e60896d85f529a5819d985bd7031f",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61531171,
+      "accepted_fraction": 0.6159276314721959,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=2.txt",
+      "sha256": "a004682415dd6d443441684d6b8779c0eb1a6c08606014066b936acb6fdf765a",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61592460,
+      "accepted_fraction": 0.6165411349695582,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=20.txt",
+      "sha256": "e4868c02007f6f405122c15a3c9894d2724e15a25abc4868deebb6f879800def",
+      "last_logged_zero_based_iteration": 65400000,
+      "candidate_rounds_through_last_log": 65400001,
+      "accepted_flips_through_last_log": 46448086,
+      "accepted_fraction": 0.7102153714034347,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=3.txt",
+      "sha256": "f4a8ec7b064198d7f96e7ed928a51c608efe83c36794f70d8d23fb93ed09bc6f",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61547472,
+      "accepted_fraction": 0.6160908046437357,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=4.txt",
+      "sha256": "8b077c344499a5ec463d44bbff51141ad919a37400a37b2424cfe819966a4db8",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61468459,
+      "accepted_fraction": 0.6152998837307319,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=5.txt",
+      "sha256": "bcb2298f68c27498a9fd09b9bcf319add9fb569c8ee3d78ffff3648410763425",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61472856,
+      "accepted_fraction": 0.6153438977443053,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=6.txt",
+      "sha256": "ad215561017444cfddb770f9ff9a038721304da7e3d214eb8a447d86cb488b50",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 59580576,
+      "accepted_fraction": 0.5964021561921706,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=7.txt",
+      "sha256": "c7e421678eebe13796206b03061e16da2e733f2babb63fe5141e567d9ce37f13",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61557625,
+      "accepted_fraction": 0.6161924362743499,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=8.txt",
+      "sha256": "08ff27884f5cf6fddff144870511402ba3dc10d60ebdd771f8a498cdad547546",
+      "last_logged_zero_based_iteration": 79100000,
+      "candidate_rounds_through_last_log": 79100001,
+      "accepted_flips_through_last_log": 52632185,
+      "accepted_fraction": 0.6653879182631111,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_software_log_lut_memory_close_UNITS=25_run=9.txt",
+      "sha256": "090ede7ff496833b9994582c8462f3cba36b284588bc88abf9c0ae4ac54cea27",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61515928,
+      "accepted_fraction": 0.6157750488911407,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=1.txt",
+      "sha256": "3abf9345201d847f55dee4c83cc824a9e36852323d01b200362829d1db14e74c",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61684593,
+      "accepted_fraction": 0.6174633872125787,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=10.txt",
+      "sha256": "a13647bf37c9b8cd8480dfe633a186e22594e45a2d1485080769f77f983e69d0",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61653352,
+      "accepted_fraction": 0.6171506644929864,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=11.txt",
+      "sha256": "d5e3c196f3bc61e2fc06c6441bdb39d63a51d59fb6cb5ea09019ec3be1655a16",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61676790,
+      "accepted_fraction": 0.6173852791052524,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=12.txt",
+      "sha256": "c99cb4ba66529f84f6376cdb7ac3a83785eed9311c8b9d60e0ff8d50308bb324",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61622885,
+      "accepted_fraction": 0.6168456895210642,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=13.txt",
+      "sha256": "0650d5b7b4e5a9e5f7f2bf64f900406143a9d2416ca570b28e9252a3d2106160",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61601723,
+      "accepted_fraction": 0.6166338576913528,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=14.txt",
+      "sha256": "7313f43f9bee67a52850986f885831ded3568826f7ea79252c258b588dc2d60b",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61620748,
+      "accepted_fraction": 0.6168242981298869,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=15.txt",
+      "sha256": "4b1883702414c3e910a347f4d34dcffb835cf884f2399c228f25f2b4c92e4e1f",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61596088,
+      "accepted_fraction": 0.616577451285511,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=16.txt",
+      "sha256": "bd39b2308b1fd28edd40ad886a908d8284eae916266ab2887a416fac9fb775d6",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61641462,
+      "accepted_fraction": 0.6170316454751587,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=17.txt",
+      "sha256": "ad8ddfd6f24455f8af29bb356ddc9afbf3d8377ff9471524aaf174e3cb94ee2f",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61623969,
+      "accepted_fraction": 0.6168565403718064,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=18.txt",
+      "sha256": "a4da3e62724795bfa3448e153841152a7531b67c4e16d18aa77bcc0e7ac1d8b7",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61537541,
+      "accepted_fraction": 0.6159913952353213,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=19.txt",
+      "sha256": "e3f334debd87e792ce7506a2a853094686416ebaf1cd87fcfd878082eff0debc",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61604538,
+      "accepted_fraction": 0.6166620358692488,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=2.txt",
+      "sha256": "86220ba58528a3181663a220c0f65ca0a9ba6633f8f2e744ad3aa08cac92c348",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61677354,
+      "accepted_fraction": 0.6173909247508416,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=20.txt",
+      "sha256": "569db0784d76d3a01e52799617875fda5402ac853462dcc0f9a3247743baf97a",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61620405,
+      "accepted_fraction": 0.6168208646964879,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=21.txt",
+      "sha256": "4a558b3341958ee12d0aac603a32d80a12e1687e6b4a5528af0e8bc1498c5ffd",
+      "last_logged_zero_based_iteration": 54100000,
+      "candidate_rounds_through_last_log": 54100001,
+      "accepted_flips_through_last_log": 41072679,
+      "accepted_fraction": 0.75919922811092,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=22.txt",
+      "sha256": "7d3dab31dac6fbd863ee0f6b83be8946380f45dbed8044b2721cc783faca9b96",
+      "last_logged_zero_based_iteration": 38700000,
+      "candidate_rounds_through_last_log": 38700001,
+      "accepted_flips_through_last_log": 32682009,
+      "accepted_fraction": 0.8444963347675366,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=3.txt",
+      "sha256": "d3b3ca7c8c7939798a20b8a122728d6796d46f02dd34dceab993c13ff92733f1",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61692827,
+      "accepted_fraction": 0.617545809634176,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=4.txt",
+      "sha256": "167ffd470dc9a619f7497d6160b27b21beb640a585555f544799299d924dfb44",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61647210,
+      "accepted_fraction": 0.6170891830121202,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=5.txt",
+      "sha256": "0ec18792ecd9e392f830bb5a0c31f1033eea2f0c928ba7ae14cc956198352e96",
+      "last_logged_zero_based_iteration": 49300000,
+      "candidate_rounds_through_last_log": 49300001,
+      "accepted_flips_through_last_log": 38613120,
+      "accepted_fraction": 0.7832275703199276,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=6.txt",
+      "sha256": "0e4c5a5d9fc30a26eb6398db15eb4f91808da7981b88e05f87fb133a68b25e7e",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61650254,
+      "accepted_fraction": 0.6171196534822857,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=7.txt",
+      "sha256": "4e79a0cb855eee1582d1c30ea85aed22be049486dcb62e9562308b08f116c392",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61671988,
+      "accepted_fraction": 0.6173372110376656,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=8.txt",
+      "sha256": "ef34084e4ffb10548f7cdf22fc721747a1754e1d69eef917a78746b7fb2a52d4",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61697069,
+      "accepted_fraction": 0.6175882720962135,
+      "completion_proven": false
+    },
+    {
+      "file": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800/logs/approximationsapprox_problem=G15_rng_selection_LFSR_b=10_rng_calculation_halon_software_log_lut_memory_close_UNITS=25_run=9.txt",
+      "sha256": "5df4b2f59ada19c8680dc5712e525f8078a00ec24bacea1d6920c7f435a2caa1",
+      "last_logged_zero_based_iteration": 99900000,
+      "candidate_rounds_through_last_log": 99900001,
+      "accepted_flips_through_last_log": 61589753,
+      "accepted_fraction": 0.6165140378727324,
+      "completion_proven": false
+    }
+  ],
+  "fpga": {
+    "runs": [
+      {
+        "file": "results/performance/board/bench_50_seed1.json",
+        "seed": 1,
+        "clock_mhz": 50.0,
+        "cooling_period": 65536,
+        "accepted_flips": 100008280,
+        "cycles": 1133118657,
+        "actual_hardware_seconds": 22.66237314,
+        "normalized_seconds_per_100m_accepted_flips": 22.66049685086075,
+        "overshoot_fraction_of_target": 8.28e-05,
+        "verified_best_cut": 3050,
+        "assignment_verified_here": true,
+        "bitfile_sha256": "0aa4c0d07ddb54a74210f723c87f819403edc8a7c15b1db2c2fb856c119d64dd",
+        "graph_sha256": "dce8ea06fac816a4726ee70be45955cbcb22212673904affd86b850720c9c9e2",
+        "sha256": "d26867ee1ed631dcd10fa009613d70d84e009d11d95bfecfda795d21413bcaae"
+      },
+      {
+        "file": "results/performance/board/bench_fast_seed1.json",
+        "seed": 1,
+        "clock_mhz": 142.857143,
+        "cooling_period": 65536,
+        "accepted_flips": 100101202,
+        "cycles": 1134167509,
+        "actual_hardware_seconds": 7.939172555060828,
+        "normalized_seconds_per_100m_accepted_flips": 7.931146076608378,
+        "overshoot_fraction_of_target": 0.00101202,
+        "verified_best_cut": 3050,
+        "assignment_verified_here": true,
+        "bitfile_sha256": "0aa4c0d07ddb54a74210f723c87f819403edc8a7c15b1db2c2fb856c119d64dd",
+        "graph_sha256": "dce8ea06fac816a4726ee70be45955cbcb22212673904affd86b850720c9c9e2",
+        "sha256": "99ba87b50d921ce4da8121a8ca0a225d0772e5f0e9a8ce76771ca3611aa791c3"
+      },
+      {
+        "file": "results/performance/board/bench_fast_seed2.json",
+        "seed": 2,
+        "clock_mhz": 142.857143,
+        "cooling_period": 65536,
+        "accepted_flips": 100092171,
+        "cycles": 1086151509,
+        "actual_hardware_seconds": 7.603060555396939,
+        "normalized_seconds_per_100m_accepted_flips": 7.596059191679377,
+        "overshoot_fraction_of_target": 0.00092171,
+        "verified_best_cut": 3049,
+        "assignment_verified_here": true,
+        "bitfile_sha256": "0aa4c0d07ddb54a74210f723c87f819403edc8a7c15b1db2c2fb856c119d64dd",
+        "graph_sha256": "dce8ea06fac816a4726ee70be45955cbcb22212673904affd86b850720c9c9e2",
+        "sha256": "97c67a84e5692dcfbe686a28babdef7e3bcf80f50140ba3c9bb4e3b3f40b454d"
+      },
+      {
+        "file": "results/performance/board/bench_fast_seed3.json",
+        "seed": 3,
+        "clock_mhz": 142.857143,
+        "cooling_period": 65536,
+        "accepted_flips": 100049013,
+        "cycles": 1048257206,
+        "actual_hardware_seconds": 7.337800434662199,
+        "normalized_seconds_per_100m_accepted_flips": 7.334205720412453,
+        "overshoot_fraction_of_target": 0.00049013,
+        "verified_best_cut": 3049,
+        "assignment_verified_here": true,
+        "bitfile_sha256": "0aa4c0d07ddb54a74210f723c87f819403edc8a7c15b1db2c2fb856c119d64dd",
+        "graph_sha256": "dce8ea06fac816a4726ee70be45955cbcb22212673904affd86b850720c9c9e2",
+        "sha256": "28ce15b6aa23e2094a6331b06f10f32696577ffa15857c49d6514f1365afef69"
+      }
+    ],
+    "same_bitstream_seed1_normalized_throughput_gain": 2.8571528795433725,
+    "same_seed_clock_frequency_ratio": 2.85714286,
+    "relative_gain_minus_clock_ratio_ppm": 3.506840176914494,
+    "median_fast_normalized_seconds": 7.596059191679377,
+    "verdict": "Supported normalized clock-scaling throughput comparison, not CPU/SpiNNaker2 speedup or time-to-solution speedup."
+  },
+  "evidence": [
+    {
+      "file": "python_code/NeuroSA_runner.py",
+      "line": 298,
+      "sha256": "42f4aaffe8a784b8e7f2efaadd1e92a27c5c7ed0d1ee7503b17787285fbe759c",
+      "excerpt": "296:     with open(log_file_name, 'a') as f:\n297:         pb = tqdm(range(int(config.MAX_ITER)))\n298:         for iter in pb:\n299:             spike_sel = 0\n300:             p_sel = -1"
+    },
+    {
+      "file": "python_code/NeuroSA_runner.py",
+      "line": 332,
+      "sha256": "42f4aaffe8a784b8e7f2efaadd1e92a27c5c7ed0d1ee7503b17787285fbe759c",
+      "excerpt": "330:                     spike = 1 if noisethld < vmem_p*(s_p_p-s_n_p) else 0\n331: \n332:                     if spike and not spike_sel:\n333:                         spike_sel = spike\n334:                         p_sel = p"
+    },
+    {
+      "file": "python_code/NeuroSA_runner.py",
+      "line": 371,
+      "sha256": "42f4aaffe8a784b8e7f2efaadd1e92a27c5c7ed0d1ee7503b17787285fbe759c",
+      "excerpt": "369:                 #     print(maxcuts)\n370:                 #     break\n371:                 num_spikes += 1\n372: \n373:                 t_update_vmem += (e_update-s_update)"
+    },
+    {
+      "file": "python_code/NeuroSA_runner.py",
+      "line": 391,
+      "sha256": "42f4aaffe8a784b8e7f2efaadd1e92a27c5c7ed0d1ee7503b17787285fbe759c",
+      "excerpt": "389:             iter += 1\n390:             \n391:             if iter % config.COUNTER == 0:\n392:                 thld += config.THLD_DELTA * config.COUNTER\n393: "
+    },
+    {
+      "file": "zynq7020/zynq7020_hardware/zynq7020_hardware.srcs/sources_1/new/scheduler_2.v",
+      "line": 124,
+      "sha256": "9653cb30c4be22af29d6613591458133f2d06b46f408653a9bd2004cbe93c9ed",
+      "excerpt": "120:             \n121:             case(state)\n122:                 S_WAIT:\n123:                 begin\n124:                     flips <= flips + 1;\n125:                     if (flip)\n126:                     begin\n127:                         flip_r <= 1;\n128:                         unit_r <= unit_number;"
+    },
+    {
+      "file": "vitis_software/fw_ann_Neq800_flips_and_uart_app/src/main.c",
+      "line": 438,
+      "sha256": "bdb0235b081d9470de63222cfa2e26d3d4f3f15fea335a02fe2910e0907cb09c",
+      "excerpt": "435:     start_machine();\n436: \n437:     int val = 0;\n438:     while (val < NO_OF_FLIPS)\n439:     {\n440:         val= read_reg(NUMBER_OF_FLIPS_ADDR);\n441:     }"
+    },
+    {
+      "file": "rtl/scheduler_2.v",
+      "line": 154,
+      "sha256": "495b5f4e04116161df3e09f84ff59b4395b24e11d95b83bf93661b67ff9ebd61",
+      "excerpt": "151:                 end\n152:                 S_CAPTURE:\n153:                 begin\n154:                     flips <= flips + 1;\n155:                     assignment[idx_comb] <= ~assignment[idx_comb];\n156:                     cuts_cur <= cuts_next;\n157:                     if (cuts_next > cuts_best)"
+    }
+  ],
+  "limitations": [
+    "The archive does not link the literal 504/2460-second constants to a particular timed run or executable. The legacy-runner evidence demonstrates a budget-definition risk, not proof of how those constants were measured.",
+    "MAX_ITER is a candidate-round budget. A round tests up to UNITS candidates and can end with no accepted flip; earlier units short-circuit later evaluations.",
+    "The archived hardware counter increments each S_WAIT cycle. The maintained counter increments once per S_CAPTURE accepted update. No source/bitstream/timing link establishes which counter generated the original 20-second value.",
+    "FPGA durations use hardware cycles and configured PLL frequency and exclude host initialization/loading/readout. The original host seconds field also includes post-stop hashing overhead and is not end-to-end latency.",
+    "The 50-to142.857 MHz comparison uses the same bitstream/configuration/seed, but slightly different stopping counts. It is a normalized throughput estimate; exact counts/overshoot are retained.",
+    "CPU uses floating-point/software-style approximations and early exit; the FPGA uses fixed-point LUTs and parallel candidate generation. Cooling advances by candidate rounds in Python and active cycles in hardware.",
+    "Final assignments and objective scores are verified; this is not verification of original CPU/SpiNNaker2 final quality or a statistically powered time-to-solution comparison.",
+    "Power values have no matched measured system boundary; the FPGA figure is a vector-less Vivado estimate, so energy-efficiency speedups are unsupported."
+  ],
+  "supported_claims": [
+    "G15 FPGA throughput at the recorded clock, with exact accepted flips, cycles, configurations, independent assignments, and explicit normalization.",
+    "Approximately 2.857x normalized throughput from raising the same FPGA implementation from 50 to 142.857 MHz for seed 1.",
+    "Three recorded high-clock runs produce best cuts 3050, 3049, 3049; no 20-run success probability is inferred."
+  ],
+  "unsupported_claims": [
+    "66x faster than Intel Core Ultra 9 185H.",
+    "324x faster than SpiNNaker2.",
+    "2.857x improvement over a CPU/SpiNNaker2 algorithm or over the paper's time-to-solution.",
+    "Measured board energy or energy-efficiency improvements inferred from Vivado power."
+  ]
+}

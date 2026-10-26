@@ -1,0 +1,190 @@
+{
+  "runner_sha256": "b80f1604770beb0fe697978d7da64af5b2de41dc00d6f67646527f11fa91e124",
+  "model_sha256": "aa4cf6fc27d7fe91a57012aa9587e9d9bb199e26e3a4ea2c97065409cc8a37a7",
+  "names": [
+    "G22",
+    "G23",
+    "G24",
+    "G25",
+    "G26",
+    "G35",
+    "G36",
+    "G37",
+    "G38"
+  ],
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "accepted_flip_budget": 10000000,
+  "max_active_cycles": 1000000000,
+  "clock_request_mhz": 100,
+  "cooling_period": 65536,
+  "build": {
+    "variant": "gset_loadable_unsigned_2048",
+    "abi": "0x47535433",
+    "vertices": 2048,
+    "units": 32,
+    "assignment_base": 256,
+    "weight_values": [
+      0,
+      1
+    ],
+    "requested_clock_mhz": 100,
+    "sources": {
+      "scripts/build_gset2048.py": "3571ddf4d1dd893b208e30885f523589c09c4fc36ac3f871fd6f2b8c05525874",
+      "scripts/prepare_gset2048_rtl.py": "cf7a1d6c8e87c977b83a943b41401c9d5f559f3756e2061fc30307d31099e6b6",
+      "scripts/prepare_gset1024_rtl.py": "705941ca0a3aed08f1a4a8be9ff0f285cb1559ffbb251192c920a6cdcb44e996",
+      "scripts/prepare_gset_rtl.py": "3a3645a972897fc08df059875a0bf3409fd9377d208f85ce37cf2165d3ec8ba9",
+      "scripts/prepare_sudoku_rtl.py": "94098c788184654822ca47bf5ad84d7f965c6e7bf2a05ebd15cf98d17fde57a3",
+      "scripts/build_overlay.tcl": "8cca49438e492e0561eb3d596646837431c80dae66a6307bf859c24c0bdfda11",
+      "rtl/files.f": "4650b260c41f2c0aafa154a7d17a6a29b8d08e1fb895647b5bf35c3733304b9f",
+      "rtl/LFSR.v": "858787b90a5ce00e9994f0984d6acd95236e13678cb0f7ea4feb6945c1d5eae8",
+      "rtl/LFSR_inout.v": "f3887b14980b2476b4b8b343855426c4c439adc1ae91b58434ae11f7c5b9002d",
+      "rtl/distributed_graph_memory.v": "d7a5e11cca71cec3cefc1ca4364440bb2c2b8110232311ed93714b332b176ac7",
+      "rtl/fixed_mult.v": "4a90500c9bff976c62e2dab22424c1310750ef830a573da663d790a4837d03ad",
+      "rtl/fixed_to_int.v": "dad0cbb07cd7f54ebf09f70f9da710d5f30475331b44bf9140a1ff68601824c7",
+      "rtl/flipping_unit.v": "055e6231629220bc659dcf176bf54e0fc05bf336126137615d67152c4a9d604b",
+      "rtl/log_LUT.v": "84549ca77b6bdf0e18a148ad16cecec1ce4fa312d68c22233360f75ee690098c",
+      "rtl/log_noise_generator.v": "e3e8d153524a40a0af3e34cb220ad238be2978f4dbe48cb784eb35fff5eaf1c0",
+      "rtl/neuron_ensemble.v": "be74c7233e8e14a7dedb7b36aa823a594538c8e5c91721aae27b88b47c30db4b",
+      "rtl/neuron_ensemble_storage.v": "c89d8b450fa751be2a54b26a9b435b8d344ed7fd0594f569dd514f7209fb4f4a",
+      "rtl/neuron_ensemble_with_memory_with_buff.v": "dd3ed14d828780c38a97d4fcce62827136235f48b5eb77b2dbb31448f0ac46fb",
+      "rtl/simple_priority_selector.v": "7b87480e3f6db5ba69808b6c7edb2462a6a736f20162b8b84f1cbaca7f128587",
+      "rtl/round_robin_priority_selector.v": "62fe7f8bee8ebb0a62703fb06d1a354f2de280e42dda1c1ed0e080dab93c7442",
+      "rtl/temperature_mapping.v": "eb59cc195dca33a17b813b9223f61a0635ef0d9df52ceabcdb047eb4f25c0791",
+      "rtl/temperature_module.v": "693221daa734a7af1123491c2ca4e21fd686cc2e7036a312f5b3db7cade0cf75",
+      "rtl/transmit_buffer.v": "2bc46285df180229d88aa6954e83c25095051ba9a952d3b61321f3e9da4d6112",
+      "rtl/scheduler_2.v": "495b5f4e04116161df3e09f84ff59b4395b24e11d95b83bf93661b67ff9ebd61",
+      "rtl/neuroSA_machine.sv": "536a974b3cf7a0abf0b4a2ec1fe73710d7f097dd4e6b9396610a65059dc2a2ef",
+      "rtl/qubo_axi.v": "a582bfaac8d0835836d539130f4b3f0e984c162d8c02663519bb390191a936e1"
+    },
+    "generated_sources": {
+      "generated/rtl/LFSR.v": "858787b90a5ce00e9994f0984d6acd95236e13678cb0f7ea4feb6945c1d5eae8",
+      "generated/rtl/LFSR_inout.v": "f3887b14980b2476b4b8b343855426c4c439adc1ae91b58434ae11f7c5b9002d",
+      "generated/rtl/distributed_graph_memory.v": "6f24298e0484633bb5c6e4ac111b86059e4bbbd828a78a8f08d06395061fcb99",
+      "generated/rtl/fixed_mult.v": "4a90500c9bff976c62e2dab22424c1310750ef830a573da663d790a4837d03ad",
+      "generated/rtl/fixed_to_int.v": "dad0cbb07cd7f54ebf09f70f9da710d5f30475331b44bf9140a1ff68601824c7",
+      "generated/rtl/flipping_unit.v": "055e6231629220bc659dcf176bf54e0fc05bf336126137615d67152c4a9d604b",
+      "generated/rtl/log_LUT.v": "84549ca77b6bdf0e18a148ad16cecec1ce4fa312d68c22233360f75ee690098c",
+      "generated/rtl/log_noise_generator.v": "e3e8d153524a40a0af3e34cb220ad238be2978f4dbe48cb784eb35fff5eaf1c0",
+      "generated/rtl/neuron_ensemble.v": "772429d2887c52effdae11a9ccea16dc73bab6f1fa9f2b8326123a7db9e73e82",
+      "generated/rtl/neuron_ensemble_storage.v": "88cbc88c9abdb13db15ce16beba8e815eea1d4d479cfaff6ebf2e967cd437251",
+      "generated/rtl/neuron_ensemble_with_memory_with_buff.v": "43cf438d5cc5f10348991ec07b31cad44e7803a6a6e45b98a6c356905508c144",
+      "generated/rtl/simple_priority_selector.v": "7b87480e3f6db5ba69808b6c7edb2462a6a736f20162b8b84f1cbaca7f128587",
+      "generated/rtl/round_robin_priority_selector.v": "62fe7f8bee8ebb0a62703fb06d1a354f2de280e42dda1c1ed0e080dab93c7442",
+      "generated/rtl/temperature_mapping.v": "eb59cc195dca33a17b813b9223f61a0635ef0d9df52ceabcdb047eb4f25c0791",
+      "generated/rtl/temperature_module.v": "693221daa734a7af1123491c2ca4e21fd686cc2e7036a312f5b3db7cade0cf75",
+      "generated/rtl/transmit_buffer.v": "2bc46285df180229d88aa6954e83c25095051ba9a952d3b61321f3e9da4d6112",
+      "generated/rtl/scheduler_2.v": "52f235c82aee72c8e7aa90b9c7eb20dff27daeac1a767b19fea25380a4e95b96",
+      "generated/rtl/neuroSA_machine.sv": "398d3109e5c997966f5a652d19f54ccef59849e4efeee441a8fd0b39effe9a1f",
+      "generated/rtl/qubo_axi.v": "56d453a8edb6ffe6a61989c7336c200310a1e9743106d491cd1f92d406a95e45"
+    },
+    "artifacts": {
+      "qubo.bit": "f18596b740deaf7751b6431cdb6209ca4dcb8550b6722d26db390f763df0b159",
+      "qubo.hwh": "68137155f2b5d5bf1c5b361ea7bdb0c84ff2931449a68037f704fedbe1012d97"
+    }
+  },
+  "graphs": [
+    {
+      "name": "G22",
+      "vertices": 2000,
+      "edges": 19990,
+      "negative_edges": 0,
+      "sha256": "9baeee06eb147b1c9ca42b43be86592d4e6fc60784a85af9be5b63d1362ef28e",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G22",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 13359,
+      "paper_neurosa_worst_cut": 13358
+    },
+    {
+      "name": "G23",
+      "vertices": 2000,
+      "edges": 19990,
+      "negative_edges": 0,
+      "sha256": "3669c719ebbc111d7c1433ab48304a419852ffa8a988930de85c5ce84c0ae05e",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G23",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 13344,
+      "paper_neurosa_worst_cut": 13341
+    },
+    {
+      "name": "G24",
+      "vertices": 2000,
+      "edges": 19990,
+      "negative_edges": 0,
+      "sha256": "9aff2abd74d14eb04ed991f8fe202931b874f5faf5477c51179e1095f1649939",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G24",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 13337,
+      "paper_neurosa_worst_cut": 13335
+    },
+    {
+      "name": "G25",
+      "vertices": 2000,
+      "edges": 19990,
+      "negative_edges": 0,
+      "sha256": "10270bb8208e89952186a2700848bc1045ab93483aa11106a1bcfc3b9fb040e6",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G25",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 13340,
+      "paper_neurosa_worst_cut": 13333
+    },
+    {
+      "name": "G26",
+      "vertices": 2000,
+      "edges": 19990,
+      "negative_edges": 0,
+      "sha256": "255e19b0ab7c08cf920551aa23b83ee96bb4092f6fd1b4223126693ef76c1dc9",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G26",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 13328,
+      "paper_neurosa_worst_cut": 13324
+    },
+    {
+      "name": "G35",
+      "vertices": 2000,
+      "edges": 11778,
+      "negative_edges": 0,
+      "sha256": "3df35a2abbe8b73a8ade2509363b9f84c060ff46e3693675e204aa1ade1da3f4",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G35",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 7687,
+      "paper_neurosa_worst_cut": 7675
+    },
+    {
+      "name": "G36",
+      "vertices": 2000,
+      "edges": 11766,
+      "negative_edges": 0,
+      "sha256": "022423749f4e3b6b51bcd80c5e7e5a130a86f000b9e62a57482ac0925a9a3d9b",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G36",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 7680,
+      "paper_neurosa_worst_cut": 7663
+    },
+    {
+      "name": "G37",
+      "vertices": 2000,
+      "edges": 11785,
+      "negative_edges": 0,
+      "sha256": "e0e54884adb8afd8e85a0f1610289ee4092847a4307909e4485c2170cf39d080",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G37",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 7691,
+      "paper_neurosa_worst_cut": 7683
+    },
+    {
+      "name": "G38",
+      "vertices": 2000,
+      "edges": 11779,
+      "negative_edges": 0,
+      "sha256": "fa1d6944433f78c64effe343beb7142365dcc5fe862af50126cf92708432b474",
+      "source_url": "https://web.stanford.edu/~yyye/yyye/Gset/G38",
+      "in_supplement_tables": true,
+      "paper_reference_cut": 7688,
+      "paper_neurosa_worst_cut": 7672
+    }
+  ]
+}

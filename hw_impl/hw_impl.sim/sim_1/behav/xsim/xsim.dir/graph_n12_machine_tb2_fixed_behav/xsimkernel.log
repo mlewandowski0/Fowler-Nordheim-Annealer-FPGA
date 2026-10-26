@@ -1,7 +1,0 @@
-Running: xsim.dir/graph_n12_machine_tb2_fixed_behav/xsimk -simmode gui -wdb graph_n12_machine_tb2_fixed_behav.wdb -simrunnum 0 -socket 56391
-Design successfully loaded
-Design Loading Memory Usage: 20404 KB (Peak: 20776 KB)
-Design Loading CPU Usage: 20 ms
-Simulation completed
-Simulation Memory Usage: 106500 KB (Peak: 159672 KB)
-Simulation CPU Usage: 130 ms

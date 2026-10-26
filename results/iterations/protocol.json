@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "iteration_definition": "One active scheduler S_WAIT arbitration decision; count no-flip and pipeline-empty decisions; exclude capture, memory-update and drain cycles. At most one accepted flip per iteration, with up to 25 local units proposing in parallel.",
+  "graphs": [
+    "G4",
+    "G11",
+    "G15"
+  ],
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "iteration_budget": 100000000,
+  "requested_clock_mhz": 100,
+  "cooling_period_active_cycles": 65536,
+  "candidate_policy": "25 local units, fixed-priority arbitration",
+  "spinnaker_alignment": "Native implementation-iteration comparison. S5.2 states a fixed iteration count but does not state its numeric count for Fig S3 or establish the same event definition; 100M is our explicitly chosen budget, motivated by the paper's main evaluation.",
+  "quality_rule": "Independently score every final best assignment; retain every seed and rejected-decision count."
+}

@@ -1,0 +1,27 @@
+python3 scripts/test_gset.py
+G6 PASS GSET AXI: signed graph upload, exact budget, target-cycle latch, independent AW/W, strobes, backpressure, halt/resume, reset, assignment cut=1085
+- /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/sim/gset_tb.sv:137: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 7ms; walltime 1.808 s; speed 3.661 ms/s
+- Verilator: cpu 1.807 s on 1 threads; allocated 8 MB
+
+G15 PASS GSET AXI: signed graph upload, exact budget, target-cycle latch, independent AW/W, strobes, backpressure, halt/resume, reset, assignment cut=2559
+- /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/sim/gset_tb.sv:137: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 7ms; walltime 1.694 s; speed 3.906 ms/s
+- Verilator: cpu 1.694 s on 1 threads; allocated 8 MB
+
+python3 scripts/test_gset.py --variant 1024
+G43 PASS GSET AXI: signed graph upload, exact budget, target-cycle latch, independent AW/W, strobes, backpressure, halt/resume, reset, assignment cut=5291
+- /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/sim/gset1024_tb.sv:138: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 10ms; walltime 2.803 s; speed 3.621 ms/s
+- Verilator: cpu 2.802 s on 1 threads; allocated 8 MB
+
+python3 scripts/test_gset.py --variant 2048
+G22 PASS GSET AXI: signed graph upload, exact budget, target-cycle latch, independent AW/W, strobes, backpressure, halt/resume, reset, assignment cut=8966
+- /home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/sim/gset2048_tb.sv:138: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 37ms; walltime 20.992 s; speed 1.766 ms/s
+- Verilator: cpu 20.990 s on 1 threads; allocated 9 MB
+

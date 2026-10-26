@@ -1,0 +1,200 @@
+{
+  "status": "Verified fixed native arbitration-iteration measurements",
+  "iteration_definition": "One active scheduler S_WAIT arbitration decision, including no-flip/pipeline-empty decisions. Excludes capture, update and drain cycles. Up to 25 units propose in parallel.",
+  "iteration_budget": 100000000,
+  "clock_mhz": 100,
+  "rows": [
+    {
+      "graph": "G4",
+      "iterations_per_run": 100000000,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "median_seconds": 1.28877598,
+      "seconds_range": [
+        1.21123432,
+        1.4416255
+      ],
+      "accepted_flips_range": [
+        3520572,
+        7360425
+      ],
+      "cut_range": [
+        11622,
+        11641
+      ],
+      "runs": [
+        {
+          "seed": 1,
+          "iterations": 100000000,
+          "accepted_flips": 7360425,
+          "rejected_iterations": 92639575,
+          "cycles": 144162550,
+          "hardware_seconds": 1.4416255,
+          "host_run_interval_seconds": 1.4433740069980558,
+          "host_initialization_seconds": 0.08211507699888898,
+          "best_cut": 11638,
+          "file": "results/iterations/board/G4_seed1.json",
+          "sha256": "62b661f74ed6d99b981f04f816423e2e27d7544afd22df460dfdbbbcb7777f62"
+        },
+        {
+          "seed": 2,
+          "iterations": 100000000,
+          "accepted_flips": 3520572,
+          "rejected_iterations": 96479428,
+          "cycles": 121123432,
+          "hardware_seconds": 1.21123432,
+          "host_run_interval_seconds": 1.2131031260032614,
+          "host_initialization_seconds": 0.08325599200179568,
+          "best_cut": 11641,
+          "file": "results/iterations/board/G4_seed2.json",
+          "sha256": "5ea3db40eae8e22e95eceb81346d647544c8cecfd7ef864eace0a889c79cc1d8"
+        },
+        {
+          "seed": 3,
+          "iterations": 100000000,
+          "accepted_flips": 4812933,
+          "rejected_iterations": 95187067,
+          "cycles": 128877598,
+          "hardware_seconds": 1.28877598,
+          "host_run_interval_seconds": 1.2890857370002777,
+          "host_initialization_seconds": 0.08283104699876276,
+          "best_cut": 11622,
+          "file": "results/iterations/board/G4_seed3.json",
+          "sha256": "4a997ac1f899d7cc1d9bbed8a751ba1d0f72e1d7260a8d2c007689de7e0ee86b"
+        }
+      ]
+    },
+    {
+      "graph": "G11",
+      "iterations_per_run": 100000000,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "median_seconds": 2.59741726,
+      "seconds_range": [
+        2.56507738,
+        2.60393542
+      ],
+      "accepted_flips_range": [
+        26084623,
+        26732257
+      ],
+      "cut_range": [
+        562,
+        564
+      ],
+      "runs": [
+        {
+          "seed": 1,
+          "iterations": 100000000,
+          "accepted_flips": 26732257,
+          "rejected_iterations": 73267743,
+          "cycles": 260393542,
+          "hardware_seconds": 2.60393542,
+          "host_run_interval_seconds": 2.6044894299993757,
+          "host_initialization_seconds": 0.0824099279998336,
+          "best_cut": 562,
+          "file": "results/iterations/board/G11_seed1.json",
+          "sha256": "c6c41f6e2169e06605ffebb1a696f92ae7c7b2f076a7ac44d82c12cc17623da8"
+        },
+        {
+          "seed": 2,
+          "iterations": 100000000,
+          "accepted_flips": 26084623,
+          "rejected_iterations": 73915377,
+          "cycles": 256507738,
+          "hardware_seconds": 2.56507738,
+          "host_run_interval_seconds": 2.566879001999041,
+          "host_initialization_seconds": 0.08265345600011642,
+          "best_cut": 564,
+          "file": "results/iterations/board/G11_seed2.json",
+          "sha256": "966801b8ccd40f7aae38d22f0fa0a72820ad0dcd3fe52f51e14c28bb64fbc678"
+        },
+        {
+          "seed": 3,
+          "iterations": 100000000,
+          "accepted_flips": 26623621,
+          "rejected_iterations": 73376379,
+          "cycles": 259741726,
+          "hardware_seconds": 2.59741726,
+          "host_run_interval_seconds": 2.5987327409966383,
+          "host_initialization_seconds": 0.08307038899874897,
+          "best_cut": 564,
+          "file": "results/iterations/board/G11_seed3.json",
+          "sha256": "6350d2e813770772514c564321999a2b5cdc38c10d462b5633070a080e1f4005"
+        }
+      ]
+    },
+    {
+      "graph": "G15",
+      "iterations_per_run": 100000000,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "median_seconds": 2.28417898,
+      "seconds_range": [
+        2.14802176,
+        2.35932982
+      ],
+      "accepted_flips_range": [
+        19133696,
+        22655497
+      ],
+      "cut_range": [
+        3047,
+        3050
+      ],
+      "runs": [
+        {
+          "seed": 1,
+          "iterations": 100000000,
+          "accepted_flips": 19133696,
+          "rejected_iterations": 80866304,
+          "cycles": 214802176,
+          "hardware_seconds": 2.14802176,
+          "host_run_interval_seconds": 2.1493653869983973,
+          "host_initialization_seconds": 0.08223692200044752,
+          "best_cut": 3050,
+          "file": "results/iterations/board/G15_seed1.json",
+          "sha256": "69c7aeef2dc6a1fa0be4ce1cf4f20b125ebfe0960ec2f5390f85e80a7790cc9c"
+        },
+        {
+          "seed": 2,
+          "iterations": 100000000,
+          "accepted_flips": 21402983,
+          "rejected_iterations": 78597017,
+          "cycles": 228417898,
+          "hardware_seconds": 2.28417898,
+          "host_run_interval_seconds": 2.2854474329978984,
+          "host_initialization_seconds": 0.08659474900196074,
+          "best_cut": 3047,
+          "file": "results/iterations/board/G15_seed2.json",
+          "sha256": "b6d8606aaa4b0c88102450e036ecbfa3ec0cfaa551c712fec85dc48755976d5c"
+        },
+        {
+          "seed": 3,
+          "iterations": 100000000,
+          "accepted_flips": 22655497,
+          "rejected_iterations": 77344503,
+          "cycles": 235932982,
+          "hardware_seconds": 2.35932982,
+          "host_run_interval_seconds": 2.3597345520029194,
+          "host_initialization_seconds": 0.08671308200064232,
+          "best_cut": 3049,
+          "file": "results/iterations/board/G15_seed3.json",
+          "sha256": "600a5dd8da395e850614306fbebfcebf841a66c09076b2a23e55c22828d3a294"
+        }
+      ]
+    }
+  ],
+  "cycle_identity": "active_cycles = iterations + 6 * accepted_flips",
+  "comparison_status": "Reported fixed-budget FPGA runtime. Numeric Fig S3 iteration count and equivalent SpiNNaker2 iteration semantics remain unconfirmed; no matched platform speedup ratio.",
+  "timing_boundary": "Active FPGA compute, including accepted-update drain; excludes bitstream/graph upload and state initialization."
+}

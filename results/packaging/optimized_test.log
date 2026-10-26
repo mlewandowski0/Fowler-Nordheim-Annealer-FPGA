@@ -1,0 +1,214 @@
+python3 scripts/run_sim.py --cycles 100000
+PASS cycles=100000 accepted_flips=11070 best_cut=2559
+- /tmp/qubo-optimized-release-qa-wnz7ohm0/near-memory-qubo/sim/reproduce_tb.sv:112: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 1ms; walltime 0.336 s; speed 3.007 ms/s
+- Verilator: cpu 0.335 s on 1 threads; allocated 7 MB
+
+Independently verified saved assignment: cut=2559
+python3 scripts/test_selector.py
+PASS selector: idle, every unit, and 49974 randomized priority/payload cases
+- /tmp/qubo-optimized-release-qa-wnz7ohm0/near-memory-qubo/sim/selector_tb.sv:34: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 50us; walltime 0.016 s; speed 3.145 ms/s
+- Verilator: cpu 0.016 s on 1 threads; allocated 7 MB
+
+python3 scripts/test_axi.py
+PASS AXI: independent AW/W, strobes, backpressure, halt/resume, reset, assignment cut=2559
+- /tmp/qubo-optimized-release-qa-wnz7ohm0/near-memory-qubo/sim/axi_tb.sv:98: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: $finish at 1ms; walltime 0.334 s; speed 3.927 ms/s
+- Verilator: cpu 0.334 s on 1 threads; allocated 8 MB
+
+python3 scripts/audit_results.py
+{
+  "groups": [
+    {
+      "folder": "paper_writing/simulation_results/LFSR_6bit_UNITS=25_N=800",
+      "runs": 40,
+      "mean_gap_to_paper_reference_3050": 122.425,
+      "best_cut": 2942.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "paper_writing/simulation_results/LFSR_7bit_UNITS=25_N=800",
+      "runs": 30,
+      "mean_gap_to_paper_reference_3050": 108.63333333333334,
+      "best_cut": 2956.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "paper_writing/simulation_results/LFSR_8bit_UNITS=25_N=800",
+      "runs": 30,
+      "mean_gap_to_paper_reference_3050": 97.36666666666666,
+      "best_cut": 2966.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "paper_writing/simulation_results/MT_UNITS=25_N=800",
+      "runs": 30,
+      "mean_gap_to_paper_reference_3050": 97.9,
+      "best_cut": 2964.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "paper_writing/simulation_results/halon_UNITS=25_N=800",
+      "runs": 30,
+      "mean_gap_to_paper_reference_3050": 101.26666666666667,
+      "best_cut": 2964.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 9900000,
+      "max_last_logged_iteration": 9900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/LFSR_6bit_UNITS=25_N=800",
+      "runs": 20,
+      "mean_gap_to_paper_reference_3050": 5.05,
+      "best_cut": 3049.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 49300000,
+      "max_last_logged_iteration": 99900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/LFSR_7bit_UNITS=25_N=800",
+      "runs": 21,
+      "mean_gap_to_paper_reference_3050": 2.3333333333333335,
+      "best_cut": 3049.0,
+      "runs_at_best": 19,
+      "min_last_logged_iteration": 99900000,
+      "max_last_logged_iteration": 99900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/LFSR_8bit_UNITS=25_N=800",
+      "runs": 26,
+      "mean_gap_to_paper_reference_3050": 1.1153846153846154,
+      "best_cut": 3050.0,
+      "runs_at_best": 1,
+      "min_last_logged_iteration": 32900000,
+      "max_last_logged_iteration": 99900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/MT_UNITS=25_N=800",
+      "runs": 21,
+      "mean_gap_to_paper_reference_3050": 2.761904761904762,
+      "best_cut": 3049.0,
+      "runs_at_best": 20,
+      "min_last_logged_iteration": 65400000,
+      "max_last_logged_iteration": 99900000
+    },
+    {
+      "folder": "python_code/runs/iter=1e8_PC/halon_UNITS=25_N=800",
+      "runs": 22,
+      "mean_gap_to_paper_reference_3050": 1.0,
+      "best_cut": 3049.0,
+      "runs_at_best": 22,
+      "min_last_logged_iteration": 38700000,
+      "max_last_logged_iteration": 99900000
+    }
+  ],
+  "historical_curve": {
+    "file": "paper_writing/current_best.txt",
+    "sha256": "45f6440dcc4f03a312907ed6a375169c1873c82934c399000ac27049529920e4",
+    "points": 661,
+    "best_cut": 3049,
+    "first_cycle_at_3049": 75516185
+  },
+  "limitations": [
+    "Logs do not contain completion markers or saved assignments.",
+    "The exact 20-run population for Table I is not identified; all available logs are included.",
+    "A last logged iteration is not proof of successful run completion."
+  ]
+}
+{
+  "workload": "G15, N=800, 25 units, 32 variables/unit, at least 100 million accepted flips",
+  "cooling_period": 65536,
+  "runs": [
+    {
+      "file": "results/performance/board/bench_50_seed1.json",
+      "seed": 1,
+      "clock_mhz": 50.0,
+      "cycles": 1133118657,
+      "accepted_flips": 100008280,
+      "flip_overshoot": 8280,
+      "hardware_seconds": 22.66237314,
+      "normalized_seconds_per_100m_flips": 22.66049685086075,
+      "best_cut": 3050,
+      "sha256": "d26867ee1ed631dcd10fa009613d70d84e009d11d95bfecfda795d21413bcaae"
+    },
+    {
+      "file": "results/performance/board/bench_fast_seed1.json",
+      "seed": 1,
+      "clock_mhz": 142.857143,
+      "cycles": 1134167509,
+      "accepted_flips": 100101202,
+      "flip_overshoot": 101202,
+      "hardware_seconds": 7.939172555060828,
+      "normalized_seconds_per_100m_flips": 7.931146076608378,
+      "best_cut": 3050,
+      "sha256": "99ba87b50d921ce4da8121a8ca0a225d0772e5f0e9a8ce76771ca3611aa791c3"
+    },
+    {
+      "file": "results/performance/board/bench_fast_seed2.json",
+      "seed": 2,
+      "clock_mhz": 142.857143,
+      "cycles": 1086151509,
+      "accepted_flips": 100092171,
+      "flip_overshoot": 92171,
+      "hardware_seconds": 7.603060555396939,
+      "normalized_seconds_per_100m_flips": 7.596059191679377,
+      "best_cut": 3049,
+      "sha256": "97c67a84e5692dcfbe686a28babdef7e3bcf80f50140ba3c9bb4e3b3f40b454d"
+    },
+    {
+      "file": "results/performance/board/bench_fast_seed3.json",
+      "seed": 3,
+      "clock_mhz": 142.857143,
+      "cycles": 1048257206,
+      "accepted_flips": 100049013,
+      "flip_overshoot": 49013,
+      "hardware_seconds": 7.337800434662199,
+      "normalized_seconds_per_100m_flips": 7.334205720412453,
+      "best_cut": 3049,
+      "sha256": "28ce15b6aa23e2094a6331b06f10f32696577ffa15857c49d6514f1365afef69"
+    }
+  ],
+  "median_fast_seconds_per_100m_flips": 7.596059191679377,
+  "median_fast_accepted_flips_per_second": 13164721.005536487,
+  "matched_seed1_gain_over_50mhz": 2.8571528795433725,
+  "historical_reference_source": "paper_writing/comparison.ipynb",
+  "historical_reference_sha256": "5ef9ecd63aebf9232112245b62e250902777b739419effbb686c417e3ca82417",
+  "historical_reported_references": [
+    {
+      "platform": "Intel Core Ultra 9 185H",
+      "reported_seconds": 504,
+      "ratio_to_current_fpga_median": 66.3501938679039
+    },
+    {
+      "platform": "SpiNNaker2",
+      "reported_seconds": 2460,
+      "ratio_to_current_fpga_median": 323.85213673619756
+    },
+    {
+      "platform": "Original FPGA website value",
+      "reported_seconds": 20,
+      "ratio_to_current_fpga_median": 2.632944201107297
+    }
+  ],
+  "comparison_status": "FPGA measurements reproduced; CPU/SpiNNaker2 numbers are historical reported references, not newly reproduced controlled speedups.",
+  "limitations": [
+    "Host polling stops slightly above 100 million accepted flips; exact counts and overshoot are recorded. The normalized duration scales the measured cycles by 100M/actual flips.",
+    "Hardware durations exclude host initialization and bitstream loading.",
+    "The original CPU/SpiNNaker2 raw timing traces and exact meaning of flips were not found in the supplied archive.",
+    "Different arithmetic, candidate-selection and cooling implementations can change solution quality and workload cost.",
+    "Vivado power reports are estimates; no measured board energy comparison is made."
+  ]
+}
+PASS saved assignment: 3050 cut edges, 800 vertices

@@ -1,7 +1,0 @@
-Running: xsim.dir/tb_fixed_mult_dsp_func_synth/xsimk -simmode gui -wdb tb_fixed_mult_dsp_func_synth.wdb -simrunnum 0 -socket 35973
-Design successfully loaded
-Design Loading Memory Usage: 181088 KB (Peak: 181088 KB)
-Design Loading CPU Usage: 650 ms
-Simulation completed
-Simulation Memory Usage: 267444 KB (Peak: 320356 KB)
-Simulation CPU Usage: 670 ms

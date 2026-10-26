@@ -1,3 +1,0 @@
-/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/vitis_software/fw_ann_Neq800_flips_and_uart/zynq_fsbl/build/CMakeFiles/fsbl.elf.dir
-/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/vitis_software/fw_ann_Neq800_flips_and_uart/zynq_fsbl/build/CMakeFiles/edit_cache.dir
-/home/mlewand/Desktop/PROJS/Fowler-Nordheim-Annealer-FPGA/vitis_software/fw_ann_Neq800_flips_and_uart/zynq_fsbl/build/CMakeFiles/rebuild_cache.dir

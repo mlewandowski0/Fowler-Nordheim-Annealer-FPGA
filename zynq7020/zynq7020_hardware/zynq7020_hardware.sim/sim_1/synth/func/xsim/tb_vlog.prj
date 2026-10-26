@@ -1,7 +1,0 @@
-# compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/ec67/hdl" --include "../../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/86fe/hdl" --include "../../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/f0b6/hdl/verilog" --include "../../../../../zynq7020_hardware.gen/sources_1/bd/design_1_N_eq_800/ipshared/0127/hdl/verilog" --include "../../../../../zynq7020_hardware.gen/sources_1/bd/whole_system/ipshared/ec67/hdl" --include "../../../../../zynq7020_hardware.gen/sources_1/bd/whole_system/ipshared/86fe/hdl" --include "../../../../../zynq7020_hardware.gen/sources_1/bd/whole_system/ipshared/f0b6/hdl/verilog" --include "../../../../../zynq7020_hardware.gen/sources_1/bd/whole_system/ipshared/0127/hdl/verilog" --include "../../../../../zynq7020_hardware.srcs/sim_1/imports/design-files" --include "/home/mlewand/tools/Vivado/2024.2/data/xilinx_vip/include" \
-"tb_func_synth.v" \
-"../../../../../zynq7020_hardware.srcs/sim_1/new/tb_system_wrapper2.v" \
-
-# Do not sort compile order
-nosort

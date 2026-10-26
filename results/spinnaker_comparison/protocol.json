@@ -1,0 +1,56 @@
+{
+  "purpose": "Quality-matched literature comparison with SpiNNaker2; no direct hardware rerun or matched speedup claim",
+  "graphs": [
+    "G4",
+    "G11",
+    "G15"
+  ],
+  "targets": {
+    "G4": 11646,
+    "G11": 564,
+    "G15": 3050
+  },
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "accepted_flip_budget": 10000000,
+  "clock_mhz": 100,
+  "cooling_period": 65536,
+  "target_rule": "Primary targets are the shared Gset reference scores, not the previous 99%-of-reference threshold. Secondary targets match the generic NeuroSA column in 2026 Table S1; that column does not distinguish CPU from SpiNNaker2.",
+  "rng_note": "Deterministic LFSR seed sweep; not a proof of independent identically distributed restart trials",
+  "selection_rule": "Use all 30 predeclared settings; no cooling sweep or per-graph tuning",
+  "secondary_targets": {
+    "G4": 11641,
+    "G11": 564,
+    "G15": 3049
+  }
+}
