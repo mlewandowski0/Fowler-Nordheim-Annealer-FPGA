@@ -10,7 +10,29 @@
 
 </div>
 
-![Best assignments read back from a Zynq-7020 during two board runs. Sudoku reaches a valid solution in 15.9 ms; G15 MAX-CUT climbs to its best-known cut, with the two sets drawn side by side and cut edges crossing between them.](docs/assets/fpga-search.gif)
+## Why combinatorial optimization
+
+Many hard problems in computer science come down to picking the best of an astronomically large set of
+discrete choices: placing and routing a chip, scheduling jobs or flights, allocating registers in a
+compiler, partitioning a network, assembling DNA fragments, selecting a portfolio. Most are NP-hard, so
+in practice they are solved with heuristics such as simulated annealing that need many millions of small
+steps. A large family of them can be written in one common form, **QUBO** (quadratic unconstrained binary
+optimization) or its equivalent, the Ising model, so a fast QUBO solver speeds up all of them at once.
+Here it solves **MAX-CUT** benchmark graphs and **Sudoku**.
+
+## Why near-memory
+
+Each annealing step does almost no arithmetic (an addition and a comparison) but touches memory: flipping
+one variable changes the local field of every neighbour. On a CPU or GPU the search is therefore limited by
+moving data rather than by computing. This accelerator splits the problem across many small units, each
+keeping its slice of the QUBO matrix, its variables and their local fields **in on-chip memory next to
+the logic that updates them**. All units propose flips in the same clock cycle, and an accepted flip is a
+single broadcast that every unit applies to its own memory in parallel, with no off-chip traffic during
+the search.
+
+## Results on the FPGA
+
+![Best assignments read back from a Zynq-7020 during two board runs. Sudoku reaches a valid solution in 15.9 ms; G15 MAX-CUT climbs to its best-known cut of 3,050, shown on a zoomed window of 28 vertices coloured by group.](docs/assets/fpga-search.gif)
 
 Solutions read back from the FPGA during two board runs, on one device-time axis.
 Sudoku is solved in **15.9 ms**; the 800-vertex G15 MAX-CUT reaches its best-known
@@ -39,9 +61,9 @@ cooling schedule for all graphs, the best of three seeds reaches the **best-know
 
 ![Zynq-7020 system: PYNQ on the ARM cores configures the accelerator over AXI4-Lite; M units with local Q fragments, membranes and noise generators feed a spike selector and scheduler, which broadcasts each accepted flip back to every unit.](docs/assets/zynq-system.svg)
 
-The graph is split across units that each keep their slice of the problem **next to the logic that uses it**.
-Every cycle, all units propose a flip in parallel; one is accepted and broadcast, and every unit updates
-its own local fields. The animation runs the paper's figure on a 12-variable simulation of the RTL:
+A PYNQ host on the Zynq's ARM cores loads the problem and reads back results; the search itself runs
+entirely in programmable logic. The animation steps through one accepted flip on the paper's architecture
+figure, driven by a 12-variable simulation of the RTL:
 
 [![The paper's architecture figure with the active blocks highlighted step by step, above a register view of a 12-variable RTL simulation with cycles and time.](docs/assets/architecture.gif)](https://mlewandowski0.github.io/Fowler-Nordheim-Annealer-FPGA/docs/assets/architecture.html)
 
