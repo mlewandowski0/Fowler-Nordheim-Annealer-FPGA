@@ -2,9 +2,9 @@
   "generator": "scripts/render_readme_visuals.py",
   "templates": {
     "scripts/visuals/architecture.html": "ecee867fd88c99cc38f4efc4d61fe92b0a823e4d5eced4c9c7cbe9f9b37811cb",
-    "scripts/visuals/fpga-search.html": "36f5bae29f586c74b943da5d54e90473291ed6ab4c322d6aa4c355fafd3992ef"
+    "scripts/visuals/fpga-search.html": "3fb09099ec87fef6e2a777c671f3ff2e04b8460a8362821ec26c75bbd42e8967"
   },
-  "generator_sha256": "ec9f4d499e933aa093d30c45d8917a770a671db2b38be7a40ba8acaa3660e206",
+  "generator_sha256": "632168771f970a0a7564fd6a5affbe0266078af9d1fca480f141c741f431f4b0",
   "base_figure": {
     "diagrams/final_diagram_simplified.svg": "187c74851cc2538bd97b63c3a54ebb81ba17f07eaea8369b02b4da0b2efd5d37"
   },
@@ -19,8 +19,8 @@
     "architecture-still.png": "5f849747a38db5f12f90847f1dad448df25f9d69c5f64d8f85a41f2c227d6d08",
     "architecture.gif": "27625e9eed7fde8e4bb2f231807b14d3bae03650ac705e953c5bfd9f06d1f534",
     "architecture.html": "2e1ed592a0a3ccf8494477d4631711a749487cf60be5dd17844a003548e95b73",
-    "fpga-search-still.png": "261611794a661f37e51eadb2557c48adc40c10e61b37637dd8cb1630818488ce",
-    "fpga-search.gif": "510a906365caece7f8cc560103056e62737c8f864e2f411fed1159aa04b7e75b",
+    "fpga-search-still.png": "9be8a291df591c99441303d47a2f53b59e3a055217275cee07df723262b4c994",
+    "fpga-search.gif": "aaf91f619388ba1792326fcf23ca83aa4508a5a805d12997435e95fe2d95e676",
     "zynq-system.png": "96eef013808b3d1d4e83346794f7b3a6bf4be83e40fbc809e8129adc749dbd12",
     "zynq-system.svg": "4cbfeda6058a91cba69fb7788fa729da93858ace7d7c90e033c0e7c424bd7f76"
   }

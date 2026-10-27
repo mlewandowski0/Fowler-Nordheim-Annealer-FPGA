@@ -12,6 +12,7 @@ audit:
 	python3 scripts/audit_comparison.py
 	python3 scripts/audit_gset_inputs.py
 	python3 scripts/summarize_gset.py
+	python3 scripts/summarize_gset100m.py
 	python3 scripts/summarize_spinnaker.py
 	python3 scripts/summarize_iterations.py
 overlay:

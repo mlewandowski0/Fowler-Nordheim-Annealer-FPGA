@@ -73,6 +73,29 @@ is rescored both against the parsed symmetric matrix and directly against the
 original sparse text edge list. Plans, all attempts, graph hashes, artifact
 hashes, tool reports and driver versions are retained under `results/gset/`.
 
+## 100M accepted flips
+
+A second batch gives every run 100M accepted flips (10× the budget above) and
+stretches the cooling schedule to match: the temperature steps down every
+4,194,304 cycles instead of 65,536, so the 512-step schedule spans most of the
+run instead of its first third. The period was chosen once for all graphs, on a
+pilot with seed 101 (not an evaluation seed) over 2^20–2^23, and saved in
+[`protocol.json`](../results/gset100m/protocol.json) before the evaluation.
+All 117 runs (39 graphs × seeds 1–3, same 100 MHz builds) are kept and rescored
+by `scripts/summarize_gset100m.py`.
+
+| Metric, 37 table graphs | 10M flips | 100M flips |
+| --- | ---: | ---: |
+| Best of 3 reaches the best-known cut | 8 | **25** |
+| Best of 3 within 0.12% of best known | 19 | **37** |
+| Worst seed ≥ NeuroSA's worst published run | — | **20** |
+| Median time per run | 1.0–4.3 s | 9.4–27.8 s |
+
+NeuroSA's published column (Supplementary Tables S1/S2) is the worst case over
+its runs, so it is compared with our worst seed. The largest remaining gaps are
+G36 and G38 (2,000 vertices) and G21; G15 reached 3,049 on all three seeds here,
+although 3,050 appears in the 10M batch. [Per-graph results](../results/gset100m/summary.json).
+
 ## CPU: two concrete comparisons
 
 The CPU baseline uses Zihao Chen's **unmodified public NumPy NeuroSA update

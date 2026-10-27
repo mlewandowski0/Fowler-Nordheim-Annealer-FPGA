@@ -22,7 +22,7 @@ for directory in ['results800','results1000','results2000','comparison800']:
    assert t['reached']==(d['best_cut']>=t['cut']) if t['cut']>0 else not t['reached']
    if t['reached']:assert 0<t['first_hit_cycle']<=d['cycles'] and abs(t['hardware_seconds']-t['first_hit_cycle']/(d['clock_mhz']*1e6))<1e-10
   if 'runner_sha256'in d:
-   allowed_drivers={hashlib.sha256(f.read_bytes()).hexdigest()for f in [ROOT/'scripts/run_gset_board.py',out/'provenance/run_gset_board_800.py',out/'provenance/run_gset_board_expanded.py']}
+   allowed_drivers={hashlib.sha256(f.read_bytes()).hexdigest()for f in [ROOT/'scripts/run_gset_board.py',out/'provenance/run_gset_board_800.py',out/'provenance/run_gset_board_expanded.py',out/'provenance/run_gset_board_targets.py']}
    allowed_models={hashlib.sha256(f.read_bytes()).hexdigest()for f in [ROOT/'scripts/gset_model.py',out/'provenance/gset_model_800.py',out/'provenance/gset_model_expanded.py']}
    assert d['runner_sha256']in allowed_drivers and d['model_sha256']in allowed_models
   d['file']=str(p.relative_to(ROOT));d['file_sha256']=hashlib.sha256(p.read_bytes()).hexdigest();records.append((directory,d))

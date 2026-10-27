@@ -1,0 +1,32 @@
+G1 101 11624 100000000 24.053432
+G11 101 564 100000000 9.630645
+Traceback (most recent call last):
+  File "/home/xilinx/qubo_gset100m/scripts/run_gset_board.py", line 77, in <module>
+    if __name__=='__main__':main()
+  File "/home/xilinx/qubo_gset100m/scripts/run_gset_board.py", line 73, in main
+    assert (hit>0)==(target>0 and measured>=target) and hit<=cycles
+AssertionError
+G43 101 6660 100000000 13.687858
+Completed 1 runs
+G22 101 13324 100000000 15.856944
+G35 101 7669 100000000 9.966819
+Completed 2 runs
+G1 101 11624 100000000 22.223671
+G11 101 564 100000000 9.486533
+G15 101 3049 100000000 9.971876
+Completed 3 runs
+G43 101 6660 100000000 12.933685
+Completed 1 runs
+G22 101 13329 100000000 12.974459
+G35 101 7681 100000000 9.798279
+Completed 2 runs
+G1 101 11624 100000000 18.529703
+G11 101 564 100000000 9.341432
+G15 101 3049 100000000 9.636431
+Completed 3 runs
+G43 101 6660 100000000 11.663658
+Completed 1 runs
+G22 101 13359 100000000 12.635735
+G35 101 7681 100000000 9.487151
+Completed 2 runs
+DONE

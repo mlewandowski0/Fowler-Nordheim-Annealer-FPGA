@@ -6,7 +6,7 @@ animation, a still image, and (for the architecture) an interactive page.
 | Asset | Content | Source data |
 | --- | --- | --- |
 | `assets/fpga-search.gif`, `fpga-search-still.png` | Board replay: Sudoku and G15 best assignments | `results/demo/classic/fpga_seed1.json`, `results/demo/g15/sweep/fpga_seed10.json` |
-| `assets/speed.png`, `assets/gset.png` | Speed and Gset quality charts | `results/gset/summary.json`, `results/spinnaker_comparison/summary.json` |
+| `assets/speed.png`, `assets/gset.png` | Speed and Gset quality charts | `results/gset/summary.json`, `results/gset100m/summary.json`, `results/spinnaker_comparison/summary.json` |
 | `assets/zynq-system.svg` (+ PNG) | Logical system block diagram | Hand-drawn; reflects the maintained RTL and drivers |
 | `assets/architecture.gif`, `architecture-still.png`, `architecture.html` | The paper figure, animated with a 12-variable RTL trace | `diagrams/final_diagram_simplified.svg`, `results/readme/tiny12/` |
 
@@ -26,11 +26,14 @@ Zynq-7020:
 Both runs are placed on one **device-time axis**: active cycles divided by the
 build's clock. Readout pauses are not counted. The replay advances
 logarithmically in device time so the early, fast improvements stay visible;
-the charts use the same log axis. G15 is drawn as the two sets of the
-partition side by side: edges crossing between them are cut (grey), edges
-inside one set are not (red arcs). Within a set, vertices are ordered by the
-graph's Fiedler vector so neighbours sit close; when a vertex changes sides it
-slides across over two in-between frames. Sudoku cells that repeat a digit in
+the charts use the same log axis. G15 has 800 vertices and 4,661 edges, too
+many to draw legibly, so the replay zooms on a fixed 28-vertex window of the
+real graph, coloured by the board's assignment: solid edges join the two groups
+(they count toward the cut), dashed red edges do not. The window is chosen
+deterministically (`g15_window` in the renderer: densest window grown from
+low-degree vertices) and laid out by stress majorization; the full-graph cut
+is shown beside it. Vertices that switched group since the previous saved state
+are ringed for one frame. Sudoku cells that repeat a digit in
 a row, column or box are marked red. The renderer independently re-checks every
 Sudoku objective, clue and solution and recounts every G15 crossing edge. The
 replay's short captures are not runtime benchmarks: use

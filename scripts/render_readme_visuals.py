@@ -24,7 +24,8 @@ BUILD = ROOT/'build/visuals'
 TINY_CLOCK_MHZ = 100.0     # clock of the loadable overlays built from the same core
 G15_BEST_KNOWN = 3050      # best-known G15 cut (paper Table I; independently reached on the board)
 ARCH_STEP_MS, ARCH_FAST_MS, ARCH_END_MS = 2300, 150, 4500
-SEARCH_FRAMES, SEARCH_FRAME_MS, SEARCH_TWEEN_MS, SEARCH_START_MS, SEARCH_END_MS = 110, 120, 70, 1500, 6000
+SEARCH_FRAMES, SEARCH_FRAME_MS, SEARCH_TWEEN_MS, SEARCH_START_MS, SEARCH_END_MS = 110, 120, 200, 1500, 6000
+WINDOW_SIZE = 28        # vertices of G15 drawn in the zoomed window
 G15_RECORDING = ROOT/'results/demo/g15/sweep/fpga_seed10.json'
 
 
@@ -85,18 +86,61 @@ def architecture_data(d):
     return out
 
 
+def g15_window(edges, n, size=WINDOW_SIZE):
+    """A small connected window of G15 that can be drawn legibly.
+
+    Deterministic: grow from each of the 200 lowest-degree vertices, always adding
+    the neighbour with most edges into the window (vertices of degree <= 40 only),
+    and keep the window with the most internal edges. Lay it out by stress
+    majorization on its own shortest-path distances.
+    """
+    nb = [set() for _ in range(n)]
+    for a, b in edges: nb[a].add(b); nb[b].add(a)
+    deg = np.array([len(x) for x in nb])
+    best = None
+    for v0 in np.argsort(deg, kind='stable')[:200]:
+        S = [int(v0)]
+        while len(S) < size:
+            cand = {u for v in S for u in nb[v]} - set(S)
+            S.append(max(cand, key=lambda u: (len(nb[u] & set(S)), -deg[u], -u)))
+        m = sum(a in S and b in S for a, b in edges)
+        if deg[S].max() <= 40 and (best is None or m > best[0]):
+            best = (m, S)
+    S = best[1]; idx = {v: i for i, v in enumerate(S)}
+    W = [(idx[a], idx[b]) for a, b in edges if a in idx and b in idx]
+    D = np.full((size, size), float(size))
+    for i in range(size):
+        dist = {i: 0}; frontier = [i]
+        while frontier:
+            nxt = []
+            for u in frontier:
+                for a, b in W:
+                    for x, y in ((a, b), (b, a)):
+                        if x == u and y not in dist: dist[y] = dist[u]+1; nxt.append(y)
+            frontier = nxt
+        for j, v in dist.items(): D[i, j] = v
+    X = np.random.default_rng(1).normal(size=(size, 2))
+    Wt = 1/np.where(D > 0, D, 1)**2; np.fill_diagonal(Wt, 0)
+    L = -Wt.copy(); np.fill_diagonal(L, Wt.sum(1))
+    for _ in range(500):
+        dd = np.linalg.norm(X[:, None]-X[None], axis=2); np.fill_diagonal(dd, 1)
+        B = -Wt*D/dd; np.fill_diagonal(B, 0); np.fill_diagonal(B, -B.sum(1))
+        X = np.linalg.solve(L+1/size, B@X)
+    # Put the long axis horizontal, then normalise both axes by the same factor.
+    X = X - X.mean(0); X = X @ np.linalg.svd(X, full_matrices=False)[2].T
+    X = (X - X.min(0)) / (X.max(0) - X.min(0)).max()
+    X[:, 1] += (1 - X[:, 1].max()) / 2
+    return S, np.round(X, 4).tolist(), W
+
+
 def search_data(s, g):
     sudoku = {'clock_mhz': s['clock_mhz'], 'puzzle': s['problem']['puzzle'], 'target': -81, 'seed': s['seed'],
               'end_ms': s['final_cycle']/(s['clock_mhz']*1e3),
               'frames': [{k: f[k] for k in ['cycle', 'grid', 'energy', 'filled_cells', 'conflict_pairs', 'solved']} | {'bad': conflicts(f['grid'])}
                          for f in s['frames']]}
-    # Order vertices by the Fiedler vector so graph neighbours sit close together in the drawing.
-    n = len(g['frames'][0]['bits']); adj = np.zeros((n, n))
-    for a, b in g['edges']: adj[a, b] = adj[b, a] = 1
-    fiedler = np.linalg.eigh(np.diag(adj.sum(1)) - adj)[1][:, 1]
-    rank = np.empty(n, dtype=int); rank[np.argsort(fiedler, kind='stable')] = np.arange(n)
+    window, xy, window_edges = g15_window(g['edges'], len(g['frames'][0]['bits']))
     maxcut = {'clock_mhz': g['clock_mhz'], 'best_known': G15_BEST_KNOWN, 'end_ms': g['final_cycle']/(g['clock_mhz']*1e3),
-              'seed': g['seed'], 'edges': g['edges'], 'rank': rank.tolist(),
+              'seed': g['seed'], 'edge_count': len(g['edges']), 'window': window, 'xy': xy, 'window_edges': window_edges,
               'frames': [{k: f[k] for k in ['cycle', 'bits', 'cut']} for f in g['frames']]}
     assert s['frames'][-1]['solved'] and s['frames'][-1]['energy'] == -81
     # Log-spaced device times from 50 µs to just past the last G15 improvement, starting at t = 0.

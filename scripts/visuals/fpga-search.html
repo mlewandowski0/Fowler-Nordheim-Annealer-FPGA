@@ -34,11 +34,11 @@ header p { margin: 0; font-size: 14px; color: var(--muted); }
 .sudoku div.clue { color: var(--ink); background: var(--soft); }
 .sudoku div.bad { background: #fde2e1; color: var(--accent); }
 .sudoku div.c3 { border-right: 2px solid var(--ink); } .sudoku div.r3 { border-bottom: 2px solid var(--ink); }
-.cutview { flex: none; position: relative; width: 290px; height: 238px; }
-.cutview canvas { position: absolute; left: 0; top: 18px; }
-.cutview .side { position: absolute; top: 0; font-size: 12px; font-weight: 700; }
-.legend { display: flex; gap: 12px; font-size: 12px; color: var(--muted); align-items: center; margin-top: 2px; }
+.zoom { flex: none; width: 290px; }
+.zoom .cap { font-size: 12px; color: var(--muted); margin-bottom: 2px; }
+.legend { display: flex; flex-wrap: wrap; gap: 3px 12px; font-size: 12px; color: var(--muted); align-items: center; margin-top: 2px; }
 .legend i { display: inline-block; width: 16px; height: 0; border-top: 2px solid; margin-right: 5px; vertical-align: 3px; }
+.legend b { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
 .chart { margin-top: 10px; }
 footer { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 8px; }
 </style>
@@ -59,9 +59,10 @@ footer { display: flex; justify-content: space-between; font-size: 12px; color: 
     <div class="rule"></div>
     <section class="col">
       <h2>G15 MAX-CUT <span>800 vertices · 4,661 edges · 142.857 MHz build</span></h2>
-      <div class="body"><div><div class="cutview"><span class="side" style="left:30px;color:var(--plus)">Set A</span>
-          <span class="side" style="right:30px;color:#b37a00">Set B</span><canvas id="cut" width="290" height="220"></canvas></div>
-        <div class="legend"><span><i style="border-color:#7d848c"></i>cut edge (counts)</span><span><i style="border-color:var(--accent)"></i>uncut edge</span></div></div>
+      <div class="body"><div class="zoom"><div class="cap">Zoom on 28 of the 800 vertices</div>
+        <canvas id="cut" width="290" height="212"></canvas>
+        <div class="legend"><span><b style="background:var(--plus)"></b>A</span><span><b style="background:var(--minus)"></b>B</span>
+          <span><i style="border-color:#5d636b"></i>cut (A–B)</span><span><i style="border-color:var(--accent);border-top-style:dashed"></i>not cut</span><span><b style="background:#fff;border:2.5px solid #1b1d20;width:6px;height:6px"></b>switched</span></div></div>
         <div class="stats" id="gstats"></div></div>
       <svg class="chart" id="gchart" width="452" height="168"></svg>
     </section>
@@ -133,51 +134,46 @@ function render(t, prevK, u) {
   chart(document.getElementById('schart'), S, t, 'energy', -85, -28, [-30, -50, -70], S.target, 'valid solution, energy −81', 'Energy');
   // MAX-CUT: the two sets side by side; nodes slide across when they flip.
   const k = at(G, t), kp = prevK === undefined ? k : prevK, gf = G.frames[k], gp = G.frames[kp];
-  drawCut(gp.bits, gf.bits, u === undefined ? 1 : u);
+  drawWindow(gp.bits, gf.bits, u === undefined ? 1 : u);
   const pct = 100 * gf.cut / G.best_known, best = gf.cut >= G.best_known;
   document.getElementById('gstats').innerHTML =
-    `<div><div class="k">Cut</div><div class="v">${num(gf.cut)}</div><div class="s">of ${num(G.edges.length)} edges</div></div>
+    `<div><div class="k">Cut</div><div class="v">${num(gf.cut)}</div><div class="s">of ${num(G.edge_count)} edges</div></div>
      <div><div class="k">Best known</div><div class="v" style="font-size:20px">${pct.toFixed(1)}%</div><div class="s">of ${num(G.best_known)}</div></div>
      <div><div class="k">Cycle</div><div class="s" style="color:var(--ink);font-size:14px">${gf.cycle.toLocaleString('en')} · ${fmt(ms(gf, G))}</div>
      ${best ? `<div class="flag">Best-known cut at ${fmt(ms(gf, G))}</div>` : '<div class="s">searching</div>'}</div>`;
   chart(document.getElementById('gchart'), G, t, 'cut', 2500, G.best_known + 30, [2500, 2750, 3000], G.best_known, `best known ${num(G.best_known)}`, 'Cut');
   document.getElementById('footl').textContent = `Sudoku seed ${S.seed} · G15 seed ${G.seed} · capture pauses between 25k-cycle chunks`;
 }
-// Node slots: columns within each set, ordered by the graph's Fiedler vector so neighbours sit close.
-const CW = 290, CH = 220, COLS = 8, DX = 7, ROWS = Math.ceil(800 / COLS), LEFT = 38, RIGHT = CW - 38 - (COLS - 1) * DX;
-function slot(i, side) {
-  const r = G.rank[i], col = r % COLS, row = Math.floor(r / COLS);
-  return [(side ? LEFT + col * DX : RIGHT + (COLS - 1 - col) * DX), 4 + row * (CH - 8) / (ROWS - 1)];
-}
-function drawCut(prevBits, bits, u) {
+// Zoomed window: real vertices and edges of G15 with the board's assignment.
+// In-between views ring the vertices that change group: first in the old colour, then the new.
+const CW = 290, CH = 212, PAD = 10;
+function drawWindow(prevBits, bits, u) {
   const ctx = document.getElementById('cut').getContext('2d');
   ctx.clearRect(0, 0, CW, CH);
-  const ease = u < 1 ? u * u * (3 - 2 * u) : 1;
-  const P = Array.from({ length: 800 }, (_, i) => {
-    const a = slot(i, prevBits[i] === '1'), b = slot(i, bits[i] === '1');
-    return [a[0] + (b[0] - a[0]) * ease, a[1] + (b[1] - a[1]) * ease];
+  const xs = G.xy.map(p => p[0]), ys = G.xy.map(p => p[1]);
+  const x0 = Math.min(...xs), y0 = Math.min(...ys), w = Math.max(...xs) - x0, h = Math.max(...ys) - y0;
+  const sc = Math.min((CW - 2 * PAD) / w, (CH - 2 * PAD) / h), ox = (CW - w * sc) / 2, oy = (CH - h * sc) / 2;
+  const P = G.xy.map(([x, y]) => [ox + (x - x0) * sc, oy + (y - y0) * sc]);
+  const shown = u < 0.5 ? prevBits : bits, side = v => shown[G.window[v]];
+  for (const [a, b] of G.window_edges) {
+    const cut = side(a) !== side(b);
+    ctx.beginPath(); ctx.moveTo(...P[a]); ctx.lineTo(...P[b]);
+    ctx.setLineDash(cut ? [] : [4, 3]); ctx.lineWidth = cut ? 1.6 : 1.3;
+    ctx.strokeStyle = cut ? '#5d636b' : '#d1242f'; ctx.stroke();
+  }
+  ctx.setLineDash([]);
+  G.window.forEach((v, i) => {
+    const flips = u < 1 && prevBits[v] !== bits[v];
+    ctx.beginPath(); ctx.arc(...P[i], 7, 0, 2 * Math.PI);
+    ctx.fillStyle = shown[v] === '1' ? '#0072b2' : '#e69f00'; ctx.fill();
+    ctx.lineWidth = flips ? 3 : 1.5; ctx.strokeStyle = flips ? '#1b1d20' : '#ffffff'; ctx.stroke();
   });
-  ctx.lineWidth = 0.5; ctx.strokeStyle = 'rgba(93,99,107,0.13)'; ctx.beginPath();
-  for (const [a, b] of G.edges) if (bits[a] !== bits[b]) { ctx.moveTo(...P[a]); ctx.lineTo(...P[b]); }
-  ctx.stroke();
-  // Uncut edges bow outward, away from the gap, so they do not hide the cut.
-  ctx.lineWidth = 0.6; ctx.strokeStyle = 'rgba(209,36,47,0.22)'; ctx.beginPath();
-  for (const [a, b] of G.edges) if (bits[a] === bits[b]) {
-    const left = bits[a] === '1', bow = Math.min(34, 8 + Math.abs(P[a][1] - P[b][1]) * 0.18);
-    const cx = left ? Math.min(P[a][0], P[b][0]) - bow : Math.max(P[a][0], P[b][0]) + bow;
-    ctx.moveTo(...P[a]); ctx.quadraticCurveTo(cx, (P[a][1] + P[b][1]) / 2, ...P[b]);
-  }
-  ctx.stroke();
-  for (let i = 0; i < 800; i++) {
-    ctx.fillStyle = bits[i] === '1' ? '#0072b2' : '#e69f00';
-    ctx.beginPath(); ctx.arc(P[i][0], P[i][1], 1.35, 0, 2 * Math.PI); ctx.fill();
-  }
 }
 // Replay sequence: one view per time step, plus two in-between views whenever G15 improves.
 const SEQ = [];
 DATA.times.forEach((t, j) => {
   const k = at(G, t), kp = j ? at(G, DATA.times[j - 1]) : k;
-  if (k !== kp) for (const u of [0.35, 0.7]) SEQ.push([t, kp, u]);
+  if (k !== kp) SEQ.push([t, kp, 0.7]);  // ring the vertices that just changed group
   SEQ.push([t, k, 1]);
 });
 window.SEQ = SEQ;

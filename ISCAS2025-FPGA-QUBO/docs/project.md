@@ -29,10 +29,11 @@ from a published figure whose iteration count is not reported. [Details](docs/be
 
 ## Accurate
 
-[![Gap to the best-known cut on 37 Gset graphs: the FPGA's best of three seeds is within 0.5% on 36 graphs and exact on 8; published NeuroSA results shown for comparison. Bottom: FPGA compute time, 1–4.3 s per run.](docs/assets/gset.png)](docs/benchmarks.md)
+[![Gap to the best-known cut on 37 Gset graphs with 100M accepted flips per run: the FPGA's worst of three seeds, the range over seeds, and NeuroSA's worst published run. Bottom: FPGA time per run, 9–28 s.](docs/assets/gset.png)](docs/benchmarks.md#100m-accepted-flips)
 
-On the 37 Gset graphs from the NeuroSA paper, the best of three FPGA runs is within **0.5%** of the
-best-known cut on 36 and **exact on 8**, using one fixed configuration (10M accepted flips, 100 MHz).
+On the 37 Gset graphs from the NeuroSA paper, with 100M accepted flips per run (9–28 s on the FPGA) and one
+cooling schedule for all graphs, the best of three seeds reaches the **best-known cut on 25** and is within
+**0.12%** on every graph. Even the worst seed matches or beats NeuroSA's worst published run on 20.
 
 ## How it works
 

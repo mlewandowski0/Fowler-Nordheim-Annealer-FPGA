@@ -6,6 +6,7 @@ SpiNNaker2 runtimes. docs/assets/gset.png: gap to the best-known cut on every
 Gset graph in the original NeuroSA tables, with the FPGA compute time.
 """
 import json
+import math
 from pathlib import Path
 
 import matplotlib
@@ -81,41 +82,46 @@ def speed_chart():
 
 
 def gset_chart():
-    gs = [g for g in json.loads((ROOT/'results/gset/summary.json').read_text())['graphs'] if g['in_tables']]
+    summary = json.loads((ROOT/'results/gset100m/summary.json').read_text())
+    gs = [g for g in summary['graphs'] if g['reference']]
     gap = lambda cut, g: 100*(g['reference']-cut)/g['reference']
+    worst = max(max(gap(g['worst_cut'], g), gap(g['neurosa_worst'], g)) for g in gs)
     fig, (a, b) = plt.subplots(2, 1, figsize=(12, 5.6), sharex=True, gridspec_kw={'height_ratios': [1.35, 1]})
     fig.subplots_adjust(left=.075, right=.985, top=.86, bottom=.15, hspace=.12)
     x = range(len(gs))
     for i, g in enumerate(gs):
-        lo, hi = g['cut_range']
-        a.plot([i, i], [gap(hi, g), gap(lo, g)], color=FPGA, alpha=.35, linewidth=2.2, solid_capstyle='round')
-    a.scatter(x, [gap(g['paper_neurosa_worst'], g) for g in gs], s=46, facecolor='white', edgecolor=CPU, linewidth=1.8, zorder=3)
-    a.scatter(x, [gap(g['best_cut'], g) for g in gs], s=30, color=FPGA, zorder=4)
-    a.set_ylim(2.05, -.12); a.set_yticks([0, .5, 1, 1.5, 2], ['0%', '0.5%', '1.0%', '1.5%', '2.0%'])
+        a.plot([i, i], [gap(g['best_cut'], g), gap(g['worst_cut'], g)], color=FPGA, alpha=.35, linewidth=2.2, solid_capstyle='round')
+    a.scatter(x, [gap(g['neurosa_worst'], g) for g in gs], s=52, facecolor='white', edgecolor=CPU, linewidth=1.8, zorder=3)
+    a.scatter(x, [gap(g['worst_cut'], g) for g in gs], s=30, color=FPGA, zorder=4)
+    top = max(.3, math.ceil(worst*10+.5)/10)
+    a.set_ylim(top, -top*.06)
+    ticks = [t/10 for t in range(0, int(top*10)+1)]
+    a.set_yticks(ticks, [f'{t:.1f}%' for t in ticks])
     a.set_ylabel('Gap to best-known cut', fontsize=10)
     a.axhline(0, color=INK, linewidth=.9)
     a.grid(axis='y', color=GRID); a.set_axisbelow(True)
-    exact = sum(g['best_cut'] >= g['reference'] for g in gs)
-    within = sum(gap(g['best_cut'], g) <= .5 for g in gs)
-    a.legend(handles=[Line2D([], [], color=FPGA, marker='o', linestyle='None', label='FPGA, best of 3 seeds'),
+    a.legend(handles=[Line2D([], [], color=FPGA, marker='o', linestyle='None', label='FPGA, worst of 3 seeds'),
                       Line2D([], [], color=FPGA, alpha=.35, linewidth=2.2, label='FPGA, range over 3 seeds'),
-                      Line2D([], [], marker='o', markerfacecolor='white', markeredgecolor=CPU, markeredgewidth=1.8, linestyle='None', label='NeuroSA, published')],
+                      Line2D([], [], marker='o', markerfacecolor='white', markeredgecolor=CPU, markeredgewidth=1.8, linestyle='None',
+                             label='NeuroSA, worst published run')],
              loc='lower right', ncol=3, frameon=False, fontsize=9.5)
     b.bar(x, [g['median_seconds'] for g in gs], color=FPGA, width=.62)
-    b.set_ylabel('FPGA compute time', fontsize=10); b.set_ylim(0, 5)
-    b.set_yticks([0, 1, 2, 3, 4, 5], ['0', '1 s', '2 s', '3 s', '4 s', '5 s'])
+    top_s = math.ceil(max(g['median_seconds'] for g in gs)/10)*10
+    b.set_ylabel('FPGA time per run', fontsize=10); b.set_ylim(0, top_s)
+    b.set_yticks(range(0, top_s+1, 10), [f'{t} s' for t in range(0, top_s+1, 10)])
     b.grid(axis='y', color=GRID); b.set_axisbelow(True)
     b.set_xticks(list(x), [g['name'] for g in gs], rotation=60, fontsize=8.5, color=INK)
     b.tick_params(axis='x', length=0)
-    # Group brackets by graph size.
     for n in (800, 2000, 1000):
         idx = [i for i, g in enumerate(gs) if g['vertices'] == n]
-        b.annotate('', xy=(idx[0]-.3, -1.55), xytext=(idx[-1]+.3, -1.55), xycoords=('data', 'data'),
+        b.annotate('', xy=(idx[0]-.3, -.31*top_s), xytext=(idx[-1]+.3, -.31*top_s), xycoords=('data', 'data'),
                    arrowprops=dict(arrowstyle='-', color='#9aa0a6'), annotation_clip=False)
-        b.text((idx[0]+idx[-1])/2, -1.95, f'{n:,} vertices', ha='center', va='top', fontsize=9, color=MUTED)
+        b.text((idx[0]+idx[-1])/2, -.39*top_s, f'{n:,} vertices', ha='center', va='top', fontsize=9, color=MUTED)
+    p = summary['protocol']
     fig.text(.075, .955, 'Gset: distance to the best-known cut', fontsize=13, fontweight='bold', va='top')
-    fig.text(.075, .905, f'37 graphs from the NeuroSA tables · 3 seeds × 10M accepted flips each at 100 MHz · '
-             f'best-known cut reached on {exact}, within 0.5% on {within}', fontsize=10, color=MUTED, va='top')
+    fig.text(.075, .905, f"{len(gs)} graphs from the NeuroSA tables · 3 seeds × {p['accepted_flips']//10**6}M accepted flips at 100 MHz, "
+             f"one cooling schedule for all · best-known cut reached on {summary['best_of_3_at_reference']} of {len(gs)}",
+             fontsize=10, color=MUTED, va='top')
     fig.savefig(ASSETS/'gset.png', dpi=180); plt.close(fig)
 
 

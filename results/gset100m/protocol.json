@@ -1,0 +1,100 @@
+{
+  "purpose": "Gset at 100M accepted flips with a cooling schedule stretched to the longer run, to compare with the published NeuroSA worst-case results.",
+  "saved_before_evaluation": "2026-10-27",
+  "graphs": {
+    "gset": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6",
+      "G7",
+      "G8",
+      "G9",
+      "G10",
+      "G11",
+      "G12",
+      "G13",
+      "G14",
+      "G15",
+      "G16",
+      "G17",
+      "G18",
+      "G19",
+      "G20",
+      "G21"
+    ],
+    "gset1024": [
+      "G43",
+      "G44",
+      "G45",
+      "G46",
+      "G47",
+      "G51",
+      "G52",
+      "G53",
+      "G54"
+    ],
+    "gset2048": [
+      "G22",
+      "G23",
+      "G24",
+      "G25",
+      "G26",
+      "G35",
+      "G36",
+      "G37",
+      "G38"
+    ]
+  },
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "accepted_flips": 100000000,
+  "cooling_period": 4194304,
+  "clock_request_mhz": 100,
+  "max_active_cycles": 20000000000,
+  "host_timeout_seconds": 200,
+  "selection_rule": "One global cooling period for every graph, chosen on a pilot with seed 101 (not an evaluation seed) on G1, G11, G15, G43, G22, G35 among 2^20..2^23 by smallest total gap to the best-known cut. All evaluation runs are kept.",
+  "pilot_results_seed101": {
+    "1048576": {
+      "G1": 11624,
+      "G11": 564,
+      "G15": null,
+      "G43": 6660,
+      "G22": 13324,
+      "G35": 7669
+    },
+    "2097152": {
+      "G1": 11624,
+      "G11": 564,
+      "G15": 3049,
+      "G43": 6660,
+      "G22": 13329,
+      "G35": 7681
+    },
+    "4194304": {
+      "G1": 11624,
+      "G11": 564,
+      "G15": 3049,
+      "G43": 6660,
+      "G22": 13359,
+      "G35": 7681
+    },
+    "8388608": {
+      "G1": 11624,
+      "G11": 562,
+      "G15": 3050,
+      "G43": 6660,
+      "G22": 13358,
+      "G35": 7674
+    }
+  },
+  "pilot_note": "G15 at 2^20 has no result: a first-hit epoch race in the new counter-unwrapping code aborted that run; fixed before the other periods ran.",
+  "driver_sha256": "416e1fe718f8ee87a91489cf2a1ef1cb3834f42c6136a224618fdc7dbf9050ba",
+  "model_sha256": "aa4cf6fc27d7fe91a57012aa9587e9d9bb199e26e3a4ea2c97065409cc8a37a7",
+  "comparison": "NeuroSA columns of Supplementary Tables S1/S2 (Chen et al., Nat. Commun. 2025) give the worst case over their runs relative to the best-known (SOTA) cut."
+}
